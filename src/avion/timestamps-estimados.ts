@@ -7,11 +7,7 @@
  * `inicio` / `fin` de las palabras que quieras: escenas, subtítulos y efectos se
  * reacomodan solos porque se calculan a partir de este array.
  */
-export type PalabraConTiempo = {
-  palabra: string;
-  inicio: number;
-  fin: number;
-};
+import type { PalabraConTiempo } from "../comun/tipos";
 
 export const TIMESTAMPS_ESTIMADOS: PalabraConTiempo[] = [
   {palabra: "Si", inicio: 0.25, fin: 0.38},

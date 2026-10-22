@@ -1,32 +1,32 @@
 import { ALL_FORMATS, Input, UrlSource } from "mediabunny";
 import { CalculateMetadataFunction, staticFile } from "remotion";
-import { ARCHIVOS, CUENTA, PAUSA_REMATE } from "./guion-avion";
 import { normalizar } from "./linea-de-tiempo";
-import { PalabraConTiempo, TIMESTAMPS_ESTIMADOS } from "./timestamps-estimados";
+import { PalabraConTiempo, PropsReel } from "./tipos";
 
 export const FPS = 60;
-const MIN_FRAMES = 1800;
-const MAX_FRAMES = 2600;
 const COLA_SEGUNDOS = 0.5;
 
-export type PropsReel = {
-  palabras: PalabraConTiempo[];
-  fuenteTimestamps: "json" | "estimados-escalados" | "estimados";
-  duracionVoz: number;
-  vozDisponible: boolean;
-  logoDisponible: boolean;
-  /** Pausa insertada en la voz: se corta en `corte` (s del audio) y se retoma `segundos` después. */
-  pausaVoz: { corte: number; segundos: number } | null;
+export type ConfigMetadata = {
+  /** Archivos en public/. */
+  voz: string;
+  timestamps: string;
+  logo: string;
+  estimados: PalabraConTiempo[];
+  /** Pausa que el guion necesita (p. ej. para el Remate) y que se inserta si la voz no la trae. */
+  pausa?: { despuesDe: string; segundos: number; silencioMinimo: number };
+  minFrames: number;
+  maxFrames: number;
+  nombreSalida: string;
 };
 
-export const PROPS_POR_DEFECTO: PropsReel = {
-  palabras: TIMESTAMPS_ESTIMADOS,
+export const propsPorDefecto = (estimados: PalabraConTiempo[]): PropsReel => ({
+  palabras: estimados,
   fuenteTimestamps: "estimados",
-  duracionVoz: TIMESTAMPS_ESTIMADOS[TIMESTAMPS_ESTIMADOS.length - 1].fin + 0.3,
+  duracionVoz: estimados[estimados.length - 1].fin + 0.3,
   vozDisponible: false,
   logoDisponible: false,
   pausaVoz: null,
-};
+});
 
 const existe = async (src: string, signal?: AbortSignal) => {
   try {
@@ -106,18 +106,17 @@ export const parsearTimestamps = (json: unknown): PalabraConTiempo[] => {
 };
 
 /** Si la voz no trae la pausa del Remate, la inserta y corre las palabras siguientes. */
-const insertarPausa = (palabras: PalabraConTiempo[]) => {
-  const tokens = PAUSA_REMATE.despuesDe.split(/\s+/).map(normalizar);
-  const i = palabras.findIndex((_, k) =>
-    tokens.every((t, n) => normalizar(palabras[k + n]?.palabra ?? "") === t),
-  );
+const insertarPausa = (palabras: PalabraConTiempo[], pausa: ConfigMetadata["pausa"]) => {
+  if (!pausa) return { palabras, pausaVoz: null };
+  const tokens = pausa.despuesDe.split(/\s+/).map(normalizar);
+  const i = palabras.findIndex((_, k) => tokens.every((t, n) => normalizar(palabras[k + n]?.palabra ?? "") === t));
   const ultima = palabras[i + tokens.length - 1];
   const siguiente = palabras[i + tokens.length];
-  if (i < 0 || !siguiente || siguiente.inicio - ultima.fin >= PAUSA_REMATE.silencioMinimo) {
+  if (i < 0 || !siguiente || siguiente.inicio - ultima.fin >= pausa.silencioMinimo) {
     return { palabras, pausaVoz: null };
   }
   const corte = (ultima.fin + siguiente.inicio) / 2;
-  const segundos = PAUSA_REMATE.segundos;
+  const segundos = pausa.segundos;
   return {
     pausaVoz: { corte, segundos },
     palabras: palabras.map((p) =>
@@ -126,65 +125,67 @@ const insertarPausa = (palabras: PalabraConTiempo[]) => {
   };
 };
 
-export const calcularMetadata: CalculateMetadataFunction<PropsReel> = async ({
-  props,
-  abortSignal,
-}) => {
-  const srcVoz = staticFile(ARCHIVOS.voz);
-  const [vozDisponible, logoDisponible] = await Promise.all([
-    existe(srcVoz, abortSignal),
-    existe(staticFile(CUENTA.logo), abortSignal),
-  ]);
+export const crearCalcularMetadata =
+  (config: ConfigMetadata): CalculateMetadataFunction<PropsReel> =>
+  async ({ props, abortSignal }) => {
+    const TIMESTAMPS_ESTIMADOS = config.estimados;
+    const srcVoz = staticFile(config.voz);
+    const [vozDisponible, logoDisponible] = await Promise.all([
+      existe(srcVoz, abortSignal),
+      existe(staticFile(config.logo), abortSignal),
+    ]);
 
-  const duracionReal = vozDisponible ? await duracionAudio(srcVoz) : null;
+    const duracionReal = vozDisponible ? await duracionAudio(srcVoz) : null;
 
-  let palabras: PalabraConTiempo[] | null = null;
-  try {
-    const r = await fetch(staticFile(ARCHIVOS.timestamps), { signal: abortSignal });
-    if (r.ok) {
-      const p = parsearTimestamps(await r.json());
-      if (p.length > 0) palabras = p;
+    let palabras: PalabraConTiempo[] | null = null;
+    try {
+      const r = await fetch(staticFile(config.timestamps), {
+        signal: abortSignal,
+      });
+      if (r.ok) {
+        const p = parsearTimestamps(await r.json());
+        if (p.length > 0) palabras = p;
+      }
+    } catch {
+      palabras = null;
     }
-  } catch {
-    palabras = null;
-  }
 
-  let fuenteTimestamps: PropsReel["fuenteTimestamps"] = "json";
-  if (!palabras) {
-    const finEstimado = TIMESTAMPS_ESTIMADOS[TIMESTAMPS_ESTIMADOS.length - 1].fin;
-    // La voz suele terminar ~0.2 s antes del final del archivo.
-    const k = duracionReal ? (duracionReal - 0.2) / finEstimado : 1;
-    palabras = TIMESTAMPS_ESTIMADOS.map((p) => ({
-      palabra: p.palabra,
-      inicio: p.inicio * k,
-      fin: p.fin * k,
-    }));
-    fuenteTimestamps = duracionReal ? "estimados-escalados" : "estimados";
-  }
+    let fuenteTimestamps: PropsReel["fuenteTimestamps"] = "json";
+    if (!palabras) {
+      const finEstimado = TIMESTAMPS_ESTIMADOS[TIMESTAMPS_ESTIMADOS.length - 1].fin;
+      // La voz suele terminar ~0.2 s antes del final del archivo.
+      const k = duracionReal ? (duracionReal - 0.2) / finEstimado : 1;
+      palabras = TIMESTAMPS_ESTIMADOS.map((p) => ({
+        palabra: p.palabra,
+        inicio: p.inicio * k,
+        fin: p.fin * k,
+      }));
+      fuenteTimestamps = duracionReal ? "estimados-escalados" : "estimados";
+    }
 
-  const conPausa = insertarPausa(palabras);
-  palabras = conPausa.palabras;
-  const pausaVoz = conPausa.pausaVoz;
+    const conPausa = insertarPausa(palabras, config.pausa);
+    palabras = conPausa.palabras;
+    const pausaVoz = conPausa.pausaVoz;
 
-  const duracionVoz = duracionReal
-    ? duracionReal + (pausaVoz?.segundos ?? 0)
-    : palabras[palabras.length - 1].fin + 0.3;
-  const durationInFrames = Math.min(
-    MAX_FRAMES,
-    Math.max(MIN_FRAMES, Math.ceil((duracionVoz + COLA_SEGUNDOS) * FPS)),
-  );
+    const duracionVoz = duracionReal
+      ? duracionReal + (pausaVoz?.segundos ?? 0)
+      : palabras[palabras.length - 1].fin + 0.3;
+    const durationInFrames = Math.min(
+      config.maxFrames,
+      Math.max(config.minFrames, Math.ceil((duracionVoz + COLA_SEGUNDOS) * FPS)),
+    );
 
-  return {
-    durationInFrames,
-    defaultOutName: "avion",
-    props: {
-      ...props,
-      palabras,
-      fuenteTimestamps,
-      duracionVoz,
-      vozDisponible,
-      logoDisponible,
-      pausaVoz,
-    },
+    return {
+      durationInFrames,
+      defaultOutName: config.nombreSalida,
+      props: {
+        ...props,
+        palabras,
+        fuenteTimestamps,
+        duracionVoz,
+        vozDisponible,
+        logoDisponible,
+        pausaVoz,
+      },
+    };
   };
-};

@@ -1,16 +1,21 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { PALABRAS_CLAVE, SUBTITULOS } from "../guion-avion";
-import { normalizar } from "../linea-de-tiempo";
-import { COLOR, FUENTE, SEGURO } from "../tema";
-import { PalabraConTiempo } from "../timestamps-estimados";
+import { normalizar } from "./linea-de-tiempo";
+import { COLOR, FUENTE, SEGURO } from "./tema";
+import { PalabraConTiempo } from "./tipos";
 
 type Bloque = { palabras: PalabraConTiempo[]; inicio: number; fin: number };
 
-const CLAVES = new Set(PALABRAS_CLAVE.map(normalizar));
+export type ConfigSubtitulos = {
+  maxPalabras: number;
+  /** Se permiten 4 palabras si el bloque entra en estos caracteres. */
+  maxCaracteresCon4: number;
+  /** Palabras que se pintan en verde agua. */
+  palabrasClave: string[];
+};
 
 /** Agrupa las palabras en bloques de 2–4, cortando en la puntuación. */
-export const armarBloques = (palabras: PalabraConTiempo[]): Bloque[] => {
+export const armarBloques = (palabras: PalabraConTiempo[], config: ConfigSubtitulos): Bloque[] => {
   const bloques: Bloque[] = [];
   let actual: PalabraConTiempo[] = [];
   const cerrar = () => {
@@ -27,7 +32,7 @@ export const armarBloques = (palabras: PalabraConTiempo[]): Bloque[] => {
     const silencio = siguiente ? siguiente.inicio - p.fin > 0.6 : true;
     const lleno =
       actual.length >= 4 ||
-      (actual.length >= SUBTITULOS.maxPalabras && texto.length > SUBTITULOS.maxCaracteresCon4);
+      (actual.length >= config.maxPalabras && texto.length > config.maxCaracteresCon4);
     // Evita dejar una palabra suelta al final de una frase.
     const quedaUna = siguiente && /[.,?!;:]$/.test(siguiente.palabra) && actual.length < 4 && !puntuacion;
     if (puntuacion || silencio || (lleno && !quedaUna)) cerrar();
@@ -39,10 +44,12 @@ export const armarBloques = (palabras: PalabraConTiempo[]): Bloque[] => {
 export const Subtitulos: React.FC<{
   palabras: PalabraConTiempo[];
   ocultar: (frame: number) => boolean;
-}> = ({ palabras, ocultar }) => {
+  config: ConfigSubtitulos;
+}> = ({ palabras, ocultar, config }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const bloques = useMemo(() => armarBloques(palabras), [palabras]);
+  const bloques = useMemo(() => armarBloques(palabras, config), [palabras, config]);
+  const claves = useMemo(() => new Set(config.palabrasClave.map(normalizar)), [config]);
   const t = frame / fps;
 
   const i = bloques.findIndex((b, k) => {
@@ -84,7 +91,7 @@ export const Subtitulos: React.FC<{
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
           });
-          const clave = CLAVES.has(normalizar(p.palabra));
+          const clave = claves.has(normalizar(p.palabra));
           return (
             <span
               key={k}

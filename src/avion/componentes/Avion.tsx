@@ -1,5 +1,5 @@
 import React from "react";
-import { COLOR } from "../tema";
+import { COLOR } from "../../comun/tema";
 
 /**
  * Avioncito visto desde arriba, con sombra desplazada en el piso para que se

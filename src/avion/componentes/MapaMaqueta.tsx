@@ -1,7 +1,7 @@
 import { GeoProjection } from "d3-geo";
 import React, { useId } from "react";
 import { crearProyeccion, EstadoMapa, GRATICULA, TIERRA, trazar } from "../geo";
-import { COLOR } from "../tema";
+import { COLOR } from "../../comun/tema";
 
 type Props = {
   estado: EstadoMapa;

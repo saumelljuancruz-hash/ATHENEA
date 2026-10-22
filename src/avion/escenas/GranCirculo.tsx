@@ -1,9 +1,9 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Avion } from "../componentes/Avion";
-import { entre, flotar, formatear } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { ContadorHud, HudEtiqueta, TituloSeccion } from "../componentes/Hud";
+import { entre, flotar, formatear } from "../../comun/anim";
+import { Escena } from "../../comun/Escena";
+import { ContadorHud, HudEtiqueta, TituloSeccion } from "../../comun/Hud";
 import { MapaMaqueta } from "../componentes/MapaMaqueta";
 import {
   EstadoMapa,
@@ -18,11 +18,11 @@ import {
   TOKIO,
 } from "../geo";
 import { DATOS, TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR } from "../tema";
+import { MarcasAvion } from "../linea-avion";
+import { COLOR } from "../../comun/tema";
 import { acercar, PLACA_PACIFICO } from "./encuadres";
 
-export type PropsGranCirculo = { marcas: Marcas["granCirculo"]; duracion: number };
+export type PropsGranCirculo = { marcas: MarcasAvion["granCirculo"]; duracion: number };
 
 const GC = rutaGranCirculo(140);
 const RECTA = rutaRecta(140);
@@ -91,7 +91,7 @@ export const GranCirculo: React.FC<PropsGranCirculo> = ({ marcas, duracion }) =>
   );
 };
 
-const Etiquetas: React.FC<{ estado: EstadoMapa; marcas: Marcas["granCirculo"] }> = ({ estado, marcas }) => {
+const Etiquetas: React.FC<{ estado: EstadoMapa; marcas: MarcasAvion["granCirculo"] }> = ({ estado, marcas }) => {
   const T = TEXTOS.granCirculo;
   const rojo = proyectarPunto(estado, RECTA[55]);
   const pico = proyectarPunto(estado, GC[62]);

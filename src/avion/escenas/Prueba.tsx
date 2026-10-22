@@ -1,11 +1,11 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Avion } from "../componentes/Avion";
-import { ENTRA_SALE, entre, flotar, resorte } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { ContadorHud, HudEtiqueta, TituloSeccion } from "../componentes/Hud";
+import { ENTRA_SALE, entre, flotar, resorte } from "../../comun/anim";
+import { Escena } from "../../comun/Escena";
+import { ContadorHud, HudEtiqueta, TituloSeccion } from "../../comun/Hud";
 import { MapaMaqueta } from "../componentes/MapaMaqueta";
-import { Sfx } from "../componentes/Sonido";
+import { Sfx } from "../../comun/Sonido";
 import {
   ALASKA,
   ALASKA_PUNTO,
@@ -21,11 +21,11 @@ import {
   trazar,
 } from "../geo";
 import { TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR } from "../tema";
+import { MarcasAvion } from "../linea-avion";
+import { COLOR } from "../../comun/tema";
 import { lerpRect, PLACA_PACIFICO } from "./encuadres";
 
-export type PropsPrueba = { marcas: Marcas["prueba"]; duracion: number };
+export type PropsPrueba = { marcas: MarcasAvion["prueba"]; duracion: number };
 
 const GC = rutaGranCirculo(140);
 const MEDIO = GC[70];

@@ -1,30 +1,34 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { Avion } from "../componentes/Avion";
-import { entre, flotar, resorte } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { Fondo } from "../componentes/Fondo";
-import { MapaMaqueta } from "../componentes/MapaMaqueta";
-import { Sfx } from "../componentes/Sonido";
-import { polilineaAPath, puntoEnPolilinea, rutaGranCirculo } from "../geo";
-import { CUENTA, TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR, FUENTE, SEGURO } from "../tema";
-import { PLACA_PACIFICO } from "./encuadres";
+import { entre, flotar, resorte } from "./anim";
+import { Escena } from "./Escena";
+import { Fondo } from "./Fondo";
+import { Sfx } from "./Sonido";
+import { COLOR, FUENTE, SEGURO } from "./tema";
 
-export type PropsCTA = { marcas: Marcas["cta"]; duracion: number; logoDisponible: boolean };
+export type TextosCTA = { titulo: string; comentar: string; seguir: string; siguiendo: string };
 
-const GC = rutaGranCirculo(100);
 const CENTRO_X = (SEGURO.izquierda + (SEGURO.ancho - SEGURO.derecha)) / 2;
 const PANTALLA = { ancho: 400, alto: 711 };
 const ESCALA_MINI = PANTALLA.ancho / 1080;
 const TELEFONO = { ancho: 436, alto: 790, top: 430 };
 const BOTON_Y = 600; // dentro de la pantalla
 
-export const CTA: React.FC<PropsCTA> = ({ duracion, logoDisponible }) => {
+/**
+ * Cierre de la cuenta: logo + usuario, "¿LO SABÍAS?" con subrayado naranja y un
+ * teléfono que muestra el Reel; un dedo toca COMÉNTALO → SEGUIME + → ✓ Siguiendo.
+ */
+export const CierreCTA: React.FC<{
+  duracion: number;
+  logoDisponible: boolean;
+  logo: string;
+  usuario: string;
+  textos: TextosCTA;
+  /** Lo que se ve en la pantalla del teléfono, dibujado en coordenadas de 1080×1920. */
+  pantalla: React.ReactNode;
+}> = ({ duracion, logoDisponible, logo, usuario, textos: T, pantalla }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const T = TEXTOS.cta;
 
   const toque1 = Math.round(Math.max(0.55 * fps, duracion * 0.2));
   const toque2 = Math.round(Math.max(toque1 + 0.65 * fps, duracion * 0.48));
@@ -62,7 +66,7 @@ export const CTA: React.FC<PropsCTA> = ({ duracion, logoDisponible }) => {
   ];
 
   return (
-    <Escena name="CTA">
+    <Escena name="Cierre">
       <Sfx efecto="tap" desde={toque1} />
       <Sfx efecto="pop" desde={toque1 + 3} />
       <Sfx efecto="tap" desde={toque2} />
@@ -81,8 +85,8 @@ export const CTA: React.FC<PropsCTA> = ({ duracion, logoDisponible }) => {
           gap: 18,
         }}
       >
-        <Logo disponible={logoDisponible} />
-        <div style={{ fontFamily: FUENTE.mono, fontWeight: 700, fontSize: 30, color: COLOR.texto }}>{CUENTA.usuario}</div>
+        <Logo disponible={logoDisponible} src={logo} />
+        <div style={{ fontFamily: FUENTE.mono, fontWeight: 700, fontSize: 30, color: COLOR.texto }}>{usuario}</div>
       </div>
 
       {/* Título con subrayado naranja */}
@@ -138,7 +142,16 @@ export const CTA: React.FC<PropsCTA> = ({ duracion, logoDisponible }) => {
             background: COLOR.fondoOscuro,
           }}
         >
-          <MiniReel frame={frame} />
+          <AbsoluteFill style={{ width: 1080, height: 1920, scale: String(ESCALA_MINI), transformOrigin: "0 0" }}>
+            <Fondo />
+            {pantalla}
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                style={{ position: "absolute", right: 46, top: 1080 + i * 150, width: 84, height: 84, borderRadius: 42, background: "rgba(255,255,255,0.18)" }}
+              />
+            ))}
+          </AbsoluteFill>
           <div
             style={{
               position: "absolute",
@@ -186,34 +199,7 @@ export const CTA: React.FC<PropsCTA> = ({ duracion, logoDisponible }) => {
   );
 };
 
-const MiniReel: React.FC<{ frame: number }> = ({ frame }) => {
-  const vuelta = (frame % 150) / 150;
-  return (
-    <AbsoluteFill style={{ width: 1080, height: 1920, scale: String(ESCALA_MINI), transformOrigin: "0 0" }}>
-      <Fondo />
-      <MapaMaqueta estado={{ ...PLACA_PACIFICO, rotacion: [147 + Math.sin(frame / 50) * 2, 0, 0] }} mostrarGrilla={false}>
-        {(p) => {
-          const pts = GC.map((pt) => p(pt) as [number, number]);
-          const a = puntoEnPolilinea(pts, vuelta);
-          return (
-            <>
-              <path d={polilineaAPath(pts)} fill="none" stroke={COLOR.verde} strokeWidth={10} strokeLinecap="round" />
-              <Avion x={a.x} y={a.y} angulo={a.angulo} tamano={90} />
-            </>
-          );
-        }}
-      </MapaMaqueta>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 1240, textAlign: "center", fontFamily: FUENTE.inter, fontWeight: 800, fontSize: 84, color: COLOR.texto }}>
-        ES UNA <span style={{ color: COLOR.verde }}>RECTA</span>
-      </div>
-      {[0, 1, 2].map((i) => (
-        <div key={i} style={{ position: "absolute", right: 46, top: 1080 + i * 150, width: 84, height: 84, borderRadius: 42, background: "rgba(255,255,255,0.18)" }} />
-      ))}
-    </AbsoluteFill>
-  );
-};
-
-const Logo: React.FC<{ disponible: boolean }> = ({ disponible }) =>
+const Logo: React.FC<{ disponible: boolean; src: string }> = ({ disponible, src }) =>
   disponible ? (
     <div
       style={{
@@ -226,7 +212,7 @@ const Logo: React.FC<{ disponible: boolean }> = ({ disponible }) =>
       }}
     >
       {/* El logo trae margen oscuro: se amplía para que se lean los anillos. */}
-      <Img src={staticFile(CUENTA.logo)} style={{ width: "100%", height: "100%", objectFit: "cover", scale: "1.45" }} />
+      <Img src={staticFile(src)} style={{ width: "100%", height: "100%", objectFit: "cover", scale: "1.45" }} />
     </div>
   ) : (
     <div

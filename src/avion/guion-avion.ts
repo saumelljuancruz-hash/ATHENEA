@@ -16,27 +16,15 @@ export const CUENTA = {
 export const ARCHIVOS = {
   voz: "voz-avion.mp3",
   timestamps: "voz-avion-timestamps.json",
-  musica: "audio/musica-suave.mp3",
-  sfx: {
-    motor: "audio/sfx-motor.wav",
-    estirar: "audio/sfx-estirar.wav",
-    whoosh: "audio/sfx-whoosh.wav",
-    pop: "audio/sfx-pop.wav",
-    tap: "audio/sfx-tap.wav",
-  },
 };
 
+/** Volúmenes de voz y música (los efectos están en src/comun/Sonido.tsx). */
 export const VOLUMEN = {
   voz: 1,
   /** Volumen nominal de la música. */
   musica: 0.08,
   /** Factor aplicado a la música mientras habla la voz (ducking). */
   ducking: 0.5,
-  motor: 0.16,
-  estirar: 0.45,
-  whoosh: 0.32,
-  pop: 0.28,
-  tap: 0.5,
 };
 
 /** Texto completo de la voz en off (referencia; el timing sale de los timestamps). */

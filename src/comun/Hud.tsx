@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLOR, FUENTE, SEGURO } from "../tema";
+import { COLOR, FUENTE, SEGURO } from "./tema";
 import { entre, flotar, formatear, resorte } from "./anim";
 import { Sfx } from "./Sonido";
 

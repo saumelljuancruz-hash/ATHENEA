@@ -1,9 +1,9 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { Avion } from "../componentes/Avion";
-import { entre, flotar } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { ContadorHud, HudEtiqueta } from "../componentes/Hud";
+import { entre, flotar } from "../../comun/anim";
+import { Escena } from "../../comun/Escena";
+import { ContadorHud, HudEtiqueta } from "../../comun/Hud";
 import { MapaMaqueta } from "../componentes/MapaMaqueta";
 import {
   EstadoMapa,
@@ -17,14 +17,14 @@ import {
   TOKIO,
 } from "../geo";
 import { TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR, FUENTE } from "../tema";
+import { MarcasAvion } from "../linea-avion";
+import { COLOR, FUENTE } from "../../comun/tema";
 import { acercar, PLACA_PACIFICO } from "./encuadres";
 
 const GC = rutaGranCirculo(140);
 const RECTA = rutaRecta(140);
 
-export type PropsHook = { marcas: Marcas["hook"]; duracion: number };
+export type PropsHook = { marcas: MarcasAvion["hook"]; duracion: number };
 
 export const Hook: React.FC<PropsHook> = ({ marcas, duracion }) => {
   const frame = useCurrentFrame();
@@ -102,7 +102,7 @@ export const Hook: React.FC<PropsHook> = ({ marcas, duracion }) => {
   );
 };
 
-const Etiquetas: React.FC<{ marcas: Marcas["hook"]; estado: EstadoMapa }> = ({ marcas, estado }) => {
+const Etiquetas: React.FC<{ marcas: MarcasAvion["hook"]; estado: EstadoMapa }> = ({ marcas, estado }) => {
   // El ancla es el punto medio de la recta roja.
   const medio = rutaRecta(2)[1];
   const p = proyectarPunto(estado, medio);

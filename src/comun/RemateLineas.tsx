@@ -1,40 +1,23 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { entre, flotar, resorte } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { crearProyeccion, GRATICULA, rutaGranCirculo, TIERRA, trazar } from "../geo";
-import { TEXTOS } from "../guion-avion";
-import { COLOR, FUENTE, SEGURO } from "../tema";
+import { entre, flotar, resorte } from "./anim";
+import { Escena } from "./Escena";
+import { COLOR, FUENTE, SEGURO } from "./tema";
 
-export type PropsRemate = { duracion: number };
-
-const GC = rutaGranCirculo(140);
-
-export const Remate: React.FC<PropsRemate> = ({ duracion }) => {
+/** Remate: tres líneas grandes, una por una con subrayado verde agua, sobre un fondo desenfocado. */
+export const RemateLineas: React.FC<{ duracion: number; lineas: string[]; fondo: React.ReactNode }> = ({
+  duracion,
+  lineas,
+  fondo,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const lineas = TEXTOS.remate;
   const paso = Math.max(0.3 * fps, Math.min(0.62 * fps, (duracion - 0.7 * fps) / lineas.length));
-
-  // Globo de alambre de fondo, desenfocado (profundidad de campo), girando sin parar.
-  const p = crearProyeccion({
-    aplanado: 0,
-    mercator: 1,
-    radioGlobo: 1,
-    escala: 560,
-    centro: [700, 900],
-    rotacion: [150 - frame * 0.35, -55, 0],
-  });
 
   return (
     <Escena name="Remate">
       <AbsoluteFill style={{ filter: "blur(4px)", opacity: 0.45, scale: String(1 + 0.05 * entre(frame, 0, duracion)) }}>
-        <svg width={1080} height={1920}>
-          <path d={trazar(p, { type: "Sphere" })} fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.25)" strokeWidth={2} />
-          <path d={trazar(p, GRATICULA)} fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth={1.5} />
-          <path d={trazar(p, TIERRA)} fill="rgba(255,255,255,0.10)" />
-          <path d={trazar(p, { type: "LineString", coordinates: GC })} fill="none" stroke={COLOR.verde} strokeWidth={6} />
-        </svg>
+        {fondo}
       </AbsoluteFill>
 
       <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(22,23,26,0.85) 0%, rgba(22,23,26,0.2) 75%)" }} />

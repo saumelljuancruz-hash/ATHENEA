@@ -1,8 +1,9 @@
 /**
- * Transcribe public/voz-avion.mp3 con Whisper (local, gratis) y alinea cada
- * palabra del guion con su tiempo real. Escribe public/voz-avion-timestamps.json.
+ * Transcribe la voz de un Reel con Whisper (local, gratis) y alinea cada
+ * palabra del guion con su tiempo real. Escribe el JSON de timestamps en public/.
  *
- * Uso:  node --no-warnings scripts/transcribir-voz.mjs
+ * Uso:  node --no-warnings scripts/transcribir-voz.mjs <reel>     (p. ej. avion, faceid)
+ * Lee ARCHIVOS y TEXTO_VOZ de src/<reel>/guion-<reel>.ts.
  *
  * Se usan las palabras del guion (no las de Whisper) para que los subtítulos
  * respeten la ortografía: "catorce" aunque Whisper escuche "14", "tirá", etc.
@@ -15,14 +16,15 @@ import {
   installWhisperCpp,
   transcribe,
 } from "@remotion/install-whisper-cpp";
-import { ARCHIVOS, TEXTO_VOZ } from "../src/guion-avion.ts";
 
 const RAIZ = path.join(path.dirname(new URL(import.meta.url).pathname), "..");
+const reel = process.argv[2] ?? "avion";
+const { ARCHIVOS, TEXTO_VOZ } = await import(path.join(RAIZ, "src", reel, `guion-${reel}.ts`));
 const WHISPER = path.join(RAIZ, "whisper.cpp");
 const VERSION = "1.5.5";
 const MODELO = "small";
 const voz = path.join(RAIZ, "public", ARCHIVOS.voz);
-const wav = path.join(WHISPER, "voz-16k.wav");
+const wav = path.join(WHISPER, `voz-${reel}-16k.wav`);
 const salida = path.join(RAIZ, "public", ARCHIVOS.timestamps);
 
 const normalizar = (s) =>

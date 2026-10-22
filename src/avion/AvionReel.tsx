@@ -1,9 +1,10 @@
-import { Audio } from "@remotion/media";
 import React, { useMemo } from "react";
-import { AbsoluteFill, interpolate, Sequence, staticFile, useVideoConfig } from "remotion";
-import { PropsReel } from "./calcular-metadata";
-import { Motor, Sfx } from "./componentes/Sonido";
-import { Subtitulos } from "./componentes/Subtitulos";
+import { AbsoluteFill, Sequence, useVideoConfig } from "remotion";
+import { crearCalcularMetadata, propsPorDefecto } from "../comun/metadata";
+import { Bucle, PistaDeAudio, Sfx } from "../comun/Sonido";
+import { Subtitulos } from "../comun/Subtitulos";
+import { COLOR } from "../comun/tema";
+import { PropsReel } from "../comun/tipos";
 import { CTA } from "./escenas/CTA";
 import { GranCirculo } from "./escenas/GranCirculo";
 import { Hook } from "./escenas/Hook";
@@ -11,31 +12,34 @@ import { MapaMiente } from "./escenas/MapaMiente";
 import { PausaComentario } from "./escenas/PausaComentario";
 import { Prueba } from "./escenas/Prueba";
 import { Remate } from "./escenas/Remate";
-import { ARCHIVOS, SUBTITULOS, VOLUMEN } from "./guion-avion";
-import { construirLineaDeTiempo, EscenaId, intensidadVoz } from "./linea-de-tiempo";
-import { COLOR } from "./tema";
+import { ARCHIVOS, CUENTA, PALABRAS_CLAVE, PAUSA_REMATE, SUBTITULOS, VOLUMEN } from "./guion-avion";
+import { EscenaAvion, lineaAvion } from "./linea-avion";
+import { TIMESTAMPS_ESTIMADOS } from "./timestamps-estimados";
+
+export const PROPS_AVION = propsPorDefecto(TIMESTAMPS_ESTIMADOS);
+
+export const calcularMetadataAvion = crearCalcularMetadata({
+  voz: ARCHIVOS.voz,
+  timestamps: ARCHIVOS.timestamps,
+  logo: CUENTA.logo,
+  estimados: TIMESTAMPS_ESTIMADOS,
+  pausa: PAUSA_REMATE,
+  minFrames: 1800,
+  // La locución de este Reel dura 40,3 s: con la pausa del Remate queda en ~43 s.
+  maxFrames: 2600,
+  nombreSalida: "avion",
+});
+
+const CONFIG_SUBTITULOS = { ...SUBTITULOS, palabrasClave: PALABRAS_CLAVE };
 
 export const AvionReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoDisponible, pausaVoz }) => {
   const { fps, durationInFrames } = useVideoConfig();
-  const linea = useMemo(
-    () => construirLineaDeTiempo(palabras, fps, durationInFrames),
-    [palabras, fps, durationInFrames],
-  );
+  const linea = useMemo(() => lineaAvion(palabras, fps, durationInFrames), [palabras, fps, durationInFrames]);
   const { escenas: e, marcas: m } = linea;
 
-  const enEscena = (f: number, id: EscenaId) => f >= e[id].desde && f < e[id].desde + e[id].duracion;
+  const enEscena = (f: number, id: EscenaAvion) => f >= e[id].desde && f < e[id].desde + e[id].duracion;
   const ocultarSubtitulos = (f: number) =>
-    SUBTITULOS.ocultarEn.some((id) => enEscena(f, id as EscenaId)) || f >= durationInFrames - 0.3 * fps;
-
-  const volumenMusica = (f: number) => {
-    const t = f / fps;
-    const duck = 1 - (1 - VOLUMEN.ducking) * intensidadVoz(palabras, t);
-    const fundidos = Math.min(
-      interpolate(f, [0, 0.6 * fps], [0, 1], { extrapolateRight: "clamp" }),
-      interpolate(f, [durationInFrames - 1.2 * fps, durationInFrames - 1], [1, 0], { extrapolateLeft: "clamp" }),
-    );
-    return VOLUMEN.musica * duck * fundidos;
-  };
+    SUBTITULOS.ocultarEn.some((id) => enEscena(f, id as EscenaAvion)) || f >= durationInFrames - 0.3 * fps;
 
   return (
     <AbsoluteFill style={{ backgroundColor: COLOR.fondoOscuro }}>
@@ -65,27 +69,25 @@ export const AvionReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoDi
         <CTA marcas={m.cta} duracion={e.cta.duracion} logoDisponible={logoDisponible} />
       </Sequence>
 
-      <Subtitulos palabras={palabras} ocultar={ocultarSubtitulos} />
+      <Subtitulos palabras={palabras} ocultar={ocultarSubtitulos} config={CONFIG_SUBTITULOS} />
 
       {/* Audio */}
-      {vozDisponible && !pausaVoz ? <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} /> : null}
-      {vozDisponible && pausaVoz ? (
-        <>
-          <Sequence name="Voz (1/2)" layout="none">
-            <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} trimAfter={Math.round(pausaVoz.corte * fps)} />
-          </Sequence>
-          <Sequence name="Voz (2/2)" from={Math.round((pausaVoz.corte + pausaVoz.segundos) * fps)} layout="none">
-            <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} trimBefore={Math.round(pausaVoz.corte * fps)} />
-          </Sequence>
-        </>
-      ) : null}
-      <Audio src={staticFile(ARCHIVOS.musica)} loop volume={volumenMusica} />
+      <PistaDeAudio
+        voz={ARCHIVOS.voz}
+        vozDisponible={vozDisponible}
+        pausaVoz={pausaVoz}
+        palabras={palabras}
+        volumenVoz={VOLUMEN.voz}
+        volumenMusica={VOLUMEN.musica}
+        ducking={VOLUMEN.ducking}
+      />
       {(["mapaMiente", "prueba", "granCirculo", "remate", "cta"] as const).map((id) => (
         <Sfx key={id} efecto="whoosh" desde={Math.max(0, e[id].desde - 8)} />
       ))}
       <Sfx efecto="whoosh" desde={e.pausa.desde + e.pausa.duracion - 14} volumen={0.22} />
-      <Motor desde={0} duracion={e.mapaMiente.desde + 10} />
-      <Motor
+      <Bucle efecto="motor" desde={0} duracion={e.mapaMiente.desde + 10} />
+      <Bucle
+        efecto="motor"
         desde={e.prueba.desde + m.prueba.vuela}
         duracion={e.granCirculo.desde + e.granCirculo.duracion - (e.prueba.desde + m.prueba.vuela)}
       />

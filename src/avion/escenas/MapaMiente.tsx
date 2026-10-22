@@ -2,11 +2,11 @@ import { geoAzimuthalEqualArea, geoCentroid, geoCircle, geoPath } from "d3-geo";
 import type { Polygon } from "geojson";
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { ENTRA_SALE, entre, flotar, resorte } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { ContadorHud, HudEtiqueta, TituloSeccion } from "../componentes/Hud";
+import { ENTRA_SALE, entre, flotar, resorte } from "../../comun/anim";
+import { Escena } from "../../comun/Escena";
+import { ContadorHud, HudEtiqueta, TituloSeccion } from "../../comun/Hud";
 import { MapaMaqueta } from "../componentes/MapaMaqueta";
-import { Sfx } from "../componentes/Sonido";
+import { Sfx } from "../../comun/Sonido";
 import {
   AFRICA,
   anillosAPath,
@@ -19,10 +19,10 @@ import {
   trazar,
 } from "../geo";
 import { DATOS, TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR } from "../tema";
+import { MarcasAvion } from "../linea-avion";
+import { COLOR } from "../../comun/tema";
 
-export type PropsMapaMiente = { marcas: Marcas["mapaMiente"]; duracion: number };
+export type PropsMapaMiente = { marcas: MarcasAvion["mapaMiente"]; duracion: number };
 
 const RADIO_GLOBO = 380;
 const ESCALA_PLANA = 150;

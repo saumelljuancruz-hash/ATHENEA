@@ -1,26 +1,29 @@
 import React from "react";
 import { AbsoluteFill, Freeze, useCurrentFrame, useVideoConfig } from "remotion";
-import { entre, flotar, resorte } from "../componentes/anim";
-import { Escena } from "../componentes/Escena";
-import { Sfx, SfxActivos } from "../componentes/Sonido";
-import { TEXTOS } from "../guion-avion";
-import { Marcas } from "../linea-de-tiempo";
-import { COLOR, FUENTE, SEGURO } from "../tema";
-import { MapaMiente, PropsMapaMiente } from "./MapaMiente";
+import { entre, flotar, resorte } from "./anim";
+import { Escena } from "./Escena";
+import { Sfx, SfxActivos } from "./Sonido";
+import { COLOR, FUENTE, SEGURO } from "./tema";
 
 const CHIPS = 30;
 
-export type PropsPausa = {
-  marcas: Marcas["pausa"];
-  duracion: number;
-  /** La escena anterior, que se muestra congelada detrás de la tarjeta. */
-  anterior: PropsMapaMiente;
-};
+export type TextosPausa = { pregunta: string; pie: string; opciones: string[]; emoji: string };
 
-export const PausaComentario: React.FC<PropsPausa> = ({ marcas, duracion, anterior }) => {
+/**
+ * Pausa para comentarios: la escena anterior congelada, oscurecida y con blur,
+ * y una tarjeta con la pregunta y dos chips.
+ */
+export const TarjetaPausa: React.FC<{
+  duracion: number;
+  /** Frame (relativo) en el que la voz dice "Contámelo…": los chips vuelven a saltar. */
+  comentarios: number;
+  textos: TextosPausa;
+  /** Escena anterior (se congela en `frameCongelado`). */
+  fondo: React.ReactNode;
+  frameCongelado: number;
+}> = ({ duracion, comentarios, textos: T, fondo, frameCongelado }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const T = TEXTOS.pausa;
 
   const congelar = entre(frame, 0, 14);
   const tarjeta = resorte(frame, fps, 6, { damping: 13, stiffness: 150 });
@@ -28,7 +31,7 @@ export const PausaComentario: React.FC<PropsPausa> = ({ marcas, duracion, anteri
   const centroX = (SEGURO.izquierda + (SEGURO.ancho - SEGURO.derecha)) / 2;
 
   return (
-    <Escena entrada={false} fondo={false} name="PausaComentario">
+    <Escena entrada={false} fondo={false} name="Pausa">
       {/* Escena congelada, oscurecida y con blur leve (con un zoom lento para que no quede quieta). */}
       <AbsoluteFill
         style={{
@@ -37,9 +40,7 @@ export const PausaComentario: React.FC<PropsPausa> = ({ marcas, duracion, anteri
         }}
       >
         <SfxActivos.Provider value={false}>
-          <Freeze frame={anterior.duracion - 1}>
-            <MapaMiente {...anterior} />
-          </Freeze>
+          <Freeze frame={frameCongelado}>{fondo}</Freeze>
         </SfxActivos.Provider>
       </AbsoluteFill>
 
@@ -84,7 +85,7 @@ export const PausaComentario: React.FC<PropsPausa> = ({ marcas, duracion, anteri
           {T.opciones.map((op, i) => {
             const pop = resorte(frame, fps, CHIPS + i * 7, { damping: 11, stiffness: 200 });
             // En "Contámelo" los chips vuelven a saltar para invitar a comentar.
-            const llamada = resorte(frame, fps, marcas.comentarios + i * 5, { damping: 7, stiffness: 260 });
+            const llamada = resorte(frame, fps, comentarios + i * 5, { damping: 7, stiffness: 260 });
             const color = i === 0 ? COLOR.verde : COLOR.textoSuave;
             return (
               <div

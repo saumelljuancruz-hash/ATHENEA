@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, random, useCurrentFrame } from "remotion";
-import { COLOR } from "../tema";
+import { COLOR } from "./tema";
 
 const BOKEH = Array.from({ length: 14 }, (_, i) => ({
   x: random(`bx${i}`) * 1080,
