@@ -8,6 +8,7 @@ export const COLOR = {
   rojo: "#ff5a4e",
   azul: "#4aa3ff",
   magenta: "#ff4f7a",
+  naranjaCalor: "#ff7a3d",
   naranja: "#ff9a3c",
   tierra: "#7d828b",
   tierraLuz: "#9499a2",

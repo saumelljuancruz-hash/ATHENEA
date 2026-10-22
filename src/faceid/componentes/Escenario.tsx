@@ -1,20 +1,8 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { ContenedorVista, Vista, VISTA_NEUTRA } from "../../comun/vista";
 import { Camara, dibujarBusto, dibujarMalla, dibujarPuntos, OpcionesPuntos } from "../cabeza";
 import { Lienzo } from "./Lienzo";
 import { aLienzo, Pantalla, SENSORES, Telefono, Ubicacion } from "./Telefono";
-
-/** Cámara 2D sobre todo el escenario: zoom y giro alrededor de `foco`, que se lleva a `destino`. */
-export type Vista = { zoom: number; giro: number; foco: [number, number]; destino: [number, number] };
-
-export const VISTA_NEUTRA: Vista = { zoom: 1, giro: 0, foco: [540, 960], destino: [540, 960] };
-
-export const aPantalla = ([x, y]: [number, number], v: Vista) => {
-  const a = (v.giro * Math.PI) / 180;
-  const dx = (x - v.foco[0]) * v.zoom;
-  const dy = (y - v.foco[1]) * v.zoom;
-  return { x: v.destino[0] + dx * Math.cos(a) - dy * Math.sin(a), y: v.destino[1] + dx * Math.sin(a) + dy * Math.cos(a) };
-};
 
 /**
  * Busto + puntos/malla en canvas, con el teléfono delante. Todo comparte la
@@ -34,12 +22,7 @@ export const Escenario: React.FC<{
 }> = ({ cam, vista = VISTA_NEUTRA, busto, puntos, malla, extra, telefono, desenfoqueBusto = 0 }) => {
   const origen = telefono ? aLienzo(SENSORES.proyector, telefono.ubicacion) : undefined;
   return (
-    <AbsoluteFill
-      style={{
-        transformOrigin: "0 0",
-        transform: `translate(${vista.destino[0]}px, ${vista.destino[1]}px) rotate(${vista.giro}deg) scale(${vista.zoom}) translate(${-vista.foco[0]}px, ${-vista.foco[1]}px)`,
-      }}
-    >
+    <ContenedorVista vista={vista}>
       {/* Dos capas: el busto puede desenfocarse (profundidad de campo) y los puntos quedan nítidos. */}
       <Lienzo
         style={{ filter: desenfoqueBusto > 0.2 ? `blur(${desenfoqueBusto}px)` : undefined }}
@@ -58,6 +41,6 @@ export const Escenario: React.FC<{
           emision={telefono.emision}
         />
       ) : null}
-    </AbsoluteFill>
+    </ContenedorVista>
   );
 };

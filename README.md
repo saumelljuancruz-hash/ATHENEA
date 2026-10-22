@@ -6,6 +6,7 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | --- | --- | --- | --- |
 | ¿Por qué los aviones hacen una curva en el mapa? | `AvionReel` | `src/avion/` | `out/avion.mp4` |
 | ¿Cómo funciona el reconocimiento facial (Face ID)? | `FaceIdReel` | `src/faceid/` | `out/faceid.mp4` |
+| ¿Cómo calienta la comida un microondas? | `MicroondasReel` | `src/microondas/` | `out/microondas.mp4` |
 
 ## Archivos en `public/`
 
@@ -34,14 +35,17 @@ python3 scripts/generar-audio.py                       # regenera música y efec
 
 - **`src/comun/`** — todo lo que comparten los Reels de la cuenta:
   - `metadata.ts`: `crearCalcularMetadata()` mide la voz y fija la duración en `voz + pausa insertada + 0,5 s`,
-    entre `minFrames` y `maxFrames` (Face ID: 1800–2400; avión: 1800–2600 porque su locución dura 40,3 s).
+    entre `minFrames` y `maxFrames` (Face ID y microondas: 1800–2400; avión: 1800–2600 porque su locución dura 40,3 s).
     Si la locución no trae la pausa del Remate, la inserta cortando la voz en el silencio indicado.
   - `linea-de-tiempo.ts`: ubica cada escena y cada momento interno buscando frases en los timestamps.
   - `Hud.tsx` (etiquetas con línea animada, título de sección, contador), `Subtitulos.tsx`, `Fondo.tsx`,
-    `Sonido.tsx` (biblioteca de efectos, voz + música con ducking), `TarjetaPausa.tsx`, `RemateLineas.tsx`,
-    `CierreCTA.tsx`.
+    `Sonido.tsx` (biblioteca de efectos, voz + música con ducking), `vista.tsx` (zoom/giro de cámara 2D),
+    `TarjetaPausa.tsx`, `RemateLineas.tsx`, `CierreCTA.tsx`.
 - **`src/<reel>/guion-<reel>.ts`** — plantilla con textos, etiquetas, palabras clave, frases de anclaje y
   volúmenes. Para un Reel nuevo: copiá una carpeta de Reel, cambiá el guion y las escenas propias.
 - **Avión**: mapa con `d3-geo` + `world-atlas` y proyección interpolada globo → plano → Mercator.
 - **Face ID**: busto 3D propio en canvas (`src/faceid/cabeza.ts`: superficie paramétrica, iluminación y
   orden de profundidad), nube de ~3.000 puntos infrarrojos que representan los 30.000 reales, y malla 3D.
+- **Microondas**: microondas ilustrado en SVG con vista de frente y en corte (`src/microondas/componentes/`),
+  ondas que rebotan en las paredes, moléculas de agua (O + 2 H) que cambian de azul a naranja, y una
+  simulación simple de calor por celdas para los puntos calientes y el plato giratorio.

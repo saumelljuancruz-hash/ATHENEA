@@ -204,6 +204,45 @@ def candado():
     return lowpass(golpe * 0.7 + metal * 0.25 + segundo, 9000)
 
 
+def microondas(duracion=4.0):
+    # Zumbido del microondas: transformador a 100 Hz + ventilador (ruido filtrado). En bucle.
+    t = t_(duracion)
+    base = 2 * np.pi * 100 * t
+    hum = np.sin(base) + 0.6 * np.sin(2 * base) + 0.3 * np.sin(3 * base) + 0.15 * np.sign(np.sin(base)) * 0.3
+    ventilador = lowpass(lowpass(rng.standard_normal(len(t)), 700), 900) * 2.2
+    x = lowpass(hum * 0.5 + ventilador, 2500) * (1 + 0.05 * np.sin(2 * np.pi * 0.5 * t))
+    nc = SR // 4
+    rampa = np.linspace(0, 1, nc)
+    x[:nc] = x[:nc] * rampa + x[-nc:] * (1 - rampa)
+    return x[:-nc]
+
+
+def burbujeo(duracion=1.6):
+    # Burbujas: chirridos cortos ascendentes en momentos aleatorios.
+    salida = np.zeros(int(duracion * SR))
+    for k in range(38):
+        ini = rng.uniform(0, duracion - 0.08)
+        d = rng.uniform(0.02, 0.05)
+        t = t_(d)
+        f0 = rng.uniform(350, 900)
+        fase = 2 * np.pi * np.cumsum(f0 * (1 + 1.8 * t / d)) / SR
+        b = np.sin(fase) * np.sin(np.pi * t / d) ** 2 * rng.uniform(0.3, 1)
+        i0 = int(ini * SR)
+        salida[i0:i0 + len(b)] += b
+    e = np.ones_like(salida)
+    e[: SR // 10] = np.linspace(0, 1, SR // 10)
+    e[-SR // 4:] = np.linspace(1, 0, SR // 4)
+    return lowpass(salida * e, 4000)
+
+
+def ding():
+    # Campanita del microondas: parciales inarmónicos con decaimiento largo.
+    t = t_(1.8)
+    x = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, a, d in ((1568, 1, 2.2), (3920, 0.35, 4), (4704, 0.2, 5.5), (2350, 0.15, 3)))
+    golpe = rng.standard_normal(len(t)) * np.exp(-t * 250) * 0.3
+    return x + golpe
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     guardar("sfx-motor.wav", motor())
@@ -222,4 +261,8 @@ if __name__ == "__main__":
     guardar("sfx-zumbido.wav", zumbido())
     guardar("sfx-bip.wav", bip())
     guardar("sfx-candado.wav", candado())
+    # Efectos del Reel del microondas.
+    guardar("sfx-microondas.wav", microondas())
+    guardar("sfx-burbujeo.wav", burbujeo())
+    guardar("sfx-ding.wav", ding())
     print("Audio generado en", os.path.abspath(OUT))

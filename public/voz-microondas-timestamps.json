@@ -1,0 +1,495 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "El",
+   "inicio": 0.07,
+   "fin": 0.16
+  },
+  {
+   "palabra": "microondas",
+   "inicio": 0.16,
+   "fin": 0.94
+  },
+  {
+   "palabra": "no",
+   "inicio": 0.94,
+   "fin": 1.1
+  },
+  {
+   "palabra": "calienta",
+   "inicio": 1.1,
+   "fin": 1.72
+  },
+  {
+   "palabra": "la",
+   "inicio": 1.72,
+   "fin": 1.88
+  },
+  {
+   "palabra": "comida.",
+   "inicio": 1.88,
+   "fin": 2.51
+  },
+  {
+   "palabra": "Calienta",
+   "inicio": 2.51,
+   "fin": 2.96
+  },
+  {
+   "palabra": "el",
+   "inicio": 2.96,
+   "fin": 3.07
+  },
+  {
+   "palabra": "agua",
+   "inicio": 3.07,
+   "fin": 3.34
+  },
+  {
+   "palabra": "que",
+   "inicio": 3.34,
+   "fin": 3.56
+  },
+  {
+   "palabra": "tiene",
+   "inicio": 3.56,
+   "fin": 3.94
+  },
+  {
+   "palabra": "adentro.",
+   "inicio": 3.94,
+   "fin": 4.54
+  },
+  {
+   "palabra": "Una",
+   "inicio": 4.54,
+   "fin": 4.73
+  },
+  {
+   "palabra": "pieza",
+   "inicio": 4.73,
+   "fin": 5.05
+  },
+  {
+   "palabra": "llamada",
+   "inicio": 5.05,
+   "fin": 5.5
+  },
+  {
+   "palabra": "magnetrón",
+   "inicio": 5.5,
+   "fin": 6.24
+  },
+  {
+   "palabra": "lanza",
+   "inicio": 6.24,
+   "fin": 6.56
+  },
+  {
+   "palabra": "ondas",
+   "inicio": 6.56,
+   "fin": 6.93
+  },
+  {
+   "palabra": "invisibles.",
+   "inicio": 6.93,
+   "fin": 7.67
+  },
+  {
+   "palabra": "Esas",
+   "inicio": 7.92,
+   "fin": 8.18
+  },
+  {
+   "palabra": "ondas",
+   "inicio": 8.18,
+   "fin": 8.5
+  },
+  {
+   "palabra": "hacen",
+   "inicio": 8.5,
+   "fin": 8.83
+  },
+  {
+   "palabra": "girar",
+   "inicio": 8.83,
+   "fin": 9.15
+  },
+  {
+   "palabra": "las",
+   "inicio": 9.15,
+   "fin": 9.34
+  },
+  {
+   "palabra": "moléculas",
+   "inicio": 9.34,
+   "fin": 9.99
+  },
+  {
+   "palabra": "de",
+   "inicio": 9.99,
+   "fin": 10.12
+  },
+  {
+   "palabra": "agua",
+   "inicio": 10.12,
+   "fin": 10.44
+  },
+  {
+   "palabra": "dos",
+   "inicio": 10.44,
+   "fin": 10.81
+  },
+  {
+   "palabra": "mil",
+   "inicio": 10.81,
+   "fin": 11.18
+  },
+  {
+   "palabra": "cuatrocientos",
+   "inicio": 11.18,
+   "fin": 11.55
+  },
+  {
+   "palabra": "millones",
+   "inicio": 11.55,
+   "fin": 12.15
+  },
+  {
+   "palabra": "de",
+   "inicio": 12.15,
+   "fin": 12.3
+  },
+  {
+   "palabra": "veces",
+   "inicio": 12.3,
+   "fin": 12.67
+  },
+  {
+   "palabra": "por",
+   "inicio": 12.67,
+   "fin": 12.89
+  },
+  {
+   "palabra": "segundo.",
+   "inicio": 12.89,
+   "fin": 13.41
+  },
+  {
+   "palabra": "Y",
+   "inicio": 13.68,
+   "fin": 13.79
+  },
+  {
+   "palabra": "con",
+   "inicio": 13.79,
+   "fin": 14.01
+  },
+  {
+   "palabra": "tanto",
+   "inicio": 14.01,
+   "fin": 14.42
+  },
+  {
+   "palabra": "roce,",
+   "inicio": 14.42,
+   "fin": 14.74
+  },
+  {
+   "palabra": "se",
+   "inicio": 15.01,
+   "fin": 15.1
+  },
+  {
+   "palabra": "calientan.",
+   "inicio": 15.1,
+   "fin": 16.06
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 16.18,
+   "fin": 16.38
+  },
+  {
+   "palabra": "también",
+   "inicio": 16.38,
+   "fin": 16.85
+  },
+  {
+   "palabra": "comiste",
+   "inicio": 16.85,
+   "fin": 17.27
+  },
+  {
+   "palabra": "algo",
+   "inicio": 17.27,
+   "fin": 17.51
+  },
+  {
+   "palabra": "hirviendo",
+   "inicio": 17.51,
+   "fin": 18.05
+  },
+  {
+   "palabra": "por",
+   "inicio": 18.05,
+   "fin": 18.23
+  },
+  {
+   "palabra": "fuera",
+   "inicio": 18.23,
+   "fin": 18.53
+  },
+  {
+   "palabra": "y",
+   "inicio": 18.53,
+   "fin": 18.59
+  },
+  {
+   "palabra": "helado",
+   "inicio": 18.59,
+   "fin": 18.95
+  },
+  {
+   "palabra": "por",
+   "inicio": 18.95,
+   "fin": 19.13
+  },
+  {
+   "palabra": "dentro?",
+   "inicio": 19.13,
+   "fin": 19.49
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 19.76,
+   "fin": 20.36
+  },
+  {
+   "palabra": "en",
+   "inicio": 20.36,
+   "fin": 20.48
+  },
+  {
+   "palabra": "los",
+   "inicio": 20.48,
+   "fin": 20.66
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 20.66,
+   "fin": 21.52
+  },
+  {
+   "palabra": "Pasa",
+   "inicio": 21.52,
+   "fin": 21.77
+  },
+  {
+   "palabra": "porque",
+   "inicio": 21.77,
+   "fin": 22.15
+  },
+  {
+   "palabra": "las",
+   "inicio": 22.15,
+   "fin": 22.34
+  },
+  {
+   "palabra": "ondas",
+   "inicio": 22.34,
+   "fin": 22.65
+  },
+  {
+   "palabra": "no",
+   "inicio": 22.65,
+   "fin": 22.77
+  },
+  {
+   "palabra": "llegan",
+   "inicio": 22.77,
+   "fin": 23.14
+  },
+  {
+   "palabra": "igual",
+   "inicio": 23.14,
+   "fin": 23.46
+  },
+  {
+   "palabra": "a",
+   "inicio": 23.46,
+   "fin": 23.52
+  },
+  {
+   "palabra": "todos",
+   "inicio": 23.52,
+   "fin": 23.84
+  },
+  {
+   "palabra": "lados:",
+   "inicio": 23.84,
+   "fin": 24.16
+  },
+  {
+   "palabra": "hay",
+   "inicio": 24.42,
+   "fin": 24.61
+  },
+  {
+   "palabra": "puntos",
+   "inicio": 24.61,
+   "fin": 25.03
+  },
+  {
+   "palabra": "calientes",
+   "inicio": 25.03,
+   "fin": 25.62
+  },
+  {
+   "palabra": "y",
+   "inicio": 25.62,
+   "fin": 25.64
+  },
+  {
+   "palabra": "puntos",
+   "inicio": 25.64,
+   "fin": 26.03
+  },
+  {
+   "palabra": "fríos.",
+   "inicio": 26.03,
+   "fin": 26.42
+  },
+  {
+   "palabra": "Por",
+   "inicio": 26.75,
+   "fin": 26.88
+  },
+  {
+   "palabra": "eso",
+   "inicio": 26.88,
+   "fin": 27.1
+  },
+  {
+   "palabra": "el",
+   "inicio": 27.1,
+   "fin": 27.25
+  },
+  {
+   "palabra": "plato",
+   "inicio": 27.25,
+   "fin": 27.62
+  },
+  {
+   "palabra": "gira.",
+   "inicio": 27.62,
+   "fin": 27.91
+  },
+  {
+   "palabra": "Y",
+   "inicio": 27.91,
+   "fin": 28.13
+  },
+  {
+   "palabra": "el",
+   "inicio": 28.13,
+   "fin": 28.23
+  },
+  {
+   "palabra": "plato",
+   "inicio": 28.23,
+   "fin": 28.5
+  },
+  {
+   "palabra": "se",
+   "inicio": 28.5,
+   "fin": 28.65
+  },
+  {
+   "palabra": "calienta",
+   "inicio": 28.65,
+   "fin": 29.24
+  },
+  {
+   "palabra": "solo",
+   "inicio": 29.24,
+   "fin": 29.54
+  },
+  {
+   "palabra": "por",
+   "inicio": 29.54,
+   "fin": 29.76
+  },
+  {
+   "palabra": "tocar",
+   "inicio": 29.76,
+   "fin": 30.13
+  },
+  {
+   "palabra": "la",
+   "inicio": 30.13,
+   "fin": 30.28
+  },
+  {
+   "palabra": "comida.",
+   "inicio": 30.28,
+   "fin": 30.73
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 31.04,
+   "fin": 31.43
+  },
+  {
+   "palabra": "la",
+   "inicio": 31.43,
+   "fin": 31.56
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 31.56,
+   "fin": 31.95
+  },
+  {
+   "palabra": "para",
+   "inicio": 31.95,
+   "fin": 32.21
+  },
+  {
+   "palabra": "entender",
+   "inicio": 32.21,
+   "fin": 32.73
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 32.73,
+   "fin": 33.04
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 33.04,
+   "fin": 33.57
+  },
+  {
+   "palabra": "todo",
+   "inicio": 33.57,
+   "fin": 33.83
+  },
+  {
+   "palabra": "lo",
+   "inicio": 33.83,
+   "fin": 33.96
+  },
+  {
+   "palabra": "que",
+   "inicio": 33.96,
+   "fin": 34.15
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 34.15,
+   "fin": 34.46
+  }
+ ]
+}

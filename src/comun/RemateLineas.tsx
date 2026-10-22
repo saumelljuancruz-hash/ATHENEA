@@ -4,6 +4,9 @@ import { entre, flotar, resorte } from "./anim";
 import { Escena } from "./Escena";
 import { COLOR, FUENTE, SEGURO } from "./tema";
 
+/** Tamaño de letra para que la línea entre en el área segura (Inter ExtraBold ≈ 0,62 em por letra). */
+const tamanoLinea = (texto: string) => Math.min(84, Math.floor((SEGURO.ancho - SEGURO.izquierda - SEGURO.derecha) / (texto.length * 0.62)));
+
 /** Remate: tres líneas grandes, una por una con subrayado verde agua, sobre un fondo desenfocado. */
 export const RemateLineas: React.FC<{ duracion: number; lineas: string[]; fondo: React.ReactNode }> = ({
   duracion,
@@ -39,7 +42,7 @@ export const RemateLineas: React.FC<{ duracion: number; lineas: string[]; fondo:
                 style={{
                   fontFamily: FUENTE.inter,
                   fontWeight: 800,
-                  fontSize: 84,
+                  fontSize: tamanoLinea(texto),
                   lineHeight: 1,
                   letterSpacing: -1,
                   color: COLOR.texto,

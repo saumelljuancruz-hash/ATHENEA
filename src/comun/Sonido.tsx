@@ -17,6 +17,9 @@ export const EFECTOS = {
   zumbido: { src: "audio/sfx-zumbido.wav", volumen: 0.2 },
   bip: { src: "audio/sfx-bip.wav", volumen: 0.3 },
   candado: { src: "audio/sfx-candado.wav", volumen: 0.55 },
+  microondas: { src: "audio/sfx-microondas.wav", volumen: 0.18 },
+  burbujeo: { src: "audio/sfx-burbujeo.wav", volumen: 0.3 },
+  ding: { src: "audio/sfx-ding.wav", volumen: 0.4 },
 };
 
 export const MUSICA = "audio/musica-suave.mp3";
