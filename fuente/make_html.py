@@ -24,7 +24,7 @@ KICKERS = {
 }
 
 # Secciones que abren página nueva (bloques temáticos de la revista)
-NEW_PAGE = {1, 4, 6, 9, 17, 20, 22, 25, 27, 28, 29}
+NEW_PAGE = {1, 27, 28, 29}
 
 # Figuras: (archivo, epígrafe, tipo). "wide" = ancho completo, "col" = dentro de la columna
 FIGS = {
@@ -34,25 +34,57 @@ FIGS = {
          "civilización del valle del Indo, que floreció hacia el 2500 a. C.", "wide-photo"),
         ("mapa.jpg", "Mapa de las rutas de las migraciones indoarias hacia el subcontinente indio "
          "(c. 1750 a. C.), vinculadas al origen de la tradición védica.", "col")],
+    5: [("hoja_palma.jpg", "Manuscrito en hoja de palma. Durante siglos, muchos textos de la India "
+         "se copiaron a mano sobre este material.", "col")],
     6: [("panca.jpg", "Panca Sradha: las cinco creencias fundamentales del hinduismo. Brahman, Atman, "
          "Karma Phala (el fruto de las acciones), Samsara y Moksha.", "col")],
     7: [("diosas.jpg", "Lakshmi, diosa de la prosperidad (arriba), junto a Ganesha y Saraswati, "
          "en una representación devocional tradicional.", "col")],
+    8: [("trimurti_pintura.jpg", "La Trimurti en una pintura tradicional: Brahma, con sus cuatro caras "
+         "(izquierda), Vishnu (centro) y Shiva, con el tridente (derecha).", "wide")],
     9: [("dashavatara.jpg", "Dashavatara: los diez avatares de Vishnu, desde Matsya, el pez, "
-         "hasta Kalki, el avatar que todavía no habría aparecido.", "wide")],
-    11: [("gopuram.jpg", "Gopuram (torre de entrada) de un templo del sur de la India, cubierto de "
+         "hasta Kalki, el avatar que todavía no habría aparecido.", "wide-end")],
+    10: [("trimurti_lamina.jpg", "Brahma, Vishnu y Shiva de pie sobre flores de loto, en una lámina "
+          "devocional. Cada corriente da mayor importancia a una u otra divinidad.", "col")],
+    11: [("khajuraho.jpg", "Templo de Khajuraho, en el centro de la India: cada nivel de la torre "
+          "está cubierto de esculturas talladas en piedra.", "col"),
+         ("gopuram.jpg", "Gopuram (torre de entrada) de un templo del sur de la India, cubierto de "
           "esculturas policromadas de divinidades y escenas sagradas.", "col")],
+    12: [("varanasi.jpg", "Los ghats de Varanasi, escalinatas a orillas del Ganges donde se realizan "
+          "baños rituales, ceremonias y cremaciones.", "col")],
     13: [("puja.jpg", "Ofrenda de flores e incienso durante una puja, una de las formas "
-          "de adoración más extendidas, en el templo o en el hogar.", "wide-photo")],
+          "de adoración más extendidas, en el templo o en el hogar.", "col"),
+         ("darshan.jpg", "Fieles reunidos ante el santuario de un templo para el darshan, "
+          "la contemplación de la divinidad.", "col")],
     14: [("holi_diwali.jpg", "A la izquierda, Holi, el festival de los colores; a la derecha, las diyas "
-          "encendidas de Diwali, el festival de las luces.", "wide-photo")],
+          "encendidas de Diwali, el festival de las luces.", "col")],
+    15: [("vestimenta.jpg", "Vestimenta tradicional: él lleva kurta y dhoti; ella, un sari.", "col")],
+    16: [("thali.jpg", "Un thali, plato que reúne arroz, dal, curry, roti, samosas y dulces, "
+          "algunas de las comidas típicas de la India.", "col")],
+    17: [("mujeres_ofrendas.jpg", "Mujeres vestidas con saris llevan ofrendas sobre la cabeza durante "
+          "una celebración religiosa en el sur de la India.", "col")],
     18: [("castas.jpg", "Esquema tradicional del sistema de castas: las cuatro varnas y, en la base, "
-          "los dalits, históricamente excluidos de ellas.", "col")],
+          "los dalits, históricamente excluidos de ellas.", "col"),
+         ("varnas.jpg", "Ilustración de las actividades asociadas tradicionalmente a las varnas: "
+          "sacerdotes y maestros, guerreros, comerciantes y campesinos.", "col")],
+    19: [("om_vaca_loto.jpg", "El Om, la flor de loto y la vaca: símbolos ligados a valores como la "
+          "espiritualidad y el respeto por la vida.", "col")],
+    20: [("altar_hogar.jpg", "Una mujer enciende incienso frente al altar de su casa: las prácticas "
+          "religiosas siguen presentes en la vida moderna.", "col")],
     21: [("lugares_culto.jpg", "Lugares de culto de algunas de las religiones presentes en la India: "
           "templo hindú, mezquita, gurdwara sikh, iglesia, pagoda budista y templo jainista.", "col")],
+    22: [("diwali_familia.jpg", "Una familia enciende diyas durante Diwali. Las celebraciones fortalecen "
+          "los vínculos y transmiten tradiciones de una generación a otra.", "col")],
+    24: [("familia_puja.jpg", "Una familia reza unida frente a un pequeño altar en su hogar, rodeado "
+          "de flores, lámparas y rangoli.", "col")],
     25: [("danza.jpg", "Bailarina de bharatanatyam, danza clásica del sur de la India que, mediante "
           "gestos y movimientos, narra relatos de las divinidades.", "col")],
+    26: [("aarti.jpg", "Un sacerdote realiza el aarti: mueve una lámpara encendida frente a la imagen "
+          "de una divinidad mientras ofrece flores.", "col")],
 }
+
+# Posición (en bloques de texto) de las figuras de columna, por sección
+FIG_POS = {7: [3], 18: [3, 9], 11: [1, 4], 13: [2, 8], 4: [1, 5], 12: [1], 14: [2], 8: [1]}
 
 # Citas destacadas (frases textuales del documento)
 QUOTES = {
@@ -186,14 +218,17 @@ def section_html(num, title, items):
         deck = f'<p class="deck">{html.escape(items[0][2:-2])}</p>'
         items = items[1:]
     figs = FIGS.get(num, [])
-    wide = "".join(figure(*f) for f in figs if f[2] != "col")
+    wide = "".join(figure(*f) for f in figs if f[2] in ("wide", "wide-photo"))
+    wide_end = "".join(figure(*f) for f in figs if f[2] == "wide-end")
     cols = [f for f in figs if f[2] == "col"]
     body = render_body(num, items)
     # Insertar figura de columna después del 2.º párrafo / término
     if cols:
         pieces = body.split("\n")
-        pos = {7: 3, 18: 3, 11: 0}.get(num, 2)
-        pieces.insert(pos, "".join(figure(*f) for f in cols))
+        n = len(pieces)
+        pos = FIG_POS.get(num, [2, int(n * 0.6)])
+        for k in range(len(cols) - 1, -1, -1):
+            pieces.insert(min(pos[k], len(pieces)), figure(*cols[k]))
         body = "\n".join(pieces)
     if num in QUOTES:
         pieces = body.split("\n")
@@ -216,6 +251,7 @@ def section_html(num, title, items):
   <div class="cols">
 {body}
   </div>
+  {wide_end}
   {closing(num)}
 </section>"""
 
@@ -246,7 +282,6 @@ def symbols_section(num, title, items):
     </div>
   </header>
   <div class="symlist">{rows}</div>
-  <blockquote class="pull wide">{html.escape(QUOTES[num])}</blockquote>
 </section>"""
 
 
@@ -317,7 +352,7 @@ page = f"""<!doctype html>
 <link rel="stylesheet" href="revista.css">
 </head><body>
 
-<div class="cover"><img src="img/portada.jpg" alt=""></div>
+<div class="cover"></div>
 
 <section class="toc">
   <p class="toc-kicker">Revista Hinduismo · N.º 1</p>
@@ -329,7 +364,7 @@ page = f"""<!doctype html>
 
 {body_sections}
 
-<div class="cover back"><img src="img/contra.jpg" alt=""></div>
+<div class="cover back"></div>
 </body></html>"""
 
 open("revista.html", "w", encoding="utf-8").write(page)
