@@ -1,11 +1,12 @@
 import { ALL_FORMATS, Input, UrlSource } from "mediabunny";
 import { CalculateMetadataFunction, staticFile } from "remotion";
-import { ARCHIVOS, CUENTA } from "./guion-avion";
+import { ARCHIVOS, CUENTA, PAUSA_REMATE } from "./guion-avion";
+import { normalizar } from "./linea-de-tiempo";
 import { PalabraConTiempo, TIMESTAMPS_ESTIMADOS } from "./timestamps-estimados";
 
 export const FPS = 60;
 const MIN_FRAMES = 1800;
-const MAX_FRAMES = 2400;
+const MAX_FRAMES = 2600;
 const COLA_SEGUNDOS = 0.5;
 
 export type PropsReel = {
@@ -14,6 +15,8 @@ export type PropsReel = {
   duracionVoz: number;
   vozDisponible: boolean;
   logoDisponible: boolean;
+  /** Pausa insertada en la voz: se corta en `corte` (s del audio) y se retoma `segundos` después. */
+  pausaVoz: { corte: number; segundos: number } | null;
 };
 
 export const PROPS_POR_DEFECTO: PropsReel = {
@@ -22,6 +25,7 @@ export const PROPS_POR_DEFECTO: PropsReel = {
   duracionVoz: TIMESTAMPS_ESTIMADOS[TIMESTAMPS_ESTIMADOS.length - 1].fin + 0.3,
   vozDisponible: false,
   logoDisponible: false,
+  pausaVoz: null,
 };
 
 const existe = async (src: string, signal?: AbortSignal) => {
@@ -101,6 +105,27 @@ export const parsearTimestamps = (json: unknown): PalabraConTiempo[] => {
     .filter((p) => p.palabra.length > 0);
 };
 
+/** Si la voz no trae la pausa del Remate, la inserta y corre las palabras siguientes. */
+const insertarPausa = (palabras: PalabraConTiempo[]) => {
+  const tokens = PAUSA_REMATE.despuesDe.split(/\s+/).map(normalizar);
+  const i = palabras.findIndex((_, k) =>
+    tokens.every((t, n) => normalizar(palabras[k + n]?.palabra ?? "") === t),
+  );
+  const ultima = palabras[i + tokens.length - 1];
+  const siguiente = palabras[i + tokens.length];
+  if (i < 0 || !siguiente || siguiente.inicio - ultima.fin >= PAUSA_REMATE.silencioMinimo) {
+    return { palabras, pausaVoz: null };
+  }
+  const corte = (ultima.fin + siguiente.inicio) / 2;
+  const segundos = PAUSA_REMATE.segundos;
+  return {
+    pausaVoz: { corte, segundos },
+    palabras: palabras.map((p) =>
+      p.inicio >= corte ? { ...p, inicio: p.inicio + segundos, fin: p.fin + segundos } : p,
+    ),
+  };
+};
+
 export const calcularMetadata: CalculateMetadataFunction<PropsReel> = async ({
   props,
   abortSignal,
@@ -137,7 +162,13 @@ export const calcularMetadata: CalculateMetadataFunction<PropsReel> = async ({
     fuenteTimestamps = duracionReal ? "estimados-escalados" : "estimados";
   }
 
-  const duracionVoz = duracionReal ?? palabras[palabras.length - 1].fin + 0.3;
+  const conPausa = insertarPausa(palabras);
+  palabras = conPausa.palabras;
+  const pausaVoz = conPausa.pausaVoz;
+
+  const duracionVoz = duracionReal
+    ? duracionReal + (pausaVoz?.segundos ?? 0)
+    : palabras[palabras.length - 1].fin + 0.3;
   const durationInFrames = Math.min(
     MAX_FRAMES,
     Math.max(MIN_FRAMES, Math.ceil((duracionVoz + COLA_SEGUNDOS) * FPS)),
@@ -153,6 +184,7 @@ export const calcularMetadata: CalculateMetadataFunction<PropsReel> = async ({
       duracionVoz,
       vozDisponible,
       logoDisponible,
+      pausaVoz,
     },
   };
 };

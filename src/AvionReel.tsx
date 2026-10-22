@@ -15,7 +15,7 @@ import { ARCHIVOS, SUBTITULOS, VOLUMEN } from "./guion-avion";
 import { construirLineaDeTiempo, EscenaId, intensidadVoz } from "./linea-de-tiempo";
 import { COLOR } from "./tema";
 
-export const AvionReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoDisponible }) => {
+export const AvionReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoDisponible, pausaVoz }) => {
   const { fps, durationInFrames } = useVideoConfig();
   const linea = useMemo(
     () => construirLineaDeTiempo(palabras, fps, durationInFrames),
@@ -68,7 +68,17 @@ export const AvionReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoDi
       <Subtitulos palabras={palabras} ocultar={ocultarSubtitulos} />
 
       {/* Audio */}
-      {vozDisponible ? <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} /> : null}
+      {vozDisponible && !pausaVoz ? <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} /> : null}
+      {vozDisponible && pausaVoz ? (
+        <>
+          <Sequence name="Voz (1/2)" layout="none">
+            <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} trimAfter={Math.round(pausaVoz.corte * fps)} />
+          </Sequence>
+          <Sequence name="Voz (2/2)" from={Math.round((pausaVoz.corte + pausaVoz.segundos) * fps)} layout="none">
+            <Audio src={staticFile(ARCHIVOS.voz)} volume={VOLUMEN.voz} trimBefore={Math.round(pausaVoz.corte * fps)} />
+          </Sequence>
+        </>
+      ) : null}
       <Audio src={staticFile(ARCHIVOS.musica)} loop volume={volumenMusica} />
       {(["mapaMiente", "prueba", "granCirculo", "remate", "cta"] as const).map((id) => (
         <Sfx key={id} efecto="whoosh" desde={Math.max(0, e[id].desde - 8)} />

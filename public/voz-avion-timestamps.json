@@ -1,0 +1,600 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Si",
+   "inicio": 0.07,
+   "fin": 0.14
+  },
+  {
+   "palabra": "mirás",
+   "inicio": 0.14,
+   "fin": 0.5
+  },
+  {
+   "palabra": "un",
+   "inicio": 0.5,
+   "fin": 0.63
+  },
+  {
+   "palabra": "vuelo",
+   "inicio": 0.63,
+   "fin": 0.99
+  },
+  {
+   "palabra": "en",
+   "inicio": 0.99,
+   "fin": 1.13
+  },
+  {
+   "palabra": "el",
+   "inicio": 1.13,
+   "fin": 1.27
+  },
+  {
+   "palabra": "mapa,",
+   "inicio": 1.27,
+   "fin": 1.71
+  },
+  {
+   "palabra": "parece",
+   "inicio": 1.71,
+   "fin": 2.1
+  },
+  {
+   "palabra": "que",
+   "inicio": 2.1,
+   "fin": 2.35
+  },
+  {
+   "palabra": "da",
+   "inicio": 2.35,
+   "fin": 2.51
+  },
+  {
+   "palabra": "una",
+   "inicio": 2.51,
+   "fin": 2.76
+  },
+  {
+   "palabra": "vuelta",
+   "inicio": 2.76,
+   "fin": 3.26
+  },
+  {
+   "palabra": "enorme.",
+   "inicio": 3.26,
+   "fin": 3.88
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 3.93,
+   "fin": 4.19
+  },
+  {
+   "palabra": "esa",
+   "inicio": 4.19,
+   "fin": 4.39
+  },
+  {
+   "palabra": "curva",
+   "inicio": 4.39,
+   "fin": 4.79
+  },
+  {
+   "palabra": "es",
+   "inicio": 4.79,
+   "fin": 4.88
+  },
+  {
+   "palabra": "el",
+   "inicio": 4.88,
+   "fin": 5.04
+  },
+  {
+   "palabra": "camino",
+   "inicio": 5.04,
+   "fin": 5.4
+  },
+  {
+   "palabra": "más",
+   "inicio": 5.4,
+   "fin": 5.87
+  },
+  {
+   "palabra": "corto.",
+   "inicio": 5.87,
+   "fin": 6.6
+  },
+  {
+   "palabra": "La",
+   "inicio": 6.7,
+   "fin": 6.84
+  },
+  {
+   "palabra": "Tierra",
+   "inicio": 6.84,
+   "fin": 7.26
+  },
+  {
+   "palabra": "es",
+   "inicio": 7.26,
+   "fin": 7.4
+  },
+  {
+   "palabra": "redonda,",
+   "inicio": 7.4,
+   "fin": 7.89
+  },
+  {
+   "palabra": "y",
+   "inicio": 8.1,
+   "fin": 8.22
+  },
+  {
+   "palabra": "para",
+   "inicio": 8.22,
+   "fin": 8.38
+  },
+  {
+   "palabra": "dibujarla",
+   "inicio": 8.38,
+   "fin": 9.04
+  },
+  {
+   "palabra": "plana",
+   "inicio": 9.04,
+   "fin": 9.61
+  },
+  {
+   "palabra": "hay",
+   "inicio": 9.61,
+   "fin": 9.81
+  },
+  {
+   "palabra": "que",
+   "inicio": 9.81,
+   "fin": 10.04
+  },
+  {
+   "palabra": "estirarla.",
+   "inicio": 10.04,
+   "fin": 10.91
+  },
+  {
+   "palabra": "Por",
+   "inicio": 11,
+   "fin": 11.14
+  },
+  {
+   "palabra": "eso",
+   "inicio": 11.14,
+   "fin": 11.28
+  },
+  {
+   "palabra": "Groenlandia",
+   "inicio": 11.28,
+   "fin": 11.88
+  },
+  {
+   "palabra": "parece",
+   "inicio": 11.88,
+   "fin": 12.29
+  },
+  {
+   "palabra": "igual",
+   "inicio": 12.29,
+   "fin": 12.63
+  },
+  {
+   "palabra": "de",
+   "inicio": 12.63,
+   "fin": 12.76
+  },
+  {
+   "palabra": "grande",
+   "inicio": 12.76,
+   "fin": 13.17
+  },
+  {
+   "palabra": "que",
+   "inicio": 13.17,
+   "fin": 13.37
+  },
+  {
+   "palabra": "África,",
+   "inicio": 13.37,
+   "fin": 13.91
+  },
+  {
+   "palabra": "cuando",
+   "inicio": 13.96,
+   "fin": 14.37
+  },
+  {
+   "palabra": "en",
+   "inicio": 14.37,
+   "fin": 14.5
+  },
+  {
+   "palabra": "realidad",
+   "inicio": 14.5,
+   "fin": 15.06
+  },
+  {
+   "palabra": "África",
+   "inicio": 15.06,
+   "fin": 15.54
+  },
+  {
+   "palabra": "es",
+   "inicio": 15.54,
+   "fin": 15.64
+  },
+  {
+   "palabra": "catorce",
+   "inicio": 15.64,
+   "fin": 16.05
+  },
+  {
+   "palabra": "veces",
+   "inicio": 16.05,
+   "fin": 16.39
+  },
+  {
+   "palabra": "más",
+   "inicio": 16.39,
+   "fin": 16.66
+  },
+  {
+   "palabra": "grande.",
+   "inicio": 16.66,
+   "fin": 17.2
+  },
+  {
+   "palabra": "¿Alguna",
+   "inicio": 17.87,
+   "fin": 18.2
+  },
+  {
+   "palabra": "vez",
+   "inicio": 18.2,
+   "fin": 18.37
+  },
+  {
+   "palabra": "miraste",
+   "inicio": 18.37,
+   "fin": 18.77
+  },
+  {
+   "palabra": "la",
+   "inicio": 18.77,
+   "fin": 18.88
+  },
+  {
+   "palabra": "ruta",
+   "inicio": 18.88,
+   "fin": 19.11
+  },
+  {
+   "palabra": "de",
+   "inicio": 19.11,
+   "fin": 19.22
+  },
+  {
+   "palabra": "tu",
+   "inicio": 19.22,
+   "fin": 19.33
+  },
+  {
+   "palabra": "vuelo",
+   "inicio": 19.33,
+   "fin": 19.61
+  },
+  {
+   "palabra": "en",
+   "inicio": 19.61,
+   "fin": 19.72
+  },
+  {
+   "palabra": "la",
+   "inicio": 19.72,
+   "fin": 19.85
+  },
+  {
+   "palabra": "pantallita",
+   "inicio": 19.85,
+   "fin": 20.4
+  },
+  {
+   "palabra": "del",
+   "inicio": 20.4,
+   "fin": 20.57
+  },
+  {
+   "palabra": "avión?",
+   "inicio": 20.57,
+   "fin": 21.2
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 21.28,
+   "fin": 21.62
+  },
+  {
+   "palabra": "en",
+   "inicio": 21.62,
+   "fin": 21.72
+  },
+  {
+   "palabra": "los",
+   "inicio": 21.72,
+   "fin": 21.84
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 21.84,
+   "fin": 22.84
+  },
+  {
+   "palabra": "Ahora",
+   "inicio": 22.84,
+   "fin": 23.21
+  },
+  {
+   "palabra": "tirá",
+   "inicio": 23.21,
+   "fin": 23.5
+  },
+  {
+   "palabra": "un",
+   "inicio": 23.5,
+   "fin": 23.64
+  },
+  {
+   "palabra": "hilo",
+   "inicio": 23.64,
+   "fin": 23.93
+  },
+  {
+   "palabra": "sobre",
+   "inicio": 23.93,
+   "fin": 24.3
+  },
+  {
+   "palabra": "un",
+   "inicio": 24.3,
+   "fin": 24.44
+  },
+  {
+   "palabra": "globo",
+   "inicio": 24.44,
+   "fin": 24.8
+  },
+  {
+   "palabra": "terráqueo,",
+   "inicio": 24.8,
+   "fin": 25.53
+  },
+  {
+   "palabra": "de",
+   "inicio": 25.67,
+   "fin": 25.81
+  },
+  {
+   "palabra": "Nueva",
+   "inicio": 25.81,
+   "fin": 26.28
+  },
+  {
+   "palabra": "York",
+   "inicio": 26.28,
+   "fin": 26.46
+  },
+  {
+   "palabra": "a",
+   "inicio": 26.46,
+   "fin": 26.53
+  },
+  {
+   "palabra": "Tokio.",
+   "inicio": 26.53,
+   "fin": 27.12
+  },
+  {
+   "palabra": "El",
+   "inicio": 27.24,
+   "fin": 27.37
+  },
+  {
+   "palabra": "hilo",
+   "inicio": 27.37,
+   "fin": 27.65
+  },
+  {
+   "palabra": "pasa",
+   "inicio": 27.65,
+   "fin": 27.9
+  },
+  {
+   "palabra": "cerca",
+   "inicio": 27.9,
+   "fin": 28.28
+  },
+  {
+   "palabra": "de",
+   "inicio": 28.28,
+   "fin": 28.44
+  },
+  {
+   "palabra": "Alaska.",
+   "inicio": 28.44,
+   "fin": 28.91
+  },
+  {
+   "palabra": "Y",
+   "inicio": 29.14,
+   "fin": 29.18
+  },
+  {
+   "palabra": "es",
+   "inicio": 29.18,
+   "fin": 29.3
+  },
+  {
+   "palabra": "justo",
+   "inicio": 29.3,
+   "fin": 29.79
+  },
+  {
+   "palabra": "por",
+   "inicio": 29.79,
+   "fin": 29.95
+  },
+  {
+   "palabra": "donde",
+   "inicio": 29.95,
+   "fin": 30.32
+  },
+  {
+   "palabra": "vuela",
+   "inicio": 30.32,
+   "fin": 30.71
+  },
+  {
+   "palabra": "el",
+   "inicio": 30.71,
+   "fin": 30.87
+  },
+  {
+   "palabra": "avión.",
+   "inicio": 30.87,
+   "fin": 31.44
+  },
+  {
+   "palabra": "Esa",
+   "inicio": 31.64,
+   "fin": 31.81
+  },
+  {
+   "palabra": "ruta",
+   "inicio": 31.81,
+   "fin": 32.04
+  },
+  {
+   "palabra": "se",
+   "inicio": 32.04,
+   "fin": 32.16
+  },
+  {
+   "palabra": "llama",
+   "inicio": 32.16,
+   "fin": 32.45
+  },
+  {
+   "palabra": "gran",
+   "inicio": 32.45,
+   "fin": 32.69
+  },
+  {
+   "palabra": "círculo,",
+   "inicio": 32.69,
+   "fin": 33.15
+  },
+  {
+   "palabra": "y",
+   "inicio": 33.32,
+   "fin": 33.58
+  },
+  {
+   "palabra": "ahorra",
+   "inicio": 33.58,
+   "fin": 34.12
+  },
+  {
+   "palabra": "horas",
+   "inicio": 34.12,
+   "fin": 34.4
+  },
+  {
+   "palabra": "de",
+   "inicio": 34.4,
+   "fin": 34.54
+  },
+  {
+   "palabra": "vuelo",
+   "inicio": 34.54,
+   "fin": 34.97
+  },
+  {
+   "palabra": "y",
+   "inicio": 34.97,
+   "fin": 34.97
+  },
+  {
+   "palabra": "muchísimo",
+   "inicio": 34.97,
+   "fin": 35.69
+  },
+  {
+   "palabra": "combustible.",
+   "inicio": 35.69,
+   "fin": 36.47
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 36.76,
+   "fin": 37.05
+  },
+  {
+   "palabra": "la",
+   "inicio": 37.05,
+   "fin": 37.16
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 37.16,
+   "fin": 37.5
+  },
+  {
+   "palabra": "para",
+   "inicio": 37.5,
+   "fin": 37.72
+  },
+  {
+   "palabra": "entender",
+   "inicio": 37.72,
+   "fin": 38.26
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 38.26,
+   "fin": 38.45
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 38.45,
+   "fin": 38.96
+  },
+  {
+   "palabra": "todo",
+   "inicio": 38.96,
+   "fin": 39.36
+  },
+  {
+   "palabra": "lo",
+   "inicio": 39.36,
+   "fin": 39.66
+  },
+  {
+   "palabra": "que",
+   "inicio": 39.66,
+   "fin": 39.96
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 39.96,
+   "fin": 40.26
+  }
+ ]
+}

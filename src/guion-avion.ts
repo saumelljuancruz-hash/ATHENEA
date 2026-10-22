@@ -59,6 +59,16 @@ export const ANCLAS = {
   adelanto: 0.12,
 };
 
+/**
+ * Pausa para el Remate. Si la locución no la trae (silencio menor a
+ * `silencioMinimo`), se inserta cortando la voz en el silencio después de la frase.
+ */
+export const PAUSA_REMATE = {
+  despuesDe: "muchísimo combustible",
+  segundos: 2.5,
+  silencioMinimo: 2,
+};
+
 /** Momentos internos de cada escena, también anclados a frases de la voz. */
 export const MARCAS = {
   hook: {

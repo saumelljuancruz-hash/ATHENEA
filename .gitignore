@@ -5,3 +5,6 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Whisper.cpp (lo descarga scripts/transcribir-voz.mjs)
+whisper.cpp
