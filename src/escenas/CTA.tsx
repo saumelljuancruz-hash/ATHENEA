@@ -215,7 +215,19 @@ const MiniReel: React.FC<{ frame: number }> = ({ frame }) => {
 
 const Logo: React.FC<{ disponible: boolean }> = ({ disponible }) =>
   disponible ? (
-    <Img src={staticFile(CUENTA.logo)} style={{ width: 84, height: 84, borderRadius: 42, objectFit: "cover", border: `3px solid ${COLOR.verde}` }} />
+    <div
+      style={{
+        width: 96,
+        height: 96,
+        borderRadius: 48,
+        overflow: "hidden",
+        border: "2px solid rgba(255,255,255,0.18)",
+        boxShadow: `0 0 24px ${COLOR.verde}55`,
+      }}
+    >
+      {/* El logo trae margen oscuro: se amplía para que se lean los anillos. */}
+      <Img src={staticFile(CUENTA.logo)} style={{ width: "100%", height: "100%", objectFit: "cover", scale: "1.45" }} />
+    </div>
   ) : (
     <div
       style={{
