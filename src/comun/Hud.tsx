@@ -142,7 +142,8 @@ export const ContadorHud: React.FC<{
   aparece?: number;
   sale?: number;
   extra?: string;
-}> = ({ etiqueta, valor, decimales = 0, unidad = "", color = COLOR.azul, aparece = 6, sale, extra }) => {
+  prefijo?: string;
+}> = ({ etiqueta, valor, decimales = 0, unidad = "", color = COLOR.azul, aparece = 6, sale, extra, prefijo = "" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const entrada = resorte(frame, fps, aparece, { damping: 18 });
@@ -171,6 +172,7 @@ export const ContadorHud: React.FC<{
         {etiqueta}
       </div>
       <div style={{ fontSize: 44, fontWeight: 700, color, marginTop: 2 }}>
+        {prefijo}
         {formatear(valor, decimales)}
         {unidad ? <span style={{ fontSize: 26, marginLeft: 8, color: COLOR.texto }}>{unidad}</span> : null}
         {extra ? <span style={{ fontSize: 22, marginLeft: 14, color: COLOR.textoSuave }}>{extra}</span> : null}

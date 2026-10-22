@@ -168,6 +168,42 @@ def tap():
     return lowpass(clic * 0.6 + cuerpo, 6000)
 
 
+def zumbido(duracion=4.0):
+    # Zumbido electrónico suave (bucle): tono grave con armónicos y leve modulación.
+    t = t_(duracion)
+    base = 2 * np.pi * 110 * t
+    x = np.sin(base) + 0.45 * np.sin(2 * base) + 0.2 * np.sin(3 * base + 0.3)
+    x *= 0.75 + 0.25 * np.sin(2 * np.pi * 6 * t)
+    x += 0.15 * lowpass(rng.standard_normal(len(t)), 900)
+    x = lowpass(x, 1800)
+    nc = SR // 4
+    rampa = np.linspace(0, 1, nc)
+    x[:nc] = x[:nc] * rampa + x[-nc:] * (1 - rampa)
+    return x[:-nc]
+
+
+def bip():
+    # "Bip" de escaneo: dos tonos cortos y limpios.
+    salida = np.zeros(int(0.32 * SR))
+    for k, (f, ini) in enumerate(((1760, 0.0), (2350, 0.13))):
+        t = t_(0.11)
+        tono = np.sin(2 * np.pi * f * t) * np.exp(-t * 18) * env_adsr(len(t), 0.004, 0.03)
+        i0 = int(ini * SR)
+        salida[i0:i0 + len(t)] += tono * (0.8 if k == 0 else 1)
+    return salida
+
+
+def candado():
+    # Click de candado: golpe metálico corto + resorte.
+    t = t_(0.25)
+    golpe = rng.standard_normal(len(t)) * np.exp(-t * 90)
+    metal = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, d in ((2900, 45), (4100, 60), (1250, 30)))
+    segundo = np.zeros_like(t)
+    i0 = int(0.06 * SR)
+    segundo[i0:] = (rng.standard_normal(len(t) - i0) * np.exp(-t[: len(t) - i0] * 120)) * 0.6
+    return lowpass(golpe * 0.7 + metal * 0.25 + segundo, 9000)
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     guardar("sfx-motor.wav", motor())
@@ -182,4 +218,8 @@ if __name__ == "__main__":
         os.remove(ruta)
     except (FileNotFoundError, subprocess.CalledProcessError):
         pass
+    # Efectos del Reel de Face ID (al final, para no cambiar la secuencia aleatoria de lo anterior).
+    guardar("sfx-zumbido.wav", zumbido())
+    guardar("sfx-bip.wav", bip())
+    guardar("sfx-candado.wav", candado())
     print("Audio generado en", os.path.abspath(OUT))

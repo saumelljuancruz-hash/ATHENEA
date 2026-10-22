@@ -1,14 +1,19 @@
-# Nadie Te Lo Explicó — "¿Por qué los aviones hacen una curva?"
+# Nadie Te Lo Explicó — Reels animados
 
-Reel vertical (1080×1920, 60 fps) hecho con [Remotion](https://remotion.dev) para **@nadietelo.explico**.
+Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev) para **@nadietelo.explico**.
 
-## Archivos que tenés que poner en `public/`
+| Reel | Composición | Carpeta | Salida |
+| --- | --- | --- | --- |
+| ¿Por qué los aviones hacen una curva en el mapa? | `AvionReel` | `src/avion/` | `out/avion.mp4` |
+| ¿Cómo funciona el reconocimiento facial (Face ID)? | `FaceIdReel` | `src/faceid/` | `out/faceid.mp4` |
+
+## Archivos en `public/`
 
 | Archivo | Para qué | Si falta |
 | --- | --- | --- |
-| `voz-avion.mp3` | Voz en off (100 %) | El video se arma igual, sin voz, con la duración de los timestamps estimados |
-| `voz-avion-timestamps.json` | Subtítulos palabra por palabra exactos (se genera con `scripts/transcribir-voz.mjs`) | Se usan los estimados de `src/timestamps-estimados.ts`, escalados al largo real del audio |
-| `logo.png` | Logo en la CTA | Se dibuja un monograma "NT" provisorio |
+| `voz-<reel>.mp3` | Voz en off (100 %) | El video se arma igual, sin voz, con los timestamps estimados |
+| `voz-<reel>-timestamps.json` | Subtítulos palabra por palabra (se genera con `scripts/transcribir-voz.mjs`) | Se usan los estimados de `src/<reel>/timestamps-estimados.ts`, escalados al largo real del audio |
+| `logo.png` | Logo en el cierre | Se dibuja un monograma "NT" provisorio |
 
 El JSON de timestamps acepta: un array `[{word|text|palabra, start|inicio|startMs, end|fin|endMs}]`,
 `{words: [...]}`, Whisper (`{segments: [{words}]}`) o la alineación por caracteres de ElevenLabs
@@ -18,26 +23,25 @@ El JSON de timestamps acepta: un array `[{word|text|palabra, start|inicio|startM
 
 ```bash
 npm i
-node --no-warnings scripts/transcribir-voz.mjs   # timestamps reales de la voz (Whisper local)
-npx remotion studio                  # revisar timing
+node --no-warnings scripts/transcribir-voz.mjs faceid   # timestamps reales de la voz (Whisper local)
+npx remotion studio                                    # revisar timing
+npx remotion render FaceIdReel out/faceid.mp4 --codec=h264 --crf=18 --audio-codec=aac --audio-bitrate=192k
 npx remotion render AvionReel out/avion.mp4 --codec=h264 --crf=18 --audio-codec=aac --audio-bitrate=192k
-python3 scripts/generar-audio.py     # regenera música y efectos (síntesis propia, sin licencias)
+python3 scripts/generar-audio.py                       # regenera música y efectos (síntesis propia)
 ```
 
 ## Cómo está armado
 
-- **Duración**: `calcular-metadata.ts` mide la voz y usa `largo + pausa insertada + 0,5 s`, limitado entre 1800 y 2600 frames.
-- **Pausa del Remate**: si la locución no trae el silencio de 2,5 s después de "muchísimo combustible",
-  se inserta cortando la voz en ese silencio y retomándola 2,5 s después (`PAUSA_REMATE` en el guion).
-- **Timestamps**: `scripts/transcribir-voz.mjs` transcribe con Whisper y alinea con el texto del guion,
-  así los subtítulos usan la ortografía del guion ("catorce" aunque se escuche "14").
-- **`src/guion-avion.ts`**: plantilla con todos los textos, etiquetas, palabras clave de subtítulos,
-  frases de anclaje de cada escena y volúmenes. Para otro Reel, duplicá y editá este archivo.
-- **`src/linea-de-tiempo.ts`**: ubica cada escena (y cada momento interno) buscando su frase en los
-  timestamps; si cambia la locución, todo se reacomoda solo.
-- **Escenas** (`src/escenas/`): `Hook`, `MapaMiente`, `PausaComentario`, `Prueba`, `GranCirculo`,
-  `Remate`, `CTA`. Cada una está registrada también como composición suelta en la carpeta *Escenas* del Studio.
-- **Mapa**: `d3-geo` + `world-atlas`, con una proyección interpolada globo → plano → Mercator (`src/geo.ts`).
-  Las distancias (10.875 km por gran círculo vs. 12.818 km por la "recta" del mapa) se calculan, no están escritas a mano.
-- **Audio**: voz 100 %, música 8 % con ducking (baja a la mitad mientras hay voz), motor lejano,
-  estiramiento elástico, whoosh en cambios de sección y pop en etiquetas.
+- **`src/comun/`** — todo lo que comparten los Reels de la cuenta:
+  - `metadata.ts`: `crearCalcularMetadata()` mide la voz y fija la duración en `voz + pausa insertada + 0,5 s`,
+    entre `minFrames` y `maxFrames` (Face ID: 1800–2400; avión: 1800–2600 porque su locución dura 40,3 s).
+    Si la locución no trae la pausa del Remate, la inserta cortando la voz en el silencio indicado.
+  - `linea-de-tiempo.ts`: ubica cada escena y cada momento interno buscando frases en los timestamps.
+  - `Hud.tsx` (etiquetas con línea animada, título de sección, contador), `Subtitulos.tsx`, `Fondo.tsx`,
+    `Sonido.tsx` (biblioteca de efectos, voz + música con ducking), `TarjetaPausa.tsx`, `RemateLineas.tsx`,
+    `CierreCTA.tsx`.
+- **`src/<reel>/guion-<reel>.ts`** — plantilla con textos, etiquetas, palabras clave, frases de anclaje y
+  volúmenes. Para un Reel nuevo: copiá una carpeta de Reel, cambiá el guion y las escenas propias.
+- **Avión**: mapa con `d3-geo` + `world-atlas` y proyección interpolada globo → plano → Mercator.
+- **Face ID**: busto 3D propio en canvas (`src/faceid/cabeza.ts`: superficie paramétrica, iluminación y
+  orden de profundidad), nube de ~3.000 puntos infrarrojos que representan los 30.000 reales, y malla 3D.

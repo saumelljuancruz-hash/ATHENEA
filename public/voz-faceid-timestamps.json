@@ -1,0 +1,570 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Cada",
+   "inicio": 0.07,
+   "fin": 0.22
+  },
+  {
+   "palabra": "vez",
+   "inicio": 0.22,
+   "fin": 0.38
+  },
+  {
+   "palabra": "que",
+   "inicio": 0.38,
+   "fin": 0.54
+  },
+  {
+   "palabra": "desbloqueás",
+   "inicio": 0.54,
+   "fin": 1.14
+  },
+  {
+   "palabra": "tu",
+   "inicio": 1.14,
+   "fin": 1.24
+  },
+  {
+   "palabra": "celular",
+   "inicio": 1.24,
+   "fin": 1.64
+  },
+  {
+   "palabra": "con",
+   "inicio": 1.64,
+   "fin": 1.78
+  },
+  {
+   "palabra": "la",
+   "inicio": 1.78,
+   "fin": 1.89
+  },
+  {
+   "palabra": "cara,",
+   "inicio": 1.89,
+   "fin": 2.11
+  },
+  {
+   "palabra": "te",
+   "inicio": 2.26,
+   "fin": 2.4
+  },
+  {
+   "palabra": "tira",
+   "inicio": 2.4,
+   "fin": 2.69
+  },
+  {
+   "palabra": "más",
+   "inicio": 2.69,
+   "fin": 2.98
+  },
+  {
+   "palabra": "de",
+   "inicio": 2.98,
+   "fin": 3.12
+  },
+  {
+   "palabra": "treinta",
+   "inicio": 3.12,
+   "fin": 3.56
+  },
+  {
+   "palabra": "mil",
+   "inicio": 3.56,
+   "fin": 3.78
+  },
+  {
+   "palabra": "puntos",
+   "inicio": 3.78,
+   "fin": 4.22
+  },
+  {
+   "palabra": "invisibles.",
+   "inicio": 4.22,
+   "fin": 4.96
+  },
+  {
+   "palabra": "Un",
+   "inicio": 5.24,
+   "fin": 5.43
+  },
+  {
+   "palabra": "proyector",
+   "inicio": 5.43,
+   "fin": 5.96
+  },
+  {
+   "palabra": "lanza",
+   "inicio": 5.96,
+   "fin": 6.29
+  },
+  {
+   "palabra": "esos",
+   "inicio": 6.29,
+   "fin": 6.54
+  },
+  {
+   "palabra": "puntos",
+   "inicio": 6.54,
+   "fin": 6.95
+  },
+  {
+   "palabra": "de",
+   "inicio": 6.95,
+   "fin": 7.08
+  },
+  {
+   "palabra": "luz",
+   "inicio": 7.08,
+   "fin": 7.28
+  },
+  {
+   "palabra": "infrarroja,",
+   "inicio": 7.28,
+   "fin": 7.94
+  },
+  {
+   "palabra": "que",
+   "inicio": 8.14,
+   "fin": 8.35
+  },
+  {
+   "palabra": "el",
+   "inicio": 8.35,
+   "fin": 8.49
+  },
+  {
+   "palabra": "ojo",
+   "inicio": 8.49,
+   "fin": 8.7
+  },
+  {
+   "palabra": "humano",
+   "inicio": 8.7,
+   "fin": 9.12
+  },
+  {
+   "palabra": "no",
+   "inicio": 9.12,
+   "fin": 9.26
+  },
+  {
+   "palabra": "puede",
+   "inicio": 9.26,
+   "fin": 9.61
+  },
+  {
+   "palabra": "ver.",
+   "inicio": 9.61,
+   "fin": 9.81
+  },
+  {
+   "palabra": "Una",
+   "inicio": 10.04,
+   "fin": 10.25
+  },
+  {
+   "palabra": "cámara",
+   "inicio": 10.25,
+   "fin": 10.73
+  },
+  {
+   "palabra": "especial",
+   "inicio": 10.73,
+   "fin": 11.3
+  },
+  {
+   "palabra": "lee",
+   "inicio": 11.3,
+   "fin": 11.52
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 11.52,
+   "fin": 11.82
+  },
+  {
+   "palabra": "se",
+   "inicio": 11.82,
+   "fin": 11.94
+  },
+  {
+   "palabra": "deforman",
+   "inicio": 11.94,
+   "fin": 12.44
+  },
+  {
+   "palabra": "sobre",
+   "inicio": 12.44,
+   "fin": 12.76
+  },
+  {
+   "palabra": "tu",
+   "inicio": 12.76,
+   "fin": 12.88
+  },
+  {
+   "palabra": "nariz,",
+   "inicio": 12.88,
+   "fin": 13.19
+  },
+  {
+   "palabra": "tus",
+   "inicio": 13.34,
+   "fin": 13.57
+  },
+  {
+   "palabra": "pómulos",
+   "inicio": 13.57,
+   "fin": 14.23
+  },
+  {
+   "palabra": "y",
+   "inicio": 14.23,
+   "fin": 14.25
+  },
+  {
+   "palabra": "tu",
+   "inicio": 14.25,
+   "fin": 14.4
+  },
+  {
+   "palabra": "frente.",
+   "inicio": 14.4,
+   "fin": 14.85
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 15.27,
+   "fin": 15.5
+  },
+  {
+   "palabra": "usás",
+   "inicio": 15.5,
+   "fin": 15.72
+  },
+  {
+   "palabra": "la",
+   "inicio": 15.72,
+   "fin": 15.85
+  },
+  {
+   "palabra": "cara",
+   "inicio": 15.85,
+   "fin": 16.12
+  },
+  {
+   "palabra": "o",
+   "inicio": 16.12,
+   "fin": 16.18
+  },
+  {
+   "palabra": "la",
+   "inicio": 16.18,
+   "fin": 16.34
+  },
+  {
+   "palabra": "huella",
+   "inicio": 16.34,
+   "fin": 16.71
+  },
+  {
+   "palabra": "para",
+   "inicio": 16.71,
+   "fin": 16.98
+  },
+  {
+   "palabra": "desbloquear?",
+   "inicio": 16.98,
+   "fin": 17.71
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 17.98,
+   "fin": 18.56
+  },
+  {
+   "palabra": "en",
+   "inicio": 18.56,
+   "fin": 18.68
+  },
+  {
+   "palabra": "los",
+   "inicio": 18.68,
+   "fin": 18.86
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 18.86,
+   "fin": 19.72
+  },
+  {
+   "palabra": "Con",
+   "inicio": 19.72,
+   "fin": 19.96
+  },
+  {
+   "palabra": "eso",
+   "inicio": 19.96,
+   "fin": 20.2
+  },
+  {
+   "palabra": "arma",
+   "inicio": 20.38,
+   "fin": 20.63
+  },
+  {
+   "palabra": "un",
+   "inicio": 20.63,
+   "fin": 20.75
+  },
+  {
+   "palabra": "mapa",
+   "inicio": 20.75,
+   "fin": 21
+  },
+  {
+   "palabra": "en",
+   "inicio": 21,
+   "fin": 21.12
+  },
+  {
+   "palabra": "tres",
+   "inicio": 21.12,
+   "fin": 21.37
+  },
+  {
+   "palabra": "dimensiones",
+   "inicio": 21.37,
+   "fin": 22.05
+  },
+  {
+   "palabra": "de",
+   "inicio": 22.05,
+   "fin": 22.17
+  },
+  {
+   "palabra": "tu",
+   "inicio": 22.17,
+   "fin": 22.29
+  },
+  {
+   "palabra": "cara,",
+   "inicio": 22.29,
+   "fin": 22.54
+  },
+  {
+   "palabra": "lo",
+   "inicio": 22.72,
+   "fin": 22.84
+  },
+  {
+   "palabra": "convierte",
+   "inicio": 22.84,
+   "fin": 23.38
+  },
+  {
+   "palabra": "en",
+   "inicio": 23.38,
+   "fin": 23.5
+  },
+  {
+   "palabra": "números",
+   "inicio": 23.5,
+   "fin": 24.08
+  },
+  {
+   "palabra": "y",
+   "inicio": 24.08,
+   "fin": 24.12
+  },
+  {
+   "palabra": "lo",
+   "inicio": 24.12,
+   "fin": 24.2
+  },
+  {
+   "palabra": "compara",
+   "inicio": 24.2,
+   "fin": 24.62
+  },
+  {
+   "palabra": "con",
+   "inicio": 24.62,
+   "fin": 24.8
+  },
+  {
+   "palabra": "el",
+   "inicio": 24.8,
+   "fin": 24.92
+  },
+  {
+   "palabra": "que",
+   "inicio": 24.92,
+   "fin": 25.1
+  },
+  {
+   "palabra": "guardó.",
+   "inicio": 25.1,
+   "fin": 25.51
+  },
+  {
+   "palabra": "Por",
+   "inicio": 25.72,
+   "fin": 25.94
+  },
+  {
+   "palabra": "eso",
+   "inicio": 25.94,
+   "fin": 26.16
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 26.16,
+   "fin": 26.75
+  },
+  {
+   "palabra": "a",
+   "inicio": 26.75,
+   "fin": 26.82
+  },
+  {
+   "palabra": "oscuras,",
+   "inicio": 26.82,
+   "fin": 27.44
+  },
+  {
+   "palabra": "y",
+   "inicio": 27.44,
+   "fin": 27.47
+  },
+  {
+   "palabra": "no",
+   "inicio": 27.47,
+   "fin": 27.6
+  },
+  {
+   "palabra": "se",
+   "inicio": 27.6,
+   "fin": 27.75
+  },
+  {
+   "palabra": "engaña",
+   "inicio": 27.75,
+   "fin": 28.33
+  },
+  {
+   "palabra": "con",
+   "inicio": 28.33,
+   "fin": 28.56
+  },
+  {
+   "palabra": "una",
+   "inicio": 28.56,
+   "fin": 28.8
+  },
+  {
+   "palabra": "foto.",
+   "inicio": 28.8,
+   "fin": 29.16
+  },
+  {
+   "palabra": "Y",
+   "inicio": 29.24,
+   "fin": 29.28
+  },
+  {
+   "palabra": "ese",
+   "inicio": 29.28,
+   "fin": 29.48
+  },
+  {
+   "palabra": "mapa",
+   "inicio": 29.48,
+   "fin": 29.8
+  },
+  {
+   "palabra": "nunca",
+   "inicio": 29.8,
+   "fin": 30.19
+  },
+  {
+   "palabra": "sale",
+   "inicio": 30.19,
+   "fin": 30.51
+  },
+  {
+   "palabra": "de",
+   "inicio": 30.51,
+   "fin": 30.67
+  },
+  {
+   "palabra": "tu",
+   "inicio": 30.67,
+   "fin": 30.83
+  },
+  {
+   "palabra": "teléfono.",
+   "inicio": 30.83,
+   "fin": 31.53
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 31.8,
+   "fin": 32.14
+  },
+  {
+   "palabra": "la",
+   "inicio": 32.14,
+   "fin": 32.26
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 32.26,
+   "fin": 32.61
+  },
+  {
+   "palabra": "para",
+   "inicio": 32.61,
+   "fin": 32.85
+  },
+  {
+   "palabra": "entender",
+   "inicio": 32.85,
+   "fin": 33.36
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 33.36,
+   "fin": 33.72
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 33.72,
+   "fin": 34.2
+  },
+  {
+   "palabra": "todo",
+   "inicio": 34.2,
+   "fin": 34.53
+  },
+  {
+   "palabra": "lo",
+   "inicio": 34.53,
+   "fin": 34.69
+  },
+  {
+   "palabra": "que",
+   "inicio": 34.69,
+   "fin": 34.94
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 34.94,
+   "fin": 35.3
+  }
+ ]
+}
