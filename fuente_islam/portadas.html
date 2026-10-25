@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Portadas</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  @page { size: A4; margin: 0; }
+  html, body { margin: 0; padding: 0; }
+  * { box-sizing: border-box; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { position: relative; width: 210mm; height: 297mm; overflow: hidden; break-after: page; background: #3a1b0c; }
+  .page:last-child { break-after: auto; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+  /* ---- Portada ---- */
+  .front .shade { position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(25,10,4,0.78) 0%, rgba(25,10,4,0.35) 30%, rgba(25,10,4,0) 45%,
+                rgba(25,10,4,0) 62%, rgba(20,8,3,0.55) 80%, rgba(15,6,2,0.88) 100%); }
+  .top { position: absolute; top: 12mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between;
+    font: 600 8.5pt "Montserrat", sans-serif; letter-spacing: 3.5pt; color: #f6e6c4; text-transform: uppercase; }
+  .title { position: absolute; top: 20mm; left: 0; right: 0; text-align: center; color: #fff6e3; }
+  .title h1 { margin: 0; font: 800 92pt/0.95 "Playfair Display", serif; letter-spacing: -1pt;
+    text-shadow: 0 1.5mm 5mm rgba(0,0,0,0.45); }
+  .title .ar { font: 700 34pt/1 "Amiri", serif; color: #f3c869; margin-top: 1mm; text-shadow: 0 1mm 3mm rgba(0,0,0,0.5); }
+  .title .sub { margin-top: 3mm; font: 700 11pt "Montserrat", sans-serif; letter-spacing: 5pt; text-transform: uppercase; color: #f6e6c4; }
+  .title .sub span { color: #f3c869; padding: 0 2mm; }
+  .tag { margin: 3mm auto 0; width: 120mm; font: italic 500 12.5pt/1.35 "Lora", serif; color: #fff1d6;
+    text-shadow: 0 0.6mm 2mm rgba(0,0,0,0.6); }
+  .lines { position: absolute; left: 14mm; bottom: 58mm; width: 70mm; color: #fff6e3; }
+  .lines div { padding: 2.6mm 0; border-bottom: 0.6pt solid rgba(243,200,105,0.7); }
+  .lines div:last-child { border-bottom: none; }
+  .lines b { display: block; font: 700 11pt "Montserrat", sans-serif; letter-spacing: 1.2pt; text-transform: uppercase; }
+  .lines i { font: italic 400 11pt "Lora", serif; color: #f6e0b5; }
+  .script { position: absolute; right: 12mm; bottom: 62mm; width: 78mm; text-align: right;
+    font: 700 24pt/1.1 "Caveat", cursive; color: #fff3da; transform: rotate(-4deg); text-shadow: 0 0.8mm 2.5mm rgba(0,0,0,0.6); }
+  .script::after { content: ""; display: block; height: 1.4mm; width: 50mm; margin: 2mm 0 0 auto; border-radius: 1mm;
+    background: linear-gradient(90deg, rgba(243,200,105,0), #f3c869); }
+  .bottom { position: absolute; left: 14mm; right: 14mm; bottom: 11mm; color: #fff6e3; }
+  .edition { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4mm; }
+  .edition .e1 { font: 700 13pt "Montserrat", sans-serif; letter-spacing: 3pt; text-transform: uppercase; color: #f3c869; }
+  .edition .e2 { font: italic 500 12pt "Lora", serif; }
+  .edition .e3 { font: 600 7.5pt "Montserrat", sans-serif; letter-spacing: 1.6pt; text-transform: uppercase; color: #f1dcc0; text-align: right; }
+  .student { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 5mm; padding: 4mm 5mm;
+    background: rgba(15,74,68,0.82); border: 0.6pt solid rgba(243,200,105,0.8); border-radius: 2.5mm; }
+  .student label { font: 600 8pt "Montserrat", sans-serif; letter-spacing: 1.6pt; text-transform: uppercase; color: #f3c869; }
+  .student span { display: block; height: 7mm; border-bottom: 0.8pt solid #f6e6c4; }
+
+  /* ---- Contraportada ---- */
+  .back .shade { position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(40,15,5,0.15) 0%, rgba(40,15,5,0) 40%, rgba(20,8,3,0) 70%, rgba(15,6,2,0.75) 100%); }
+  .back .quote { position: absolute; top: 52mm; left: 40mm; right: 40mm; text-align: center; color: #3b1a0c; }
+  .back .star { width: 14mm; height: 14mm; margin: 0 auto 5mm; color: #fff3dc; }
+  .back .quote p { margin: 0; font: italic 700 25pt/1.22 "Playfair Display", serif; color: #fff8ea;
+    text-shadow: 0 0.8mm 3mm rgba(80,30,5,0.55); }
+  .back .quote .rule { width: 34mm; height: 1.4mm; margin: 6mm auto; border-radius: 1mm; background: #fff1d0; opacity: 0.9; }
+  .back .quote .small { font: 500 12pt/1.45 "Lora", serif; font-style: normal; color: #fff3df; text-shadow: 0 0.5mm 2mm rgba(80,30,5,0.6); }
+  .back .foot { position: absolute; left: 14mm; right: 14mm; bottom: 12mm; display: flex; justify-content: space-between; align-items: flex-end; color: #fff3df; }
+  .back .foot .brand { font: 800 26pt/1 "Playfair Display", serif; }
+  .back .foot .brand span { display: block; font: 700 16pt "Amiri", serif; color: #f3c869; margin-top: 1mm; }
+  .back .foot .info { text-align: right; font: 600 7.5pt/1.7 "Montserrat", sans-serif; letter-spacing: 1.6pt; text-transform: uppercase; }
+</style></head><body>
+
+<div class="page front">
+  <img class="bg" src="img/cairo_minarete.jpg" alt="">
+  <div class="shade"></div>
+  <div class="top"><span>Revista interdisciplinaria</span><span>Edición especial</span></div>
+  <div class="title">
+    <h1>El Islam</h1>
+    <div class="ar" lang="ar">الإسلام</div>
+    <div class="sub">Religión <span>·</span> Cultura <span>·</span> Sociedad</div>
+    <p class="tag">Una mirada a sus orígenes, creencias, tradiciones y presencia en el mundo actual.</p>
+  </div>
+  <div class="lines">
+    <div><b>Origen y evolución</b><i>Del siglo VII al mundo actual</i></div>
+    <div><b>Creencias y vida cotidiana</b><i>Los cinco pilares y el Ramadán</i></div>
+    <div><b>Infografía central</b><i>Signos y símbolos del Islam</i></div>
+  </div>
+  <div class="script">Una religión que atraviesa culturas</div>
+  <div class="bottom">
+    <div class="edition">
+      <div><div class="e1">Edición especial</div><div class="e2">El Islam y su influencia en la sociedad</div></div>
+      <div class="e3">Revista interdisciplinaria de<br>Sociología, Religión y Cultura</div>
+    </div>
+    <div class="student">
+      <div><label>Nombre</label><span></span></div>
+      <div><label>Curso</label><span></span></div>
+      <div><label>Fecha</label><span></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page back">
+  <img class="bg" src="img/arco_marrakech.jpg" alt="">
+  <div class="shade"></div>
+  <div class="quote">
+    <svg class="star" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="10" y="10" width="20" height="20"/><rect x="10" y="10" width="20" height="20" transform="rotate(45 20 20)"/>
+      <circle cx="20" cy="20" r="4"/></g></svg>
+    <p>«Conocer una religión también es una forma de comprender a la sociedad».</p>
+    <div class="rule"></div>
+    <p class="small">No es necesario compartir las creencias de otra persona para comprenderlas y respetarlas.</p>
+  </div>
+  <div class="foot">
+    <div class="brand">El Islam<span lang="ar">الإسلام</span></div>
+    <div class="info">Revista interdisciplinaria de<br>Sociología, Religión y Cultura<br>Edición especial</div>
+  </div>
+</div>
+</body></html>

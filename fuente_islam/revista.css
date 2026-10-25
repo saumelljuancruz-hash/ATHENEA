@@ -1,0 +1,286 @@
+:root {
+  --green: #0f4a44;
+  --green-2: #19675d;
+  --green-soft: #e3eee9;
+  --gold: #c39132;
+  --gold-soft: #ecd8a6;
+  --terra: #b4542f;
+  --ink: #231f1b;
+  --muted: #5e6763;
+  --paper: #fbf7ee;
+  /* Patrón geométrico de estrellas de ocho puntas */
+  --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23c39132' stroke-width='0.8' opacity='0.55'%3E%3Crect x='10' y='10' width='20' height='20'/%3E%3Crect x='10' y='10' width='20' height='20' transform='rotate(45 20 20)'/%3E%3Cpath d='M0 0L10 10M40 0L30 10M0 40L10 30M40 40L30 30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@page {
+  size: A4;
+  margin: 20mm 17mm 19mm 17mm;
+  background: var(--paper);
+  @top-left {
+    content: "EL ISLAM · RELIGIÓN, CULTURA Y SOCIEDAD";
+    font: 600 7.5pt "Montserrat", sans-serif;
+    letter-spacing: 2pt; color: var(--green);
+    vertical-align: bottom; padding-bottom: 3mm;
+    border-bottom: 0.6pt solid var(--gold);
+  }
+  @top-right {
+    content: "REVISTA INTERDISCIPLINARIA · EDICIÓN ESPECIAL";
+    font: 500 7pt "Montserrat", sans-serif;
+    letter-spacing: 1.3pt; color: var(--muted);
+    vertical-align: bottom; padding-bottom: 3mm;
+    border-bottom: 0.6pt solid var(--gold);
+  }
+  @bottom-center {
+    content: counter(page);
+    font: 700 9pt "Montserrat", sans-serif;
+    color: var(--green); vertical-align: top; padding-top: 4mm;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Lora", Georgia, serif;
+  font-size: 12pt; line-height: 1.42;
+  color: var(--ink); background: var(--paper);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+[lang="ar"], .ar { font-family: "Amiri", serif; }
+
+/* Las portadas se insertan al unir el PDF: aquí solo reservan su página */
+.cover { height: 10mm; break-after: page; }
+.cover.back { break-before: page; break-after: auto; }
+
+.rule {
+  display: block; width: 34mm; height: 1.6mm; border-radius: 1mm;
+  background: linear-gradient(90deg, var(--gold), #e2b95a 60%, rgba(195,145,50,0));
+  margin: 2.5mm 0 4mm;
+}
+.marker { position: absolute; font-size: 1.5pt; color: var(--paper); line-height: 1; }
+
+/* ---------- Presentación e índice ---------- */
+.presentacion { break-after: page; }
+.toc-kicker {
+  font: 700 8pt "Montserrat", sans-serif; letter-spacing: 3pt; text-transform: uppercase;
+  color: var(--terra); margin: 1mm 0 0;
+}
+.pres-title { font: italic 700 26pt/1.12 "Playfair Display", serif; color: var(--green); margin: 2mm 0 0; }
+.pres-lead { font: italic 500 13pt/1.4 "Lora", serif; color: var(--green-2); margin: 0 0 4mm; }
+.pres-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 6mm; align-items: stretch; }
+.pres-box {
+  background: var(--green-soft); border-radius: 2.5mm; padding: 4.5mm 5mm 3mm;
+  border-left: 1.4mm solid var(--green);
+}
+.pres-box h3 {
+  font: 700 9pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase;
+  color: var(--green); margin: 0 0 2mm;
+}
+.pres-quote {
+  margin: 0; padding: 6mm 5mm; border-radius: 2.5mm;
+  background: var(--green) var(--pattern); background-size: 14mm;
+  color: #fff7e6; font: 700 19pt/1.2 "Caveat", cursive;
+  display: flex; align-items: center;
+}
+.toc-title {
+  font: 800 28pt/1 "Playfair Display", serif; color: var(--green); margin: 6mm 0 1mm;
+}
+ol.toc { list-style: none; padding: 0; margin: 0; }
+ol.toc li {
+  display: flex; align-items: baseline; gap: 3mm;
+  padding: 1.5mm 0; border-bottom: 0.4pt solid rgba(15,74,68,0.15); font-size: 12pt; line-height: 1.25;
+}
+ol.toc .tn { font: 700 12pt "Playfair Display", serif; color: var(--gold); width: 8mm; flex: none; }
+ol.toc em { font-style: normal; font-weight: 700; color: var(--green); }
+ol.toc .lead-dots { flex: 1; border-bottom: 1pt dotted rgba(15,74,68,0.35); transform: translateY(-1mm); min-width: 5mm; }
+ol.toc .tp { font: 700 10pt "Montserrat", sans-serif; color: var(--green); width: 7mm; text-align: right; flex: none; }
+
+ul.dots { list-style: none; padding: 0; margin: 0; }
+ul.dots li { padding: 0.8mm 0 0.8mm 6mm; position: relative; }
+ul.dots li::before {
+  content: ""; position: absolute; left: 0.6mm; top: 2.7mm; width: 2mm; height: 2mm;
+  background: var(--gold); transform: rotate(45deg);
+}
+
+/* ---------- Secciones ---------- */
+.sec { position: relative; margin-bottom: 8mm; }
+.sec.newpage { break-before: page; }
+.sec-head {
+  display: flex; align-items: flex-start; gap: 5mm; margin: 1mm 0 5mm;
+  break-inside: avoid; break-after: avoid;
+}
+.sec-head .num { font: 800 44pt/0.9 "Playfair Display", serif; color: var(--gold); flex: none; padding-top: 1mm; }
+.sec-head .htext { flex: 1; }
+.kicker {
+  font: 700 7.8pt "Montserrat", sans-serif; letter-spacing: 2.4pt; text-transform: uppercase;
+  color: var(--terra); margin: 1.2mm 0 1.5mm; display: flex; gap: 3mm; align-items: center; flex-wrap: wrap;
+}
+.area {
+  font: 600 7pt "Montserrat", sans-serif; letter-spacing: 1.6pt; text-transform: uppercase;
+  color: var(--green); background: var(--green-soft); border-radius: 5mm; padding: 0.8mm 2.6mm;
+}
+.sec-head h2 { font: italic 700 24pt/1.12 "Playfair Display", serif; color: var(--green); margin: 0; }
+.sec-head .rule { margin: 3mm 0 0; }
+.deck { font: italic 500 13pt/1.35 "Lora", serif; color: var(--green-2); margin: 3.5mm 0 0; }
+
+.cols {
+  column-count: 2; column-gap: 8mm;
+  column-rule: 0.4pt solid rgba(195,145,50,0.4);
+  text-align: justify; hyphens: manual; orphans: 3; widows: 3;
+}
+.cols p { margin: 0 0 2.6mm; }
+.cols p.lead::first-letter {
+  initial-letter: 3; font-family: "Playfair Display", serif; font-weight: 800;
+  color: var(--green); margin-right: 2mm;
+}
+.cols strong { color: var(--green); }
+strong.lbl { font-family: "Montserrat", sans-serif; font-size: 10pt; letter-spacing: 0.6pt; text-transform: uppercase; color: var(--terra); margin-right: 1mm; }
+
+h3.sub {
+  font: 700 13pt/1.25 "Playfair Display", serif; color: var(--green);
+  margin: 4.5mm 0 1.8mm; text-align: left; break-after: avoid;
+  display: flex; gap: 2mm; align-items: baseline;
+}
+h3.sub::before {
+  content: ""; width: 2.3mm; height: 2.3mm; flex: none; background: var(--gold);
+  transform: rotate(45deg) translateY(-0.6mm);
+}
+.cols > h3.sub:first-child { margin-top: 0; }
+h3.sub.big { font-size: 15pt; }
+
+/* Entrevista */
+#s3 h3.sub { font: 700 12pt/1.3 "Lora", serif; color: var(--green); }
+#s3 h3.sub::before { content: "P"; width: 6mm; height: 6mm; transform: none; border-radius: 50%;
+  background: var(--green); color: #fff; font: 700 8pt/6mm "Montserrat", sans-serif; text-align: center; }
+
+.note, .opinion { break-inside: avoid; border-radius: 2mm; margin: 2mm 0 4mm; }
+.note { background: #f3ebd9; border: 0.6pt dashed var(--gold); padding: 3mm 3.5mm 1mm; }
+.note p { font-size: 11pt; line-height: 1.35; text-align: left; }
+.opinion { background: var(--green-soft); border-left: 1.4mm solid var(--green); padding: 3mm 3.5mm 0.5mm; }
+
+/* Pilares */
+.pillars {
+  break-inside: avoid; margin: 3mm 0 4mm; padding: 3.5mm 3.5mm 1.5mm;
+  background: var(--green) var(--pattern); background-size: 12mm; border-radius: 2.5mm; color: #fbf3e1;
+  text-align: left;
+}
+.pillars-title { font: 700 8.5pt "Montserrat", sans-serif !important; letter-spacing: 2pt; text-transform: uppercase; color: var(--gold-soft); margin: 0 0 2.5mm !important; }
+.pillar { display: flex; gap: 3mm; background: rgba(9,46,42,0.82); border-radius: 1.6mm; padding: 2mm 2.6mm; margin-bottom: 2mm; }
+.pillar .pn { font: 800 16pt/1 "Playfair Display", serif; color: var(--gold); width: 5mm; flex: none; }
+.pillar p { margin: 0 !important; font-size: 11pt; line-height: 1.32; }
+.pillar .pname { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6mm !important; }
+.pillar .pname strong { color: #fff; font-size: 12pt; }
+.pillar .ar { font-size: 15pt; color: var(--gold-soft); line-height: 1; }
+
+/* Línea de tiempo */
+.timeline { break-inside: avoid; margin: 3mm 0 4mm; padding: 3.5mm 3.5mm 2mm; border: 0.8pt solid var(--gold); border-radius: 2.5mm; background: #fffaf0; text-align: left; }
+.tl-title { font: 700 8.5pt "Montserrat", sans-serif !important; letter-spacing: 2pt; text-transform: uppercase; color: var(--terra); margin: 0 0 2mm !important; }
+.timeline ol { list-style: none; margin: 0; padding: 0 0 0 4mm; border-left: 1.2pt solid var(--gold); }
+.timeline li { position: relative; padding: 0 0 2.4mm 2mm; }
+.timeline li::before { content: ""; position: absolute; left: -5.9mm; top: 1.4mm; width: 2.8mm; height: 2.8mm; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 1pt var(--gold); }
+.timeline .yr { display: block; font: 800 13pt/1.1 "Playfair Display", serif; color: var(--green); }
+.timeline .tx { font-size: 11pt; line-height: 1.3; }
+
+/* Figuras */
+figure { margin: 0; break-inside: avoid; }
+figure .frame { border-radius: 1.6mm; overflow: hidden; box-shadow: 0 0 0 0.5pt rgba(15,74,68,0.3); background: #fff; }
+figure img { display: block; width: 100%; }
+figcaption {
+  font: italic 400 9.5pt/1.35 "Lora", serif; color: var(--muted);
+  margin-top: 2mm; padding-left: 3mm; border-left: 1.2mm solid var(--gold); text-align: left;
+}
+figure.col { margin: 2mm 0 5mm; }
+figure.col img { max-height: 100mm; object-fit: contain; }
+figure.wide { margin: 0 0 6mm; }
+.mapbox { position: relative; }
+.pin { position: absolute; transform: translate(-50%, -50%); width: 0; height: 0; }
+.pin i { position: absolute; left: -1.6mm; top: -1.6mm; width: 3.2mm; height: 3.2mm; border-radius: 50%; background: var(--terra); box-shadow: 0 0 0 0.8mm #fff; }
+.pin b { position: absolute; top: -2.3mm; white-space: nowrap; font: 700 8pt "Montserrat", sans-serif; color: #fff; background: var(--green); padding: 0.4mm 1.6mm; border-radius: 1mm; }
+.pin.l b { right: 2.6mm; }
+.pin.r b { left: 2.6mm; }
+
+blockquote.pull {
+  margin: 4mm 0 5mm; padding: 4mm 0; border-top: 1pt solid var(--gold); border-bottom: 1pt solid var(--gold);
+  font: 700 17pt/1.2 "Caveat", cursive; color: var(--terra); text-align: left; break-inside: avoid;
+}
+blockquote.pull::before { content: "“"; display: block; font: 800 30pt/0.6 "Playfair Display", serif; color: var(--gold); margin-bottom: 1mm; }
+blockquote.pull.wide { font-size: 24pt; text-align: center; padding: 7mm 10mm; }
+blockquote.pull.wide::before { display: none; }
+
+/* Roles */
+.roles-title { font: 700 14pt "Playfair Display", serif; color: var(--green); margin: 0 0 3mm; }
+.roles { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-bottom: 6mm; }
+.role {
+  background: #fffaf0; border: 0.6pt solid rgba(195,145,50,0.6); border-radius: 2.5mm;
+  padding: 3.5mm 4mm 3mm; border-top: 1.6mm solid var(--green);
+}
+.role h4 { font: 700 10pt "Montserrat", sans-serif; letter-spacing: 1.6pt; text-transform: uppercase; color: var(--terra); margin: 0 0 1.5mm; }
+.role p { margin: 0; font-size: 11.5pt; line-height: 1.36; text-align: left; }
+
+/* ---------- Infografía central (doble página) ---------- */
+.spread {
+  break-before: page; height: 258mm; overflow: hidden;
+  background: var(--green) var(--pattern); background-size: 16mm;
+  border-radius: 3mm; padding: 8mm 8mm 7mm; color: #fbf3e1;
+  display: flex; flex-direction: column;
+}
+.info-head .kicker { color: var(--gold-soft); }
+.info-head .area { background: rgba(255,255,255,0.12); color: #fbf3e1; }
+.info-head h2 { font: italic 700 28pt/1.1 "Playfair Display", serif; color: #fff; margin: 0 0 3mm; }
+.info-intro { margin: 0 0 5mm; font-size: 11.5pt; line-height: 1.4; background: rgba(9,46,42,0.75); padding: 3mm 4mm; border-radius: 2mm; border-left: 1.2mm solid var(--gold); }
+.info-intro strong { color: var(--gold-soft); display: block; font-family: "Playfair Display", serif; font-size: 13pt; margin-bottom: 1mm; }
+.syms { display: flex; flex-direction: column; gap: 4mm; flex: 1; }
+.sym {
+  position: relative; display: grid; grid-template-columns: 48mm 1fr; grid-template-rows: auto auto 1fr;
+  column-gap: 5mm; background: rgba(9,46,42,0.88); border: 0.6pt solid rgba(236,216,166,0.5);
+  border-radius: 2.5mm; padding: 3.5mm 4mm; flex: 1;
+}
+.sym-n {
+  position: absolute; top: -1mm; left: -1mm; width: 9mm; height: 9mm; border-radius: 50%;
+  background: var(--gold); color: var(--green); font: 800 14pt/9mm "Playfair Display", serif; text-align: center; z-index: 2;
+}
+.sym-photo, .sym-icon { grid-row: 1 / span 2; border-radius: 1.6mm; overflow: hidden; height: 31mm; }
+.sym-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sym-icon { background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: var(--gold); border: 0.6pt solid rgba(236,216,166,0.4); }
+.sym-icon svg { width: 26mm; height: 26mm; }
+.sym-cap { grid-column: 1; grid-row: 3; margin: 1.6mm 0 0; font: italic 8.5pt/1.3 "Lora", serif; color: #d9e6df; }
+.sym h4 { grid-column: 2; grid-row: 1; font: 700 15pt "Playfair Display", serif; color: var(--gold-soft); margin: 0 0 1.5mm; }
+.sym > p.desc { grid-column: 2; grid-row: 2 / span 2; margin: 0; font-size: 11.5pt; line-height: 1.38; text-align: left; }
+.spread-r .syms { flex: none; }
+.analysis { margin-top: 4mm; columns: 2; column-gap: 7mm; text-align: justify; font-size: 11pt; line-height: 1.36; }
+.analysis h3 { column-span: all; font: 700 10pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase; color: var(--gold); margin: 0 0 2mm; }
+.analysis p { margin: 0 0 2mm; }
+.idea { margin-top: 4mm; background: var(--gold); color: var(--green); border-radius: 2.5mm; padding: 4mm 5mm; }
+.idea span { font: 700 8.5pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase; }
+.idea p { margin: 1mm 0 0; font: 700 18pt/1.2 "Caveat", cursive; }
+
+/* ---------- Conclusión y bibliografía ---------- */
+.closing { margin-top: 6mm; break-inside: avoid; }
+ul.biblio { list-style: none; padding: 0; margin: 0 0 4mm; }
+ul.biblio li { padding: 2mm 0 2mm 7mm; position: relative; border-bottom: 0.4pt solid rgba(15,74,68,0.15); line-height: 1.35; }
+ul.biblio li::before { content: ""; position: absolute; left: 1mm; top: 3.6mm; width: 2mm; height: 2mm; background: var(--gold); transform: rotate(45deg); }
+.url { font-family: "Montserrat", sans-serif; font-size: 9.5pt; color: var(--green-2); word-break: break-all; }
+.biblio-note { font-size: 11pt; font-style: italic; color: var(--muted); }
+.credits { margin-top: 5mm; padding: 4mm 5mm; background: #f3ebd9; border-radius: 2mm; font-size: 8.5pt; line-height: 1.35; color: #4b463f; break-inside: avoid; }
+.credits h4 { font: 700 8.5pt "Montserrat", sans-serif; letter-spacing: 1.8pt; text-transform: uppercase; color: var(--green); margin: 0 0 1.5mm; }
+.credits ul { margin: 1mm 0; padding-left: 4mm; columns: 2; column-gap: 6mm; }
+.credits li { margin-bottom: 0.8mm; break-inside: avoid; }
+.credits p { margin: 0.5mm 0; }
+
+.pattern-band { height: 34mm; margin-top: 8mm; border-radius: 3mm;
+  background: var(--green) var(--pattern); background-size: 14mm; }
+
+.spread .marker { color: var(--green); }
+.spread-r .sym-photo { height: 26mm; }
+.spread-r .syms { gap: 3mm; }
+.spread-r .sym { padding: 3mm 4mm; }
+figure.wide .frame { height: 95mm; }
+figure.wide img { height: 100%; object-fit: cover; }
+
+.edition-band { margin-top: 6mm; display: flex; align-items: center; gap: 7mm; padding: 4mm 7mm;
+  border-radius: 3mm; background: var(--green) var(--pattern); background-size: 14mm; color: #fbf3e1; }
+.edition-band .ar { font-size: 30pt; line-height: 1; color: var(--gold-soft); }
+.edition-band b { display: block; font: 700 11pt "Montserrat", sans-serif; letter-spacing: 3pt; text-transform: uppercase; color: var(--gold-soft); }
+.edition-band i { display: block; font: italic 600 13pt "Playfair Display", serif; margin: 1mm 0; }
+.edition-band small { font: 600 7.5pt "Montserrat", sans-serif; letter-spacing: 1.5pt; text-transform: uppercase; color: #d9e6df; }
+
+.mapa-svg { display: block; width: 100%; height: auto; }
