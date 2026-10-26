@@ -25,7 +25,8 @@ export const calcularMetadataGps = crearCalcularMetadata({
   estimados: TIMESTAMPS_ESTIMADOS,
   pausa: PAUSA_REMATE,
   minFrames: 1800,
-  maxFrames: 2400,
+  // La locución grabada dura más de 40 s: con la pausa del Remate queda por encima del tope original.
+  maxFrames: 2800,
   nombreSalida: "gps",
 });
 

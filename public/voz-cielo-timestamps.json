@@ -1,0 +1,565 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "El",
+   "inicio": 0.07,
+   "fin": 0.26
+  },
+  {
+   "palabra": "cielo",
+   "inicio": 0.26,
+   "fin": 0.83
+  },
+  {
+   "palabra": "no",
+   "inicio": 0.83,
+   "fin": 1.07
+  },
+  {
+   "palabra": "es",
+   "inicio": 1.07,
+   "fin": 1.3
+  },
+  {
+   "palabra": "azul.",
+   "inicio": 1.3,
+   "fin": 1.92
+  },
+  {
+   "palabra": "Lo",
+   "inicio": 1.95,
+   "fin": 2.11
+  },
+  {
+   "palabra": "que",
+   "inicio": 2.11,
+   "fin": 2.35
+  },
+  {
+   "palabra": "ves",
+   "inicio": 2.35,
+   "fin": 2.61
+  },
+  {
+   "palabra": "es",
+   "inicio": 2.77,
+   "fin": 2.95
+  },
+  {
+   "palabra": "luz",
+   "inicio": 2.95,
+   "fin": 3.22
+  },
+  {
+   "palabra": "azul",
+   "inicio": 3.22,
+   "fin": 3.58
+  },
+  {
+   "palabra": "rebotando.",
+   "inicio": 3.58,
+   "fin": 4.5
+  },
+  {
+   "palabra": "La",
+   "inicio": 4.5,
+   "fin": 4.67
+  },
+  {
+   "palabra": "luz",
+   "inicio": 4.67,
+   "fin": 4.93
+  },
+  {
+   "palabra": "del",
+   "inicio": 4.93,
+   "fin": 5.19
+  },
+  {
+   "palabra": "sol",
+   "inicio": 5.19,
+   "fin": 5.45
+  },
+  {
+   "palabra": "parece",
+   "inicio": 5.45,
+   "fin": 5.97
+  },
+  {
+   "palabra": "blanca,",
+   "inicio": 5.97,
+   "fin": 6.53
+  },
+  {
+   "palabra": "pero",
+   "inicio": 6.58,
+   "fin": 6.76
+  },
+  {
+   "palabra": "trae",
+   "inicio": 6.76,
+   "fin": 6.94
+  },
+  {
+   "palabra": "todos",
+   "inicio": 6.94,
+   "fin": 7.44
+  },
+  {
+   "palabra": "los",
+   "inicio": 7.44,
+   "fin": 7.67
+  },
+  {
+   "palabra": "colores",
+   "inicio": 7.67,
+   "fin": 8.2
+  },
+  {
+   "palabra": "mezclados.",
+   "inicio": 8.2,
+   "fin": 8.9
+  },
+  {
+   "palabra": "Al",
+   "inicio": 8.9,
+   "fin": 9.275
+  },
+  {
+   "palabra": "chocar",
+   "inicio": 9.275,
+   "fin": 9.65
+  },
+  {
+   "palabra": "con",
+   "inicio": 9.65,
+   "fin": 9.86
+  },
+  {
+   "palabra": "el",
+   "inicio": 9.86,
+   "fin": 10
+  },
+  {
+   "palabra": "aire,",
+   "inicio": 10,
+   "fin": 10.39
+  },
+  {
+   "palabra": "el",
+   "inicio": 10.43,
+   "fin": 10.56
+  },
+  {
+   "palabra": "azul",
+   "inicio": 10.56,
+   "fin": 10.83
+  },
+  {
+   "palabra": "rebota",
+   "inicio": 10.83,
+   "fin": 11.23
+  },
+  {
+   "palabra": "unas",
+   "inicio": 11.23,
+   "fin": 11.343
+  },
+  {
+   "palabra": "cinco",
+   "inicio": 11.343,
+   "fin": 11.457
+  },
+  {
+   "palabra": "veces",
+   "inicio": 11.457,
+   "fin": 11.57
+  },
+  {
+   "palabra": "más",
+   "inicio": 11.57,
+   "fin": 11.92
+  },
+  {
+   "palabra": "que",
+   "inicio": 11.92,
+   "fin": 12.15
+  },
+  {
+   "palabra": "el",
+   "inicio": 12.15,
+   "fin": 12.32
+  },
+  {
+   "palabra": "rojo",
+   "inicio": 12.32,
+   "fin": 12.7
+  },
+  {
+   "palabra": "y",
+   "inicio": 14.37,
+   "fin": 14.38
+  },
+  {
+   "palabra": "se",
+   "inicio": 14.38,
+   "fin": 14.51
+  },
+  {
+   "palabra": "desparrama",
+   "inicio": 14.51,
+   "fin": 15.3
+  },
+  {
+   "palabra": "por",
+   "inicio": 15.3,
+   "fin": 15.45
+  },
+  {
+   "palabra": "todo",
+   "inicio": 15.45,
+   "fin": 15.74
+  },
+  {
+   "palabra": "el",
+   "inicio": 15.74,
+   "fin": 15.88
+  },
+  {
+   "palabra": "cielo.",
+   "inicio": 15.88,
+   "fin": 16.23
+  },
+  {
+   "palabra": "Por",
+   "inicio": 16.5,
+   "fin": 16.72
+  },
+  {
+   "palabra": "eso,",
+   "inicio": 16.72,
+   "fin": 16.94
+  },
+  {
+   "palabra": "mires",
+   "inicio": 17.09,
+   "fin": 17.46
+  },
+  {
+   "palabra": "para",
+   "inicio": 17.46,
+   "fin": 17.76
+  },
+  {
+   "palabra": "donde",
+   "inicio": 17.76,
+   "fin": 18.13
+  },
+  {
+   "palabra": "mires,",
+   "inicio": 18.13,
+   "fin": 18.5
+  },
+  {
+   "palabra": "te",
+   "inicio": 18.82,
+   "fin": 18.9
+  },
+  {
+   "palabra": "llega",
+   "inicio": 18.9,
+   "fin": 19.39
+  },
+  {
+   "palabra": "azul.",
+   "inicio": 19.39,
+   "fin": 20.1
+  },
+  {
+   "palabra": "¿Qué",
+   "inicio": 20.22,
+   "fin": 20.44
+  },
+  {
+   "palabra": "te",
+   "inicio": 20.44,
+   "fin": 20.55
+  },
+  {
+   "palabra": "gusta",
+   "inicio": 20.55,
+   "fin": 20.83
+  },
+  {
+   "palabra": "más:",
+   "inicio": 20.83,
+   "fin": 21.2
+  },
+  {
+   "palabra": "el",
+   "inicio": 21.34,
+   "fin": 21.34
+  },
+  {
+   "palabra": "cielo",
+   "inicio": 21.34,
+   "fin": 21.7
+  },
+  {
+   "palabra": "del",
+   "inicio": 21.7,
+   "fin": 21.92
+  },
+  {
+   "palabra": "mediodía",
+   "inicio": 21.92,
+   "fin": 22.63
+  },
+  {
+   "palabra": "o",
+   "inicio": 22.63,
+   "fin": 22.66
+  },
+  {
+   "palabra": "el",
+   "inicio": 22.66,
+   "fin": 22.79
+  },
+  {
+   "palabra": "del",
+   "inicio": 22.79,
+   "fin": 22.99
+  },
+  {
+   "palabra": "atardecer?",
+   "inicio": 22.99,
+   "fin": 23.56
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 23.8,
+   "fin": 24.52
+  },
+  {
+   "palabra": "en",
+   "inicio": 24.52,
+   "fin": 24.63
+  },
+  {
+   "palabra": "los",
+   "inicio": 24.63,
+   "fin": 24.82
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 24.82,
+   "fin": 25.49
+  },
+  {
+   "palabra": "Al",
+   "inicio": 25.7,
+   "fin": 25.86
+  },
+  {
+   "palabra": "atardecer,",
+   "inicio": 25.86,
+   "fin": 26.6
+  },
+  {
+   "palabra": "la",
+   "inicio": 26.87,
+   "fin": 26.94
+  },
+  {
+   "palabra": "luz",
+   "inicio": 26.94,
+   "fin": 27.16
+  },
+  {
+   "palabra": "cruza",
+   "inicio": 27.16,
+   "fin": 27.52
+  },
+  {
+   "palabra": "mucho",
+   "inicio": 27.52,
+   "fin": 27.88
+  },
+  {
+   "palabra": "más",
+   "inicio": 27.88,
+   "fin": 28.17
+  },
+  {
+   "palabra": "aire",
+   "inicio": 28.17,
+   "fin": 28.46
+  },
+  {
+   "palabra": "hasta",
+   "inicio": 28.46,
+   "fin": 28.82
+  },
+  {
+   "palabra": "llegar",
+   "inicio": 28.82,
+   "fin": 29.26
+  },
+  {
+   "palabra": "a",
+   "inicio": 29.26,
+   "fin": 29.33
+  },
+  {
+   "palabra": "vos.",
+   "inicio": 29.33,
+   "fin": 29.6
+  },
+  {
+   "palabra": "En",
+   "inicio": 29.7,
+   "fin": 29.76
+  },
+  {
+   "palabra": "el",
+   "inicio": 29.76,
+   "fin": 29.92
+  },
+  {
+   "palabra": "camino,",
+   "inicio": 29.92,
+   "fin": 30.6
+  },
+  {
+   "palabra": "el",
+   "inicio": 30.61,
+   "fin": 30.73
+  },
+  {
+   "palabra": "azul",
+   "inicio": 30.73,
+   "fin": 31
+  },
+  {
+   "palabra": "rebota",
+   "inicio": 31,
+   "fin": 31.9
+  },
+  {
+   "palabra": "para",
+   "inicio": 31.9,
+   "fin": 32.13
+  },
+  {
+   "palabra": "otros",
+   "inicio": 32.13,
+   "fin": 32.47
+  },
+  {
+   "palabra": "lados",
+   "inicio": 32.47,
+   "fin": 32.9
+  },
+  {
+   "palabra": "y",
+   "inicio": 32.9,
+   "fin": 33.02
+  },
+  {
+   "palabra": "solo",
+   "inicio": 33.02,
+   "fin": 33.37
+  },
+  {
+   "palabra": "te",
+   "inicio": 33.37,
+   "fin": 33.56
+  },
+  {
+   "palabra": "llegan",
+   "inicio": 33.56,
+   "fin": 34.13
+  },
+  {
+   "palabra": "los",
+   "inicio": 34.13,
+   "fin": 34.42
+  },
+  {
+   "palabra": "naranjas",
+   "inicio": 34.42,
+   "fin": 35.19
+  },
+  {
+   "palabra": "y",
+   "inicio": 35.19,
+   "fin": 35.28
+  },
+  {
+   "palabra": "los",
+   "inicio": 35.28,
+   "fin": 35.57
+  },
+  {
+   "palabra": "rojos.",
+   "inicio": 35.57,
+   "fin": 36.4
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 36.4,
+   "fin": 36.73
+  },
+  {
+   "palabra": "la",
+   "inicio": 36.73,
+   "fin": 36.84
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 36.84,
+   "fin": 37.18
+  },
+  {
+   "palabra": "para",
+   "inicio": 37.18,
+   "fin": 37.41
+  },
+  {
+   "palabra": "entender",
+   "inicio": 37.41,
+   "fin": 37.9
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 37.9,
+   "fin": 38.36
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 38.36,
+   "fin": 39
+  },
+  {
+   "palabra": "todo",
+   "inicio": 39,
+   "fin": 39.32
+  },
+  {
+   "palabra": "lo",
+   "inicio": 39.32,
+   "fin": 39.48
+  },
+  {
+   "palabra": "que",
+   "inicio": 39.48,
+   "fin": 39.73
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 39.73,
+   "fin": 40.2
+  }
+ ]
+}

@@ -1,0 +1,580 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Tu",
+   "inicio": 0.08,
+   "fin": 0.13
+  },
+  {
+   "palabra": "celular",
+   "inicio": 0.13,
+   "fin": 0.6
+  },
+  {
+   "palabra": "sabe",
+   "inicio": 0.6,
+   "fin": 0.87
+  },
+  {
+   "palabra": "dónde",
+   "inicio": 0.87,
+   "fin": 1.27
+  },
+  {
+   "palabra": "estás",
+   "inicio": 1.27,
+   "fin": 1.72
+  },
+  {
+   "palabra": "sin",
+   "inicio": 1.72,
+   "fin": 1.87
+  },
+  {
+   "palabra": "mandarle",
+   "inicio": 1.87,
+   "fin": 2.34
+  },
+  {
+   "palabra": "nada",
+   "inicio": 2.34,
+   "fin": 2.67
+  },
+  {
+   "palabra": "a",
+   "inicio": 2.67,
+   "fin": 2.75
+  },
+  {
+   "palabra": "ningún",
+   "inicio": 2.75,
+   "fin": 3.32
+  },
+  {
+   "palabra": "satélite.",
+   "inicio": 3.32,
+   "fin": 4.2
+  },
+  {
+   "palabra": "Solo",
+   "inicio": 4.2,
+   "fin": 4.74
+  },
+  {
+   "palabra": "escucha.",
+   "inicio": 4.74,
+   "fin": 5.5
+  },
+  {
+   "palabra": "Hay",
+   "inicio": 5.5,
+   "fin": 5.66
+  },
+  {
+   "palabra": "más",
+   "inicio": 5.66,
+   "fin": 5.87
+  },
+  {
+   "palabra": "de",
+   "inicio": 5.87,
+   "fin": 5.99
+  },
+  {
+   "palabra": "treinta",
+   "inicio": 5.99,
+   "fin": 6.33
+  },
+  {
+   "palabra": "satélites",
+   "inicio": 6.33,
+   "fin": 6.86
+  },
+  {
+   "palabra": "dando",
+   "inicio": 6.86,
+   "fin": 7.73
+  },
+  {
+   "palabra": "vueltas,",
+   "inicio": 7.73,
+   "fin": 8.6
+  },
+  {
+   "palabra": "y",
+   "inicio": 8.6,
+   "fin": 8.67
+  },
+  {
+   "palabra": "cada",
+   "inicio": 8.67,
+   "fin": 8.96
+  },
+  {
+   "palabra": "uno",
+   "inicio": 8.96,
+   "fin": 9.17
+  },
+  {
+   "palabra": "transmite",
+   "inicio": 9.17,
+   "fin": 9.81
+  },
+  {
+   "palabra": "la",
+   "inicio": 9.81,
+   "fin": 9.95
+  },
+  {
+   "palabra": "hora",
+   "inicio": 9.95,
+   "fin": 10.24
+  },
+  {
+   "palabra": "exacta",
+   "inicio": 10.24,
+   "fin": 10.77
+  },
+  {
+   "palabra": "todo",
+   "inicio": 10.77,
+   "fin": 10.96
+  },
+  {
+   "palabra": "el",
+   "inicio": 10.96,
+   "fin": 11.1
+  },
+  {
+   "palabra": "tiempo.",
+   "inicio": 11.1,
+   "fin": 11.54
+  },
+  {
+   "palabra": "Tu",
+   "inicio": 11.8,
+   "fin": 11.93
+  },
+  {
+   "palabra": "celular",
+   "inicio": 11.93,
+   "fin": 12.4
+  },
+  {
+   "palabra": "mide",
+   "inicio": 12.4,
+   "fin": 12.7
+  },
+  {
+   "palabra": "cuánto",
+   "inicio": 12.7,
+   "fin": 13.12
+  },
+  {
+   "palabra": "tarda",
+   "inicio": 13.12,
+   "fin": 13.44
+  },
+  {
+   "palabra": "en",
+   "inicio": 13.44,
+   "fin": 13.57
+  },
+  {
+   "palabra": "llegar",
+   "inicio": 13.57,
+   "fin": 13.97
+  },
+  {
+   "palabra": "cada",
+   "inicio": 13.97,
+   "fin": 14.23
+  },
+  {
+   "palabra": "señal",
+   "inicio": 14.23,
+   "fin": 14.7
+  },
+  {
+   "palabra": "y",
+   "inicio": 14.7,
+   "fin": 14.77
+  },
+  {
+   "palabra": "así",
+   "inicio": 14.77,
+   "fin": 15.06
+  },
+  {
+   "palabra": "sabe",
+   "inicio": 15.06,
+   "fin": 15.35
+  },
+  {
+   "palabra": "a",
+   "inicio": 15.35,
+   "fin": 15.42
+  },
+  {
+   "palabra": "qué",
+   "inicio": 15.42,
+   "fin": 15.71
+  },
+  {
+   "palabra": "distancia",
+   "inicio": 15.71,
+   "fin": 16.36
+  },
+  {
+   "palabra": "está",
+   "inicio": 16.36,
+   "fin": 16.72
+  },
+  {
+   "palabra": "cada",
+   "inicio": 16.72,
+   "fin": 17.01
+  },
+  {
+   "palabra": "uno.",
+   "inicio": 17.01,
+   "fin": 17.5
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 17.62,
+   "fin": 17.8
+  },
+  {
+   "palabra": "usás",
+   "inicio": 17.8,
+   "fin": 18.11
+  },
+  {
+   "palabra": "el",
+   "inicio": 18.11,
+   "fin": 18.23
+  },
+  {
+   "palabra": "GPS",
+   "inicio": 18.23,
+   "fin": 18.42
+  },
+  {
+   "palabra": "hasta",
+   "inicio": 18.42,
+   "fin": 18.74
+  },
+  {
+   "palabra": "para",
+   "inicio": 18.74,
+   "fin": 18.99
+  },
+  {
+   "palabra": "ir",
+   "inicio": 18.99,
+   "fin": 19.11
+  },
+  {
+   "palabra": "a",
+   "inicio": 19.11,
+   "fin": 19.17
+  },
+  {
+   "palabra": "lugares",
+   "inicio": 19.17,
+   "fin": 19.75
+  },
+  {
+   "palabra": "que",
+   "inicio": 19.75,
+   "fin": 19.9
+  },
+  {
+   "palabra": "ya",
+   "inicio": 19.9,
+   "fin": 20.03
+  },
+  {
+   "palabra": "conocés?",
+   "inicio": 20.03,
+   "fin": 20.8
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 20.8,
+   "fin": 21.4
+  },
+  {
+   "palabra": "en",
+   "inicio": 21.4,
+   "fin": 21.52
+  },
+  {
+   "palabra": "los",
+   "inicio": 21.52,
+   "fin": 21.7
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 21.7,
+   "fin": 22.6
+  },
+  {
+   "palabra": "Con",
+   "inicio": 22.6,
+   "fin": 22.78
+  },
+  {
+   "palabra": "cuatro",
+   "inicio": 22.78,
+   "fin": 23.15
+  },
+  {
+   "palabra": "satélites,",
+   "inicio": 23.15,
+   "fin": 23.75
+  },
+  {
+   "palabra": "cruza",
+   "inicio": 23.99,
+   "fin": 24.21
+  },
+  {
+   "palabra": "las",
+   "inicio": 24.21,
+   "fin": 24.39
+  },
+  {
+   "palabra": "distancias",
+   "inicio": 24.39,
+   "fin": 25
+  },
+  {
+   "palabra": "y",
+   "inicio": 25,
+   "fin": 25.08
+  },
+  {
+   "palabra": "encuentra",
+   "inicio": 25.08,
+   "fin": 25.6
+  },
+  {
+   "palabra": "el",
+   "inicio": 25.6,
+   "fin": 25.75
+  },
+  {
+   "palabra": "único",
+   "inicio": 25.75,
+   "fin": 26.26
+  },
+  {
+   "palabra": "punto",
+   "inicio": 26.26,
+   "fin": 26.6
+  },
+  {
+   "palabra": "donde",
+   "inicio": 26.6,
+   "fin": 26.92
+  },
+  {
+   "palabra": "estás.",
+   "inicio": 26.92,
+   "fin": 27.5
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 27.55,
+   "fin": 27.79
+  },
+  {
+   "palabra": "allá",
+   "inicio": 27.79,
+   "fin": 28.15
+  },
+  {
+   "palabra": "arriba",
+   "inicio": 28.15,
+   "fin": 28.64
+  },
+  {
+   "palabra": "el",
+   "inicio": 28.64,
+   "fin": 28.73
+  },
+  {
+   "palabra": "tiempo",
+   "inicio": 28.73,
+   "fin": 29.22
+  },
+  {
+   "palabra": "pasa",
+   "inicio": 29.22,
+   "fin": 29.46
+  },
+  {
+   "palabra": "distinto:",
+   "inicio": 29.46,
+   "fin": 30.04
+  },
+  {
+   "palabra": "sus",
+   "inicio": 30.3,
+   "fin": 30.5
+  },
+  {
+   "palabra": "relojes",
+   "inicio": 30.5,
+   "fin": 30.96
+  },
+  {
+   "palabra": "se",
+   "inicio": 31.96,
+   "fin": 32.09
+  },
+  {
+   "palabra": "adelantan",
+   "inicio": 32.09,
+   "fin": 32.69
+  },
+  {
+   "palabra": "treinta",
+   "inicio": 32.69,
+   "fin": 32.83
+  },
+  {
+   "palabra": "y",
+   "inicio": 32.83,
+   "fin": 32.97
+  },
+  {
+   "palabra": "ocho",
+   "inicio": 32.97,
+   "fin": 33.11
+  },
+  {
+   "palabra": "microsegundos",
+   "inicio": 33.11,
+   "fin": 33.95
+  },
+  {
+   "palabra": "por",
+   "inicio": 33.95,
+   "fin": 34.15
+  },
+  {
+   "palabra": "día.",
+   "inicio": 34.15,
+   "fin": 34.42
+  },
+  {
+   "palabra": "Sin",
+   "inicio": 34.7,
+   "fin": 34.9
+  },
+  {
+   "palabra": "corregirlo,",
+   "inicio": 34.9,
+   "fin": 35.55
+  },
+  {
+   "palabra": "el",
+   "inicio": 35.76,
+   "fin": 36.283
+  },
+  {
+   "palabra": "error",
+   "inicio": 36.283,
+   "fin": 36.807
+  },
+  {
+   "palabra": "crecería",
+   "inicio": 36.807,
+   "fin": 37.33
+  },
+  {
+   "palabra": "unos",
+   "inicio": 37.33,
+   "fin": 37.63
+  },
+  {
+   "palabra": "diez",
+   "inicio": 37.63,
+   "fin": 38.05
+  },
+  {
+   "palabra": "kilómetros",
+   "inicio": 38.05,
+   "fin": 39.03
+  },
+  {
+   "palabra": "por",
+   "inicio": 39.03,
+   "fin": 39.03
+  },
+  {
+   "palabra": "día.",
+   "inicio": 39.03,
+   "fin": 39.6
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 39.6,
+   "fin": 39.96
+  },
+  {
+   "palabra": "la",
+   "inicio": 39.96,
+   "fin": 40.08
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 40.08,
+   "fin": 40.45
+  },
+  {
+   "palabra": "para",
+   "inicio": 40.45,
+   "fin": 40.7
+  },
+  {
+   "palabra": "entender",
+   "inicio": 40.7,
+   "fin": 41.23
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 41.23,
+   "fin": 41.54
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 41.54,
+   "fin": 42.12
+  },
+  {
+   "palabra": "todo",
+   "inicio": 42.12,
+   "fin": 42.24
+  },
+  {
+   "palabra": "lo",
+   "inicio": 42.24,
+   "fin": 42.36
+  },
+  {
+   "palabra": "que",
+   "inicio": 42.36,
+   "fin": 42.54
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 42.54,
+   "fin": 42.84
+  }
+ ]
+}

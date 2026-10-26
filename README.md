@@ -11,8 +11,7 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | ¿Por qué un QR roto se lee igual? | `QrReel` | `src/qr/` | `out/qr.mp4` |
 | ¿Por qué el cielo es azul? | `CieloReel` | `src/cielo/` | `out/cielo.mp4` |
 
-> GPS, QR y cielo todavía no tienen voz grabada: usan timestamps estimados. El texto para grabar está en
-> `TEXTO_VOZ` de cada `guion-<reel>.ts`. Al subir `public/voz-<reel>.mp3`, corré
+> Para cambiar una voz: reemplazá `public/voz-<reel>.mp3`, corré
 > `node --no-warnings scripts/transcribir-voz.mjs <reel>` y volvé a renderizar.
 
 ## Archivos en `public/`
@@ -42,7 +41,8 @@ python3 scripts/generar-audio.py                       # regenera música y efec
 
 - **`src/comun/`** — todo lo que comparten los Reels de la cuenta:
   - `metadata.ts`: `crearCalcularMetadata()` mide la voz y fija la duración en `voz + pausa insertada + 0,5 s`,
-    entre `minFrames` y `maxFrames` (Face ID y microondas: 1800–2400; avión: 1800–2600 porque su locución dura 40,3 s).
+    entre `minFrames` y `maxFrames` (Face ID y microondas: 1800–2400; avión: 1800–2600; GPS, QR y cielo: 1800–2800,
+    porque sus locuciones duran más de 40 s).
     Si la locución no trae la pausa del Remate, la inserta cortando la voz en el silencio indicado.
   - `linea-de-tiempo.ts`: ubica cada escena y cada momento interno buscando frases en los timestamps.
   - `Hud.tsx` (etiquetas con línea animada, título de sección, contador), `Subtitulos.tsx`, `Fondo.tsx`,
