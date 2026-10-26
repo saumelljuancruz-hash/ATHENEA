@@ -264,6 +264,18 @@ def brillo():
     return salida
 
 
+def interferencia():
+    # Zumbido de interferencia GSM ("ti ti ti"): ráfagas a ~217 Hz con armónicos ásperos.
+    salida = np.zeros(int(1.6 * SR))
+    for k in range(3):
+        i0 = int(k * 0.42 * SR)
+        t = t_(0.28)
+        portadora = np.sign(np.sin(2 * np.pi * 217 * t)) * 0.5 + np.sin(2 * np.pi * 434 * t) * 0.3
+        rafaga = portadora * (np.sin(2 * np.pi * 34 * t) > 0) * env_adsr(len(t), 0.005, 0.04)
+        salida[i0:i0 + len(t)] += rafaga
+    return lowpass(salida, 3500)
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     guardar("sfx-motor.wav", motor())
@@ -289,4 +301,6 @@ if __name__ == "__main__":
     # Efectos de los Reels de GPS y cielo.
     guardar("sfx-ping.wav", ping())
     guardar("sfx-brillo.wav", brillo())
+    # Efecto del Reel del modo avión.
+    guardar("sfx-interferencia.wav", interferencia())
     print("Audio generado en", os.path.abspath(OUT))

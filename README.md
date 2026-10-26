@@ -10,6 +10,9 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | ¿Cómo sabe el GPS dónde estás? | `GpsReel` | `src/gps/` | `out/gps.mp4` |
 | ¿Por qué un QR roto se lee igual? | `QrReel` | `src/qr/` | `out/qr.mp4` |
 | ¿Por qué el cielo es azul? | `CieloReel` | `src/cielo/` | `out/cielo.mp4` |
+| ¿El modo avión puede tirar un avión? | `ModoAvionReel` | `src/modoavion/` | `out/modoavion.mp4` |
+| ¿Cargar el celular toda la noche lo arruina? | `BateriaReel` | `src/bateria/` | `out/bateria.mp4` |
+| ¿Cómo sabe el algoritmo lo que te gusta? | `AlgoritmoReel` | `src/algoritmo/` | `out/algoritmo.mp4` |
 
 > Para cambiar una voz: reemplazá `public/voz-<reel>.mp3`, corré
 > `node --no-warnings scripts/transcribir-voz.mjs <reel>` y volvé a renderizar.
@@ -42,7 +45,8 @@ python3 scripts/generar-audio.py                       # regenera música y efec
 - **`src/comun/`** — todo lo que comparten los Reels de la cuenta:
   - `metadata.ts`: `crearCalcularMetadata()` mide la voz y fija la duración en `voz + pausa insertada + 0,5 s`,
     entre `minFrames` y `maxFrames` (Face ID y microondas: 1800–2400; avión: 1800–2600; GPS, QR y cielo: 1800–2800,
-    porque sus locuciones duran más de 40 s).
+    porque sus locuciones duran más de 40 s). `minFrames`/`maxFrames` son opcionales: modo avión, batería y
+    algoritmo no tienen tope y duran lo que necesite la voz.
     Si la locución no trae la pausa del Remate, la inserta cortando la voz en el silencio indicado.
   - `linea-de-tiempo.ts`: ubica cada escena y cada momento interno buscando frases en los timestamps.
   - `Hud.tsx` (etiquetas con línea animada, título de sección, contador), `Subtitulos.tsx`, `Fondo.tsx`,
@@ -62,3 +66,9 @@ python3 scripts/generar-audio.py                       # regenera música y efec
   módulos animados, lupa de unos y ceros, mancha y reconstrucción.
 - **Cielo**: paisaje con cielo que cambia de color, prisma, dispersión del azul en moléculas de aire y
   diagrama del atardecer con la curvatura de la Tierra.
+- **Modo avión**: avión de costado con la cabina en corte, celulares que se encienden, torres de antena que
+  se saturan, auriculares del piloto con la interferencia "ti ti ti" (efecto `interferencia`) y wifi de cabina.
+- **Batería**: dormitorio de noche, pila con corriente que se corta al 100 %, gráfico de la carga inteligente
+  (espera en 80 % hasta la alarma), calor con almohada y sol, y la zona feliz del 20 al 80 %.
+- **Algoritmo**: el video que mide tu tiempo, cinco señales que alimentan tu perfil, una multitud de personas
+  con las parecidas resaltadas y la recomendación que viaja de ellas a vos.

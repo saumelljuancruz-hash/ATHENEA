@@ -14,8 +14,9 @@ export type ConfigMetadata = {
   estimados: PalabraConTiempo[];
   /** Pausa que el guion necesita (p. ej. para el Remate) y que se inserta si la voz no la trae. */
   pausa?: { despuesDe: string; segundos: number; silencioMinimo: number };
-  minFrames: number;
-  maxFrames: number;
+  /** Límites opcionales de duración (frames). Sin ellos, el video dura lo que necesita la voz. */
+  minFrames?: number;
+  maxFrames?: number;
   nombreSalida: string;
 };
 
@@ -171,8 +172,8 @@ export const crearCalcularMetadata =
       ? duracionReal + (pausaVoz?.segundos ?? 0)
       : palabras[palabras.length - 1].fin + 0.3;
     const durationInFrames = Math.min(
-      config.maxFrames,
-      Math.max(config.minFrames, Math.ceil((duracionVoz + COLA_SEGUNDOS) * FPS)),
+      config.maxFrames ?? Infinity,
+      Math.max(config.minFrames ?? 1, Math.ceil((duracionVoz + COLA_SEGUNDOS) * FPS)),
     );
 
     return {

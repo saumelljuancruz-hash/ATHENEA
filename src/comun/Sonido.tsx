@@ -22,6 +22,7 @@ export const EFECTOS = {
   ding: { src: "audio/sfx-ding.wav", volumen: 0.4 },
   ping: { src: "audio/sfx-ping.wav", volumen: 0.22 },
   brillo: { src: "audio/sfx-brillo.wav", volumen: 0.2 },
+  interferencia: { src: "audio/sfx-interferencia.wav", volumen: 0.22 },
 };
 
 export const MUSICA = "audio/musica-suave.mp3";

@@ -5,6 +5,9 @@ import { ComposicionesMicroondas } from "./microondas/Composiciones";
 import { ComposicionesGps } from "./gps/Composiciones";
 import { ComposicionesQr } from "./qr/Composiciones";
 import { ComposicionesCielo } from "./cielo/Composiciones";
+import { ComposicionesModoAvion } from "./modoavion/Composiciones";
+import { ComposicionesBateria } from "./bateria/Composiciones";
+import { ComposicionesAlgoritmo } from "./algoritmo/Composiciones";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -14,5 +17,8 @@ export const RemotionRoot: React.FC = () => (
     <ComposicionesGps />
     <ComposicionesQr />
     <ComposicionesCielo />
+    <ComposicionesModoAvion />
+    <ComposicionesBateria />
+    <ComposicionesAlgoritmo />
   </>
 );
