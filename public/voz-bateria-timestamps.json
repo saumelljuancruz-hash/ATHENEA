@@ -1,0 +1,580 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Dejás",
+   "inicio": 0.06,
+   "fin": 0.39
+  },
+  {
+   "palabra": "el",
+   "inicio": 0.39,
+   "fin": 0.55
+  },
+  {
+   "palabra": "celular",
+   "inicio": 0.55,
+   "fin": 1.1
+  },
+  {
+   "palabra": "cargando",
+   "inicio": 1.1,
+   "fin": 1.72
+  },
+  {
+   "palabra": "toda",
+   "inicio": 1.72,
+   "fin": 2.04
+  },
+  {
+   "palabra": "la",
+   "inicio": 2.04,
+   "fin": 2.17
+  },
+  {
+   "palabra": "noche.",
+   "inicio": 2.17,
+   "fin": 2.64
+  },
+  {
+   "palabra": "¿Lo",
+   "inicio": 2.77,
+   "fin": 2.89
+  },
+  {
+   "palabra": "estás",
+   "inicio": 2.89,
+   "fin": 3.28
+  },
+  {
+   "palabra": "matando?",
+   "inicio": 3.28,
+   "fin": 3.94
+  },
+  {
+   "palabra": "Tranquilo:",
+   "inicio": 4.06,
+   "fin": 4.62
+  },
+  {
+   "palabra": "no.",
+   "inicio": 5.06,
+   "fin": 5.28
+  },
+  {
+   "palabra": "Cuando",
+   "inicio": 5.64,
+   "fin": 6
+  },
+  {
+   "palabra": "llega",
+   "inicio": 6,
+   "fin": 6.3
+  },
+  {
+   "palabra": "al",
+   "inicio": 6.3,
+   "fin": 6.42
+  },
+  {
+   "palabra": "cien",
+   "inicio": 6.42,
+   "fin": 6.603
+  },
+  {
+   "palabra": "por",
+   "inicio": 6.603,
+   "fin": 6.787
+  },
+  {
+   "palabra": "ciento,",
+   "inicio": 6.787,
+   "fin": 6.97
+  },
+  {
+   "palabra": "el",
+   "inicio": 7.25,
+   "fin": 7.34
+  },
+  {
+   "palabra": "celular",
+   "inicio": 7.34,
+   "fin": 7.91
+  },
+  {
+   "palabra": "corta",
+   "inicio": 7.91,
+   "fin": 8.31
+  },
+  {
+   "palabra": "la",
+   "inicio": 8.31,
+   "fin": 8.47
+  },
+  {
+   "palabra": "carga",
+   "inicio": 8.47,
+   "fin": 8.88
+  },
+  {
+   "palabra": "solo.",
+   "inicio": 8.88,
+   "fin": 9.24
+  },
+  {
+   "palabra": "Y",
+   "inicio": 9.24,
+   "fin": 9.32
+  },
+  {
+   "palabra": "muchos,",
+   "inicio": 9.32,
+   "fin": 9.8
+  },
+  {
+   "palabra": "además,",
+   "inicio": 9.95,
+   "fin": 10.62
+  },
+  {
+   "palabra": "aprenden",
+   "inicio": 10.65,
+   "fin": 11.09
+  },
+  {
+   "palabra": "a",
+   "inicio": 11.09,
+   "fin": 11.2
+  },
+  {
+   "palabra": "qué",
+   "inicio": 11.2,
+   "fin": 11.36
+  },
+  {
+   "palabra": "hora",
+   "inicio": 11.36,
+   "fin": 11.59
+  },
+  {
+   "palabra": "te",
+   "inicio": 11.59,
+   "fin": 11.69
+  },
+  {
+   "palabra": "despertás:",
+   "inicio": 11.69,
+   "fin": 12.23
+  },
+  {
+   "palabra": "frenan",
+   "inicio": 12.44,
+   "fin": 12.88
+  },
+  {
+   "palabra": "en",
+   "inicio": 12.88,
+   "fin": 13.03
+  },
+  {
+   "palabra": "ochenta",
+   "inicio": 13.03,
+   "fin": 13.56
+  },
+  {
+   "palabra": "y",
+   "inicio": 13.56,
+   "fin": 13.56
+  },
+  {
+   "palabra": "completan",
+   "inicio": 13.56,
+   "fin": 14.16
+  },
+  {
+   "palabra": "justo",
+   "inicio": 14.16,
+   "fin": 14.51
+  },
+  {
+   "palabra": "antes",
+   "inicio": 14.51,
+   "fin": 14.82
+  },
+  {
+   "palabra": "de",
+   "inicio": 14.82,
+   "fin": 14.95
+  },
+  {
+   "palabra": "que",
+   "inicio": 14.95,
+   "fin": 15.15
+  },
+  {
+   "palabra": "suene",
+   "inicio": 15.15,
+   "fin": 15.48
+  },
+  {
+   "palabra": "la",
+   "inicio": 15.48,
+   "fin": 15.61
+  },
+  {
+   "palabra": "alarma.",
+   "inicio": 15.61,
+   "fin": 16.28
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 16.41,
+   "fin": 16.6
+  },
+  {
+   "palabra": "lo",
+   "inicio": 16.6,
+   "fin": 16.75
+  },
+  {
+   "palabra": "cargás",
+   "inicio": 16.75,
+   "fin": 17.11
+  },
+  {
+   "palabra": "de",
+   "inicio": 17.11,
+   "fin": 17.24
+  },
+  {
+   "palabra": "noche",
+   "inicio": 17.24,
+   "fin": 17.57
+  },
+  {
+   "palabra": "o",
+   "inicio": 17.57,
+   "fin": 17.7
+  },
+  {
+   "palabra": "durante",
+   "inicio": 17.7,
+   "fin": 18.09
+  },
+  {
+   "palabra": "el",
+   "inicio": 18.09,
+   "fin": 18.22
+  },
+  {
+   "palabra": "día?",
+   "inicio": 18.22,
+   "fin": 18.48
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 18.74,
+   "fin": 19.41
+  },
+  {
+   "palabra": "en",
+   "inicio": 19.41,
+   "fin": 19.53
+  },
+  {
+   "palabra": "los",
+   "inicio": 19.53,
+   "fin": 19.69
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 19.69,
+   "fin": 20.52
+  },
+  {
+   "palabra": "Lo",
+   "inicio": 20.52,
+   "fin": 20.67
+  },
+  {
+   "palabra": "que",
+   "inicio": 20.67,
+   "fin": 20.89
+  },
+  {
+   "palabra": "de",
+   "inicio": 20.89,
+   "fin": 21.04
+  },
+  {
+   "palabra": "verdad",
+   "inicio": 21.04,
+   "fin": 21.48
+  },
+  {
+   "palabra": "gasta",
+   "inicio": 21.48,
+   "fin": 21.84
+  },
+  {
+   "palabra": "la",
+   "inicio": 21.84,
+   "fin": 21.99
+  },
+  {
+   "palabra": "batería",
+   "inicio": 21.99,
+   "fin": 22.58
+  },
+  {
+   "palabra": "es",
+   "inicio": 22.58,
+   "fin": 22.73
+  },
+  {
+   "palabra": "el",
+   "inicio": 22.73,
+   "fin": 22.9
+  },
+  {
+   "palabra": "calor.",
+   "inicio": 22.9,
+   "fin": 23.25
+  },
+  {
+   "palabra": "Por",
+   "inicio": 23.52,
+   "fin": 23.71
+  },
+  {
+   "palabra": "eso,",
+   "inicio": 23.71,
+   "fin": 23.89
+  },
+  {
+   "palabra": "nunca",
+   "inicio": 24.02,
+   "fin": 24.33
+  },
+  {
+   "palabra": "lo",
+   "inicio": 24.33,
+   "fin": 24.46
+  },
+  {
+   "palabra": "cargues",
+   "inicio": 24.46,
+   "fin": 24.89
+  },
+  {
+   "palabra": "debajo",
+   "inicio": 24.89,
+   "fin": 25.27
+  },
+  {
+   "palabra": "de",
+   "inicio": 25.27,
+   "fin": 25.39
+  },
+  {
+   "palabra": "la",
+   "inicio": 25.39,
+   "fin": 25.51
+  },
+  {
+   "palabra": "almohada",
+   "inicio": 25.51,
+   "fin": 26.11
+  },
+  {
+   "palabra": "ni",
+   "inicio": 26.11,
+   "fin": 26.32
+  },
+  {
+   "palabra": "al",
+   "inicio": 26.32,
+   "fin": 26.56
+  },
+  {
+   "palabra": "sol.",
+   "inicio": 26.56,
+   "fin": 26.92
+  },
+  {
+   "palabra": "Y",
+   "inicio": 26.92,
+   "fin": 27.02
+  },
+  {
+   "palabra": "no",
+   "inicio": 27.02,
+   "fin": 27.1
+  },
+  {
+   "palabra": "hace",
+   "inicio": 27.1,
+   "fin": 27.34
+  },
+  {
+   "palabra": "falta",
+   "inicio": 27.34,
+   "fin": 27.67
+  },
+  {
+   "palabra": "esperar",
+   "inicio": 27.67,
+   "fin": 28.06
+  },
+  {
+   "palabra": "a",
+   "inicio": 28.06,
+   "fin": 28.12
+  },
+  {
+   "palabra": "que",
+   "inicio": 28.12,
+   "fin": 28.3
+  },
+  {
+   "palabra": "llegue",
+   "inicio": 28.3,
+   "fin": 28.66
+  },
+  {
+   "palabra": "a",
+   "inicio": 28.66,
+   "fin": 28.72
+  },
+  {
+   "palabra": "cero:",
+   "inicio": 28.72,
+   "fin": 28.95
+  },
+  {
+   "palabra": "a",
+   "inicio": 29.26,
+   "fin": 29.26
+  },
+  {
+   "palabra": "la",
+   "inicio": 29.26,
+   "fin": 29.46
+  },
+  {
+   "palabra": "batería",
+   "inicio": 29.46,
+   "fin": 30.27
+  },
+  {
+   "palabra": "le",
+   "inicio": 30.27,
+   "fin": 30.47
+  },
+  {
+   "palabra": "gusta",
+   "inicio": 30.47,
+   "fin": 30.98
+  },
+  {
+   "palabra": "vivir",
+   "inicio": 30.98,
+   "fin": 31.49
+  },
+  {
+   "palabra": "entre",
+   "inicio": 31.49,
+   "fin": 32
+  },
+  {
+   "palabra": "el",
+   "inicio": 32,
+   "fin": 32.2
+  },
+  {
+   "palabra": "veinte",
+   "inicio": 32.2,
+   "fin": 32.91
+  },
+  {
+   "palabra": "y",
+   "inicio": 32.91,
+   "fin": 32.91
+  },
+  {
+   "palabra": "el",
+   "inicio": 32.91,
+   "fin": 33.11
+  },
+  {
+   "palabra": "ochenta",
+   "inicio": 33.11,
+   "fin": 33.473
+  },
+  {
+   "palabra": "por",
+   "inicio": 33.473,
+   "fin": 33.837
+  },
+  {
+   "palabra": "ciento.",
+   "inicio": 33.837,
+   "fin": 34.2
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 34.2,
+   "fin": 34.53
+  },
+  {
+   "palabra": "la",
+   "inicio": 34.53,
+   "fin": 34.64
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 34.64,
+   "fin": 34.98
+  },
+  {
+   "palabra": "para",
+   "inicio": 34.98,
+   "fin": 35.2
+  },
+  {
+   "palabra": "entender",
+   "inicio": 35.2,
+   "fin": 35.78
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 35.78,
+   "fin": 36.01
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 36.01,
+   "fin": 36.67
+  },
+  {
+   "palabra": "todo",
+   "inicio": 36.67,
+   "fin": 36.78
+  },
+  {
+   "palabra": "lo",
+   "inicio": 36.78,
+   "fin": 36.89
+  },
+  {
+   "palabra": "que",
+   "inicio": 36.89,
+   "fin": 37.05
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 37.05,
+   "fin": 37.32
+  }
+ ]
+}

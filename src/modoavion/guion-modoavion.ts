@@ -55,7 +55,7 @@ export const MARCAS = {
   },
   zumbido: {
     auriculares: "los auriculares",
-    titi: "como un zumbido",
+    titi: "ti ti ti",
   },
   pausa: {
     comentarios: "Contámelo",

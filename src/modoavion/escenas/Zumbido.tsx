@@ -10,11 +10,12 @@ import { MarcasModoAvion } from "../linea-modoavion";
 
 export type PropsZumbido = { marcas: MarcasModoAvion["zumbido"]; duracion: number };
 
-/** Ráfagas "ti ti ti": tres pulsos cada 0,42 s, repetidos. */
+/** Ráfagas "ti ti ti": tres pulsos cada 0,42 s, repetidos al ritmo de la voz. */
 const PERIODO = 0.42;
+const CICLO = 1.3;
 const rafaga = (t: number) => {
   if (t < 0) return 0;
-  const ciclo = t % 1.6;
+  const ciclo = t % CICLO;
   const k = Math.floor(ciclo / PERIODO);
   if (k > 2) return 0;
   const u = (ciclo - k * PERIODO) / 0.28;
@@ -58,8 +59,8 @@ export const Zumbido: React.FC<PropsZumbido> = ({ marcas: m }) => {
 
   return (
     <Escena name="Zumbido">
-      {[0, 1, 2].map((k) => (
-        <Sfx key={k} efecto="interferencia" desde={m.titi + k * 1.6 * fps - 6} />
+      {[0, 1].map((k) => (
+        <Sfx key={k} efecto="interferencia" desde={m.titi + k * CICLO * fps - 6} />
       ))}
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
         <defs>
@@ -85,8 +86,8 @@ export const Zumbido: React.FC<PropsZumbido> = ({ marcas: m }) => {
       {/* "ti ti ti" */}
       <div style={{ position: "absolute", left: 0, right: 150, top: 845, display: "flex", justifyContent: "center", gap: 30 }}>
         {[0, 1, 2].map((k) => {
-          const visto = t - inicio >= 0 && ((t - inicio) % 1.6) >= k * PERIODO;
-          const p = rafaga(t - inicio) * (Math.floor(((t - inicio) % 1.6) / PERIODO) === k ? 1 : 0);
+          const visto = t - inicio >= 0 && ((t - inicio) % CICLO) >= k * PERIODO;
+          const p = rafaga(t - inicio) * (Math.floor(((t - inicio) % CICLO) / PERIODO) === k ? 1 : 0);
           return (
             <span
               key={k}

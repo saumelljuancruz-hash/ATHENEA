@@ -1,0 +1,650 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Si",
+   "inicio": 0.05,
+   "fin": 0.16
+  },
+  {
+   "palabra": "no",
+   "inicio": 0.16,
+   "fin": 0.32
+  },
+  {
+   "palabra": "ponés",
+   "inicio": 0.32,
+   "fin": 0.71
+  },
+  {
+   "palabra": "modo",
+   "inicio": 0.71,
+   "fin": 1.02
+  },
+  {
+   "palabra": "avión,",
+   "inicio": 1.02,
+   "fin": 1.59
+  },
+  {
+   "palabra": "el",
+   "inicio": 1.68,
+   "fin": 1.84
+  },
+  {
+   "palabra": "avión",
+   "inicio": 1.84,
+   "fin": 2.33
+  },
+  {
+   "palabra": "no",
+   "inicio": 2.33,
+   "fin": 2.49
+  },
+  {
+   "palabra": "se",
+   "inicio": 2.49,
+   "fin": 2.65
+  },
+  {
+   "palabra": "cae.",
+   "inicio": 2.65,
+   "fin": 2.89
+  },
+  {
+   "palabra": "No",
+   "inicio": 3.2,
+   "fin": 3.32
+  },
+  {
+   "palabra": "hay",
+   "inicio": 3.32,
+   "fin": 3.5
+  },
+  {
+   "palabra": "ningún",
+   "inicio": 3.5,
+   "fin": 3.94
+  },
+  {
+   "palabra": "accidente",
+   "inicio": 3.94,
+   "fin": 4.53
+  },
+  {
+   "palabra": "comprobado",
+   "inicio": 4.53,
+   "fin": 5.12
+  },
+  {
+   "palabra": "por",
+   "inicio": 5.12,
+   "fin": 5.29
+  },
+  {
+   "palabra": "un",
+   "inicio": 5.29,
+   "fin": 5.41
+  },
+  {
+   "palabra": "celular.",
+   "inicio": 5.41,
+   "fin": 6.1
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 6.1,
+   "fin": 6.47
+  },
+  {
+   "palabra": "algo",
+   "inicio": 6.47,
+   "fin": 6.84
+  },
+  {
+   "palabra": "sí",
+   "inicio": 6.84,
+   "fin": 7.12
+  },
+  {
+   "palabra": "pasa.",
+   "inicio": 7.12,
+   "fin": 7.8
+  },
+  {
+   "palabra": "Allá",
+   "inicio": 7.8,
+   "fin": 8.15
+  },
+  {
+   "palabra": "arriba,",
+   "inicio": 8.15,
+   "fin": 8.71
+  },
+  {
+   "palabra": "tu",
+   "inicio": 8.72,
+   "fin": 8.85
+  },
+  {
+   "palabra": "celular",
+   "inicio": 8.85,
+   "fin": 9.34
+  },
+  {
+   "palabra": "busca",
+   "inicio": 9.34,
+   "fin": 9.7
+  },
+  {
+   "palabra": "antenas",
+   "inicio": 9.7,
+   "fin": 10.18
+  },
+  {
+   "palabra": "sin",
+   "inicio": 10.18,
+   "fin": 10.39
+  },
+  {
+   "palabra": "parar,",
+   "inicio": 10.39,
+   "fin": 10.8
+  },
+  {
+   "palabra": "y",
+   "inicio": 10.8,
+   "fin": 10.86
+  },
+  {
+   "palabra": "cuanto",
+   "inicio": 10.86,
+   "fin": 11.23
+  },
+  {
+   "palabra": "más",
+   "inicio": 11.23,
+   "fin": 11.48
+  },
+  {
+   "palabra": "lejos",
+   "inicio": 11.48,
+   "fin": 11.78
+  },
+  {
+   "palabra": "están,",
+   "inicio": 11.78,
+   "fin": 12.15
+  },
+  {
+   "palabra": "más",
+   "inicio": 12.38,
+   "fin": 12.57
+  },
+  {
+   "palabra": "fuerte",
+   "inicio": 12.57,
+   "fin": 12.98
+  },
+  {
+   "palabra": "transmite",
+   "inicio": 12.98,
+   "fin": 13.6
+  },
+  {
+   "palabra": "para",
+   "inicio": 13.6,
+   "fin": 13.83
+  },
+  {
+   "palabra": "encontrarlas.",
+   "inicio": 13.83,
+   "fin": 14.7
+  },
+  {
+   "palabra": "Esas",
+   "inicio": 14.7,
+   "fin": 14.95
+  },
+  {
+   "palabra": "señales",
+   "inicio": 14.95,
+   "fin": 15.46
+  },
+  {
+   "palabra": "se",
+   "inicio": 15.46,
+   "fin": 15.59
+  },
+  {
+   "palabra": "cuelan",
+   "inicio": 15.59,
+   "fin": 16
+  },
+  {
+   "palabra": "en",
+   "inicio": 16,
+   "fin": 16.08
+  },
+  {
+   "palabra": "los",
+   "inicio": 16.08,
+   "fin": 16.21
+  },
+  {
+   "palabra": "auriculares",
+   "inicio": 16.21,
+   "fin": 16.7
+  },
+  {
+   "palabra": "de",
+   "inicio": 16.7,
+   "fin": 16.83
+  },
+  {
+   "palabra": "los",
+   "inicio": 16.83,
+   "fin": 17.05
+  },
+  {
+   "palabra": "pilotos",
+   "inicio": 17.05,
+   "fin": 17.54
+  },
+  {
+   "palabra": "como",
+   "inicio": 17.54,
+   "fin": 17.86
+  },
+  {
+   "palabra": "un",
+   "inicio": 17.86,
+   "fin": 18.04
+  },
+  {
+   "palabra": "zumbido:",
+   "inicio": 18.04,
+   "fin": 18.59
+  },
+  {
+   "palabra": "ti",
+   "inicio": 18.59,
+   "fin": 19.14
+  },
+  {
+   "palabra": "ti",
+   "inicio": 19.14,
+   "fin": 19.35
+  },
+  {
+   "palabra": "ti,",
+   "inicio": 19.35,
+   "fin": 19.79
+  },
+  {
+   "palabra": "ti",
+   "inicio": 19.87,
+   "fin": 20.13
+  },
+  {
+   "palabra": "ti",
+   "inicio": 20.13,
+   "fin": 20.39
+  },
+  {
+   "palabra": "ti.",
+   "inicio": 20.39,
+   "fin": 20.8
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 20.93,
+   "fin": 21.18
+  },
+  {
+   "palabra": "ponés",
+   "inicio": 21.18,
+   "fin": 21.46
+  },
+  {
+   "palabra": "modo",
+   "inicio": 21.46,
+   "fin": 21.7
+  },
+  {
+   "palabra": "avión",
+   "inicio": 21.7,
+   "fin": 22.09
+  },
+  {
+   "palabra": "o",
+   "inicio": 22.09,
+   "fin": 22.15
+  },
+  {
+   "palabra": "te",
+   "inicio": 22.15,
+   "fin": 22.29
+  },
+  {
+   "palabra": "hacés",
+   "inicio": 22.29,
+   "fin": 22.61
+  },
+  {
+   "palabra": "el",
+   "inicio": 22.61,
+   "fin": 22.74
+  },
+  {
+   "palabra": "distraído?",
+   "inicio": 22.74,
+   "fin": 23.37
+  },
+  {
+   "palabra": "Contámelo",
+   "inicio": 23.7,
+   "fin": 24.3
+  },
+  {
+   "palabra": "en",
+   "inicio": 24.3,
+   "fin": 24.42
+  },
+  {
+   "palabra": "los",
+   "inicio": 24.42,
+   "fin": 24.6
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 24.6,
+   "fin": 25.5
+  },
+  {
+   "palabra": "Y",
+   "inicio": 25.5,
+   "fin": 25.66
+  },
+  {
+   "palabra": "con",
+   "inicio": 25.66,
+   "fin": 25.75
+  },
+  {
+   "palabra": "cientos",
+   "inicio": 25.75,
+   "fin": 26.2
+  },
+  {
+   "palabra": "de",
+   "inicio": 26.2,
+   "fin": 26.33
+  },
+  {
+   "palabra": "celulares",
+   "inicio": 26.33,
+   "fin": 26.91
+  },
+  {
+   "palabra": "buscando",
+   "inicio": 26.91,
+   "fin": 27.43
+  },
+  {
+   "palabra": "a",
+   "inicio": 27.43,
+   "fin": 27.49
+  },
+  {
+   "palabra": "la",
+   "inicio": 27.49,
+   "fin": 27.62
+  },
+  {
+   "palabra": "vez",
+   "inicio": 27.62,
+   "fin": 27.81
+  },
+  {
+   "palabra": "desde",
+   "inicio": 27.81,
+   "fin": 28.13
+  },
+  {
+   "palabra": "el",
+   "inicio": 28.13,
+   "fin": 28.26
+  },
+  {
+   "palabra": "aire,",
+   "inicio": 28.26,
+   "fin": 28.6
+  },
+  {
+   "palabra": "también",
+   "inicio": 28.68,
+   "fin": 29.05
+  },
+  {
+   "palabra": "molestan",
+   "inicio": 29.05,
+   "fin": 29.5
+  },
+  {
+   "palabra": "a",
+   "inicio": 29.5,
+   "fin": 29.55
+  },
+  {
+   "palabra": "las",
+   "inicio": 29.55,
+   "fin": 29.72
+  },
+  {
+   "palabra": "antenas",
+   "inicio": 29.72,
+   "fin": 30.11
+  },
+  {
+   "palabra": "de",
+   "inicio": 30.11,
+   "fin": 30.22
+  },
+  {
+   "palabra": "la",
+   "inicio": 30.22,
+   "fin": 30.33
+  },
+  {
+   "palabra": "tierra.",
+   "inicio": 30.33,
+   "fin": 30.67
+  },
+  {
+   "palabra": "Por",
+   "inicio": 30.9,
+   "fin": 31.14
+  },
+  {
+   "palabra": "eso",
+   "inicio": 31.14,
+   "fin": 31.38
+  },
+  {
+   "palabra": "te",
+   "inicio": 31.38,
+   "fin": 31.54
+  },
+  {
+   "palabra": "piden",
+   "inicio": 31.54,
+   "fin": 31.96
+  },
+  {
+   "palabra": "apagarlo:",
+   "inicio": 31.96,
+   "fin": 32.63
+  },
+  {
+   "palabra": "más",
+   "inicio": 32.73,
+   "fin": 33
+  },
+  {
+   "palabra": "por",
+   "inicio": 33,
+   "fin": 33.2
+  },
+  {
+   "palabra": "el",
+   "inicio": 33.2,
+   "fin": 33.33
+  },
+  {
+   "palabra": "ruido",
+   "inicio": 33.33,
+   "fin": 33.66
+  },
+  {
+   "palabra": "que",
+   "inicio": 33.66,
+   "fin": 33.86
+  },
+  {
+   "palabra": "por",
+   "inicio": 33.86,
+   "fin": 34.06
+  },
+  {
+   "palabra": "peligro.",
+   "inicio": 34.06,
+   "fin": 34.54
+  },
+  {
+   "palabra": "Y",
+   "inicio": 34.6,
+   "fin": 34.75
+  },
+  {
+   "palabra": "el",
+   "inicio": 34.75,
+   "fin": 34.81
+  },
+  {
+   "palabra": "wifi",
+   "inicio": 34.81,
+   "fin": 35.16
+  },
+  {
+   "palabra": "del",
+   "inicio": 35.16,
+   "fin": 35.38
+  },
+  {
+   "palabra": "avión",
+   "inicio": 35.38,
+   "fin": 35.81
+  },
+  {
+   "palabra": "sí",
+   "inicio": 35.81,
+   "fin": 36.03
+  },
+  {
+   "palabra": "se",
+   "inicio": 36.03,
+   "fin": 36.17
+  },
+  {
+   "palabra": "puede",
+   "inicio": 36.17,
+   "fin": 36.54
+  },
+  {
+   "palabra": "usar,",
+   "inicio": 36.54,
+   "fin": 36.99
+  },
+  {
+   "palabra": "porque",
+   "inicio": 37.08,
+   "fin": 37.62
+  },
+  {
+   "palabra": "esa",
+   "inicio": 37.62,
+   "fin": 37.89
+  },
+  {
+   "palabra": "señal",
+   "inicio": 37.89,
+   "fin": 38.43
+  },
+  {
+   "palabra": "está",
+   "inicio": 38.43,
+   "fin": 39.52
+  },
+  {
+   "palabra": "controlada.",
+   "inicio": 39.52,
+   "fin": 39.79
+  },
+  {
+   "palabra": "Seguí",
+   "inicio": 40.1,
+   "fin": 40.49
+  },
+  {
+   "palabra": "la",
+   "inicio": 40.49,
+   "fin": 40.62
+  },
+  {
+   "palabra": "cuenta",
+   "inicio": 40.62,
+   "fin": 41.01
+  },
+  {
+   "palabra": "para",
+   "inicio": 41.01,
+   "fin": 41.27
+  },
+  {
+   "palabra": "entender",
+   "inicio": 41.27,
+   "fin": 41.8
+  },
+  {
+   "palabra": "cómo",
+   "inicio": 41.8,
+   "fin": 42.12
+  },
+  {
+   "palabra": "funciona",
+   "inicio": 42.12,
+   "fin": 42.67
+  },
+  {
+   "palabra": "todo",
+   "inicio": 42.67,
+   "fin": 42.9
+  },
+  {
+   "palabra": "lo",
+   "inicio": 42.9,
+   "fin": 43.03
+  },
+  {
+   "palabra": "que",
+   "inicio": 43.03,
+   "fin": 43.22
+  },
+  {
+   "palabra": "usás.",
+   "inicio": 43.22,
+   "fin": 43.6
+  }
+ ]
+}
