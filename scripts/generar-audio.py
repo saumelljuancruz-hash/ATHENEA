@@ -243,6 +243,27 @@ def ding():
     return x + golpe
 
 
+def ping():
+    # Ping de señal (tipo sonar): tono puro con eco suave.
+    t = t_(1.2)
+    tono = np.sin(2 * np.pi * 1320 * t) * np.exp(-t * 6)
+    eco = np.zeros_like(tono)
+    d = int(0.18 * SR)
+    eco[d:] = tono[:-d] * 0.35
+    return (tono + eco) * env_adsr(len(t), 0.003, 0.2)
+
+
+def brillo():
+    # Brillo: arpegio de campanitas agudas, muy suave.
+    salida = np.zeros(int(1.4 * SR))
+    for k, f in enumerate((2093, 2637, 3136, 4186)):
+        t = t_(1.0)
+        nota_ = sum(np.sin(2 * np.pi * f * m * t) * a for m, a in ((1, 1), (2.01, 0.2))) * np.exp(-t * 5)
+        i0 = int(k * 0.09 * SR)
+        salida[i0:i0 + len(t)] += nota_ * (1 - 0.15 * k)
+    return salida
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     guardar("sfx-motor.wav", motor())
@@ -265,4 +286,7 @@ if __name__ == "__main__":
     guardar("sfx-microondas.wav", microondas())
     guardar("sfx-burbujeo.wav", burbujeo())
     guardar("sfx-ding.wav", ding())
+    # Efectos de los Reels de GPS y cielo.
+    guardar("sfx-ping.wav", ping())
+    guardar("sfx-brillo.wav", brillo())
     print("Audio generado en", os.path.abspath(OUT))

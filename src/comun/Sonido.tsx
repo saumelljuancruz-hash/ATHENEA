@@ -20,6 +20,8 @@ export const EFECTOS = {
   microondas: { src: "audio/sfx-microondas.wav", volumen: 0.18 },
   burbujeo: { src: "audio/sfx-burbujeo.wav", volumen: 0.3 },
   ding: { src: "audio/sfx-ding.wav", volumen: 0.4 },
+  ping: { src: "audio/sfx-ping.wav", volumen: 0.22 },
+  brillo: { src: "audio/sfx-brillo.wav", volumen: 0.2 },
 };
 
 export const MUSICA = "audio/musica-suave.mp3";

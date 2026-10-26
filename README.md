@@ -7,6 +7,13 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | ¿Por qué los aviones hacen una curva en el mapa? | `AvionReel` | `src/avion/` | `out/avion.mp4` |
 | ¿Cómo funciona el reconocimiento facial (Face ID)? | `FaceIdReel` | `src/faceid/` | `out/faceid.mp4` |
 | ¿Cómo calienta la comida un microondas? | `MicroondasReel` | `src/microondas/` | `out/microondas.mp4` |
+| ¿Cómo sabe el GPS dónde estás? | `GpsReel` | `src/gps/` | `out/gps.mp4` |
+| ¿Por qué un QR roto se lee igual? | `QrReel` | `src/qr/` | `out/qr.mp4` |
+| ¿Por qué el cielo es azul? | `CieloReel` | `src/cielo/` | `out/cielo.mp4` |
+
+> GPS, QR y cielo todavía no tienen voz grabada: usan timestamps estimados. El texto para grabar está en
+> `TEXTO_VOZ` de cada `guion-<reel>.ts`. Al subir `public/voz-<reel>.mp3`, corré
+> `node --no-warnings scripts/transcribir-voz.mjs <reel>` y volvé a renderizar.
 
 ## Archivos en `public/`
 
@@ -49,3 +56,9 @@ python3 scripts/generar-audio.py                       # regenera música y efec
 - **Microondas**: microondas ilustrado en SVG con vista de frente y en corte (`src/microondas/componentes/`),
   ondas que rebotan en las paredes, moléculas de agua (O + 2 H) que cambian de azul a naranja, y una
   simulación simple de calor por celdas para los puntos calientes y el plato giratorio.
+- **GPS**: reutiliza el globo del avión con órbitas y satélites (`src/gps/componentes/Espacio.tsx`), un plano
+  de ciudad para la trilateración y relojes que se desfasan 38 μs por día.
+- **QR**: el código del video es real (`qrcode`, nivel H) y lleva a instagram.com/nadietelo.explico;
+  módulos animados, lupa de unos y ceros, mancha y reconstrucción.
+- **Cielo**: paisaje con cielo que cambia de color, prisma, dispersión del azul en moléculas de aire y
+  diagrama del atardecer con la curvatura de la Tierra.

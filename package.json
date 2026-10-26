@@ -15,6 +15,7 @@
     "@remotion/media": "4.0.537",
     "d3-geo": "^3.1.1",
     "mediabunny": "1.61.6",
+    "qrcode": "^1.5.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.537",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.537",
     "@types/d3-geo": "^3.1.1",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "19.2.7",
     "@types/topojson-client": "^3.1.5",
     "@types/web": "0.0.166",
