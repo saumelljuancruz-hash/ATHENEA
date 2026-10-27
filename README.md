@@ -13,6 +13,9 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | ¿El modo avión puede tirar un avión? | `ModoAvionReel` | `src/modoavion/` | `out/modoavion.mp4` |
 | ¿Cargar el celular toda la noche lo arruina? | `BateriaReel` | `src/bateria/` | `out/bateria.mp4` |
 | ¿Cómo sabe el algoritmo lo que te gusta? | `AlgoritmoReel` | `src/algoritmo/` | `out/algoritmo.mp4` |
+| El hombre que engañó a Google Maps con un carrito | `TraficoReel` | `src/trafico/` | `out/trafico.mp4` |
+| Por qué las ventanillas del avión son redondeadas | `VentanasReel` | `src/ventanas/` | `out/ventanas.mp4` |
+| Cerrar las apps NO ahorra batería | `AppsReel` | `src/apps/` | `out/apps.mp4` |
 
 > Portadas: `npx remotion still <Reel>-Portada out/portada-<reel>.png` (ModoAvion, Bateria, Algoritmo).
 > El texto de cada portada está en `PORTADA` dentro del guion; todo lo importante entra en el recorte 4:5 de la grilla.
@@ -52,6 +55,8 @@ python3 scripts/generar-audio.py                       # regenera música y efec
     algoritmo no tienen tope y duran lo que necesite la voz.
     Si la locución no trae la pausa del Remate, la inserta cortando la voz en el silencio indicado.
   - `linea-de-tiempo.ts`: ubica cada escena y cada momento interno buscando frases en los timestamps.
+  - `Gancho.tsx` (gancho escrito desde el cuadro 1), `Cortes.tsx` y `Planos.tsx` (cambio de encuadre cada 2–3 s),
+    `CierreLoop.tsx` (el final funde al primer cuadro para que el Reel haga loop). Ver `GUIA-REELS.md`.
   - `Hud.tsx` (etiquetas con línea animada, título de sección, contador), `Subtitulos.tsx`, `Fondo.tsx`,
     `Sonido.tsx` (biblioteca de efectos, voz + música con ducking), `vista.tsx` (zoom/giro de cámara 2D),
     `TarjetaPausa.tsx`, `RemateLineas.tsx`, `CierreCTA.tsx`.

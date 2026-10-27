@@ -8,8 +8,12 @@ export type LineaPortada = { texto: string; color?: string };
 const ANCHO_TEXTO = 920;
 const MAXIMO = 175;
 
-/** Una línea del título que se agranda hasta llenar el ancho (sin pasarse de MAXIMO). */
-const LineaAjustada: React.FC<{ linea: LineaPortada }> = ({ linea }) => {
+/** Una línea de título que se agranda hasta llenar `ancho` (sin pasarse de `maximo`). */
+export const LineaAjustada: React.FC<{ linea: LineaPortada; ancho?: number; maximo?: number }> = ({
+  linea,
+  ancho: anchoTexto = ANCHO_TEXTO,
+  maximo = MAXIMO,
+}) => {
   const medida = useRef<HTMLSpanElement>(null);
   const [tamano, setTamano] = useState(100);
   const [espera] = useState(() => delayRender("Midiendo el título de la portada"));
@@ -17,11 +21,11 @@ const LineaAjustada: React.FC<{ linea: LineaPortada }> = ({ linea }) => {
   useLayoutEffect(() => {
     document.fonts.ready.then(() => {
       // Se mide una copia invisible a 100 px y se escala a lo ancho.
-      const ancho = medida.current?.getBoundingClientRect().width || ANCHO_TEXTO;
-      setTamano(Math.min(MAXIMO, Math.floor((100 * ANCHO_TEXTO) / ancho)));
+      const ancho = medida.current?.getBoundingClientRect().width || anchoTexto;
+      setTamano(Math.min(maximo, Math.floor((100 * anchoTexto) / ancho)));
       continueRender(espera);
     });
-  }, [espera]);
+  }, [espera, anchoTexto, maximo]);
   return (
     <>
       <span ref={medida} style={{ ...estilo, fontSize: 100, position: "absolute", visibility: "hidden" }}>
