@@ -139,3 +139,9 @@ export const TEXTOS = {
 export const DATOS = {
   pasajeros: 180,
 };
+
+/** Portada del Reel (imagen fija). */
+export const PORTADA = {
+  etiqueta: "¿MITO O VERDAD?",
+  lineas: ["¿TU CELULAR", "PUEDE TIRAR", "UN AVIÓN?"],
+};

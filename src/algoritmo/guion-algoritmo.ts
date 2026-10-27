@@ -147,3 +147,9 @@ export const TEXTOS = {
 
 /** Categorías del perfil (barras). */
 export const CATEGORIAS = ["ciencia", "humor", "comida", "viajes", "música", "deporte"];
+
+/** Portada del Reel (imagen fija). */
+export const PORTADA = {
+  etiqueta: "ESTE VIDEO TAMBIÉN",
+  lineas: ["EL ALGORITMO", "TE ESTÁ", "MIDIENDO"],
+};

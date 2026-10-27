@@ -137,3 +137,9 @@ export const TEXTOS = {
     siguiendo: "✓ Siguiendo",
   },
 };
+
+/** Portada del Reel (imagen fija). */
+export const PORTADA = {
+  etiqueta: "LO HACÉS TODAS LAS NOCHES",
+  lineas: ["¿CARGARLO", "TODA LA NOCHE", "LO ARRUINA?"],
+};

@@ -14,6 +14,9 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | ¿Cargar el celular toda la noche lo arruina? | `BateriaReel` | `src/bateria/` | `out/bateria.mp4` |
 | ¿Cómo sabe el algoritmo lo que te gusta? | `AlgoritmoReel` | `src/algoritmo/` | `out/algoritmo.mp4` |
 
+> Portadas: `npx remotion still <Reel>-Portada out/portada-<reel>.png` (ModoAvion, Bateria, Algoritmo).
+> El texto de cada portada está en `PORTADA` dentro del guion; todo lo importante entra en el recorte 4:5 de la grilla.
+
 > Para cambiar una voz: reemplazá `public/voz-<reel>.mp3`, corré
 > `node --no-warnings scripts/transcribir-voz.mjs <reel>` y volvé a renderizar.
 

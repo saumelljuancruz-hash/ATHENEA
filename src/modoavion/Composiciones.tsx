@@ -1,5 +1,6 @@
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
 import { FPS } from "../comun/metadata";
+import { PortadaModoAvion } from "./Portada";
 import { Antenas } from "./escenas/Antenas";
 import { Busqueda } from "./escenas/Busqueda";
 import { CTA } from "./escenas/CTA";
@@ -29,6 +30,7 @@ export const ComposicionesModoAvion: React.FC = () => (
       defaultProps={PROPS_MODOAVION}
       calculateMetadata={calcularMetadataModoAvion}
     />
+    <Still id="ModoAvion-Portada" component={PortadaModoAvion} width={ANCHO} height={ALTO} />
     <Folder name="ModoAvion-Escenas">
       <Composition id="ModoAvion-Hook" component={Hook} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.hook.duracion} defaultProps={{ marcas: m.hook, duracion: e.hook.duracion }} />
       <Composition id="ModoAvion-Busqueda" component={Busqueda} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.busqueda.duracion} defaultProps={{ marcas: m.busqueda, duracion: e.busqueda.duracion }} />

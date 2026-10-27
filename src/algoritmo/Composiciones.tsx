@@ -1,5 +1,6 @@
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
 import { FPS } from "../comun/metadata";
+import { PortadaAlgoritmo } from "./Portada";
 import { CTA } from "./escenas/CTA";
 import { Hook } from "./escenas/Hook";
 import { Parecidos } from "./escenas/Parecidos";
@@ -29,6 +30,7 @@ export const ComposicionesAlgoritmo: React.FC = () => (
       defaultProps={PROPS_ALGORITMO}
       calculateMetadata={calcularMetadataAlgoritmo}
     />
+    <Still id="Algoritmo-Portada" component={PortadaAlgoritmo} width={ANCHO} height={ALTO} />
     <Folder name="Algoritmo-Escenas">
       <Composition id="Algoritmo-Hook" component={Hook} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.hook.duracion} defaultProps={{ marcas: m.hook, duracion: e.hook.duracion }} />
       <Composition id="Algoritmo-Senales" component={Senales} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.senales.duracion} defaultProps={{ marcas: m.senales, duracion: e.senales.duracion }} />

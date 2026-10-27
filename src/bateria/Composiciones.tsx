@@ -1,5 +1,6 @@
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
 import { FPS } from "../comun/metadata";
+import { PortadaBateria } from "./Portada";
 import { CTA } from "./escenas/CTA";
 import { Calor } from "./escenas/Calor";
 import { Corte } from "./escenas/Corte";
@@ -29,6 +30,7 @@ export const ComposicionesBateria: React.FC = () => (
       defaultProps={PROPS_BATERIA}
       calculateMetadata={calcularMetadataBateria}
     />
+    <Still id="Bateria-Portada" component={PortadaBateria} width={ANCHO} height={ALTO} />
     <Folder name="Bateria-Escenas">
       <Composition id="Bateria-Hook" component={Hook} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.hook.duracion} defaultProps={{ marcas: m.hook, duracion: e.hook.duracion }} />
       <Composition id="Bateria-Corte" component={Corte} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.corte.duracion} defaultProps={{ marcas: m.corte, duracion: e.corte.duracion }} />

@@ -199,7 +199,7 @@ export const CierreCTA: React.FC<{
   );
 };
 
-const Logo: React.FC<{ disponible: boolean; src: string }> = ({ disponible, src }) =>
+export const Logo: React.FC<{ disponible: boolean; src: string }> = ({ disponible, src }) =>
   disponible ? (
     <div
       style={{
