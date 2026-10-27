@@ -1,0 +1,605 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Por",
+   "inicio": 0.11,
+   "fin": 0.24
+  },
+  {
+   "palabra": "esta",
+   "inicio": 0.24,
+   "fin": 0.61
+  },
+  {
+   "palabra": "forma",
+   "inicio": 0.61,
+   "fin": 0.96
+  },
+  {
+   "palabra": "de",
+   "inicio": 0.96,
+   "fin": 1.12
+  },
+  {
+   "palabra": "ventana",
+   "inicio": 1.12,
+   "fin": 1.68
+  },
+  {
+   "palabra": "se",
+   "inicio": 1.68,
+   "fin": 1.84
+  },
+  {
+   "palabra": "cayeron",
+   "inicio": 1.84,
+   "fin": 2.4
+  },
+  {
+   "palabra": "aviones.",
+   "inicio": 2.4,
+   "fin": 3.08
+  },
+  {
+   "palabra": "Te",
+   "inicio": 3.08,
+   "fin": 3.36
+  },
+  {
+   "palabra": "cuento.",
+   "inicio": 3.36,
+   "fin": 4.2
+  },
+  {
+   "palabra": "En",
+   "inicio": 4.2,
+   "fin": 4.35
+  },
+  {
+   "palabra": "los",
+   "inicio": 4.35,
+   "fin": 4.58
+  },
+  {
+   "palabra": "años",
+   "inicio": 4.58,
+   "fin": 4.97
+  },
+  {
+   "palabra": "cincuenta,",
+   "inicio": 4.97,
+   "fin": 5.53
+  },
+  {
+   "palabra": "el",
+   "inicio": 5.58,
+   "fin": 5.72
+  },
+  {
+   "palabra": "Comet",
+   "inicio": 5.72,
+   "fin": 6.04
+  },
+  {
+   "palabra": "era",
+   "inicio": 6.04,
+   "fin": 6.22
+  },
+  {
+   "palabra": "el",
+   "inicio": 6.22,
+   "fin": 6.34
+  },
+  {
+   "palabra": "primer",
+   "inicio": 6.34,
+   "fin": 6.72
+  },
+  {
+   "palabra": "avión",
+   "inicio": 6.72,
+   "fin": 7.08
+  },
+  {
+   "palabra": "de",
+   "inicio": 7.08,
+   "fin": 7.23
+  },
+  {
+   "palabra": "pasajeros",
+   "inicio": 7.23,
+   "fin": 7.72
+  },
+  {
+   "palabra": "a",
+   "inicio": 7.72,
+   "fin": 7.81
+  },
+  {
+   "palabra": "reacción.",
+   "inicio": 7.81,
+   "fin": 8.64
+  },
+  {
+   "palabra": "El",
+   "inicio": 8.8,
+   "fin": 8.99
+  },
+  {
+   "palabra": "futuro,",
+   "inicio": 8.99,
+   "fin": 9.43
+  },
+  {
+   "palabra": "¿viste?",
+   "inicio": 9.58,
+   "fin": 10.24
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 10.24,
+   "fin": 10.71
+  },
+  {
+   "palabra": "en",
+   "inicio": 10.71,
+   "fin": 10.94
+  },
+  {
+   "palabra": "mil",
+   "inicio": 10.94,
+   "fin": 11.236
+  },
+  {
+   "palabra": "novecientos",
+   "inicio": 11.236,
+   "fin": 11.532
+  },
+  {
+   "palabra": "cincuenta",
+   "inicio": 11.532,
+   "fin": 11.828
+  },
+  {
+   "palabra": "y",
+   "inicio": 11.828,
+   "fin": 12.124
+  },
+  {
+   "palabra": "cuatro,",
+   "inicio": 12.124,
+   "fin": 12.42
+  },
+  {
+   "palabra": "dos",
+   "inicio": 12.48,
+   "fin": 12.66
+  },
+  {
+   "palabra": "se",
+   "inicio": 12.66,
+   "fin": 12.77
+  },
+  {
+   "palabra": "partieron",
+   "inicio": 12.77,
+   "fin": 13.32
+  },
+  {
+   "palabra": "en",
+   "inicio": 13.32,
+   "fin": 13.44
+  },
+  {
+   "palabra": "el",
+   "inicio": 13.44,
+   "fin": 13.56
+  },
+  {
+   "palabra": "aire",
+   "inicio": 13.56,
+   "fin": 13.89
+  },
+  {
+   "palabra": "en",
+   "inicio": 13.89,
+   "fin": 14.01
+  },
+  {
+   "palabra": "menos",
+   "inicio": 14.01,
+   "fin": 14.45
+  },
+  {
+   "palabra": "de",
+   "inicio": 14.45,
+   "fin": 14.65
+  },
+  {
+   "palabra": "tres",
+   "inicio": 14.65,
+   "fin": 14.96
+  },
+  {
+   "palabra": "meses.",
+   "inicio": 14.96,
+   "fin": 15.68
+  },
+  {
+   "palabra": "Para",
+   "inicio": 15.68,
+   "fin": 15.9
+  },
+  {
+   "palabra": "entenderlo,",
+   "inicio": 15.9,
+   "fin": 16.44
+  },
+  {
+   "palabra": "metieron",
+   "inicio": 16.62,
+   "fin": 17.06
+  },
+  {
+   "palabra": "un",
+   "inicio": 17.06,
+   "fin": 17.18
+  },
+  {
+   "palabra": "avión",
+   "inicio": 17.18,
+   "fin": 17.55
+  },
+  {
+   "palabra": "entero",
+   "inicio": 17.55,
+   "fin": 17.93
+  },
+  {
+   "palabra": "en",
+   "inicio": 17.93,
+   "fin": 18.05
+  },
+  {
+   "palabra": "una",
+   "inicio": 18.05,
+   "fin": 18.24
+  },
+  {
+   "palabra": "pileta",
+   "inicio": 18.24,
+   "fin": 18.62
+  },
+  {
+   "palabra": "gigante",
+   "inicio": 18.62,
+   "fin": 19.12
+  },
+  {
+   "palabra": "y",
+   "inicio": 19.12,
+   "fin": 19.2
+  },
+  {
+   "palabra": "lo",
+   "inicio": 19.2,
+   "fin": 19.31
+  },
+  {
+   "palabra": "inflaron",
+   "inicio": 19.31,
+   "fin": 19.82
+  },
+  {
+   "palabra": "y",
+   "inicio": 19.82,
+   "fin": 19.88
+  },
+  {
+   "palabra": "desinflaron",
+   "inicio": 19.88,
+   "fin": 20.58
+  },
+  {
+   "palabra": "miles",
+   "inicio": 20.58,
+   "fin": 20.89
+  },
+  {
+   "palabra": "de",
+   "inicio": 20.89,
+   "fin": 21.03
+  },
+  {
+   "palabra": "veces,",
+   "inicio": 21.03,
+   "fin": 21.34
+  },
+  {
+   "palabra": "como",
+   "inicio": 21.64,
+   "fin": 22.02
+  },
+  {
+   "palabra": "en",
+   "inicio": 22.02,
+   "fin": 22.25
+  },
+  {
+   "palabra": "cada",
+   "inicio": 22.25,
+   "fin": 22.45
+  },
+  {
+   "palabra": "vuelo.",
+   "inicio": 22.45,
+   "fin": 23.32
+  },
+  {
+   "palabra": "Hasta",
+   "inicio": 23.32,
+   "fin": 23.72
+  },
+  {
+   "palabra": "que",
+   "inicio": 23.72,
+   "fin": 23.96
+  },
+  {
+   "palabra": "apareció",
+   "inicio": 23.96,
+   "fin": 24.68
+  },
+  {
+   "palabra": "la",
+   "inicio": 24.68,
+   "fin": 24.84
+  },
+  {
+   "palabra": "grieta:",
+   "inicio": 24.84,
+   "fin": 25.46
+  },
+  {
+   "palabra": "en",
+   "inicio": 25.5,
+   "fin": 25.64
+  },
+  {
+   "palabra": "la",
+   "inicio": 25.64,
+   "fin": 25.78
+  },
+  {
+   "palabra": "esquina",
+   "inicio": 25.78,
+   "fin": 26.28
+  },
+  {
+   "palabra": "de",
+   "inicio": 26.28,
+   "fin": 26.42
+  },
+  {
+   "palabra": "una",
+   "inicio": 26.42,
+   "fin": 26.63
+  },
+  {
+   "palabra": "ventana.",
+   "inicio": 26.63,
+   "fin": 27.4
+  },
+  {
+   "palabra": "¿Por",
+   "inicio": 27.52,
+   "fin": 27.7
+  },
+  {
+   "palabra": "qué",
+   "inicio": 27.7,
+   "fin": 27.94
+  },
+  {
+   "palabra": "creés",
+   "inicio": 27.94,
+   "fin": 28.24
+  },
+  {
+   "palabra": "que",
+   "inicio": 28.24,
+   "fin": 28.42
+  },
+  {
+   "palabra": "se",
+   "inicio": 28.42,
+   "fin": 28.54
+  },
+  {
+   "palabra": "rompió",
+   "inicio": 28.54,
+   "fin": 28.96
+  },
+  {
+   "palabra": "justo",
+   "inicio": 28.96,
+   "fin": 29.26
+  },
+  {
+   "palabra": "ahí?",
+   "inicio": 29.26,
+   "fin": 29.72
+  },
+  {
+   "palabra": "Contame",
+   "inicio": 29.82,
+   "fin": 30.26
+  },
+  {
+   "palabra": "en",
+   "inicio": 30.26,
+   "fin": 30.4
+  },
+  {
+   "palabra": "los",
+   "inicio": 30.4,
+   "fin": 30.61
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 30.61,
+   "fin": 31.44
+  },
+  {
+   "palabra": "En",
+   "inicio": 31.44,
+   "fin": 31.56
+  },
+  {
+   "palabra": "una",
+   "inicio": 31.56,
+   "fin": 31.74
+  },
+  {
+   "palabra": "esquina,",
+   "inicio": 31.74,
+   "fin": 32.17
+  },
+  {
+   "palabra": "la",
+   "inicio": 32.33,
+   "fin": 32.46
+  },
+  {
+   "palabra": "fuerza",
+   "inicio": 32.46,
+   "fin": 32.89
+  },
+  {
+   "palabra": "se",
+   "inicio": 32.89,
+   "fin": 33.03
+  },
+  {
+   "palabra": "amontona",
+   "inicio": 33.03,
+   "fin": 33.59
+  },
+  {
+   "palabra": "en",
+   "inicio": 33.59,
+   "fin": 33.73
+  },
+  {
+   "palabra": "un",
+   "inicio": 33.73,
+   "fin": 33.87
+  },
+  {
+   "palabra": "solo",
+   "inicio": 33.87,
+   "fin": 34.15
+  },
+  {
+   "palabra": "punto.",
+   "inicio": 34.15,
+   "fin": 34.76
+  },
+  {
+   "palabra": "En",
+   "inicio": 34.76,
+   "fin": 34.91
+  },
+  {
+   "palabra": "una",
+   "inicio": 34.91,
+   "fin": 35.16
+  },
+  {
+   "palabra": "curva,",
+   "inicio": 35.16,
+   "fin": 35.65
+  },
+  {
+   "palabra": "se",
+   "inicio": 35.67,
+   "fin": 35.82
+  },
+  {
+   "palabra": "reparte.",
+   "inicio": 35.82,
+   "fin": 36.6
+  },
+  {
+   "palabra": "Por",
+   "inicio": 36.75,
+   "fin": 36.97
+  },
+  {
+   "palabra": "eso",
+   "inicio": 36.97,
+   "fin": 37.2
+  },
+  {
+   "palabra": "hoy",
+   "inicio": 37.2,
+   "fin": 37.43
+  },
+  {
+   "palabra": "todas",
+   "inicio": 37.43,
+   "fin": 37.81
+  },
+  {
+   "palabra": "las",
+   "inicio": 37.81,
+   "fin": 38.04
+  },
+  {
+   "palabra": "ventanillas",
+   "inicio": 38.04,
+   "fin": 38.87
+  },
+  {
+   "palabra": "son",
+   "inicio": 38.87,
+   "fin": 39.1
+  },
+  {
+   "palabra": "redondeadas.",
+   "inicio": 39.1,
+   "fin": 40.2
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 40.3,
+   "fin": 40.82
+  },
+  {
+   "palabra": "al",
+   "inicio": 40.82,
+   "fin": 40.92
+  },
+  {
+   "palabra": "que",
+   "inicio": 40.92,
+   "fin": 41.08
+  },
+  {
+   "palabra": "siempre",
+   "inicio": 41.08,
+   "fin": 41.46
+  },
+  {
+   "palabra": "pide",
+   "inicio": 41.46,
+   "fin": 41.67
+  },
+  {
+   "palabra": "ventanilla.",
+   "inicio": 41.67,
+   "fin": 42.19
+  }
+ ]
+}

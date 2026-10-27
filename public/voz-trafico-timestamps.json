@@ -1,0 +1,555 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Este",
+   "inicio": 0.12,
+   "fin": 0.37
+  },
+  {
+   "palabra": "tipo",
+   "inicio": 0.37,
+   "fin": 0.74
+  },
+  {
+   "palabra": "engañó",
+   "inicio": 0.74,
+   "fin": 1.48
+  },
+  {
+   "palabra": "a",
+   "inicio": 1.48,
+   "fin": 1.57
+  },
+  {
+   "palabra": "Google",
+   "inicio": 1.57,
+   "fin": 2.12
+  },
+  {
+   "palabra": "Maps…",
+   "inicio": 2.12,
+   "fin": 2.74
+  },
+  {
+   "palabra": "con",
+   "inicio": 2.74,
+   "fin": 2.86
+  },
+  {
+   "palabra": "un",
+   "inicio": 2.86,
+   "fin": 3.07
+  },
+  {
+   "palabra": "carrito.",
+   "inicio": 3.07,
+   "fin": 3.9
+  },
+  {
+   "palabra": "En",
+   "inicio": 3.9,
+   "fin": 4.17
+  },
+  {
+   "palabra": "dos",
+   "inicio": 4.17,
+   "fin": 4.607
+  },
+  {
+   "palabra": "mil",
+   "inicio": 4.607,
+   "fin": 5.043
+  },
+  {
+   "palabra": "veinte,",
+   "inicio": 5.043,
+   "fin": 5.48
+  },
+  {
+   "palabra": "en",
+   "inicio": 5.78,
+   "fin": 5.89
+  },
+  {
+   "palabra": "Berlín,",
+   "inicio": 5.89,
+   "fin": 6.5
+  },
+  {
+   "palabra": "un",
+   "inicio": 6.5,
+   "fin": 6.65
+  },
+  {
+   "palabra": "artista",
+   "inicio": 6.65,
+   "fin": 7.18
+  },
+  {
+   "palabra": "metió",
+   "inicio": 7.18,
+   "fin": 7.63
+  },
+  {
+   "palabra": "noventa",
+   "inicio": 7.63,
+   "fin": 7.783
+  },
+  {
+   "palabra": "y",
+   "inicio": 7.783,
+   "fin": 7.937
+  },
+  {
+   "palabra": "nueve",
+   "inicio": 7.937,
+   "fin": 8.09
+  },
+  {
+   "palabra": "celulares",
+   "inicio": 8.09,
+   "fin": 8.8
+  },
+  {
+   "palabra": "usados",
+   "inicio": 8.8,
+   "fin": 9.2
+  },
+  {
+   "palabra": "en",
+   "inicio": 9.2,
+   "fin": 9.34
+  },
+  {
+   "palabra": "un",
+   "inicio": 9.34,
+   "fin": 9.48
+  },
+  {
+   "palabra": "carrito",
+   "inicio": 9.48,
+   "fin": 10
+  },
+  {
+   "palabra": "y",
+   "inicio": 10,
+   "fin": 10.09
+  },
+  {
+   "palabra": "se",
+   "inicio": 10.09,
+   "fin": 10.24
+  },
+  {
+   "palabra": "puso",
+   "inicio": 10.24,
+   "fin": 10.56
+  },
+  {
+   "palabra": "a",
+   "inicio": 10.56,
+   "fin": 10.66
+  },
+  {
+   "palabra": "caminar",
+   "inicio": 10.66,
+   "fin": 11.2
+  },
+  {
+   "palabra": "despacito",
+   "inicio": 11.2,
+   "fin": 11.95
+  },
+  {
+   "palabra": "por",
+   "inicio": 11.95,
+   "fin": 12.16
+  },
+  {
+   "palabra": "la",
+   "inicio": 12.16,
+   "fin": 12.32
+  },
+  {
+   "palabra": "calle.",
+   "inicio": 12.32,
+   "fin": 12.55
+  },
+  {
+   "palabra": "¿Y",
+   "inicio": 12.95,
+   "fin": 12.97
+  },
+  {
+   "palabra": "sabés",
+   "inicio": 12.97,
+   "fin": 13.27
+  },
+  {
+   "palabra": "qué",
+   "inicio": 13.27,
+   "fin": 13.51
+  },
+  {
+   "palabra": "pasó?",
+   "inicio": 13.51,
+   "fin": 13.8
+  },
+  {
+   "palabra": "Maps",
+   "inicio": 14,
+   "fin": 14.44
+  },
+  {
+   "palabra": "la",
+   "inicio": 14.44,
+   "fin": 14.66
+  },
+  {
+   "palabra": "pintó",
+   "inicio": 14.66,
+   "fin": 15.32
+  },
+  {
+   "palabra": "de",
+   "inicio": 15.32,
+   "fin": 15.54
+  },
+  {
+   "palabra": "rojo.",
+   "inicio": 15.54,
+   "fin": 16.11
+  },
+  {
+   "palabra": "Embotellamiento.",
+   "inicio": 16.11,
+   "fin": 17.3
+  },
+  {
+   "palabra": "Y",
+   "inicio": 17.3,
+   "fin": 17.31
+  },
+  {
+   "palabra": "la",
+   "inicio": 17.31,
+   "fin": 17.5
+  },
+  {
+   "palabra": "calle…",
+   "inicio": 17.5,
+   "fin": 18.19
+  },
+  {
+   "palabra": "vacía.",
+   "inicio": 18.19,
+   "fin": 18.58
+  },
+  {
+   "palabra": "Porque",
+   "inicio": 19.07,
+   "fin": 19.53
+  },
+  {
+   "palabra": "Maps",
+   "inicio": 19.53,
+   "fin": 19.81
+  },
+  {
+   "palabra": "no",
+   "inicio": 19.81,
+   "fin": 19.95
+  },
+  {
+   "palabra": "ve",
+   "inicio": 19.95,
+   "fin": 20.09
+  },
+  {
+   "palabra": "autos.",
+   "inicio": 20.09,
+   "fin": 20.44
+  },
+  {
+   "palabra": "Bueno,",
+   "inicio": 20.7,
+   "fin": 21.09
+  },
+  {
+   "palabra": "no",
+   "inicio": 21.29,
+   "fin": 21.39
+  },
+  {
+   "palabra": "exactamente:",
+   "inicio": 21.39,
+   "fin": 22.28
+  },
+  {
+   "palabra": "ve",
+   "inicio": 22.5,
+   "fin": 22.67
+  },
+  {
+   "palabra": "celulares.",
+   "inicio": 22.67,
+   "fin": 23.42
+  },
+  {
+   "palabra": "Si",
+   "inicio": 23.7,
+   "fin": 23.86
+  },
+  {
+   "palabra": "muchos",
+   "inicio": 23.86,
+   "fin": 24.22
+  },
+  {
+   "palabra": "se",
+   "inicio": 24.22,
+   "fin": 24.36
+  },
+  {
+   "palabra": "mueven",
+   "inicio": 24.36,
+   "fin": 24.73
+  },
+  {
+   "palabra": "lento",
+   "inicio": 24.73,
+   "fin": 25.05
+  },
+  {
+   "palabra": "en",
+   "inicio": 25.05,
+   "fin": 25.18
+  },
+  {
+   "palabra": "el",
+   "inicio": 25.18,
+   "fin": 25.31
+  },
+  {
+   "palabra": "mismo",
+   "inicio": 25.31,
+   "fin": 25.63
+  },
+  {
+   "palabra": "lugar,",
+   "inicio": 25.63,
+   "fin": 26.11
+  },
+  {
+   "palabra": "para",
+   "inicio": 26.13,
+   "fin": 26.35
+  },
+  {
+   "palabra": "Maps",
+   "inicio": 26.35,
+   "fin": 26.59
+  },
+  {
+   "palabra": "eso",
+   "inicio": 26.59,
+   "fin": 26.8
+  },
+  {
+   "palabra": "es",
+   "inicio": 26.8,
+   "fin": 26.93
+  },
+  {
+   "palabra": "tráfico.",
+   "inicio": 26.93,
+   "fin": 27.46
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 27.87,
+   "fin": 28
+  },
+  {
+   "palabra": "le",
+   "inicio": 28,
+   "fin": 28.12
+  },
+  {
+   "palabra": "hacés",
+   "inicio": 28.12,
+   "fin": 28.49
+  },
+  {
+   "palabra": "caso",
+   "inicio": 28.49,
+   "fin": 28.72
+  },
+  {
+   "palabra": "a",
+   "inicio": 28.72,
+   "fin": 28.78
+  },
+  {
+   "palabra": "Maps",
+   "inicio": 28.78,
+   "fin": 29.02
+  },
+  {
+   "palabra": "aunque",
+   "inicio": 29.02,
+   "fin": 29.38
+  },
+  {
+   "palabra": "veas",
+   "inicio": 29.38,
+   "fin": 29.62
+  },
+  {
+   "palabra": "la",
+   "inicio": 29.62,
+   "fin": 29.76
+  },
+  {
+   "palabra": "calle",
+   "inicio": 29.76,
+   "fin": 30.04
+  },
+  {
+   "palabra": "libre?",
+   "inicio": 30.04,
+   "fin": 30.33
+  },
+  {
+   "palabra": "Contame",
+   "inicio": 30.6,
+   "fin": 31
+  },
+  {
+   "palabra": "en",
+   "inicio": 31,
+   "fin": 31.11
+  },
+  {
+   "palabra": "los",
+   "inicio": 31.11,
+   "fin": 31.28
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 31.28,
+   "fin": 31.91
+  },
+  {
+   "palabra": "Así",
+   "inicio": 32.1,
+   "fin": 32.4
+  },
+  {
+   "palabra": "que",
+   "inicio": 32.4,
+   "fin": 32.62
+  },
+  {
+   "palabra": "ese",
+   "inicio": 32.62,
+   "fin": 32.84
+  },
+  {
+   "palabra": "rojo",
+   "inicio": 32.84,
+   "fin": 33.14
+  },
+  {
+   "palabra": "del",
+   "inicio": 33.14,
+   "fin": 33.36
+  },
+  {
+   "palabra": "mapa",
+   "inicio": 33.36,
+   "fin": 33.66
+  },
+  {
+   "palabra": "somos",
+   "inicio": 33.66,
+   "fin": 34.04
+  },
+  {
+   "palabra": "nosotros,",
+   "inicio": 34.04,
+   "fin": 34.68
+  },
+  {
+   "palabra": "con",
+   "inicio": 34.7,
+   "fin": 35.01
+  },
+  {
+   "palabra": "el",
+   "inicio": 35.01,
+   "fin": 35.21
+  },
+  {
+   "palabra": "celu",
+   "inicio": 35.21,
+   "fin": 35.62
+  },
+  {
+   "palabra": "en",
+   "inicio": 35.62,
+   "fin": 35.82
+  },
+  {
+   "palabra": "el",
+   "inicio": 35.82,
+   "fin": 36.01
+  },
+  {
+   "palabra": "bolsillo.",
+   "inicio": 36.01,
+   "fin": 36.84
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 37.2,
+   "fin": 38.01
+  },
+  {
+   "palabra": "al",
+   "inicio": 38.01,
+   "fin": 38.17
+  },
+  {
+   "palabra": "que",
+   "inicio": 38.17,
+   "fin": 38.42
+  },
+  {
+   "palabra": "le",
+   "inicio": 38.42,
+   "fin": 38.58
+  },
+  {
+   "palabra": "cree",
+   "inicio": 38.58,
+   "fin": 38.91
+  },
+  {
+   "palabra": "todo",
+   "inicio": 38.91,
+   "fin": 39.24
+  },
+  {
+   "palabra": "a",
+   "inicio": 39.24,
+   "fin": 39.32
+  },
+  {
+   "palabra": "Maps.",
+   "inicio": 39.32,
+   "fin": 39.48
+  }
+ ]
+}

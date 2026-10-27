@@ -1,0 +1,565 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Confieso:",
+   "inicio": 0.13,
+   "fin": 1.11
+  },
+  {
+   "palabra": "yo",
+   "inicio": 1.21,
+   "fin": 1.36
+  },
+  {
+   "palabra": "cerraba",
+   "inicio": 1.36,
+   "fin": 1.9
+  },
+  {
+   "palabra": "todas",
+   "inicio": 1.9,
+   "fin": 2.19
+  },
+  {
+   "palabra": "las",
+   "inicio": 2.19,
+   "fin": 2.39
+  },
+  {
+   "palabra": "apps",
+   "inicio": 2.39,
+   "fin": 2.75
+  },
+  {
+   "palabra": "como",
+   "inicio": 2.75,
+   "fin": 3.04
+  },
+  {
+   "palabra": "veinte",
+   "inicio": 3.04,
+   "fin": 3.47
+  },
+  {
+   "palabra": "veces",
+   "inicio": 3.47,
+   "fin": 3.84
+  },
+  {
+   "palabra": "por",
+   "inicio": 3.84,
+   "fin": 4.12
+  },
+  {
+   "palabra": "día.",
+   "inicio": 4.12,
+   "fin": 4.6
+  },
+  {
+   "palabra": "Y",
+   "inicio": 4.6,
+   "fin": 4.69
+  },
+  {
+   "palabra": "resulta",
+   "inicio": 4.69,
+   "fin": 5.33
+  },
+  {
+   "palabra": "que",
+   "inicio": 5.33,
+   "fin": 5.61
+  },
+  {
+   "palabra": "gastaba",
+   "inicio": 5.61,
+   "fin": 6.25
+  },
+  {
+   "palabra": "más",
+   "inicio": 6.25,
+   "fin": 6.62
+  },
+  {
+   "palabra": "batería.",
+   "inicio": 6.62,
+   "fin": 7.34
+  },
+  {
+   "palabra": "Otro",
+   "inicio": 7.4,
+   "fin": 7.78
+  },
+  {
+   "palabra": "mito",
+   "inicio": 7.78,
+   "fin": 8.15
+  },
+  {
+   "palabra": "de",
+   "inicio": 8.15,
+   "fin": 8.34
+  },
+  {
+   "palabra": "la",
+   "inicio": 8.34,
+   "fin": 8.53
+  },
+  {
+   "palabra": "tecnología.",
+   "inicio": 8.53,
+   "fin": 9.6
+  },
+  {
+   "palabra": "Cuando",
+   "inicio": 9.6,
+   "fin": 9.98
+  },
+  {
+   "palabra": "salís",
+   "inicio": 9.98,
+   "fin": 10.36
+  },
+  {
+   "palabra": "de",
+   "inicio": 10.36,
+   "fin": 10.49
+  },
+  {
+   "palabra": "una",
+   "inicio": 10.49,
+   "fin": 10.73
+  },
+  {
+   "palabra": "app,",
+   "inicio": 10.73,
+   "fin": 10.95
+  },
+  {
+   "palabra": "el",
+   "inicio": 11.04,
+   "fin": 11.18
+  },
+  {
+   "palabra": "celular",
+   "inicio": 11.18,
+   "fin": 11.69
+  },
+  {
+   "palabra": "no",
+   "inicio": 11.69,
+   "fin": 11.83
+  },
+  {
+   "palabra": "la",
+   "inicio": 11.83,
+   "fin": 11.98
+  },
+  {
+   "palabra": "deja",
+   "inicio": 11.98,
+   "fin": 12.26
+  },
+  {
+   "palabra": "andando:",
+   "inicio": 12.26,
+   "fin": 12.8
+  },
+  {
+   "palabra": "la",
+   "inicio": 12.8,
+   "fin": 13
+  },
+  {
+   "palabra": "congela.",
+   "inicio": 13,
+   "fin": 13.67
+  },
+  {
+   "palabra": "Queda",
+   "inicio": 14.03,
+   "fin": 14.3
+  },
+  {
+   "palabra": "dormida",
+   "inicio": 14.3,
+   "fin": 14.72
+  },
+  {
+   "palabra": "en",
+   "inicio": 14.72,
+   "fin": 14.84
+  },
+  {
+   "palabra": "la",
+   "inicio": 14.84,
+   "fin": 14.96
+  },
+  {
+   "palabra": "memoria,",
+   "inicio": 14.96,
+   "fin": 15.5
+  },
+  {
+   "palabra": "casi",
+   "inicio": 15.52,
+   "fin": 15.77
+  },
+  {
+   "palabra": "sin",
+   "inicio": 15.77,
+   "fin": 15.96
+  },
+  {
+   "palabra": "gastar",
+   "inicio": 15.96,
+   "fin": 16.33
+  },
+  {
+   "palabra": "nada.",
+   "inicio": 16.33,
+   "fin": 16.58
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 16.8,
+   "fin": 17.1
+  },
+  {
+   "palabra": "si",
+   "inicio": 17.1,
+   "fin": 17.25
+  },
+  {
+   "palabra": "la",
+   "inicio": 17.25,
+   "fin": 17.4
+  },
+  {
+   "palabra": "cerrás,",
+   "inicio": 17.4,
+   "fin": 17.84
+  },
+  {
+   "palabra": "la",
+   "inicio": 18.02,
+   "fin": 18.11
+  },
+  {
+   "palabra": "próxima",
+   "inicio": 18.11,
+   "fin": 18.55
+  },
+  {
+   "palabra": "vez",
+   "inicio": 18.55,
+   "fin": 18.71
+  },
+  {
+   "palabra": "tiene",
+   "inicio": 18.71,
+   "fin": 18.98
+  },
+  {
+   "palabra": "que",
+   "inicio": 18.98,
+   "fin": 19.14
+  },
+  {
+   "palabra": "arrancar",
+   "inicio": 19.14,
+   "fin": 19.6
+  },
+  {
+   "palabra": "de",
+   "inicio": 19.6,
+   "fin": 19.76
+  },
+  {
+   "palabra": "cero",
+   "inicio": 19.76,
+   "fin": 20.13
+  },
+  {
+   "palabra": "y",
+   "inicio": 20.13,
+   "fin": 20.19
+  },
+  {
+   "palabra": "cargar",
+   "inicio": 20.19,
+   "fin": 20.76
+  },
+  {
+   "palabra": "todo",
+   "inicio": 20.76,
+   "fin": 21.12
+  },
+  {
+   "palabra": "otra",
+   "inicio": 21.12,
+   "fin": 21.49
+  },
+  {
+   "palabra": "vez.",
+   "inicio": 21.49,
+   "fin": 21.8
+  },
+  {
+   "palabra": "Y",
+   "inicio": 21.8,
+   "fin": 21.88
+  },
+  {
+   "palabra": "eso",
+   "inicio": 21.88,
+   "fin": 22.06
+  },
+  {
+   "palabra": "gasta",
+   "inicio": 22.06,
+   "fin": 22.38
+  },
+  {
+   "palabra": "más",
+   "inicio": 22.38,
+   "fin": 22.64
+  },
+  {
+   "palabra": "que",
+   "inicio": 22.64,
+   "fin": 22.84
+  },
+  {
+   "palabra": "despertarla.",
+   "inicio": 22.84,
+   "fin": 23.55
+  },
+  {
+   "palabra": "Lo",
+   "inicio": 23.8,
+   "fin": 24.03
+  },
+  {
+   "palabra": "dicen",
+   "inicio": 24.03,
+   "fin": 24.37
+  },
+  {
+   "palabra": "hasta",
+   "inicio": 24.37,
+   "fin": 24.78
+  },
+  {
+   "palabra": "Apple",
+   "inicio": 24.78,
+   "fin": 25.19
+  },
+  {
+   "palabra": "y",
+   "inicio": 25.19,
+   "fin": 25.27
+  },
+  {
+   "palabra": "Google.",
+   "inicio": 25.27,
+   "fin": 25.8
+  },
+  {
+   "palabra": "¿Vos",
+   "inicio": 25.95,
+   "fin": 26.08
+  },
+  {
+   "palabra": "sos",
+   "inicio": 26.08,
+   "fin": 26.26
+  },
+  {
+   "palabra": "de",
+   "inicio": 26.26,
+   "fin": 26.38
+  },
+  {
+   "palabra": "los",
+   "inicio": 26.38,
+   "fin": 26.55
+  },
+  {
+   "palabra": "que",
+   "inicio": 26.55,
+   "fin": 26.74
+  },
+  {
+   "palabra": "cierran",
+   "inicio": 26.74,
+   "fin": 27.15
+  },
+  {
+   "palabra": "todo?",
+   "inicio": 27.15,
+   "fin": 27.6
+  },
+  {
+   "palabra": "Contame",
+   "inicio": 27.6,
+   "fin": 27.96
+  },
+  {
+   "palabra": "la",
+   "inicio": 27.96,
+   "fin": 28.06
+  },
+  {
+   "palabra": "verdad",
+   "inicio": 28.06,
+   "fin": 28.37
+  },
+  {
+   "palabra": "en",
+   "inicio": 28.37,
+   "fin": 28.47
+  },
+  {
+   "palabra": "los",
+   "inicio": 28.47,
+   "fin": 28.62
+  },
+  {
+   "palabra": "comentarios.",
+   "inicio": 28.62,
+   "fin": 29.2
+  },
+  {
+   "palabra": "Ojo,",
+   "inicio": 29.49,
+   "fin": 29.68
+  },
+  {
+   "palabra": "hay",
+   "inicio": 29.87,
+   "fin": 30.22
+  },
+  {
+   "palabra": "una",
+   "inicio": 30.22,
+   "fin": 30.43
+  },
+  {
+   "palabra": "excepción:",
+   "inicio": 30.43,
+   "fin": 31.4
+  },
+  {
+   "palabra": "si",
+   "inicio": 31.4,
+   "fin": 31.56
+  },
+  {
+   "palabra": "una",
+   "inicio": 31.56,
+   "fin": 31.8
+  },
+  {
+   "palabra": "app",
+   "inicio": 31.8,
+   "fin": 32.03
+  },
+  {
+   "palabra": "se",
+   "inicio": 32.03,
+   "fin": 32.2
+  },
+  {
+   "palabra": "trabó",
+   "inicio": 32.2,
+   "fin": 32.66
+  },
+  {
+   "palabra": "o",
+   "inicio": 32.66,
+   "fin": 32.74
+  },
+  {
+   "palabra": "está",
+   "inicio": 32.74,
+   "fin": 33.13
+  },
+  {
+   "palabra": "usando",
+   "inicio": 33.13,
+   "fin": 33.63
+  },
+  {
+   "palabra": "el",
+   "inicio": 33.63,
+   "fin": 33.76
+  },
+  {
+   "palabra": "GPS",
+   "inicio": 33.76,
+   "fin": 34
+  },
+  {
+   "palabra": "de",
+   "inicio": 34,
+   "fin": 34.16
+  },
+  {
+   "palabra": "fondo,",
+   "inicio": 34.16,
+   "fin": 34.6
+  },
+  {
+   "palabra": "ahí",
+   "inicio": 34.6,
+   "fin": 35.04
+  },
+  {
+   "palabra": "sí,",
+   "inicio": 35.04,
+   "fin": 35.49
+  },
+  {
+   "palabra": "cerrala.",
+   "inicio": 35.59,
+   "fin": 36.14
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 36.6,
+   "fin": 37.5
+  },
+  {
+   "palabra": "al",
+   "inicio": 37.5,
+   "fin": 37.68
+  },
+  {
+   "palabra": "que",
+   "inicio": 37.68,
+   "fin": 37.95
+  },
+  {
+   "palabra": "cierra",
+   "inicio": 37.95,
+   "fin": 38.49
+  },
+  {
+   "palabra": "todas",
+   "inicio": 38.49,
+   "fin": 38.94
+  },
+  {
+   "palabra": "las",
+   "inicio": 38.94,
+   "fin": 39.21
+  },
+  {
+   "palabra": "apps.",
+   "inicio": 39.21,
+   "fin": 39.6
+  }
+ ]
+}
