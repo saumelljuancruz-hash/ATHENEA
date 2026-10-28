@@ -1,0 +1,1714 @@
+{
+  "fps": 30,
+  "durationInFrames": 1688,
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {
+          "text": "Así como DESLIZÁS este video, el viento desliza un OCÉANO entero.",
+          "start": 0,
+          "end": 118
+        }
+      ],
+      "from": 0,
+      "durationInFrames": 126
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {
+          "text": "Cuando afloja, en ARGENTINA llueve de más.",
+          "start": 0,
+          "end": 72
+        },
+        {
+          "text": "Quedate y sabés qué te ESPERA.",
+          "start": 82,
+          "end": 133
+        }
+      ],
+      "from": 126,
+      "durationInFrames": 149
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {
+          "text": "En el Pacífico, el viento casi siempre sopla hacia ASIA.",
+          "start": 0,
+          "end": 92
+        },
+        {
+          "text": "Empuja el agua CALIENTE y la apila: en Indonesia, el mar queda MEDIO METRO más alto.",
+          "start": 102,
+          "end": 251
+        },
+        {
+          "text": "Frente a Perú, sube agua FRÍA.",
+          "start": 261,
+          "end": 311
+        }
+      ],
+      "from": 275,
+      "durationInFrames": 320
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {
+          "text": "Pero a veces, el viento se FRENA.",
+          "start": 0,
+          "end": 64
+        }
+      ],
+      "from": 595,
+      "durationInFrames": 73
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {
+          "text": "Y esa montaña de agua caliente VUELVE: cruza más de 10.000 KILÓMETROS en unos dos meses.",
+          "start": 0,
+          "end": 157
+        },
+        {
+          "text": "Con MEDIO GRADO de más durante meses, se declara EL NIÑO.",
+          "start": 168,
+          "end": 267
+        }
+      ],
+      "from": 668,
+      "durationInFrames": 277
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {
+          "text": "Y ahora mismo, el Pacífico no está medio grado ARRIBA…",
+          "start": 0,
+          "end": 87
+        }
+      ],
+      "from": 945,
+      "durationInFrames": 100
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {
+          "text": "Está 2,1 GRADOS arriba.",
+          "start": 0,
+          "end": 64
+        },
+        {
+          "text": "Ese mar caliente cambia los vientos y manda HUMEDAD hacia acá.",
+          "start": 78,
+          "end": 174
+        },
+        {
+          "text": "En el Litoral y la Pampa llueve MÁS, y pueden crecer el PARANÁ y el URUGUAY.",
+          "start": 183,
+          "end": 300
+        },
+        {
+          "text": "La NOAA da 83% de chances de que sea el más FUERTE desde 1950.",
+          "start": 309,
+          "end": 448
+        }
+      ],
+      "from": 1045,
+      "durationInFrames": 475
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {
+          "text": "GUARDALO para este verano.",
+          "start": 0,
+          "end": 36
+        },
+        {
+          "text": "Y SEGUÍ a @nadietelo.explico para más datos así.",
+          "start": 44,
+          "end": 115
+        }
+      ],
+      "from": 1520,
+      "durationInFrames": 168
+    }
+  ],
+  "captions": [
+    {
+      "text": "Así",
+      "startMs": 0,
+      "endMs": 260,
+      "timestampMs": 130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " como",
+      "startMs": 260,
+      "endMs": 500,
+      "timestampMs": 380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " DESLIZÁS",
+      "startMs": 500,
+      "endMs": 1040,
+      "timestampMs": 770,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " este",
+      "startMs": 1040,
+      "endMs": 1300,
+      "timestampMs": 1170,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " video,",
+      "startMs": 1300,
+      "endMs": 1560,
+      "timestampMs": 1430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 1920,
+      "endMs": 2060,
+      "timestampMs": 1990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " viento",
+      "startMs": 2060,
+      "endMs": 2320,
+      "timestampMs": 2190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " desliza",
+      "startMs": 2320,
+      "endMs": 2820,
+      "timestampMs": 2570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 2820,
+      "endMs": 3000,
+      "timestampMs": 2910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " OCÉANO",
+      "startMs": 3000,
+      "endMs": 3440,
+      "timestampMs": 3220,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " entero.",
+      "startMs": 3440,
+      "endMs": 3940,
+      "timestampMs": 3690,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Cuando",
+      "startMs": 4200,
+      "endMs": 4500,
+      "timestampMs": 4350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " afloja,",
+      "startMs": 4500,
+      "endMs": 5040,
+      "timestampMs": 4770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " en",
+      "startMs": 5040,
+      "endMs": 5280,
+      "timestampMs": 5160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ARGENTINA",
+      "startMs": 5280,
+      "endMs": 5680,
+      "timestampMs": 5480,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " llueve",
+      "startMs": 5680,
+      "endMs": 6220,
+      "timestampMs": 5950,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 6220,
+      "endMs": 6400,
+      "timestampMs": 6310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más.",
+      "startMs": 6400,
+      "endMs": 6600,
+      "timestampMs": 6500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Quedate",
+      "startMs": 6920,
+      "endMs": 7260,
+      "timestampMs": 7090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 7260,
+      "endMs": 7660,
+      "timestampMs": 7460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sabés",
+      "startMs": 7660,
+      "endMs": 8020,
+      "timestampMs": 7840,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " qué",
+      "startMs": 8020,
+      "endMs": 8160,
+      "timestampMs": 8090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 8160,
+      "endMs": 8300,
+      "timestampMs": 8230,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ESPERA.",
+      "startMs": 8300,
+      "endMs": 8640,
+      "timestampMs": 8470,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " En",
+      "startMs": 9180,
+      "endMs": 9320,
+      "timestampMs": 9250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 9320,
+      "endMs": 9420,
+      "timestampMs": 9370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Pacífico,",
+      "startMs": 9420,
+      "endMs": 10020,
+      "timestampMs": 9720,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 10240,
+      "endMs": 10260,
+      "timestampMs": 10250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " viento",
+      "startMs": 10260,
+      "endMs": 10480,
+      "timestampMs": 10370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " casi",
+      "startMs": 10480,
+      "endMs": 10820,
+      "timestampMs": 10650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " siempre",
+      "startMs": 10820,
+      "endMs": 11300,
+      "timestampMs": 11060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sopla",
+      "startMs": 11300,
+      "endMs": 11680,
+      "timestampMs": 11490,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hacia",
+      "startMs": 11680,
+      "endMs": 11940,
+      "timestampMs": 11810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ASIA.",
+      "startMs": 11940,
+      "endMs": 12240,
+      "timestampMs": 12090,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Empuja",
+      "startMs": 12580,
+      "endMs": 13000,
+      "timestampMs": 12790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 13000,
+      "endMs": 13120,
+      "timestampMs": 13060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " agua",
+      "startMs": 13120,
+      "endMs": 13260,
+      "timestampMs": 13190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " CALIENTE",
+      "startMs": 13260,
+      "endMs": 13760,
+      "timestampMs": 13510,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 13760,
+      "endMs": 14020,
+      "timestampMs": 13890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 14020,
+      "endMs": 14160,
+      "timestampMs": 14090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " apila:",
+      "startMs": 14160,
+      "endMs": 14500,
+      "timestampMs": 14330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " en",
+      "startMs": 14820,
+      "endMs": 14960,
+      "timestampMs": 14890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Indonesia,",
+      "startMs": 14960,
+      "endMs": 15320,
+      "timestampMs": 15140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 15740,
+      "endMs": 15800,
+      "timestampMs": 15770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mar",
+      "startMs": 15800,
+      "endMs": 15920,
+      "timestampMs": 15860,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " queda",
+      "startMs": 15920,
+      "endMs": 16160,
+      "timestampMs": 16040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MEDIO",
+      "startMs": 16160,
+      "endMs": 16500,
+      "timestampMs": 16330,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " METRO",
+      "startMs": 16500,
+      "endMs": 16900,
+      "timestampMs": 16700,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 16900,
+      "endMs": 17200,
+      "timestampMs": 17050,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " alto.",
+      "startMs": 17200,
+      "endMs": 17520,
+      "timestampMs": 17360,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Frente",
+      "startMs": 17860,
+      "endMs": 18120,
+      "timestampMs": 17990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 18120,
+      "endMs": 18260,
+      "timestampMs": 18190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Perú,",
+      "startMs": 18260,
+      "endMs": 18500,
+      "timestampMs": 18380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " sube",
+      "startMs": 18500,
+      "endMs": 18940,
+      "timestampMs": 18720,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " agua",
+      "startMs": 18940,
+      "endMs": 19180,
+      "timestampMs": 19060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FRÍA.",
+      "startMs": 19180,
+      "endMs": 19540,
+      "timestampMs": 19360,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Pero",
+      "startMs": 19840,
+      "endMs": 20040,
+      "timestampMs": 19940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 20040,
+      "endMs": 20140,
+      "timestampMs": 20090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " veces,",
+      "startMs": 20140,
+      "endMs": 20480,
+      "timestampMs": 20310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 20480,
+      "endMs": 21000,
+      "timestampMs": 20740,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " viento",
+      "startMs": 21000,
+      "endMs": 21320,
+      "timestampMs": 21160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " se",
+      "startMs": 21320,
+      "endMs": 21560,
+      "timestampMs": 21440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FRENA.",
+      "startMs": 21560,
+      "endMs": 21960,
+      "timestampMs": 21760,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 22260,
+      "endMs": 22400,
+      "timestampMs": 22330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " esa",
+      "startMs": 22400,
+      "endMs": 22580,
+      "timestampMs": 22490,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " montaña",
+      "startMs": 22580,
+      "endMs": 23040,
+      "timestampMs": 22810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 23040,
+      "endMs": 23180,
+      "timestampMs": 23110,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " agua",
+      "startMs": 23180,
+      "endMs": 23320,
+      "timestampMs": 23250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " caliente",
+      "startMs": 23320,
+      "endMs": 23820,
+      "timestampMs": 23570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " VUELVE:",
+      "startMs": 23820,
+      "endMs": 24420,
+      "timestampMs": 24120,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " cruza",
+      "startMs": 24420,
+      "endMs": 25040,
+      "timestampMs": 24730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 25040,
+      "endMs": 25200,
+      "timestampMs": 25120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 25200,
+      "endMs": 25380,
+      "timestampMs": 25290,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 10.000",
+      "startMs": 25380,
+      "endMs": 25880,
+      "timestampMs": 25630,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " KILÓMETROS",
+      "startMs": 25880,
+      "endMs": 26400,
+      "timestampMs": 26140,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 26400,
+      "endMs": 26600,
+      "timestampMs": 26500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " unos",
+      "startMs": 26600,
+      "endMs": 26800,
+      "timestampMs": 26700,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " dos",
+      "startMs": 26800,
+      "endMs": 27120,
+      "timestampMs": 26960,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " meses.",
+      "startMs": 27120,
+      "endMs": 27500,
+      "timestampMs": 27310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Con",
+      "startMs": 27880,
+      "endMs": 28000,
+      "timestampMs": 27940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MEDIO",
+      "startMs": 28000,
+      "endMs": 28280,
+      "timestampMs": 28140,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " GRADO",
+      "startMs": 28280,
+      "endMs": 28600,
+      "timestampMs": 28440,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 28600,
+      "endMs": 28760,
+      "timestampMs": 28680,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 28760,
+      "endMs": 28940,
+      "timestampMs": 28850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " durante",
+      "startMs": 28940,
+      "endMs": 29180,
+      "timestampMs": 29060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " meses,",
+      "startMs": 29180,
+      "endMs": 29720,
+      "timestampMs": 29450,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " se",
+      "startMs": 30000,
+      "endMs": 30100,
+      "timestampMs": 30050,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " declara",
+      "startMs": 30100,
+      "endMs": 30620,
+      "timestampMs": 30360,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " EL",
+      "startMs": 30620,
+      "endMs": 30860,
+      "timestampMs": 30740,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " NIÑO.",
+      "startMs": 30860,
+      "endMs": 31160,
+      "timestampMs": 31010,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 31500,
+      "endMs": 31640,
+      "timestampMs": 31570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ahora",
+      "startMs": 31640,
+      "endMs": 31840,
+      "timestampMs": 31740,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mismo,",
+      "startMs": 31840,
+      "endMs": 32200,
+      "timestampMs": 32020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 32500,
+      "endMs": 32560,
+      "timestampMs": 32530,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Pacífico",
+      "startMs": 32560,
+      "endMs": 33060,
+      "timestampMs": 32810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 33060,
+      "endMs": 33260,
+      "timestampMs": 33160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está",
+      "startMs": 33260,
+      "endMs": 33560,
+      "timestampMs": 33410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " medio",
+      "startMs": 33560,
+      "endMs": 33860,
+      "timestampMs": 33710,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " grado",
+      "startMs": 33860,
+      "endMs": 34180,
+      "timestampMs": 34020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ARRIBA…",
+      "startMs": 34180,
+      "endMs": 34400,
+      "timestampMs": 34290,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Está",
+      "startMs": 34820,
+      "endMs": 35160,
+      "timestampMs": 34990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 2,1",
+      "startMs": 35160,
+      "endMs": 36140,
+      "timestampMs": 35650,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " GRADOS",
+      "startMs": 36140,
+      "endMs": 36640,
+      "timestampMs": 36390,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " arriba.",
+      "startMs": 36640,
+      "endMs": 36980,
+      "timestampMs": 36810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Ese",
+      "startMs": 37440,
+      "endMs": 37660,
+      "timestampMs": 37550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mar",
+      "startMs": 37660,
+      "endMs": 37820,
+      "timestampMs": 37740,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " caliente",
+      "startMs": 37820,
+      "endMs": 38200,
+      "timestampMs": 38010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cambia",
+      "startMs": 38200,
+      "endMs": 38680,
+      "timestampMs": 38440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " los",
+      "startMs": 38680,
+      "endMs": 38820,
+      "timestampMs": 38750,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " vientos",
+      "startMs": 38820,
+      "endMs": 39160,
+      "timestampMs": 38990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 39160,
+      "endMs": 39460,
+      "timestampMs": 39310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " manda",
+      "startMs": 39460,
+      "endMs": 39720,
+      "timestampMs": 39590,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " HUMEDAD",
+      "startMs": 39720,
+      "endMs": 40120,
+      "timestampMs": 39920,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hacia",
+      "startMs": 40120,
+      "endMs": 40380,
+      "timestampMs": 40250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " acá.",
+      "startMs": 40380,
+      "endMs": 40620,
+      "timestampMs": 40500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " En",
+      "startMs": 40920,
+      "endMs": 41060,
+      "timestampMs": 40990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 41060,
+      "endMs": 41160,
+      "timestampMs": 41110,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Litoral",
+      "startMs": 41160,
+      "endMs": 41540,
+      "timestampMs": 41350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 41540,
+      "endMs": 41620,
+      "timestampMs": 41580,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 41620,
+      "endMs": 41740,
+      "timestampMs": 41680,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Pampa",
+      "startMs": 41740,
+      "endMs": 42040,
+      "timestampMs": 41890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " llueve",
+      "startMs": 42040,
+      "endMs": 42420,
+      "timestampMs": 42230,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MÁS,",
+      "startMs": 42420,
+      "endMs": 42700,
+      "timestampMs": 42560,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " y",
+      "startMs": 42700,
+      "endMs": 43040,
+      "timestampMs": 42870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " pueden",
+      "startMs": 43040,
+      "endMs": 43260,
+      "timestampMs": 43150,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " crecer",
+      "startMs": 43260,
+      "endMs": 43580,
+      "timestampMs": 43420,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 43580,
+      "endMs": 43720,
+      "timestampMs": 43650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " PARANÁ",
+      "startMs": 43720,
+      "endMs": 44160,
+      "timestampMs": 43940,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 44160,
+      "endMs": 44340,
+      "timestampMs": 44250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 44340,
+      "endMs": 44440,
+      "timestampMs": 44390,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " URUGUAY.",
+      "startMs": 44440,
+      "endMs": 44820,
+      "timestampMs": 44630,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " La",
+      "startMs": 45120,
+      "endMs": 45260,
+      "timestampMs": 45190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " NOAA",
+      "startMs": 45260,
+      "endMs": 45500,
+      "timestampMs": 45380,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " da",
+      "startMs": 45500,
+      "endMs": 45600,
+      "timestampMs": 45550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 83%",
+      "startMs": 45600,
+      "endMs": 46040,
+      "timestampMs": 45820,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 46700,
+      "endMs": 47040,
+      "timestampMs": 46870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " chances",
+      "startMs": 47040,
+      "endMs": 47320,
+      "timestampMs": 47180,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 47320,
+      "endMs": 47560,
+      "timestampMs": 47440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 47560,
+      "endMs": 47660,
+      "timestampMs": 47610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sea",
+      "startMs": 47660,
+      "endMs": 47860,
+      "timestampMs": 47760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 47860,
+      "endMs": 48020,
+      "timestampMs": 47940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 48020,
+      "endMs": 48240,
+      "timestampMs": 48130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FUERTE",
+      "startMs": 48240,
+      "endMs": 48600,
+      "timestampMs": 48420,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " desde",
+      "startMs": 48600,
+      "endMs": 48860,
+      "timestampMs": 48730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 1950.",
+      "startMs": 48860,
+      "endMs": 49760,
+      "timestampMs": 49310,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " GUARDALO",
+      "startMs": 50680,
+      "endMs": 51040,
+      "timestampMs": 50860,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 51040,
+      "endMs": 51260,
+      "timestampMs": 51150,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " este",
+      "startMs": 51260,
+      "endMs": 51460,
+      "timestampMs": 51360,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " verano.",
+      "startMs": 51460,
+      "endMs": 51860,
+      "timestampMs": 51660,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 52140,
+      "endMs": 52220,
+      "timestampMs": 52180,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SEGUÍ",
+      "startMs": 52220,
+      "endMs": 52464,
+      "timestampMs": 52342,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 52464,
+      "endMs": 52586,
+      "timestampMs": 52525,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " @nadietelo.explico",
+      "startMs": 52586,
+      "endMs": 53440,
+      "timestampMs": 53013,
+      "confidence": null,
+      "keyword": false,
+      "handle": true,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 53440,
+      "endMs": 53680,
+      "timestampMs": 53560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 53680,
+      "endMs": 53940,
+      "timestampMs": 53810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " datos",
+      "startMs": 53940,
+      "endMs": 54260,
+      "timestampMs": 54100,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " así.",
+      "startMs": 54260,
+      "endMs": 54500,
+      "timestampMs": 54380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    }
+  ]
+}

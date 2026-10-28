@@ -1,0 +1,60 @@
+{
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {"text": "Así como DESLIZÁS este video, el viento desliza un OCÉANO entero."}
+      ]
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {"text": "Cuando afloja, en ARGENTINA llueve de más."},
+        {"text": "Quedate y sabés qué te ESPERA."}
+      ]
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {"text": "En el Pacífico, el viento casi siempre sopla hacia ASIA."},
+        {"text": "Empuja el agua CALIENTE y la apila: en Indonesia, el mar queda MEDIO METRO más alto."},
+        {"text": "Frente a Perú, sube agua FRÍA."}
+      ]
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {"text": "Pero a veces, el viento se FRENA."}
+      ]
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {"text": "Y esa montaña de agua caliente VUELVE: cruza más de 10.000 KILÓMETROS en unos dos meses."},
+        {"text": "Con MEDIO GRADO de más durante meses, se declara EL NIÑO."}
+      ]
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {"text": "Y ahora mismo, el Pacífico no está medio grado ARRIBA…"}
+      ]
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {"text": "Está 2,1 GRADOS arriba."},
+        {"text": "Ese mar caliente cambia los vientos y manda HUMEDAD hacia acá."},
+        {"text": "En el Litoral y la Pampa llueve MÁS, y pueden crecer el PARANÁ y el URUGUAY."},
+        {"text": "La NOAA da 83% de chances de que sea el más FUERTE desde 1950."}
+      ]
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {"text": "GUARDALO para este verano."},
+        {"text": "Y SEGUÍ a @nadietelo.explico para más datos así."}
+      ]
+    }
+  ]
+}
