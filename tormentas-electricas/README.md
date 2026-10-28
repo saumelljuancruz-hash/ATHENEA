@@ -1,6 +1,6 @@
 # Reel · Cómo se forman las tormentas eléctricas
 
-Reel vertical 9:16 (1080 × 1920, 30 fps, 50 s) para **@nadietelo.explico**, hecho con Remotion y motion graphics en SVG/CSS. El guion completo, los prompts visuales, los ganchos alternativos, el caption y el chequeo de reglas están en [GUION.md](GUION.md).
+Reel vertical 9:16 (1080 × 1920, 30 fps, 58 s) para **@nadietelo.explico**, hecho con Remotion y motion graphics en SVG/CSS. El guion completo, los prompts visuales, los ganchos alternativos, el caption y el chequeo de reglas están en [GUION.md](GUION.md).
 
 ## Comandos
 
@@ -23,7 +23,7 @@ En Studio, la composición `TormentasElectricas` es el reel completo, y la carpe
 | Archivo | Qué hace |
 | --- | --- |
 | `voiceover/guion.json` | Texto de la voz en off, por pieza y por frase. Las palabras clave van en MAYÚSCULAS. |
-| `scripts/generar_voz_guia.py` | Sintetiza la voz frase por frase y escribe `public/voiceover/voz-guia.mp3` y `src/timeline.json`. |
+| `scripts/generar_voz.py` | Genera o alinea la voz en off y escribe `public/voiceover/voz-en-off.mp3` y `src/timeline.json`. |
 | `src/timeline.json` | Generado: dónde empieza cada pieza, cada frase y cada palabra. Las escenas y los subtítulos se sincronizan con esto. |
 | `src/Reel.tsx` | Une las 8 escenas, los subtítulos, la marca de agua, la voz y el ambiente de lluvia. |
 | `src/scenes/` | Una escena por pieza del guion (gancho, intro, cuerpo 1, bucle, cuerpo 2, bucle, final, CTA). |
@@ -33,19 +33,20 @@ En Studio, la composición `TormentasElectricas` es el reel completo, y la carpe
 
 ## Voz en off
 
-La voz actual es una **voz guía** generada localmente con [Piper](https://github.com/rhasspy/piper) y la voz `es_AR-daniela-high` (entrenada con el dataset OpenSLR 61, licencia CC BY-SA 4.0). Sirve para sincronizar el video. Para publicar conviene reemplazarla por una voz final.
+La voz es **Fernando Martínez** de ElevenLabs (modelo `eleven_v4`, voice_id `dlGxemPxFMTY7iXagmOj`), generada como una sola toma con el texto de `voiceover/guion.json` y acelerada un 5 % sin cambiar el tono para que el reel quede por debajo de 60 s. La toma se transcribe con faster-whisper y cada palabra del guion se alinea con lo que se escucha, así los subtítulos y los cortes de escena caen justo.
 
 Si cambiás el texto o la voz, volvé a generar el audio y la línea de tiempo: las escenas y los subtítulos se ajustan solos.
 
 ```console
-# Piper (gratis, local)
-pip install piper-tts
-python scripts/generar_voz_guia.py --model ruta/es_AR-daniela-high.onnx
+pip install faster-whisper            # para --audio
+pip install piper-tts                 # para --model
 
-# ElevenLabs (necesita ELEVENLABS_API_KEY y créditos)
-python scripts/generar_voz_guia.py --elevenlabs-voice 34RuvBpKQDapycxZnrDJ
+# Una locución ya hecha (toma de ElevenLabs o tu voz grabada)
+python scripts/generar_voz.py --audio toma.mp3 --tempo 1.05
+
+# Piper, gratis y local (voz guía)
+python scripts/generar_voz.py --model ruta/es_AR-daniela-high.onnx
+
+# ElevenLabs por API, frase por frase (necesita ELEVENLABS_API_KEY)
+python scripts/generar_voz.py --elevenlabs-voice dlGxemPxFMTY7iXagmOj
 ```
-
-Piper no es determinista: cada corrida da una toma un poco distinta (±0,5 s en total), y el video se reacomoda solo.
-
-Si grabás tu propia voz, grabá cada frase de `voiceover/guion.json` por separado, o ajustá a mano los tiempos de `src/timeline.json`.

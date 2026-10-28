@@ -8,7 +8,7 @@ const SWITCH_CAPTIONS_EVERY_MS = 1100;
 
 const clean = (text: string) => text.trim().replace(/[.,:…]+$/, "");
 
-// Misma regla que scripts/generar_voz_guia.py: sin minúsculas = palabra clave.
+// Misma regla que scripts/generar_voz.py: sin minúsculas = palabra clave.
 const isKeyword = (text: string) => {
   const core = clean(text);
   return !core.startsWith("@") && !/[a-záéíóúñü]/.test(core) && (/\d/.test(core) || core.replace(/[^A-ZÁÉÍÓÚÑÜ]/g, "").length >= 2);

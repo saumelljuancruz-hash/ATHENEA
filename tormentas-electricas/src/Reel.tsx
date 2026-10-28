@@ -46,7 +46,7 @@ export const Reel: React.FC = () => {
       </Series>
       <Captions />
       <Watermark />
-      <Audio name="Voz en off" src={staticFile("voiceover/voz-guia.mp3")} volume={0.5} />
+      <Audio name="Voz en off" src={staticFile("voiceover/voz-en-off.mp3")} volume={0.6} />
       <Audio
         name="Ambiente de lluvia"
         src={staticFile("sfx/ambiente-lluvia.mp3")}

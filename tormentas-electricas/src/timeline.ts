@@ -1,7 +1,7 @@
 import type { Caption } from "@remotion/captions";
 import data from "./timeline.json";
 
-// Generado por scripts/generar_voz_guia.py a partir de voiceover/guion.json.
+// Generado por scripts/generar_voz.py a partir de voiceover/guion.json.
 // Todos los tiempos salen del audio, así que las escenas se ajustan solas
 // si cambia la voz en off.
 

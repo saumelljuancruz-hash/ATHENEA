@@ -1,6 +1,6 @@
 # Cómo se forman las tormentas eléctricas — guion del reel
 
-**Cuenta:** @nadietelo.explico · **Formato:** vertical 9:16 (1080 × 1920) · **Duración:** 50 s · **Voz en off:** 159 palabras
+**Cuenta:** @nadietelo.explico · **Formato:** vertical 9:16 (1080 × 1920) · **Duración:** 58 s · **Voz en off:** 159 palabras, voz Fernando Martínez (ElevenLabs)
 
 **Anclaje cotidiano:** el dedo del espectador sobre la pantalla del celular. La pantalla táctil detecta tu dedo porque tu dedo altera su carga eléctrica: es electricidad que estás moviendo *ahora mismo*. El reel arranca ahí, vuelve a la pantalla en el cuerpo 1 (la estática que junta polvo), en el cuerpo final (el canal del rayo es del ancho de tu dedo) y cierra con el dedo tocando "guardar" y "seguir".
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 1 · Gancho (0,0 – 3,0 s)
+## 1 · Gancho (0,0 – 2,8 s)
 
 **Voz en off:** Tu dedo está moviendo electricidad. Ahora mismo.
 
@@ -20,7 +20,7 @@
 
 **Movimiento:** Desde el frame 0 el dedo ya está en cuadro, grande y desenfocado por movimiento, cayendo hacia la pantalla. Toca en el frame 11: destello cian, sacudón de cámara y las ondas se expanden. La cámara hace un *push-out* lento (de 112 % a 100 %). Un reflejo de luz barre el vidrio de izquierda a derecha.
 
-## 2 · Introducción (3,0 – 7,7 s)
+## 2 · Introducción (2,8 – 8,4 s)
 
 **Voz en off:** Un rayo también… con 300 millones de voltios. Al final vas a saber si viene hacia vos.
 
@@ -30,7 +30,7 @@
 
 **Movimiento:** Impacto del rayo con destello blanco y sacudón. Los dígitos del contador giran en escala logarítmica, así se ven pasar todas las cifras. El contador se encoge y sube mientras entra el plano de la nube; la nube avanza despacio hacia la persona y la línea punteada corre.
 
-## 3 · Cuerpo 1 (7,7 – 21,5 s)
+## 3 · Cuerpo 1 (8,4 – 25,4 s)
 
 **Voz en off:** Una nube de tormenta mide 15 kilómetros: casi dos Everest. Adentro, vientos de 100 km/h hacen chocar millones de piedritas de hielo. Cada choque arranca carga, como la estática que junta polvo en tu pantalla. Arriba, positivo. Abajo, negativo. Una pila gigante.
 
@@ -45,7 +45,7 @@
 
 **Movimiento:** *Tilt up* (de 130 % a 100 %) mientras la nube crece; el segundo Everest cae con rebote. Zoom violento hacia adentro de la nube (×3,4) con *whoosh*. Adentro, *push-out* lento. En el choque, cámara quieta y sacudón en el impacto. El celular entra con un pop. Los signos aparecen escalonados con rebote; el contorno de la pila se dibuja en trazo continuo y la cámara empuja hacia adelante (100 % → 106 %).
 
-## 4 · Bucle abierto (21,5 – 22,9 s)
+## 4 · Bucle abierto (25,4 – 27,1 s)
 
 **Voz en off:** Pero el rayo te engaña.
 
@@ -55,7 +55,7 @@
 
 **Movimiento:** *Zoom-in* continuo (100 % → 114 %), sacudón en el impacto del rayo y otro en el *glitch*. El *glitch* cambia cada 2 frames.
 
-## 5 · Cuerpo 2 (22,9 – 29,8 s)
+## 5 · Cuerpo 2 (27,1 – 34,9 s)
 
 **Voz en off:** No baja: sube. Primero cae un camino invisible, a saltos. Al tocar el suelo, el destello sube a 100.000 kilómetros por segundo.
 
@@ -65,7 +65,7 @@
 
 **Movimiento:** La flecha gira 180° con rebote. El líder avanza en 10 saltos discretos (no en un trazo continuo). La descarga de retorno sube en 6 frames con destello a pantalla completa y sacudón fuerte; el contador corre de 0 a 100.000.
 
-## 6 · Bucle abierto (29,8 – 31,5 s)
+## 6 · Bucle abierto (34,9 – 36,9 s)
 
 **Voz en off:** Y lo más loco está adentro.
 
@@ -73,9 +73,9 @@
 
 **Visual:** La cámara se mete dentro del canal del rayo: el trazo cian ocupa todo el cuadro, anillos de túnel vienen hacia la cámara y el color pasa de cian a naranja incandescente hasta un fogonazo blanco anaranjado.
 
-**Movimiento:** Zoom exponencial ×9 en 1,7 s (efecto *dolly* a través del rayo), con dos *whooshes*.
+**Movimiento:** Zoom exponencial ×9 en 2 s (efecto *dolly* a través del rayo), con dos *whooshes*.
 
-## 7 · Cuerpo final (31,5 – 44,6 s)
+## 7 · Cuerpo final (36,9 – 52,5 s)
 
 **Voz en off:** Ese canal es del ancho de tu dedo. Pero llega a 30.000 grados: cinco veces la superficie del Sol. El aire explota, y eso es el trueno. Contá los segundos hasta escucharlo y dividí por tres: esos son los kilómetros. Si el número baja, viene hacia vos.
 
@@ -90,7 +90,7 @@
 
 **Movimiento:** El dedo entra desde la izquierda; las cotas se dibujan una después de la otra. El termómetro sube con *ease-in-out* y los soles aparecen de a uno con pop. En "explota", destello cálido y el sacudón más fuerte del video. En la regla, cada número entra con pop y la nube se desliza hacia la derecha a saltos.
 
-## 8 · Llamado a la acción (44,6 – 50,3 s)
+## 8 · Llamado a la acción (52,5 – 58,4 s)
 
 **Voz en off:** Guardalo para la próxima tormenta. Y seguí a @nadietelo.explico para más datos así.
 
@@ -108,10 +108,11 @@
 2. **"Esta pantalla y una nube de tormenta funcionan con el mismo truco."** Visual: el dedo toca la pantalla y la grilla del sensor se transforma en el interior de una nube con cargas + y −.
 3. **"Lo que estás tocando ahora tiene 5 voltios. Un rayo, 300 millones."** Visual: el dedo apoyado en la pantalla y, al lado, un contador que se dispara de 5 a 300.000.000 hasta romper el vidrio.
 
-## Caption para Instagram
+## Descripción para Instagram
 
-Tu dedo en la pantalla y un rayo usan el mismo truco… pero uno tiene 300 millones de voltios ⚡
-Guardalo y usá la regla del ÷3 en la próxima tormenta.
+Tu dedo y un rayo hacen lo mismo: mover electricidad. La diferencia es que uno tiene 5 voltios… y el otro, 300 millones ⚡
+Probá la regla del ÷3 en la próxima tormenta: contá los segundos entre el destello y el trueno, dividí por 3 y sabés a cuántos kilómetros está.
+Guardalo y seguí a @nadietelo.explico para más datos así.
 
 #tormentas #rayos #ciencia #datoscuriosos #sabiasque
 
