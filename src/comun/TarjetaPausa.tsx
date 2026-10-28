@@ -78,9 +78,7 @@ export const TarjetaPausa: React.FC<{
         >
           {T.pregunta}
         </div>
-        <div style={{ fontFamily: FUENTE.mono, fontSize: 26, color: COLOR.textoSuave, marginTop: 26 }}>
-          {T.pie}
-        </div>
+        <div style={{ fontFamily: FUENTE.mono, fontSize: 26, color: COLOR.textoSuave, marginTop: 26 }}>{T.pie}</div>
         <div style={{ display: "flex", gap: 22, marginTop: 40 }}>
           {T.opciones.map((op, i) => {
             const pop = resorte(frame, fps, CHIPS + i * 7, { damping: 11, stiffness: 200 });
@@ -91,7 +89,11 @@ export const TarjetaPausa: React.FC<{
               <div
                 key={op}
                 style={{
-                  scale: String(pop * (1 + 0.03 * Math.sin((frame + i * 20) / 10)) * (1 + 0.12 * Math.sin(Math.PI * Math.min(1, llamada)))),
+                  scale: String(
+                    pop *
+                      (1 + 0.03 * Math.sin((frame + i * 20) / 10)) *
+                      (1 + 0.12 * Math.sin(Math.PI * Math.min(1, llamada))),
+                  ),
                   opacity: Math.min(1, pop * 1.5),
                   border: `3px solid ${color}`,
                   color,

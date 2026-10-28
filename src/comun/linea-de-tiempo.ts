@@ -52,12 +52,7 @@ const buscarIndice = (palabras: PalabraConTiempo[], frase: string, desde = 0) =>
  * Devuelve [inicio, fin] en segundos de una frase. Si la transcripción real no
  * contiene la frase exacta, usa la posición estimada escalada a la duración real.
  */
-export const ubicarFrase = (
-  palabras: PalabraConTiempo[],
-  frase: string,
-  estimados: PalabraConTiempo[],
-  desde = 0,
-) => {
+export const ubicarFrase = (palabras: PalabraConTiempo[], frase: string, estimados: PalabraConTiempo[], desde = 0) => {
   const i = buscarIndice(palabras, frase, desde);
   const n = frase.split(/\s+/).filter(Boolean).length;
   if (i >= 0) {

@@ -17,6 +17,9 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | Por qué las ventanillas del avión son redondeadas | `VentanasReel` | `src/ventanas/` | `out/ventanas.mp4` |
 | Cerrar las apps NO ahorra batería | `AppsReel` | `src/apps/` | `out/apps.mp4` |
 | Tenés bichos viviendo en la cara (ácaros Demodex) | `AcarosReel` | `src/acaros/` | `out/acaros.mp4` |
+| ¿Por qué se te duerme la pierna? | `PiernaReel` | `src/pierna/` | `out/pierna.mp4` |
+| ¿Por qué ves estrellitas al pararte? | `MareoReel` | `src/mareo/` | `out/mareo.mp4` |
+| ¿Por qué te late el ojo? | `ParpadoReel` | `src/parpado/` | `out/parpado.mp4` |
 
 > Portadas: `npx remotion still <Reel>-Portada out/portada-<reel>.png` (ModoAvion, Bateria, Algoritmo).
 > El texto de cada portada está en `PORTADA` dentro del guion; todo lo importante entra en el recorte 4:5 de la grilla.

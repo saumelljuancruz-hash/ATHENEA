@@ -17,7 +17,8 @@ export const Planos: React.FC<{ planos: Plano[]; direccion?: 1 | -1 }> = ({ plan
   while (i < lista.length - 1 && frame >= lista[i + 1].desde) i++;
   const p = lista[i];
   const t = i === 0 ? 1 : spring({ frame: frame - p.desde, fps, config: { damping: 13, stiffness: 170, mass: 0.8 } });
-  const desenfoque = i === 0 ? 0 : interpolate(frame - p.desde, [0, 5], [6, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const desenfoque =
+    i === 0 ? 0 : interpolate(frame - p.desde, [0, 5], [6, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const lado = (i % 2 === 0 ? 1 : -1) * direccion;
   const mano = pulsoMano(frame + i * 97, 0.9);
   return (

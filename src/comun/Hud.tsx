@@ -98,6 +98,9 @@ export const TituloSeccion: React.FC<{ numero: string; titulo: string; aparece?:
         gap: 20,
         opacity: entrada * (1 - salida),
         translate: `${interpolate(entrada, [0, 1], [-40, 0]) + flotar(frame, 240, 2)}px 0px`,
+        background: "rgba(36,22,52,0.5)",
+        borderRadius: 18,
+        padding: "8px 20px 8px 8px",
       }}
     >
       <div
@@ -167,7 +170,16 @@ export const ContadorHud: React.FC<{
         minWidth: 300,
       }}
     >
-      <div style={{ fontSize: 20, letterSpacing: 2, color: COLOR.textoSuave, display: "flex", alignItems: "center", gap: 10 }}>
+      <div
+        style={{
+          fontSize: 20,
+          letterSpacing: 2,
+          color: COLOR.textoSuave,
+          display: "flex",
+          alignItems: "center",
+          gap: 10,
+        }}
+      >
         <span style={{ width: 8, height: 8, borderRadius: 4, background: color, opacity: parpadeo }} />
         {etiqueta}
       </div>

@@ -21,7 +21,7 @@ export const Fondo: React.FC = () => {
       }}
     >
       {BOKEH.map((b, i) => {
-        const y = (b.y - frame * b.vel * 1.4 + 2200) % 2200 - 140;
+        const y = ((b.y - frame * b.vel * 1.4 + 2200) % 2200) - 140;
         const x = b.x + Math.sin((frame + b.fase) / 140) * 30;
         return (
           <div
@@ -42,8 +42,7 @@ export const Fondo: React.FC = () => {
       })}
       <AbsoluteFill
         style={{
-          background:
-            "radial-gradient(ellipse 120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,0.55) 100%)",
+          background: "radial-gradient(ellipse 120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,0.55) 100%)",
         }}
       />
     </AbsoluteFill>

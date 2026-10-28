@@ -13,7 +13,9 @@ const CENTRO: [number, number] = [540, 900];
  */
 export const pulsoMano = (frame: number, intensidad = 1) => ({
   x: intensidad * (3.2 * Math.sin(frame / 37) + 1.8 * Math.sin(frame / 23 + 1.3) + 0.8 * Math.sin(frame / 11 + 0.4)),
-  y: intensidad * (2.6 * Math.sin(frame / 41 + 2.1) + 1.6 * Math.sin(frame / 19 + 0.7) + 0.7 * Math.sin(frame / 13 + 2.9)),
+  y:
+    intensidad *
+    (2.6 * Math.sin(frame / 41 + 2.1) + 1.6 * Math.sin(frame / 19 + 0.7) + 0.7 * Math.sin(frame / 13 + 2.9)),
   giro: intensidad * (0.32 * Math.sin(frame / 53 + 0.5) + 0.14 * Math.sin(frame / 29 + 1.7)),
 });
 
@@ -27,7 +29,8 @@ export const vistaCortes = (frame: number, cortes: Corte[], fps = 60): Vista => 
   while (i < lista.length - 1 && frame >= lista[i + 1].desde) i++;
   const actual = lista[i];
   const previo = lista[Math.max(0, i - 1)];
-  const t = i === 0 ? 1 : spring({ frame: frame - actual.desde, fps, config: { damping: 15, stiffness: 150, mass: 0.9 } });
+  const t =
+    i === 0 ? 1 : spring({ frame: frame - actual.desde, fps, config: { damping: 15, stiffness: 150, mass: 0.9 } });
   const mezcla = (a: number, b: number) => a + (b - a) * t;
   const empuje = 1 + 0.0008 * Math.max(0, frame - actual.desde);
   const mano = pulsoMano(frame);

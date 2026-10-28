@@ -26,7 +26,9 @@ export const CierreCTA: React.FC<{
   textos: TextosCTA;
   /** Lo que se ve en la pantalla del teléfono, dibujado en coordenadas de 1080×1920. */
   pantalla: React.ReactNode;
-}> = ({ duracion, logoDisponible, logo, usuario, textos: T, pantalla }) => {
+  /** Fondo propio (estilo cálido); sin él, el fondo oscuro de siempre. */
+  fondo?: React.ReactNode;
+}> = ({ duracion, logoDisponible, logo, usuario, textos: T, pantalla, fondo }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -66,7 +68,8 @@ export const CierreCTA: React.FC<{
   ];
 
   return (
-    <Escena name="Cierre">
+    <Escena name="Cierre" fondo={!fondo}>
+      {fondo}
       <Sfx efecto="tap" desde={toque1} />
       <Sfx efecto="pop" desde={toque1 + 3} />
       <Sfx efecto="tap" desde={toque2} />
@@ -100,7 +103,17 @@ export const CierreCTA: React.FC<{
           textAlign: "center",
         }}
       >
-        <div style={{ fontFamily: FUENTE.inter, fontWeight: 800, fontSize: 100, color: COLOR.texto, letterSpacing: -1, lineHeight: 1, whiteSpace: "nowrap" }}>
+        <div
+          style={{
+            fontFamily: FUENTE.inter,
+            fontWeight: 800,
+            fontSize: 100,
+            color: COLOR.texto,
+            letterSpacing: -1,
+            lineHeight: 1,
+            whiteSpace: "nowrap",
+          }}
+        >
           {T.titulo}
         </div>
         <div
@@ -148,7 +161,15 @@ export const CierreCTA: React.FC<{
             {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                style={{ position: "absolute", right: 46, top: 1080 + i * 150, width: 84, height: 84, borderRadius: 42, background: "rgba(255,255,255,0.18)" }}
+                style={{
+                  position: "absolute",
+                  right: 46,
+                  top: 1080 + i * 150,
+                  width: 84,
+                  height: 84,
+                  borderRadius: 42,
+                  background: "rgba(255,255,255,0.18)",
+                }}
               />
             ))}
           </AbsoluteFill>
@@ -191,7 +212,18 @@ export const CierreCTA: React.FC<{
             ) : null,
           )}
         </div>
-        <div style={{ position: "absolute", left: "50%", top: 24, width: 110, height: 30, translate: "-50% 0", borderRadius: 15, background: "#08090b" }} />
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: 24,
+            width: 110,
+            height: 30,
+            translate: "-50% 0",
+            borderRadius: 15,
+            background: "#08090b",
+          }}
+        />
       </div>
 
       {frame < salidaDedo + 2 ? <Dedo x={dedo.x} y={dedo.y} escala={dedo.escala} /> : null}
@@ -257,7 +289,10 @@ const Dedo: React.FC<{ x: number; y: number; escala: number }> = ({ x, y, escala
         <stop offset="100%" stopColor="#d99c76" />
       </linearGradient>
     </defs>
-    <path d="M30 60 C30 20 110 20 110 60 L112 250 C150 230 210 240 230 290 L240 420 L20 420 L28 260 Z" fill="url(#piel)" />
+    <path
+      d="M30 60 C30 20 110 20 110 60 L112 250 C150 230 210 240 230 290 L240 420 L20 420 L28 260 Z"
+      fill="url(#piel)"
+    />
     <path d="M44 52 C44 30 96 30 96 52 L96 96 C80 104 60 104 44 96 Z" fill="#fbe4d3" opacity={0.85} />
   </svg>
 );

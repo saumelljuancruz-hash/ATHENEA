@@ -17,6 +17,10 @@ el guion tiene que pasar el **checklist** del final.
   - **Escenas cotidianas reconocibles** (la cocina, la cama, el colectivo, la mano con el celular)
     antes que diagramas técnicos. Los diagramas, si hacen falta, también con color y calidez.
   - Nada de siluetas grises ni maquetas frías: si algo se ve "de manual técnico", rehacerlo.
+  - **Cómo se arma:** personajes con `src/comun/personajes/Personaje.tsx` (cara con parpadeo y expresiones,
+    parado o sentado, manos, celular, pierna floja, tambaleo) y lugares de `Lugares.tsx` (baño, living,
+    dormitorio). Subtítulos con `pastilla: true`; gancho y portada con `tono` violeta/borravino cálido;
+    CTA con `fondo` en gradiente cálido. Un mismo personaje por Reel (`ESTILO` en el Hook).
 - **Colores de acento:** turquesa #3ee0c0 (lo correcto / principal), rojo coral #ff5a4e (lo engañoso),
   azul #4aa3ff (datos), amarillo #ffc94a, naranja #ff7a3d, rosa #ff4f7a.
 - **HUD:** etiquetas en JetBrains Mono 22–26 px con línea guía animada de 1 px; contador abajo a la izquierda.

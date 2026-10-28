@@ -10,7 +10,10 @@ export const aPantalla = ([x, y]: [number, number], v: Vista) => {
   const a = (v.giro * Math.PI) / 180;
   const dx = (x - v.foco[0]) * v.zoom;
   const dy = (y - v.foco[1]) * v.zoom;
-  return { x: v.destino[0] + dx * Math.cos(a) - dy * Math.sin(a), y: v.destino[1] + dx * Math.sin(a) + dy * Math.cos(a) };
+  return {
+    x: v.destino[0] + dx * Math.cos(a) - dy * Math.sin(a),
+    y: v.destino[1] + dx * Math.sin(a) + dy * Math.cos(a),
+  };
 };
 
 /** Aplica la vista a todo su contenido (dibujado en coordenadas de 1080×1920). */

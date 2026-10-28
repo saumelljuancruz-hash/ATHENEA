@@ -11,7 +11,14 @@ import { SfxActivos } from "./Sonido";
 export const CierreLoop: React.FC<{ duracion: number; children: React.ReactNode }> = ({ duracion, children }) => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{ opacity: interpolate(frame, [0, duracion - 1], [0, 1], { extrapolateRight: "clamp", easing: Easing.inOut(Easing.sin) }) }}>
+    <AbsoluteFill
+      style={{
+        opacity: interpolate(frame, [0, duracion - 1], [0, 1], {
+          extrapolateRight: "clamp",
+          easing: Easing.inOut(Easing.sin),
+        }),
+      }}
+    >
       <SfxActivos.Provider value={false}>
         <Freeze frame={0}>{children}</Freeze>
       </SfxActivos.Provider>

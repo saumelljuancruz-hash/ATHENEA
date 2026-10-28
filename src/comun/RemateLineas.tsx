@@ -5,7 +5,8 @@ import { Escena } from "./Escena";
 import { COLOR, FUENTE, SEGURO } from "./tema";
 
 /** Tamaño de letra para que la línea entre en el área segura (Inter ExtraBold ≈ 0,62 em por letra). */
-const tamanoLinea = (texto: string) => Math.min(84, Math.floor((SEGURO.ancho - SEGURO.izquierda - SEGURO.derecha) / (texto.length * 0.62)));
+const tamanoLinea = (texto: string) =>
+  Math.min(84, Math.floor((SEGURO.ancho - SEGURO.izquierda - SEGURO.derecha) / (texto.length * 0.62)));
 
 /** Remate: tres líneas grandes, una por una con subrayado verde agua, sobre un fondo desenfocado. */
 export const RemateLineas: React.FC<{ duracion: number; lineas: string[]; fondo: React.ReactNode }> = ({
@@ -25,7 +26,16 @@ export const RemateLineas: React.FC<{ duracion: number; lineas: string[]; fondo:
 
       <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(22,23,26,0.85) 0%, rgba(22,23,26,0.2) 75%)" }} />
 
-      <div style={{ position: "absolute", left: SEGURO.izquierda, top: 620, display: "flex", flexDirection: "column", gap: 54 }}>
+      <div
+        style={{
+          position: "absolute",
+          left: SEGURO.izquierda,
+          top: 620,
+          display: "flex",
+          flexDirection: "column",
+          gap: 54,
+        }}
+      >
         {lineas.map((texto, i) => {
           const desde = 6 + i * paso;
           const entrada = resorte(frame, fps, desde, { damping: 15, stiffness: 160 });

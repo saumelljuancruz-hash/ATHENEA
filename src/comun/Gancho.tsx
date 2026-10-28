@@ -10,7 +10,13 @@ export type LineaGancho = { texto: string; color?: keyof typeof COLOR };
  * El gancho escrito en pantalla desde el cuadro 1 (GUIA-REELS: la gente decide en 2 s).
  * Late suave mientras está y sale hacia arriba al llegar a `hasta`.
  */
-export const GanchoPantalla: React.FC<{ lineas: LineaGancho[]; hasta: number; top?: number }> = ({ lineas, hasta, top = 250 }) => {
+export const GanchoPantalla: React.FC<{
+  lineas: LineaGancho[];
+  hasta: number;
+  top?: number;
+  /** Color (r, g, b) de la sombra detrás del texto; para el estilo cálido, un violeta profundo. */
+  tono?: string;
+}> = ({ lineas, hasta, top = 250, tono = "22,23,26" }) => {
   const frame = useCurrentFrame();
   const sale = entre(frame, hasta - 10, hasta, ENTRA_SALE);
   if (sale >= 1) return null;
@@ -24,7 +30,7 @@ export const GanchoPantalla: React.FC<{ lineas: LineaGancho[]; hasta: number; to
           right: 0,
           top: 0,
           height: top + 520,
-          background: "linear-gradient(180deg, rgba(22,23,26,0.92) 0%, rgba(22,23,26,0.75) 65%, rgba(22,23,26,0) 100%)",
+          background: `linear-gradient(180deg, rgba(${tono},0.9) 0%, rgba(${tono},0.7) 65%, rgba(${tono},0) 100%)`,
           opacity: 1 - sale,
         }}
       />
@@ -41,8 +47,18 @@ export const GanchoPantalla: React.FC<{ lineas: LineaGancho[]; hasta: number; to
         }}
       >
         {lineas.map((l, k) => (
-          <div key={k} style={{ rotate: `${0.5 * Math.sin(frame / (23 + k * 7) + k)}deg`, translate: `${2 * Math.sin(frame / (31 + k * 5) + k * 2)}px 0` }}>
-            <LineaAjustada linea={{ texto: l.texto, color: l.color ? COLOR[l.color] : undefined }} ancho={850} maximo={150} />
+          <div
+            key={k}
+            style={{
+              rotate: `${0.5 * Math.sin(frame / (23 + k * 7) + k)}deg`,
+              translate: `${2 * Math.sin(frame / (31 + k * 5) + k * 2)}px 0`,
+            }}
+          >
+            <LineaAjustada
+              linea={{ texto: l.texto, color: l.color ? COLOR[l.color] : undefined }}
+              ancho={850}
+              maximo={150}
+            />
           </div>
         ))}
       </div>

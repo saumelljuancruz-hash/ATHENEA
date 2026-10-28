@@ -12,6 +12,8 @@ export type ConfigSubtitulos = {
   maxCaracteresCon4: number;
   /** Palabras que se pintan en verde agua. */
   palabrasClave: string[];
+  /** Pastilla oscura detrás del texto, para fondos claros (estilo cálido). */
+  pastilla?: boolean;
 };
 
 /** Agrupa las palabras en bloques de 2–4, cortando en la puntuación. */
@@ -31,8 +33,7 @@ export const armarBloques = (palabras: PalabraConTiempo[], config: ConfigSubtitu
     const puntuacion = /[.,?!;:]$/.test(p.palabra);
     const silencio = siguiente ? siguiente.inicio - p.fin > 0.6 : true;
     const lleno =
-      actual.length >= 4 ||
-      (actual.length >= config.maxPalabras && texto.length > config.maxCaracteresCon4);
+      actual.length >= 4 || (actual.length >= config.maxPalabras && texto.length > config.maxCaracteresCon4);
     // Evita dejar una palabra suelta al final de una frase.
     const quedaUna = siguiente && /[.,?!;:]$/.test(siguiente.palabra) && actual.length < 4 && !puntuacion;
     if (puntuacion || silencio || (lleno && !quedaUna)) cerrar();
@@ -85,28 +86,40 @@ export const Subtitulos: React.FC<{
           opacity: entrada,
         }}
       >
-        {bloque.palabras.map((p, k) => {
-          const dicha = t >= p.inicio - 0.04;
-          const pop = interpolate(t, [p.inicio - 0.04, p.inicio + 0.1], [0.82, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          });
-          const clave = claves.has(normalizar(p.palabra));
-          return (
-            <span
-              key={k}
-              style={{
-                color: clave ? COLOR.verde : COLOR.texto,
-                opacity: dicha ? 1 : 0.28,
-                scale: String(pop),
-                display: "inline-block",
-                textShadow: "0 4px 0 rgba(0,0,0,0.35), 0 6px 22px rgba(0,0,0,0.85)",
-              }}
-            >
-              {p.palabra}
-            </span>
-          );
-        })}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "0 14px",
+            ...(config.pastilla
+              ? { background: "rgba(36,22,52,0.62)", borderRadius: 22, padding: "6px 22px 10px" }
+              : {}),
+          }}
+        >
+          {bloque.palabras.map((p, k) => {
+            const dicha = t >= p.inicio - 0.04;
+            const pop = interpolate(t, [p.inicio - 0.04, p.inicio + 0.1], [0.82, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            });
+            const clave = claves.has(normalizar(p.palabra));
+            return (
+              <span
+                key={k}
+                style={{
+                  color: clave ? COLOR.verde : COLOR.texto,
+                  opacity: dicha ? 1 : 0.28,
+                  scale: String(pop),
+                  display: "inline-block",
+                  textShadow: "0 4px 0 rgba(0,0,0,0.35), 0 6px 22px rgba(0,0,0,0.85)",
+                }}
+              >
+                {p.palabra}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </AbsoluteFill>
   );

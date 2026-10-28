@@ -17,7 +17,12 @@ export const LineaAjustada: React.FC<{ linea: LineaPortada; ancho?: number; maxi
   const medida = useRef<HTMLSpanElement>(null);
   const [tamano, setTamano] = useState(100);
   const [espera] = useState(() => delayRender("Midiendo el título de la portada"));
-  const estilo: React.CSSProperties = { fontFamily: FUENTE.inter, fontWeight: 800, letterSpacing: -2, whiteSpace: "nowrap" };
+  const estilo: React.CSSProperties = {
+    fontFamily: FUENTE.inter,
+    fontWeight: 800,
+    letterSpacing: -2,
+    whiteSpace: "nowrap",
+  };
   useLayoutEffect(() => {
     document.fonts.ready.then(() => {
       // Se mide una copia invisible a 100 px y se escala a lo ancho.
@@ -57,13 +62,19 @@ export const Portada: React.FC<{
   subrayado: string;
   logo: string;
   usuario: string;
-}> = ({ fondo, etiqueta, lineas, subrayado, logo, usuario }) => {
+  /** Color (r, g, b) de las sombras; para el estilo cálido, un violeta profundo. */
+  tono?: string;
+}> = ({ fondo, etiqueta, lineas, subrayado, logo, usuario, tono = "22,23,26" }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: COLOR.fondoOscuro, overflow: "hidden" }}>
       {fondo}
       {/* Oscurece abajo para que el título se lea siempre */}
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(22,23,26,0) 45%, rgba(22,23,26,0.92) 62%, #16171a 100%)" }} />
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(22,23,26,0.85) 0%, rgba(22,23,26,0) 22%)" }} />
+      <AbsoluteFill
+        style={{
+          background: `linear-gradient(180deg, rgba(${tono},0) 45%, rgba(${tono},0.92) 62%, rgb(${tono}) 100%)`,
+        }}
+      />
+      <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(${tono},0.85) 0%, rgba(${tono},0) 22%)` }} />
 
       {/* Cuenta */}
       <div style={{ position: "absolute", left: 80, top: 300, display: "flex", alignItems: "center", gap: 20 }}>
@@ -82,7 +93,7 @@ export const Portada: React.FC<{
             letterSpacing: 3,
             color: etiqueta.color,
             border: `3px solid ${etiqueta.color}`,
-            background: `linear-gradient(${etiqueta.color}26, ${etiqueta.color}26), rgba(22,23,26,0.92)`,
+            background: `linear-gradient(${etiqueta.color}26, ${etiqueta.color}26), rgba(${tono},0.92)`,
             borderRadius: 12,
             padding: "8px 20px",
             marginBottom: 28,
@@ -93,7 +104,16 @@ export const Portada: React.FC<{
         {lineas.map((l, k) => (
           <LineaAjustada key={k} linea={l} />
         ))}
-        <div style={{ width: 260, height: 14, borderRadius: 7, background: subrayado, marginTop: 26, boxShadow: `0 0 30px ${subrayado}88` }} />
+        <div
+          style={{
+            width: 260,
+            height: 14,
+            borderRadius: 7,
+            background: subrayado,
+            marginTop: 26,
+            boxShadow: `0 0 30px ${subrayado}88`,
+          }}
+        />
       </div>
     </AbsoluteFill>
   );
