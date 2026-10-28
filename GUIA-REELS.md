@@ -13,7 +13,8 @@ el guion tiene que pasar el **checklist** del final.
   naranja calor #ff7a3d, magenta #ff4f7a.
 - **HUD:** etiquetas en JetBrains Mono 22–26 px con línea guía animada de 1 px; contador abajo a la izquierda.
 - **Título de sección:** badge "01" con borde turquesa + Inter bold en mayúsculas.
-- **Subtítulos:** Inter Bold ~64 px blanco, 2–4 palabras, palabra clave en turquesa, tercio inferior.
+- **Subtítulos:** Inter Bold **50 px** blanco (más chicos para no tapar el video), 2–4 palabras,
+  palabra clave en turquesa, tercio inferior.
 - **Zonas libres:** ~250 px abajo y ~150 px a la derecha (interfaz de Instagram).
 - **Audio:** voz 100 %, música 8 % con ducking, efectos sutiles y puntuales.
 - **Textos:** todos en `src/<reel>/guion-<reel>.ts` (nada hardcodeado en los componentes).
@@ -21,11 +22,21 @@ el guion tiene que pasar el **checklist** del final.
 
 ## 2. Estructura del video
 
-Hook → 01 → (02) → **PausaComentario** (escena anterior congelada y desenfocada, pregunta, 2 chips, 💬,
-whoosh al volver) → secciones → **Remate** (3 líneas en mayúsculas con subrayado turquesa, durante una
-pausa de 2,5 s) → **CTA** ("¿LO SABÍAS?", teléfono con el Reel, dedo que toca COMÉNTALO → SEGUIME → ✓ Siguiendo).
+Hook → 01 → 02 → 03 → **Remate** → **CTA** → loop.
+
+- **Sin pausa para comentarios.** Nada de tarjeta "Contame en los comentarios" ni frase de la voz
+  pidiendo comentarios: en los datos de la cuenta, ahí la retención cae casi un 30 %.
+- **Remate sin silencio:** las 3 líneas en mayúsculas con subrayado turquesa aparecen **mientras la voz
+  dice la última frase** (la escena arranca con esa frase, `inicio: { frase }`). No se inserta la pausa
+  de 2,5 s (no se usa `PAUSA_REMATE`) y el guion no lleva `[pausa]`.
+- **CTA:** "¿LO SABÍAS?", teléfono con el Reel, dedo que toca **MANDÁSELO ➤** → SEGUIME → ✓ Siguiendo.
+- **Loop:** los últimos **45 frames (≈ 0,75 s)** funden suave al primer cuadro del Hook (`CierreLoop`).
 
 ## 3. Lo aprendido sobre alcance
+
+- **Pedir comentarios en el medio del video hace caer la retención ~30 %** (dato de la cuenta).
+  La interacción se pide en la descripción y en el comentario fijado, nunca frenando el video.
+- **Ningún silencio largo:** cualquier pausa sin voz (como la del remate) es un punto de salida.
 
 - **Primer segundo:** la pregunta o el dato tiene que estar **escrito en pantalla desde el cuadro 1**
   (como la portada), no solo en los subtítulos. Si la gente salta en los primeros 2–3 s, el Reel muere.
@@ -39,7 +50,23 @@ pausa de 2,5 s) → **CTA** ("¿LO SABÍAS?", teléfono con el Reel, dedo que to
 - **Formato "video real":** fondo negro, logo + usuario arriba, frase corta con la palabra clave en color,
   video impactante al centro, momento fuerte cerca del final.
 
-## 4. Las 30 estrategias de retención
+## 4. Animación humanizada (no robótica)
+
+Que se sienta animado por una persona, no por una máquina:
+
+- **Nada a velocidad constante ni con movimiento lineal.** Todo arranca, acelera y frena.
+- **Resortes con un poquito de rebote:** las cosas llegan, se pasan apenas y se acomodan
+  (`spring` en `Cortes` y `Planos`).
+- **Cámara en mano:** vaivén chico e irregular siempre activo (`pulsoMano`): la imagen nunca está quieta.
+- **Movimiento secundario:** los personajes se balancean, "respiran" (estiran y encogen apenas),
+  mueven la cabeza y las patas aunque estén quietos.
+- **Ritmos irregulares:** períodos distintos que no coinciden (sumas de senos), cada elemento con su
+  propia semilla; nada sincronizado como un metrónomo.
+- **Escalonado:** los elementos de un grupo entran uno después del otro, no todos juntos.
+- **Textos vivos:** el gancho y los títulos laten y se mueven apenas, cada línea a su ritmo.
+- **Personalidad:** los personajes tienen intención (tantean, se frenan, se miran), no solo se desplazan.
+
+## 5. Las 30 estrategias de retención
 
 ### Ganchos de storytelling
 1. Planteá una incógnita
@@ -81,7 +108,7 @@ pausa de 2,5 s) → **CTA** ("¿LO SABÍAS?", teléfono con el Reel, dedo que to
 29. Conectá con una emoción específica
 30. Cerrá con una micro-CTA que no sea vender
 
-## 5. Checklist antes de grabar la voz
+## 6. Checklist antes de grabar la voz
 
 **Guion**
 - [ ] Las primeras 8 palabras son un dato que choca, una incógnita o una creencia rota (1, 6, 14).
@@ -89,10 +116,11 @@ pausa de 2,5 s) → **CTA** ("¿LO SABÍAS?", teléfono con el Reel, dedo que to
 - [ ] Hay al menos un "pero" que da vuelta la historia (8).
 - [ ] Hay una mini historia, confesión o autocorrección con tono cercano (3, 4, 5, 26).
 - [ ] Al menos 2 números concretos (12).
-- [ ] La pregunta de la pausa es abierta o deja una frase para completar (10, 22, 25).
+- [ ] **No pide comentarios** en ningún momento del video (va en la descripción y el comentario fijado).
+- [ ] **No tiene `[pausa]`**: la voz va de corrido hasta el "Mandáselo".
 - [ ] El remate repite la idea central con otras palabras (28) y toca una emoción (29).
 - [ ] El cierre es una micro-CTA para mandar o comentar, o un cliffhanger de parte 2 (24, 30).
-- [ ] La voz dura 20–35 s, más la pausa del remate.
+- [ ] La voz dura 20–35 s.
 
 **Animación**
 - [ ] La pregunta está escrita en pantalla desde el cuadro 1.
@@ -101,4 +129,6 @@ pausa de 2,5 s) → **CTA** ("¿LO SABÍAS?", teléfono con el Reel, dedo que to
 - [ ] Hay una transformación de antes a después (9).
 - [ ] Algún clip real (B-roll) de 1–2 s si suma (19).
 - [ ] Efectos de sonido solo en los momentos clave (21).
-- [ ] El último cuadro empalma con el primero (loop visual, 23).
+- [ ] El último cuadro empalma con el primero: fundido de ≈ 0,75 s (loop visual, 23).
+- [ ] Movimiento humanizado: resortes, cámara en mano, movimiento secundario, ritmos irregulares.
+- [ ] Subtítulos a 50 px; el remate aparece con la última frase, sin silencio.

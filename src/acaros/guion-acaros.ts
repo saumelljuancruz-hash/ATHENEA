@@ -2,8 +2,9 @@
  * GUION — "Tenés bichos viviendo en la cara" (los ácaros Demodex)
  *
  * Escrito con GUIA-REELS.md: dato que choca en pantalla desde el cuadro 1, tono de charla,
- * autocorrección ("Bueno, salen… caminan un centímetro por hora"), números concretos,
- * pregunta directa y cierre para mandarlo.
+ * autocorrección ("Bueno, salen… caminan un centímetro por hora"), números concretos y cierre
+ * para mandarlo. Sin pausa para comentarios y sin silencio en el remate: las tres líneas
+ * acompañan la última frase.
  *
  * Datos: miden ~0,3 mm, viven cabeza abajo en folículos y poros (pestañas incluidas) y comen sebo;
  * de noche salen a aparearse y, según el estudio de su genoma (2022), usan la melatonina de la
@@ -30,22 +31,16 @@ export const VOLUMEN = {
 
 /** Texto de la voz en off (para grabar). El timing sale de los timestamps. */
 export const TEXTO_VOZ =
-  "Ahora mismo tenés bichos viviendo en la cara. Literal. Se llaman Demodex y miden un tercio de milímetro. Viven cabeza abajo en tus poros y en tus pestañas, comiéndose la grasa de tu piel. De día no se mueven. Pero de noche usan tu hormona del sueño como despertador y salen a buscar pareja. Bueno, salen… caminan un centímetro por hora. ¿Te picó la cara? Contame en los comentarios. Tranqui: casi todos los adultos los tenemos y, salvo que haya demasiados, son inofensivos. Te los pasó tu mamá de bebé. [pausa 2.5 s] Mandáselo al que se está rascando la cara.";
+  "Ahora mismo tenés bichos viviendo en la cara. Literal. Se llaman Demodex y miden un tercio de milímetro. Viven cabeza abajo en tus poros y en tus pestañas, comiéndose la grasa de tu piel. De día no se mueven. Pero de noche usan tu hormona del sueño como despertador y salen a buscar pareja. Bueno, salen… caminan un centímetro por hora. Tranqui: casi todos los adultos los tenemos y, salvo que haya demasiados, son inofensivos. Te los pasó tu mamá de bebé. Mandáselo al que se está rascando la cara.";
 
 export const ANCLAS = {
   quienes: "Se llaman Demodex",
   noche: "De día no",
-  pausa: "Te picó la",
   tranqui: "Tranqui: casi",
-  remateDespuesDe: "mamá de bebé",
+  /** El remate arranca con la última frase (sin silencio): las tres líneas la acompañan. */
+  remate: "Te los pasó",
   cta: "Mandáselo al que",
   adelanto: 0.12,
-};
-
-export const PAUSA_REMATE = {
-  despuesDe: "mamá de bebé",
-  segundos: 2.5,
-  silencioMinimo: 2,
 };
 
 export const MARCAS = {
@@ -67,14 +62,10 @@ export const MARCAS = {
     bueno: "Bueno, salen",
     centimetro: "un centímetro",
   },
-  pausa: {
-    comentarios: "Contame",
-  },
   tranqui: {
     adultos: "los adultos",
     demasiados: "haya demasiados",
     inofensivos: "son inofensivos",
-    mama: "tu mamá",
   },
   cta: {
     manda: "Mandáselo",
@@ -97,7 +88,6 @@ export const PALABRAS_CLAVE = [
   "pareja",
   "centimetro",
   "hora",
-  "comentarios",
   "todos",
   "demasiados",
   "inofensivos",
@@ -108,7 +98,7 @@ export const PALABRAS_CLAVE = [
 export const SUBTITULOS = {
   maxPalabras: 3,
   maxCaracteresCon4: 17,
-  ocultarEn: ["pausa", "remate"] as string[],
+  ocultarEn: [] as string[],
 };
 
 export const TEXTOS = {
@@ -135,18 +125,11 @@ export const TEXTOS = {
     hora: "1 hora",
     contador: "HORA",
   },
-  pausa: {
-    pregunta: "¿Te picó la cara?",
-    pie: "Contame en los comentarios",
-    opciones: ["ME PICA TODO", "NI UN POCO"],
-    emoji: "💬",
-  },
   tranqui: {
     seccion: "03",
     titulo: "TRANQUI",
     demasiados: "demasiados: irritan",
     inofensivos: "normal: inofensivos",
-    mama: "de mamá a bebé",
     contador: "ADULTOS QUE LOS TIENEN",
   },
   remate: ["NO ESTÁS SUCIO", "ESTÁS HABITADO", "DESDE BEBÉ"],

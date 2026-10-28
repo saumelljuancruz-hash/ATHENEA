@@ -3,16 +3,15 @@ import { PalabraConTiempo } from "../comun/tipos";
 import { ANCLAS, MARCAS } from "./guion-acaros";
 import { TIMESTAMPS_ESTIMADOS } from "./timestamps-estimados";
 
-export type EscenaAcaros = "hook" | "quienes" | "noche" | "pausa" | "tranqui" | "remate" | "cta";
+export type EscenaAcaros = "hook" | "quienes" | "noche" | "tranqui" | "remate" | "cta";
 
 export const CONFIG_LINEA_ACAROS: ConfigLinea<EscenaAcaros, typeof MARCAS> = {
   escenas: [
     { id: "hook", inicio: null },
     { id: "quienes", inicio: { frase: ANCLAS.quienes } },
     { id: "noche", inicio: { frase: ANCLAS.noche } },
-    { id: "pausa", inicio: { frase: ANCLAS.pausa } },
     { id: "tranqui", inicio: { frase: ANCLAS.tranqui } },
-    { id: "remate", inicio: { despuesDe: ANCLAS.remateDespuesDe } },
+    { id: "remate", inicio: { frase: ANCLAS.remate } },
     { id: "cta", inicio: { frase: ANCLAS.cta } },
   ],
   marcas: MARCAS,

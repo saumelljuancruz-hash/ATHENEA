@@ -9,11 +9,10 @@ import { PropsReel } from "../comun/tipos";
 import { CTA } from "./escenas/CTA";
 import { Hook } from "./escenas/Hook";
 import { Noche } from "./escenas/Noche";
-import { PausaComentario } from "./escenas/PausaComentario";
 import { Quienes } from "./escenas/Quienes";
 import { Remate } from "./escenas/Remate";
 import { Tranqui } from "./escenas/Tranqui";
-import { ARCHIVOS, CUENTA, PALABRAS_CLAVE, PAUSA_REMATE, SUBTITULOS, VOLUMEN } from "./guion-acaros";
+import { ARCHIVOS, CUENTA, PALABRAS_CLAVE, SUBTITULOS, VOLUMEN } from "./guion-acaros";
 import { EscenaAcaros, lineaAcaros } from "./linea-acaros";
 import { TIMESTAMPS_ESTIMADOS } from "./timestamps-estimados";
 
@@ -24,12 +23,11 @@ export const calcularMetadataAcaros = crearCalcularMetadata({
   timestamps: ARCHIVOS.timestamps,
   logo: CUENTA.logo,
   estimados: TIMESTAMPS_ESTIMADOS,
-  pausa: PAUSA_REMATE,
-  // Sin tope: el video dura lo que necesita la voz (+ pausa del remate + 0,5 s).
+  // Sin tope y sin pausas insertadas: el video dura lo que la voz (+ 0,5 s).
   nombreSalida: "acaros",
 });
 
-const LOOP = 18;
+const LOOP = 45;
 
 const CONFIG_SUBTITULOS = { ...SUBTITULOS, palabrasClave: PALABRAS_CLAVE };
 
@@ -54,13 +52,6 @@ export const AcarosReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoD
       </Sequence>
       <Sequence name="02 Noche" from={e.noche.desde} durationInFrames={e.noche.duracion}>
         <Noche marcas={m.noche} duracion={e.noche.duracion} />
-      </Sequence>
-      <Sequence name="PausaComentario" from={e.pausa.desde} durationInFrames={e.pausa.duracion}>
-        <PausaComentario
-          marcas={m.pausa}
-          duracion={e.pausa.duracion}
-          anterior={{ marcas: m.noche, duracion: e.noche.duracion }}
-        />
       </Sequence>
       <Sequence name="03 Tranqui" from={e.tranqui.desde} durationInFrames={e.tranqui.duracion}>
         <Tranqui marcas={m.tranqui} duracion={e.tranqui.duracion} />
@@ -93,7 +84,6 @@ export const AcarosReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoD
       {(["quienes", "noche", "tranqui", "remate", "cta"] as const).map((id) => (
         <Sfx key={id} efecto="whoosh" desde={Math.max(0, e[id].desde - 8)} />
       ))}
-      <Sfx efecto="whoosh" desde={e.pausa.desde + e.pausa.duracion - 14} volumen={0.22} />
     </AbsoluteFill>
   );
 };

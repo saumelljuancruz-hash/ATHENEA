@@ -1,26 +1,32 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { pulsoMano } from "./Cortes";
 
 export type Plano = { desde: number; contenido: React.ReactNode };
 
 /**
- * Cambia de plano con un corte seco y un barrido corto (≈ 0,12 s de desenfoque),
- * como un corte de edición (GUIA-REELS #15 y #17: cortar cada 2–3 s, cambiar el encuadre).
+ * Cambia de plano con un corte y un empujón que se acomoda con un resorte (se pasa apenas y vuelve),
+ * más un vaivén de cámara en mano: se siente editado por una persona, no por una máquina
+ * (GUIA-REELS #15 y #17: cortar cada 2–3 s; animación humanizada).
  */
 export const Planos: React.FC<{ planos: Plano[]; direccion?: 1 | -1 }> = ({ planos, direccion = 1 }) => {
   const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
   const lista = [...planos].sort((a, b) => a.desde - b.desde);
   let i = 0;
   while (i < lista.length - 1 && frame >= lista[i + 1].desde) i++;
   const p = lista[i];
-  const t = i === 0 ? 1 : interpolate(frame, [p.desde, p.desde + 7], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const t = i === 0 ? 1 : spring({ frame: frame - p.desde, fps, config: { damping: 13, stiffness: 170, mass: 0.8 } });
+  const desenfoque = i === 0 ? 0 : interpolate(frame - p.desde, [0, 5], [6, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const lado = (i % 2 === 0 ? 1 : -1) * direccion;
+  const mano = pulsoMano(frame + i * 97, 0.9);
   return (
     <AbsoluteFill
       style={{
-        translate: `${(1 - t) * 90 * lado}px 0`,
-        scale: String(1 + 0.06 * (1 - t)),
-        filter: t < 1 ? `blur(${(1 - t) * 10}px)` : undefined,
+        translate: `${(1 - t) * 70 * lado + mano.x}px ${mano.y}px`,
+        rotate: `${(1 - t) * 1.2 * lado + mano.giro}deg`,
+        scale: String(1.02 + 0.07 * (1 - t)),
+        filter: desenfoque > 0.05 ? `blur(${desenfoque}px)` : undefined,
       }}
     >
       {p.contenido}

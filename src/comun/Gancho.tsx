@@ -41,7 +41,9 @@ export const GanchoPantalla: React.FC<{ lineas: LineaGancho[]; hasta: number; to
         }}
       >
         {lineas.map((l, k) => (
-          <LineaAjustada key={k} linea={{ texto: l.texto, color: l.color ? COLOR[l.color] : undefined }} ancho={850} maximo={150} />
+          <div key={k} style={{ rotate: `${0.5 * Math.sin(frame / (23 + k * 7) + k)}deg`, translate: `${2 * Math.sin(frame / (31 + k * 5) + k * 2)}px 0` }}>
+            <LineaAjustada linea={{ texto: l.texto, color: l.color ? COLOR[l.color] : undefined }} ancho={850} maximo={150} />
+          </div>
         ))}
       </div>
     </AbsoluteFill>
