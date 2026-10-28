@@ -16,6 +16,7 @@ Reels verticales (1080×1920, 60 fps) hechos con [Remotion](https://remotion.dev
 | El hombre que engañó a Google Maps con un carrito | `TraficoReel` | `src/trafico/` | `out/trafico.mp4` |
 | Por qué las ventanillas del avión son redondeadas | `VentanasReel` | `src/ventanas/` | `out/ventanas.mp4` |
 | Cerrar las apps NO ahorra batería | `AppsReel` | `src/apps/` | `out/apps.mp4` |
+| Tenés bichos viviendo en la cara (ácaros Demodex) | `AcarosReel` | `src/acaros/` | `out/acaros.mp4` |
 
 > Portadas: `npx remotion still <Reel>-Portada out/portada-<reel>.png` (ModoAvion, Bateria, Algoritmo).
 > El texto de cada portada está en `PORTADA` dentro del guion; todo lo importante entra en el recorte 4:5 de la grilla.

@@ -11,6 +11,7 @@ import { ComposicionesAlgoritmo } from "./algoritmo/Composiciones";
 import { ComposicionesTrafico } from "./trafico/Composiciones";
 import { ComposicionesVentanas } from "./ventanas/Composiciones";
 import { ComposicionesApps } from "./apps/Composiciones";
+import { ComposicionesAcaros } from "./acaros/Composiciones";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -26,5 +27,6 @@ export const RemotionRoot: React.FC = () => (
     <ComposicionesTrafico />
     <ComposicionesVentanas />
     <ComposicionesApps />
+    <ComposicionesAcaros />
   </>
 );
