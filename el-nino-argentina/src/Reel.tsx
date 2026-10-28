@@ -50,7 +50,7 @@ export const Reel: React.FC = () => {
       <Audio
         name="Ambiente de mar"
         src={staticFile("sfx/ambiente-mar.mp3")}
-        volume={(f) => interpolate(f, [0, 20, durationInFrames - 40, durationInFrames], [0, 0.2, 0.2, 0], { extrapolateRight: "clamp" })}
+        volume={(f) => interpolate(f, [0, 20, durationInFrames - 40, durationInFrames], [0, 0.065, 0.065, 0], { extrapolateRight: "clamp" })}
       />
     </AbsoluteFill>
   );

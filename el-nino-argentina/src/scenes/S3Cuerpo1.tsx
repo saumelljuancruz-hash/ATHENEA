@@ -71,12 +71,12 @@ export const S3Cuerpo1: React.FC = () => {
         <div style={{ position: "absolute", right: 18, bottom: 12, fontFamily: MONO, fontWeight: 800, fontSize: 24, color: "#fff", opacity: 0.85 }}>PERÚ</div>
         <div style={{ position: "absolute", right: 150, top: 150, opacity: upwelling, fontFamily: MONO, fontWeight: 800, fontSize: 24, color: C.negative, whiteSpace: "nowrap" }}>AGUA FRÍA ↑</div>
       </div>
-      <Audio from={0} src={staticFile("sfx/viento.wav")} volume={0.45} />
-      <Audio from={empuja - 6} src={staticFile("sfx/ola.wav")} volume={0.45} />
+      <Audio from={0} src={staticFile("sfx/viento.wav")} volume={0.07} />
+      <Audio from={empuja - 6} src={staticFile("sfx/ola.wav")} volume={0.07} />
       <Audio from={caliente} src={staticFile("sfx/toque.wav")} volume={0.5} />
       <Audio from={medio} src={staticFile("sfx/toque.wav")} volume={0.5} />
-      <Audio from={frente - 6} src={staticFile("sfx/whoosh.wav")} volume={0.35} />
-      <Audio from={fria} src={staticFile("sfx/ola.wav")} volume={0.4} />
+      <Audio from={frente - 6} src={staticFile("sfx/whoosh.wav")} volume={0.1} />
+      <Audio from={fria} src={staticFile("sfx/ola.wav")} volume={0.07} />
     </AbsoluteFill>
   );
 };

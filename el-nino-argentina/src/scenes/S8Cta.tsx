@@ -1,6 +1,6 @@
 import React from "react";
 import { Audio } from "@remotion/media";
-import { AbsoluteFill, random, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, random, staticFile, useCurrentFrame } from "remotion";
 import { Bolt } from "../components/Bolt";
 import { Finger } from "../components/Finger";
 import { easeInOut, easeOut, mix, pop, ramp } from "../components/anim";
@@ -100,11 +100,7 @@ export const S8Cta: React.FC = () => {
             boxShadow: `0 0 60px ${C.electric}33, 0 40px 80px rgba(0,0,0,0.6)`,
           }}
         >
-          <div style={{ width: 190, height: 190, borderRadius: "50%", background: "radial-gradient(circle at 40% 35%, #2b4f99, #0a1430)", border: `6px solid ${C.yellow}`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 50px ${C.yellow}55` }}>
-            <svg width={90} height={120} viewBox="0 0 26 34">
-              <path d="M15 0 L2 19 H12 L9 34 L24 13 H14 Z" fill={C.yellow} />
-            </svg>
-          </div>
+          <Img src={staticFile("logo.png")} style={{ width: 200, height: 200, borderRadius: "50%", border: "5px solid #3ee0c0", boxShadow: "0 0 50px #3ee0c055" }} />
           <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 64, color: C.white, marginTop: 30, letterSpacing: -1 }}>@nadietelo.explico</div>
           <div style={{ fontFamily: DISPLAY, fontWeight: 600, fontSize: 34, color: C.dim, marginTop: 10 }}>Datos curiosos, bien explicados</div>
           <div
@@ -137,7 +133,7 @@ export const S8Cta: React.FC = () => {
       <Flash at={tapSave} color={C.yellow} length={8} peak={0.3} />
       <Audio from={tapSave - 1} src={staticFile("sfx/toque.wav")} volume={0.56} />
       <Audio from={tapSave} src={staticFile("sfx/ding.wav")} volume={0.42} />
-      <Audio from={follow - 6} src={staticFile("sfx/whoosh.wav")} volume={0.28} />
+      <Audio from={follow - 6} src={staticFile("sfx/whoosh.wav")} volume={0.1} />
       <Audio from={tapFollow - 1} src={staticFile("sfx/toque.wav")} volume={0.56} />
       <Audio from={tapFollow + 1} src={staticFile("sfx/ding.wav")} volume={0.35} />
     </AbsoluteFill>

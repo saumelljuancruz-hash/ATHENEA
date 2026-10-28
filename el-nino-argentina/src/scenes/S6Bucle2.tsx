@@ -34,8 +34,8 @@ export const S6Bucle2: React.FC = () => {
           </Label>
         </div>
       </AbsoluteFill>
-      <Audio from={0} src={staticFile("sfx/whoosh.wav")} volume={0.4} />
-      <Audio from={no} src={staticFile("sfx/viento.wav")} volume={0.35} />
+      <Audio from={0} src={staticFile("sfx/whoosh.wav")} volume={0.1} />
+      <Audio from={no} src={staticFile("sfx/viento.wav")} volume={0.06} />
       <Audio from={arriba} src={staticFile("sfx/chispa.wav")} volume={0.5} />
     </AbsoluteFill>
   );

@@ -43,9 +43,9 @@ export const S4Bucle1: React.FC = () => {
           <div style={{ width: 60, height: 150, borderRadius: 16, background: C.positive, boxShadow: `0 0 40px ${C.positive}` }} />
         </div>
       </AbsoluteFill>
-      <Audio from={0} src={staticFile("sfx/viento.wav")} volume={(f) => 0.45 * speed(f)} />
+      <Audio from={0} src={staticFile("sfx/viento.wav")} volume={(f) => 0.07 * speed(f)} />
       <Audio from={frena} src={staticFile("sfx/toque.wav")} volume={0.8} />
-      <Audio from={frena} src={staticFile("sfx/trueno.wav")} volume={0.25} />
+      <Audio from={frena} src={staticFile("sfx/trueno.wav")} volume={0.1} />
     </AbsoluteFill>
   );
 };

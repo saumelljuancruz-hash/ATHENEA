@@ -88,10 +88,10 @@ export const S1Gancho: React.FC = () => {
       >
         <Finger width={300} rim={0.5} />
       </div>
-      <Audio from={0} src={staticFile("sfx/whoosh.wav")} volume={0.5} />
-      <Audio from={12} src={staticFile("sfx/ola.wav")} volume={0.55} />
-      <Audio from={swipeB - 2} src={staticFile("sfx/whoosh.wav")} volume={0.5} />
-      <Audio from={swipeB + 16} src={staticFile("sfx/ola.wav")} volume={0.6} />
+      <Audio from={0} src={staticFile("sfx/whoosh.wav")} volume={0.12} />
+      <Audio from={12} src={staticFile("sfx/ola.wav")} volume={0.1} />
+      <Audio from={swipeB - 2} src={staticFile("sfx/whoosh.wav")} volume={0.12} />
+      <Audio from={swipeB + 16} src={staticFile("sfx/ola.wav")} volume={0.1} />
     </AbsoluteFill>
   );
 };

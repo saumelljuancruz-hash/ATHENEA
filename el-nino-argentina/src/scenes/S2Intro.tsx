@@ -72,8 +72,8 @@ export const S2Intro: React.FC = () => {
         </AbsoluteFill>
       ) : null}
       <Flash at={argentina - 1} color={C.electric} length={8} peak={0.4} />
-      <Audio from={Math.max(0, afloja - 2)} src={staticFile("sfx/ola.wav")} volume={0.7} />
-      <Audio from={argentina - 4} src={staticFile("sfx/whoosh.wav")} volume={0.45} />
+      <Audio from={Math.max(0, afloja - 2)} src={staticFile("sfx/ola.wav")} volume={0.1} />
+      <Audio from={argentina - 4} src={staticFile("sfx/whoosh.wav")} volume={0.12} />
       <Audio from={argentina} src={staticFile("sfx/ambiente-lluvia.mp3")} volume={(f) => mix(Math.min(1, f / 20), 0, 0.5) * (1 - ramp(f, 110 - argentina, 140 - argentina))} />
       <Audio from={stay} src={staticFile("sfx/toque.wav")} volume={0.6} />
     </AbsoluteFill>

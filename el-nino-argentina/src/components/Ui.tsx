@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, interpolate, random, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, interpolate, random, staticFile, useCurrentFrame } from "remotion";
 import { C, DISPLAY, MONO } from "../theme";
 
 /** Sacudón de cámara que decae después de cada impacto. */
@@ -129,9 +129,7 @@ export const Watermark: React.FC = () => (
       letterSpacing: -0.3,
     }}
   >
-    <svg width={26} height={34} viewBox="0 0 26 34">
-      <path d="M15 0 L2 19 H12 L9 34 L24 13 H14 Z" fill={C.yellow} />
-    </svg>
+    <Img src={staticFile("logo-icono.png")} style={{ width: 50, height: 50, borderRadius: "50%" }} />
     @nadietelo.explico
   </div>
 );

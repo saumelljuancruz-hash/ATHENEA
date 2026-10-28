@@ -94,11 +94,11 @@ export const S5Cuerpo2: React.FC = () => {
         </div>
       </AbsoluteFill>
       <Flash at={nino} color={C.positive} length={10} peak={0.35} />
-      <Audio from={vuelve - 8} src={staticFile("sfx/whoosh.wav")} volume={0.5} />
-      <Audio from={vuelve} src={staticFile("sfx/ola.wav")} volume={0.5} />
+      <Audio from={vuelve - 8} src={staticFile("sfx/whoosh.wav")} volume={0.12} />
+      <Audio from={vuelve} src={staticFile("sfx/ola.wav")} volume={0.08} />
       <Audio from={meses} src={staticFile("sfx/toque.wav")} volume={0.5} />
       <Audio from={medio} src={staticFile("sfx/toque.wav")} volume={0.5} />
-      <Audio from={nino - 2} src={staticFile("sfx/trueno.wav")} volume={0.45} />
+      <Audio from={nino - 2} src={staticFile("sfx/trueno.wav")} volume={0.15} />
     </AbsoluteFill>
   );
 };

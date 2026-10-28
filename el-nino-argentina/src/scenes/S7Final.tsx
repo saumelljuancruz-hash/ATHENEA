@@ -104,14 +104,14 @@ export const S7Final: React.FC = () => {
         ) : null}
       </AbsoluteFill>
       <Flash at={6} color="#ffd39a" length={12} peak={0.6} />
-      <Audio from={4} src={staticFile("sfx/trueno.wav")} volume={0.6} />
-      <Audio from={moist - 6} src={staticFile("sfx/whoosh.wav")} volume={0.45} />
-      <Audio from={cambia} src={staticFile("sfx/viento.wav")} volume={0.35} />
+      <Audio from={4} src={staticFile("sfx/trueno.wav")} volume={0.18} />
+      <Audio from={moist - 6} src={staticFile("sfx/whoosh.wav")} volume={0.12} />
+      <Audio from={cambia} src={staticFile("sfx/viento.wav")} volume={0.06} />
       <Audio from={rain - 6} src={staticFile("sfx/ambiente-lluvia.mp3")} volume={(f) => 0.6 * Math.min(1, f / 20) * (1 - ramp(f, odds - rain, odds - rain + 30))} />
-      <Audio from={litoral} src={staticFile("sfx/trueno.wav")} volume={0.25} />
+      <Audio from={litoral} src={staticFile("sfx/trueno.wav")} volume={0.08} />
       <Audio from={parana} src={staticFile("sfx/toque.wav")} volume={0.5} />
       <Audio from={uruguay} src={staticFile("sfx/toque.wav")} volume={0.5} />
-      <Audio from={odds} src={staticFile("sfx/whoosh.wav")} volume={0.35} />
+      <Audio from={odds} src={staticFile("sfx/whoosh.wav")} volume={0.1} />
       <Audio from={pct + 20} src={staticFile("sfx/ding.wav")} volume={0.5} />
     </AbsoluteFill>
   );
