@@ -1,0 +1,495 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Ese",
+   "inicio": 0.1,
+   "fin": 0.3
+  },
+  {
+   "palabra": "ojo",
+   "inicio": 0.3,
+   "fin": 0.6
+  },
+  {
+   "palabra": "que",
+   "inicio": 0.6,
+   "fin": 0.94
+  },
+  {
+   "palabra": "te",
+   "inicio": 0.94,
+   "fin": 1.12
+  },
+  {
+   "palabra": "late",
+   "inicio": 1.12,
+   "fin": 1.54
+  },
+  {
+   "palabra": "solo,",
+   "inicio": 1.54,
+   "fin": 2.14
+  },
+  {
+   "palabra": "como",
+   "inicio": 2.19,
+   "fin": 2.45
+  },
+  {
+   "palabra": "si",
+   "inicio": 2.45,
+   "fin": 2.6
+  },
+  {
+   "palabra": "tuviera",
+   "inicio": 2.6,
+   "fin": 3.08
+  },
+  {
+   "palabra": "vida",
+   "inicio": 3.08,
+   "fin": 3.37
+  },
+  {
+   "palabra": "propia…",
+   "inicio": 3.37,
+   "fin": 3.92
+  },
+  {
+   "palabra": "no",
+   "inicio": 3.92,
+   "fin": 4.22
+  },
+  {
+   "palabra": "es",
+   "inicio": 4.22,
+   "fin": 4.52
+  },
+  {
+   "palabra": "el",
+   "inicio": 4.52,
+   "fin": 4.82
+  },
+  {
+   "palabra": "ojo.",
+   "inicio": 4.82,
+   "fin": 5.27
+  },
+  {
+   "palabra": "Es",
+   "inicio": 5.69,
+   "fin": 5.7
+  },
+  {
+   "palabra": "un",
+   "inicio": 5.7,
+   "fin": 5.8
+  },
+  {
+   "palabra": "musculito",
+   "inicio": 5.8,
+   "fin": 6.31
+  },
+  {
+   "palabra": "del",
+   "inicio": 6.31,
+   "fin": 6.48
+  },
+  {
+   "palabra": "párpado",
+   "inicio": 6.48,
+   "fin": 6.96
+  },
+  {
+   "palabra": "que",
+   "inicio": 6.96,
+   "fin": 7.14
+  },
+  {
+   "palabra": "se",
+   "inicio": 7.14,
+   "fin": 7.26
+  },
+  {
+   "palabra": "dispara",
+   "inicio": 7.26,
+   "fin": 7.68
+  },
+  {
+   "palabra": "sin",
+   "inicio": 7.68,
+   "fin": 7.92
+  },
+  {
+   "palabra": "que",
+   "inicio": 7.92,
+   "fin": 8.15
+  },
+  {
+   "palabra": "se",
+   "inicio": 8.15,
+   "fin": 8.32
+  },
+  {
+   "palabra": "lo",
+   "inicio": 8.32,
+   "fin": 8.48
+  },
+  {
+   "palabra": "pidas.",
+   "inicio": 8.48,
+   "fin": 8.96
+  },
+  {
+   "palabra": "Se",
+   "inicio": 8.96,
+   "fin": 9.13
+  },
+  {
+   "palabra": "llama",
+   "inicio": 9.13,
+   "fin": 9.51
+  },
+  {
+   "palabra": "mioquimia",
+   "inicio": 9.51,
+   "fin": 10.2
+  },
+  {
+   "palabra": "y",
+   "inicio": 10.2,
+   "fin": 10.37
+  },
+  {
+   "palabra": "es",
+   "inicio": 10.37,
+   "fin": 10.44
+  },
+  {
+   "palabra": "súper",
+   "inicio": 10.44,
+   "fin": 10.95
+  },
+  {
+   "palabra": "común.",
+   "inicio": 10.95,
+   "fin": 11.38
+  },
+  {
+   "palabra": "¿Las",
+   "inicio": 11.68,
+   "fin": 11.93
+  },
+  {
+   "palabra": "causas?",
+   "inicio": 11.93,
+   "fin": 12.41
+  },
+  {
+   "palabra": "Las",
+   "inicio": 12.81,
+   "fin": 12.87
+  },
+  {
+   "palabra": "de",
+   "inicio": 12.87,
+   "fin": 12.99
+  },
+  {
+   "palabra": "siempre:",
+   "inicio": 12.99,
+   "fin": 13.43
+  },
+  {
+   "palabra": "dormir",
+   "inicio": 13.64,
+   "fin": 14.14
+  },
+  {
+   "palabra": "poco,",
+   "inicio": 14.14,
+   "fin": 14.48
+  },
+  {
+   "palabra": "estrés,",
+   "inicio": 14.65,
+   "fin": 15.24
+  },
+  {
+   "palabra": "mucho",
+   "inicio": 15.44,
+   "fin": 15.78
+  },
+  {
+   "palabra": "café",
+   "inicio": 15.78,
+   "fin": 16.12
+  },
+  {
+   "palabra": "y",
+   "inicio": 16.12,
+   "fin": 16.19
+  },
+  {
+   "palabra": "horas",
+   "inicio": 16.19,
+   "fin": 16.53
+  },
+  {
+   "palabra": "mirando",
+   "inicio": 16.53,
+   "fin": 17
+  },
+  {
+   "palabra": "pantallas.",
+   "inicio": 17,
+   "fin": 17.61
+  },
+  {
+   "palabra": "O",
+   "inicio": 17.88,
+   "fin": 18.06
+  },
+  {
+   "palabra": "sea,",
+   "inicio": 18.06,
+   "fin": 18.34
+  },
+  {
+   "palabra": "una",
+   "inicio": 18.68,
+   "fin": 18.92
+  },
+  {
+   "palabra": "semana",
+   "inicio": 18.92,
+   "fin": 19.61
+  },
+  {
+   "palabra": "normal.",
+   "inicio": 19.61,
+   "fin": 20.29
+  },
+  {
+   "palabra": "Casi",
+   "inicio": 20.68,
+   "fin": 20.96
+  },
+  {
+   "palabra": "siempre",
+   "inicio": 20.96,
+   "fin": 21.47
+  },
+  {
+   "palabra": "es",
+   "inicio": 21.47,
+   "fin": 21.61
+  },
+  {
+   "palabra": "inofensivo",
+   "inicio": 21.61,
+   "fin": 22.31
+  },
+  {
+   "palabra": "y",
+   "inicio": 22.31,
+   "fin": 22.39
+  },
+  {
+   "palabra": "se",
+   "inicio": 22.39,
+   "fin": 22.52
+  },
+  {
+   "palabra": "va",
+   "inicio": 22.52,
+   "fin": 22.66
+  },
+  {
+   "palabra": "solo",
+   "inicio": 22.66,
+   "fin": 22.95
+  },
+  {
+   "palabra": "en",
+   "inicio": 22.95,
+   "fin": 23.09
+  },
+  {
+   "palabra": "unos",
+   "inicio": 23.09,
+   "fin": 23.38
+  },
+  {
+   "palabra": "días.",
+   "inicio": 23.38,
+   "fin": 23.74
+  },
+  {
+   "palabra": "Si",
+   "inicio": 24.04,
+   "fin": 24.19
+  },
+  {
+   "palabra": "dura",
+   "inicio": 24.19,
+   "fin": 24.57
+  },
+  {
+   "palabra": "semanas",
+   "inicio": 24.57,
+   "fin": 25.11
+  },
+  {
+   "palabra": "o",
+   "inicio": 25.11,
+   "fin": 25.22
+  },
+  {
+   "palabra": "te",
+   "inicio": 25.22,
+   "fin": 25.33
+  },
+  {
+   "palabra": "cierra",
+   "inicio": 25.33,
+   "fin": 25.79
+  },
+  {
+   "palabra": "el",
+   "inicio": 25.79,
+   "fin": 25.94
+  },
+  {
+   "palabra": "ojo,",
+   "inicio": 25.94,
+   "fin": 26.15
+  },
+  {
+   "palabra": "ahí",
+   "inicio": 26.53,
+   "fin": 26.72
+  },
+  {
+   "palabra": "sí,",
+   "inicio": 26.72,
+   "fin": 26.96
+  },
+  {
+   "palabra": "al",
+   "inicio": 27.27,
+   "fin": 27.29
+  },
+  {
+   "palabra": "médico.",
+   "inicio": 27.29,
+   "fin": 27.83
+  },
+  {
+   "palabra": "Así",
+   "inicio": 28.27,
+   "fin": 28.38
+  },
+  {
+   "palabra": "que",
+   "inicio": 28.38,
+   "fin": 28.6
+  },
+  {
+   "palabra": "no,",
+   "inicio": 28.6,
+   "fin": 28.75
+  },
+  {
+   "palabra": "no",
+   "inicio": 28.9,
+   "fin": 29.2
+  },
+  {
+   "palabra": "te",
+   "inicio": 29.2,
+   "fin": 29.26
+  },
+  {
+   "palabra": "está",
+   "inicio": 29.26,
+   "fin": 29.57
+  },
+  {
+   "palabra": "guiñando",
+   "inicio": 29.57,
+   "fin": 30.24
+  },
+  {
+   "palabra": "nadie:",
+   "inicio": 30.24,
+   "fin": 30.61
+  },
+  {
+   "palabra": "es",
+   "inicio": 30.88,
+   "fin": 31.04
+  },
+  {
+   "palabra": "tu",
+   "inicio": 31.04,
+   "fin": 31.2
+  },
+  {
+   "palabra": "cuerpo",
+   "inicio": 31.2,
+   "fin": 31.69
+  },
+  {
+   "palabra": "pidiendo",
+   "inicio": 31.69,
+   "fin": 32.34
+  },
+  {
+   "palabra": "descanso.",
+   "inicio": 32.34,
+   "fin": 32.9
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 33.04,
+   "fin": 33.69
+  },
+  {
+   "palabra": "al",
+   "inicio": 33.69,
+   "fin": 33.83
+  },
+  {
+   "palabra": "que",
+   "inicio": 33.83,
+   "fin": 34.03
+  },
+  {
+   "palabra": "hoy",
+   "inicio": 34.03,
+   "fin": 34.23
+  },
+  {
+   "palabra": "tiene",
+   "inicio": 34.23,
+   "fin": 34.57
+  },
+  {
+   "palabra": "el",
+   "inicio": 34.57,
+   "fin": 34.7
+  },
+  {
+   "palabra": "ojo",
+   "inicio": 34.7,
+   "fin": 34.89
+  },
+  {
+   "palabra": "bailando.",
+   "inicio": 34.89,
+   "fin": 35.52
+  }
+ ]
+}

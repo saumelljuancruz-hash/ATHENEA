@@ -1,0 +1,460 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Te",
+   "inicio": 0.13,
+   "fin": 0.15
+  },
+  {
+   "palabra": "parás",
+   "inicio": 0.15,
+   "fin": 0.51
+  },
+  {
+   "palabra": "rápido",
+   "inicio": 0.51,
+   "fin": 0.96
+  },
+  {
+   "palabra": "del",
+   "inicio": 0.96,
+   "fin": 1.15
+  },
+  {
+   "palabra": "sillón",
+   "inicio": 1.15,
+   "fin": 1.67
+  },
+  {
+   "palabra": "y…",
+   "inicio": 1.67,
+   "fin": 2.715
+  },
+  {
+   "palabra": "estrellitas.",
+   "inicio": 2.715,
+   "fin": 3.76
+  },
+  {
+   "palabra": "Todo",
+   "inicio": 4,
+   "fin": 4.33
+  },
+  {
+   "palabra": "se",
+   "inicio": 4.33,
+   "fin": 4.49
+  },
+  {
+   "palabra": "pone",
+   "inicio": 4.49,
+   "fin": 4.82
+  },
+  {
+   "palabra": "negro",
+   "inicio": 4.82,
+   "fin": 5.23
+  },
+  {
+   "palabra": "un",
+   "inicio": 5.23,
+   "fin": 5.38
+  },
+  {
+   "palabra": "segundo.",
+   "inicio": 5.38,
+   "fin": 6
+  },
+  {
+   "palabra": "¿Qué",
+   "inicio": 6.33,
+   "fin": 6.42
+  },
+  {
+   "palabra": "pasó?",
+   "inicio": 6.42,
+   "fin": 6.77
+  },
+  {
+   "palabra": "Cuando",
+   "inicio": 7,
+   "fin": 7.47
+  },
+  {
+   "palabra": "estás",
+   "inicio": 7.47,
+   "fin": 7.94
+  },
+  {
+   "palabra": "sentado,",
+   "inicio": 7.94,
+   "fin": 8.54
+  },
+  {
+   "palabra": "tu",
+   "inicio": 8.54,
+   "fin": 8.63
+  },
+  {
+   "palabra": "corazón",
+   "inicio": 8.63,
+   "fin": 9.19
+  },
+  {
+   "palabra": "ya",
+   "inicio": 9.19,
+   "fin": 9.29
+  },
+  {
+   "palabra": "tiene",
+   "inicio": 9.29,
+   "fin": 9.62
+  },
+  {
+   "palabra": "todo",
+   "inicio": 9.62,
+   "fin": 9.88
+  },
+  {
+   "palabra": "calculado.",
+   "inicio": 9.88,
+   "fin": 10.5
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 10.5,
+   "fin": 10.8
+  },
+  {
+   "palabra": "al",
+   "inicio": 10.8,
+   "fin": 10.95
+  },
+  {
+   "palabra": "pararte",
+   "inicio": 10.95,
+   "fin": 11.46
+  },
+  {
+   "palabra": "de",
+   "inicio": 11.46,
+   "fin": 11.61
+  },
+  {
+   "palabra": "golpe,",
+   "inicio": 11.61,
+   "fin": 12.01
+  },
+  {
+   "palabra": "la",
+   "inicio": 12.01,
+   "fin": 12.11
+  },
+  {
+   "palabra": "gravedad",
+   "inicio": 12.11,
+   "fin": 12.61
+  },
+  {
+   "palabra": "tira",
+   "inicio": 12.61,
+   "fin": 12.8
+  },
+  {
+   "palabra": "como",
+   "inicio": 12.8,
+   "fin": 13
+  },
+  {
+   "palabra": "medio",
+   "inicio": 13,
+   "fin": 13.3
+  },
+  {
+   "palabra": "litro",
+   "inicio": 13.3,
+   "fin": 13.6
+  },
+  {
+   "palabra": "de",
+   "inicio": 13.6,
+   "fin": 13.72
+  },
+  {
+   "palabra": "sangre",
+   "inicio": 13.72,
+   "fin": 14.08
+  },
+  {
+   "palabra": "hacia",
+   "inicio": 14.08,
+   "fin": 14.38
+  },
+  {
+   "palabra": "las",
+   "inicio": 14.38,
+   "fin": 14.56
+  },
+  {
+   "palabra": "piernas.",
+   "inicio": 14.56,
+   "fin": 15
+  },
+  {
+   "palabra": "Y",
+   "inicio": 15,
+   "fin": 15.41
+  },
+  {
+   "palabra": "arriba,",
+   "inicio": 15.41,
+   "fin": 15.66
+  },
+  {
+   "palabra": "a",
+   "inicio": 15.85,
+   "fin": 15.94
+  },
+  {
+   "palabra": "tu",
+   "inicio": 15.94,
+   "fin": 16.13
+  },
+  {
+   "palabra": "cerebro,",
+   "inicio": 16.13,
+   "fin": 16.85
+  },
+  {
+   "palabra": "le",
+   "inicio": 17,
+   "fin": 17.16
+  },
+  {
+   "palabra": "llega",
+   "inicio": 17.16,
+   "fin": 17.55
+  },
+  {
+   "palabra": "menos",
+   "inicio": 17.55,
+   "fin": 17.94
+  },
+  {
+   "palabra": "por",
+   "inicio": 17.94,
+   "fin": 18.18
+  },
+  {
+   "palabra": "un",
+   "inicio": 18.18,
+   "fin": 18.34
+  },
+  {
+   "palabra": "instante.",
+   "inicio": 18.34,
+   "fin": 19
+  },
+  {
+   "palabra": "Por",
+   "inicio": 19,
+   "fin": 19.34
+  },
+  {
+   "palabra": "eso",
+   "inicio": 19.34,
+   "fin": 19.68
+  },
+  {
+   "palabra": "ves",
+   "inicio": 19.68,
+   "fin": 20.02
+  },
+  {
+   "palabra": "puntitos",
+   "inicio": 20.02,
+   "fin": 20.94
+  },
+  {
+   "palabra": "y",
+   "inicio": 20.94,
+   "fin": 21.05
+  },
+  {
+   "palabra": "te",
+   "inicio": 21.05,
+   "fin": 21.28
+  },
+  {
+   "palabra": "mareás.",
+   "inicio": 21.28,
+   "fin": 22
+  },
+  {
+   "palabra": "Enseguida",
+   "inicio": 22,
+   "fin": 22.68
+  },
+  {
+   "palabra": "tu",
+   "inicio": 22.68,
+   "fin": 22.83
+  },
+  {
+   "palabra": "cuerpo",
+   "inicio": 22.83,
+   "fin": 23.29
+  },
+  {
+   "palabra": "reacciona:",
+   "inicio": 23.29,
+   "fin": 24
+  },
+  {
+   "palabra": "el",
+   "inicio": 24,
+   "fin": 24.12
+  },
+  {
+   "palabra": "corazón",
+   "inicio": 24.12,
+   "fin": 24.64
+  },
+  {
+   "palabra": "late",
+   "inicio": 24.64,
+   "fin": 24.83
+  },
+  {
+   "palabra": "más",
+   "inicio": 24.83,
+   "fin": 25.07
+  },
+  {
+   "palabra": "rápido",
+   "inicio": 25.07,
+   "fin": 25.5
+  },
+  {
+   "palabra": "y",
+   "inicio": 25.5,
+   "fin": 25.58
+  },
+  {
+   "palabra": "los",
+   "inicio": 25.58,
+   "fin": 25.76
+  },
+  {
+   "palabra": "vasos",
+   "inicio": 25.76,
+   "fin": 26.09
+  },
+  {
+   "palabra": "se",
+   "inicio": 26.09,
+   "fin": 26.22
+  },
+  {
+   "palabra": "aprietan",
+   "inicio": 26.22,
+   "fin": 26.77
+  },
+  {
+   "palabra": "para",
+   "inicio": 26.77,
+   "fin": 27.02
+  },
+  {
+   "palabra": "subir",
+   "inicio": 27.02,
+   "fin": 27.36
+  },
+  {
+   "palabra": "la",
+   "inicio": 27.36,
+   "fin": 27.49
+  },
+  {
+   "palabra": "sangre.",
+   "inicio": 27.49,
+   "fin": 27.77
+  },
+  {
+   "palabra": "Truco:",
+   "inicio": 28.15,
+   "fin": 28.38
+  },
+  {
+   "palabra": "levantate",
+   "inicio": 28.75,
+   "fin": 29.22
+  },
+  {
+   "palabra": "en",
+   "inicio": 29.22,
+   "fin": 29.37
+  },
+  {
+   "palabra": "dos",
+   "inicio": 29.37,
+   "fin": 29.6
+  },
+  {
+   "palabra": "pasos.",
+   "inicio": 29.6,
+   "fin": 30
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 30,
+   "fin": 30.64
+  },
+  {
+   "palabra": "al",
+   "inicio": 30.64,
+   "fin": 30.77
+  },
+  {
+   "palabra": "que",
+   "inicio": 30.77,
+   "fin": 30.96
+  },
+  {
+   "palabra": "se",
+   "inicio": 30.96,
+   "fin": 31.09
+  },
+  {
+   "palabra": "levanta",
+   "inicio": 31.09,
+   "fin": 31.54
+  },
+  {
+   "palabra": "del",
+   "inicio": 31.54,
+   "fin": 31.73
+  },
+  {
+   "palabra": "sillón",
+   "inicio": 31.73,
+   "fin": 32.18
+  },
+  {
+   "palabra": "como",
+   "inicio": 32.18,
+   "fin": 32.44
+  },
+  {
+   "palabra": "un",
+   "inicio": 32.44,
+   "fin": 32.57
+  },
+  {
+   "palabra": "cohete.",
+   "inicio": 32.57,
+   "fin": 33
+  }
+ ]
+}

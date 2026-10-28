@@ -1,0 +1,485 @@
+{
+ "fuente": "whisper.cpp 1.5.5 (small) alineado al guion",
+ "palabras": [
+  {
+   "palabra": "Te",
+   "inicio": 0.07,
+   "fin": 0.19
+  },
+  {
+   "palabra": "levantás",
+   "inicio": 0.19,
+   "fin": 0.96
+  },
+  {
+   "palabra": "del",
+   "inicio": 0.96,
+   "fin": 1.15
+  },
+  {
+   "palabra": "inodoro",
+   "inicio": 1.15,
+   "fin": 1.86
+  },
+  {
+   "palabra": "después",
+   "inicio": 1.86,
+   "fin": 2.33
+  },
+  {
+   "palabra": "de",
+   "inicio": 2.33,
+   "fin": 2.45
+  },
+  {
+   "palabra": "media",
+   "inicio": 2.45,
+   "fin": 2.74
+  },
+  {
+   "palabra": "hora",
+   "inicio": 2.74,
+   "fin": 3
+  },
+  {
+   "palabra": "con",
+   "inicio": 3,
+   "fin": 3.25
+  },
+  {
+   "palabra": "el",
+   "inicio": 3.25,
+   "fin": 3.4
+  },
+  {
+   "palabra": "celular…",
+   "inicio": 3.4,
+   "fin": 4.03
+  },
+  {
+   "palabra": "y",
+   "inicio": 4.03,
+   "fin": 4.3
+  },
+  {
+   "palabra": "la",
+   "inicio": 4.3,
+   "fin": 4.33
+  },
+  {
+   "palabra": "pierna",
+   "inicio": 4.33,
+   "fin": 5
+  },
+  {
+   "palabra": "no",
+   "inicio": 5,
+   "fin": 5.24
+  },
+  {
+   "palabra": "existe.",
+   "inicio": 5.24,
+   "fin": 6.14
+  },
+  {
+   "palabra": "¿Te",
+   "inicio": 6.32,
+   "fin": 6.4
+  },
+  {
+   "palabra": "pasó,",
+   "inicio": 6.4,
+   "fin": 6.72
+  },
+  {
+   "palabra": "no?",
+   "inicio": 6.79,
+   "fin": 6.87
+  },
+  {
+   "palabra": "Lo",
+   "inicio": 7,
+   "fin": 7.48
+  },
+  {
+   "palabra": "que",
+   "inicio": 7.48,
+   "fin": 7.51
+  },
+  {
+   "palabra": "pasa",
+   "inicio": 7.51,
+   "fin": 7.87
+  },
+  {
+   "palabra": "es",
+   "inicio": 7.87,
+   "fin": 8.06
+  },
+  {
+   "palabra": "que,",
+   "inicio": 8.06,
+   "fin": 8.35
+  },
+  {
+   "palabra": "sentado",
+   "inicio": 8.35,
+   "fin": 9.03
+  },
+  {
+   "palabra": "así,",
+   "inicio": 9.03,
+   "fin": 9.42
+  },
+  {
+   "palabra": "aplastás",
+   "inicio": 9.42,
+   "fin": 10.19
+  },
+  {
+   "palabra": "un",
+   "inicio": 10.19,
+   "fin": 10.38
+  },
+  {
+   "palabra": "nervio.",
+   "inicio": 10.38,
+   "fin": 11.08
+  },
+  {
+   "palabra": "Y",
+   "inicio": 11.08,
+   "fin": 11.14
+  },
+  {
+   "palabra": "el",
+   "inicio": 11.14,
+   "fin": 11.24
+  },
+  {
+   "palabra": "nervio",
+   "inicio": 11.24,
+   "fin": 11.7
+  },
+  {
+   "palabra": "es",
+   "inicio": 11.7,
+   "fin": 11.88
+  },
+  {
+   "palabra": "como",
+   "inicio": 11.88,
+   "fin": 12.16
+  },
+  {
+   "palabra": "un",
+   "inicio": 12.16,
+   "fin": 12.24
+  },
+  {
+   "palabra": "cable:",
+   "inicio": 12.24,
+   "fin": 12.6
+  },
+  {
+   "palabra": "si",
+   "inicio": 12.64,
+   "fin": 13.12
+  },
+  {
+   "palabra": "lo",
+   "inicio": 13.12,
+   "fin": 13.24
+  },
+  {
+   "palabra": "apretás,",
+   "inicio": 13.24,
+   "fin": 13.6
+  },
+  {
+   "palabra": "las",
+   "inicio": 13.6,
+   "fin": 14.12
+  },
+  {
+   "palabra": "señales",
+   "inicio": 14.12,
+   "fin": 14.56
+  },
+  {
+   "palabra": "no",
+   "inicio": 14.56,
+   "fin": 14.8
+  },
+  {
+   "palabra": "pasan.",
+   "inicio": 14.8,
+   "fin": 15
+  },
+  {
+   "palabra": "Por",
+   "inicio": 15,
+   "fin": 15.25
+  },
+  {
+   "palabra": "eso",
+   "inicio": 15.25,
+   "fin": 15.6
+  },
+  {
+   "palabra": "no",
+   "inicio": 15.6,
+   "fin": 15.67
+  },
+  {
+   "palabra": "sentís",
+   "inicio": 15.67,
+   "fin": 16.3
+  },
+  {
+   "palabra": "nada.",
+   "inicio": 16.3,
+   "fin": 16.6
+  },
+  {
+   "palabra": "Pero",
+   "inicio": 16.75,
+   "fin": 17.1
+  },
+  {
+   "palabra": "cuando",
+   "inicio": 17.1,
+   "fin": 17.61
+  },
+  {
+   "palabra": "te",
+   "inicio": 17.61,
+   "fin": 17.78
+  },
+  {
+   "palabra": "parás,",
+   "inicio": 17.78,
+   "fin": 18.23
+  },
+  {
+   "palabra": "lo",
+   "inicio": 18.23,
+   "fin": 18.36
+  },
+  {
+   "palabra": "liberás,",
+   "inicio": 18.36,
+   "fin": 19.05
+  },
+  {
+   "palabra": "y",
+   "inicio": 19.05,
+   "fin": 19.09
+  },
+  {
+   "palabra": "el",
+   "inicio": 19.09,
+   "fin": 19.15
+  },
+  {
+   "palabra": "nervio",
+   "inicio": 19.15,
+   "fin": 19.44
+  },
+  {
+   "palabra": "se",
+   "inicio": 19.44,
+   "fin": 19.54
+  },
+  {
+   "palabra": "despierta",
+   "inicio": 19.54,
+   "fin": 20.01
+  },
+  {
+   "palabra": "mandando",
+   "inicio": 20.01,
+   "fin": 20.95
+  },
+  {
+   "palabra": "todo",
+   "inicio": 20.95,
+   "fin": 21.26
+  },
+  {
+   "palabra": "de",
+   "inicio": 21.26,
+   "fin": 21.47
+  },
+  {
+   "palabra": "golpe,",
+   "inicio": 21.47,
+   "fin": 22
+  },
+  {
+   "palabra": "desordenado.",
+   "inicio": 22,
+   "fin": 22
+  },
+  {
+   "palabra": "Eso",
+   "inicio": 22.19,
+   "fin": 22.47
+  },
+  {
+   "palabra": "es",
+   "inicio": 22.47,
+   "fin": 22.85
+  },
+  {
+   "palabra": "el",
+   "inicio": 22.85,
+   "fin": 22.96
+  },
+  {
+   "palabra": "hormigueo.",
+   "inicio": 22.96,
+   "fin": 23.73
+  },
+  {
+   "palabra": "Tranqui:",
+   "inicio": 24,
+   "fin": 24.6
+  },
+  {
+   "palabra": "en",
+   "inicio": 24.63,
+   "fin": 24.77
+  },
+  {
+   "palabra": "un",
+   "inicio": 24.77,
+   "fin": 24.9
+  },
+  {
+   "palabra": "ratito",
+   "inicio": 24.9,
+   "fin": 25.33
+  },
+  {
+   "palabra": "se",
+   "inicio": 25.33,
+   "fin": 25.47
+  },
+  {
+   "palabra": "acomoda.",
+   "inicio": 25.47,
+   "fin": 26
+  },
+  {
+   "palabra": "Así",
+   "inicio": 26,
+   "fin": 26.31
+  },
+  {
+   "palabra": "que",
+   "inicio": 26.31,
+   "fin": 26.69
+  },
+  {
+   "palabra": "el",
+   "inicio": 26.69,
+   "fin": 26.84
+  },
+  {
+   "palabra": "celular",
+   "inicio": 26.84,
+   "fin": 27.24
+  },
+  {
+   "palabra": "no",
+   "inicio": 27.24,
+   "fin": 27.39
+  },
+  {
+   "palabra": "te",
+   "inicio": 27.39,
+   "fin": 27.54
+  },
+  {
+   "palabra": "durmió",
+   "inicio": 27.54,
+   "fin": 28.07
+  },
+  {
+   "palabra": "la",
+   "inicio": 28.07,
+   "fin": 28.22
+  },
+  {
+   "palabra": "pierna…",
+   "inicio": 28.22,
+   "fin": 28.68
+  },
+  {
+   "palabra": "bueno,",
+   "inicio": 29,
+   "fin": 29.52
+  },
+  {
+   "palabra": "un",
+   "inicio": 29.73,
+   "fin": 29.94
+  },
+  {
+   "palabra": "poquito",
+   "inicio": 29.94,
+   "fin": 30.67
+  },
+  {
+   "palabra": "sí.",
+   "inicio": 30.67,
+   "fin": 31
+  },
+  {
+   "palabra": "Mandáselo",
+   "inicio": 31.3,
+   "fin": 31.6
+  },
+  {
+   "palabra": "al",
+   "inicio": 31.6,
+   "fin": 31.7
+  },
+  {
+   "palabra": "que",
+   "inicio": 31.7,
+   "fin": 31.85
+  },
+  {
+   "palabra": "vive",
+   "inicio": 31.85,
+   "fin": 32.05
+  },
+  {
+   "palabra": "media",
+   "inicio": 32.05,
+   "fin": 32.3
+  },
+  {
+   "palabra": "hora",
+   "inicio": 32.3,
+   "fin": 32.5
+  },
+  {
+   "palabra": "en",
+   "inicio": 32.5,
+   "fin": 32.6
+  },
+  {
+   "palabra": "el",
+   "inicio": 32.6,
+   "fin": 32.7
+  },
+  {
+   "palabra": "baño.",
+   "inicio": 32.7,
+   "fin": 33
+  }
+ ]
+}

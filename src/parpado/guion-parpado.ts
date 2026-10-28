@@ -62,7 +62,7 @@ export const MARCAS = {
     dias: "unos días",
     medico: "al médico",
     guinando: "guiñando nadie",
-    descanso: "pidiendo descanso",
+    descanso: "tu cuerpo",
   },
   cta: {
     manda: "Mandáselo",

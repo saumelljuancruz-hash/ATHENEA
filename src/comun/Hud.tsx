@@ -98,7 +98,7 @@ export const TituloSeccion: React.FC<{ numero: string; titulo: string; aparece?:
         gap: 20,
         opacity: entrada * (1 - salida),
         translate: `${interpolate(entrada, [0, 1], [-40, 0]) + flotar(frame, 240, 2)}px 0px`,
-        background: "rgba(36,22,52,0.5)",
+        background: `rgba(36,22,52,${0.5 * barrido})`,
         borderRadius: 18,
         padding: "8px 20px 8px 8px",
       }}
