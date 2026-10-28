@@ -24,9 +24,10 @@ export const Planos: React.FC<{ planos: Plano[]; direccion?: 1 | -1 }> = ({ plan
   return (
     <AbsoluteFill
       style={{
-        translate: `${(1 - t) * 70 * lado + mano.x}px ${mano.y}px`,
-        rotate: `${(1 - t) * 1.2 * lado + mano.giro}deg`,
-        scale: String(1.02 + 0.07 * (1 - t)),
+        // Escala base 1,05: con el empujón (≤ 36 px), el giro y el vaivén, nunca se ve el borde.
+        translate: `${(1 - t) * 36 * lado + mano.x}px ${mano.y}px`,
+        rotate: `${(1 - t) * 0.6 * lado + mano.giro}deg`,
+        scale: String(1.05 + 0.06 * Math.max(0, 1 - t)),
         filter: desenfoque > 0.05 ? `blur(${desenfoque}px)` : undefined,
       }}
     >

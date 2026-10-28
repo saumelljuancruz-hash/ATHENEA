@@ -74,6 +74,10 @@ Que se sienta animado por una persona, no por una máquina:
 - **Resortes con un poquito de rebote:** las cosas llegan, se pasan apenas y se acomodan
   (`spring` en `Cortes` y `Planos`).
 - **Cámara en mano:** vaivén chico e irregular siempre activo (`pulsoMano`): la imagen nunca está quieta.
+- **Zoom sin saltos ni bordes:** ningún valor de cámara puede cambiar de golpe entre un cuadro y el
+  siguiente (el "respiro" del zoom es continuo y no se reinicia en cada corte), y el dibujo tiene que
+  tapar siempre toda la pantalla (`cubrir` en `Cortes`: zoom mínimo 1,04 y sin franjas al alejar o
+  correr la cámara). Revisar cuadros seguidos alrededor de cada corte antes de renderizar.
 - **Movimiento secundario:** los personajes se balancean, "respiran" (estiran y encogen apenas),
   mueven la cabeza y las patas aunque estén quietos.
 - **Ritmos irregulares:** períodos distintos que no coinciden (sumas de senos), cada elemento con su
