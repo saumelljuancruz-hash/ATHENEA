@@ -30,7 +30,14 @@ export const Quienes: React.FC<PropsQuienes> = ({ marcas: m }) => {
   const presentacion = (
     <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 45%, #2a2c31, #16171a 70%)" }}>
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <Acaro x={540} y={880 + flotar(frame, 150, 10)} escala={3.4} rot={interpolate(frame, [0, m.tercio], [-18, 12])} frame={frame} camina={1} />
+        <Acaro
+          x={540}
+          y={880 + flotar(frame, 150, 10)}
+          escala={3.4}
+          rot={interpolate(frame, [0, m.tercio], [-18, 12])}
+          frame={frame}
+          camina={1}
+        />
       </svg>
     </AbsoluteFill>
   );
@@ -41,20 +48,59 @@ export const Quienes: React.FC<PropsQuienes> = ({ marcas: m }) => {
         <g opacity={regla}>
           <rect x={REGLA.x - 20} y={REGLA.y} width={REGLA.ancho + 40} height={90} rx={10} fill="#e6d9b8" />
           {Array.from({ length: 11 }, (_, k) => (
-            <line key={k} x1={REGLA.x + k * 80} x2={REGLA.x + k * 80} y1={REGLA.y} y2={REGLA.y + (k % 5 === 0 ? 60 : 34)} stroke="#3a2f22" strokeWidth={k % 5 === 0 ? 5 : 3} />
+            <line
+              key={k}
+              x1={REGLA.x + k * 80}
+              x2={REGLA.x + k * 80}
+              y1={REGLA.y}
+              y2={REGLA.y + (k % 5 === 0 ? 60 : 34)}
+              stroke="#3a2f22"
+              strokeWidth={k % 5 === 0 ? 5 : 3}
+            />
           ))}
           {["0", "0,5", "1 mm"].map((t, k) => (
-            <text key={t} x={REGLA.x + k * 400} y={REGLA.y + 140} textAnchor="middle" fill={COLOR.texto} fontFamily={FUENTE.mono} fontWeight={700} fontSize={32}>
+            <text
+              key={t}
+              x={REGLA.x + k * 400}
+              y={REGLA.y + 140}
+              textAnchor="middle"
+              fill={COLOR.texto}
+              fontFamily={FUENTE.mono}
+              fontWeight={700}
+              fontSize={32}
+            >
               {t}
             </text>
           ))}
         </g>
         {tres.map((t, k) => (
-          <Acaro key={k} x={REGLA.x + 120 + k * 240 + (1 - t) * 300} y={REGLA.y - 70} escala={1.15} rot={90} frame={frame} camina={1 - t} opacidad={t} />
+          <Acaro
+            key={k}
+            x={REGLA.x + 120 + k * 240 + (1 - t) * 300}
+            y={REGLA.y - 70}
+            escala={1.15}
+            rot={90}
+            frame={frame}
+            camina={1 - t}
+            opacidad={t}
+          />
         ))}
         <g opacity={tres[0]}>
-          <path d={`M ${REGLA.x + 10} ${REGLA.y - 150} L ${REGLA.x + 10} ${REGLA.y - 170} L ${REGLA.x + 230} ${REGLA.y - 170} L ${REGLA.x + 230} ${REGLA.y - 150}`} fill="none" stroke={COLOR.verde} strokeWidth={4} />
-          <text x={REGLA.x + 120} y={REGLA.y - 190} textAnchor="middle" fill={COLOR.verde} fontFamily={FUENTE.mono} fontWeight={700} fontSize={40}>
+          <path
+            d={`M ${REGLA.x + 10} ${REGLA.y - 150} L ${REGLA.x + 10} ${REGLA.y - 170} L ${REGLA.x + 230} ${REGLA.y - 170} L ${REGLA.x + 230} ${REGLA.y - 150}`}
+            fill="none"
+            stroke={COLOR.verde}
+            strokeWidth={4}
+          />
+          <text
+            x={REGLA.x + 120}
+            y={REGLA.y - 190}
+            textAnchor="middle"
+            fill={COLOR.verde}
+            fontFamily={FUENTE.mono}
+            fontWeight={700}
+            fontSize={40}
+          >
             {T.medida}
           </text>
         </g>
@@ -63,7 +109,16 @@ export const Quienes: React.FC<PropsQuienes> = ({ marcas: m }) => {
   );
 
   const acarosEnFoliculo = (fx: number, n: number) =>
-    Array.from({ length: n }, (_, k) => <Acaro key={`${fx}${k}`} x={fx - 10 + k * 18} y={760 + k * 150} escala={0.7} rot={180 + (k % 2 ? 6 : -6)} frame={frame} />);
+    Array.from({ length: n }, (_, k) => (
+      <Acaro
+        key={`${fx}${k}`}
+        x={fx - 10 + k * 18}
+        y={760 + k * 150}
+        escala={0.7}
+        rot={180 + (k % 2 ? 6 : -6)}
+        frame={frame}
+      />
+    ));
 
   const corte = (zoom: [number, number], g: number) => (
     <Cortes
@@ -79,7 +134,16 @@ export const Quienes: React.FC<PropsQuienes> = ({ marcas: m }) => {
   );
 
   const pestanas = (
-    <AbsoluteFill style={{ scale: String(interpolate(frame, [m.pestanas, m.grasa], [1.05, 1.18], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })) }}>
+    <AbsoluteFill
+      style={{
+        scale: String(
+          interpolate(frame, [m.pestanas, m.grasa], [1.05, 1.18], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+          }),
+        ),
+      }}
+    >
       <Pestanas
         frame={frame}
         detras={[2, 4, 6].map((k) => {
@@ -107,13 +171,51 @@ export const Quienes: React.FC<PropsQuienes> = ({ marcas: m }) => {
         ]}
       />
       <AbsoluteFill>
-        <HudEtiqueta ancla={{ x: 600, y: 600 }} caja={{ x: 640, y: 470 }} texto={T.nombre} color={COLOR.verde} aparece={m.demodex + s(0.1)} desaparece={m.tercio - s(0.1)} tamano={30} />
-        <HudEtiqueta ancla={{ x: 330, y: 760 }} caja={{ x: 520, y: 470 }} texto={T.poro} color={COLOR.azul} aparece={m.cabeza + s(0.3)} desaparece={m.pestanas - s(0.1)} tamano={28} />
-        <HudEtiqueta ancla={{ x: 540, y: 960 }} caja={{ x: 110, y: 470 }} texto={T.pestana} color={COLOR.verde} aparece={m.pestanas + s(0.3)} desaparece={m.grasa - s(0.1)} tamano={28} />
-        <HudEtiqueta ancla={{ x: 560, y: 780 }} caja={{ x: 560, y: 470 }} texto={T.grasa} color="#e8c45a" aparece={m.grasa + s(0.3)} tamano={28} />
+        <HudEtiqueta
+          ancla={{ x: 600, y: 600 }}
+          caja={{ x: 640, y: 470 }}
+          texto={T.nombre}
+          color={COLOR.verde}
+          aparece={m.demodex + s(0.1)}
+          desaparece={m.tercio - s(0.1)}
+          tamano={30}
+        />
+        <HudEtiqueta
+          ancla={{ x: 330, y: 760 }}
+          caja={{ x: 520, y: 470 }}
+          texto={T.poro}
+          color={COLOR.azul}
+          aparece={m.cabeza + s(0.3)}
+          desaparece={m.pestanas - s(0.1)}
+          tamano={28}
+        />
+        <HudEtiqueta
+          ancla={{ x: 540, y: 960 }}
+          caja={{ x: 110, y: 470 }}
+          texto={T.pestana}
+          color={COLOR.verde}
+          aparece={m.pestanas + s(0.3)}
+          desaparece={m.grasa - s(0.1)}
+          tamano={28}
+        />
+        <HudEtiqueta
+          ancla={{ x: 560, y: 780 }}
+          caja={{ x: 560, y: 470 }}
+          texto={T.grasa}
+          color="#e8c45a"
+          aparece={m.grasa + s(0.3)}
+          tamano={28}
+        />
       </AbsoluteFill>
       <TituloSeccion numero={T.seccion} titulo={T.titulo} />
-      <ContadorHud etiqueta={T.contador} valor={0.3} decimales={1} unidad=" mm" color={COLOR.verde} aparece={m.tercio + s(0.4)} />
+      <ContadorHud
+        etiqueta={T.contador}
+        valor={0.3}
+        decimales={1}
+        unidad=" mm"
+        color={COLOR.verde}
+        aparece={m.tercio + s(0.4)}
+      />
     </Escena>
   );
 };

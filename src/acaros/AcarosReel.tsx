@@ -10,7 +10,6 @@ import { CTA } from "./escenas/CTA";
 import { Hook } from "./escenas/Hook";
 import { Noche } from "./escenas/Noche";
 import { Quienes } from "./escenas/Quienes";
-import { Remate } from "./escenas/Remate";
 import { Tranqui } from "./escenas/Tranqui";
 import { ARCHIVOS, CUENTA, PALABRAS_CLAVE, SUBTITULOS, VOLUMEN } from "./guion-acaros";
 import { EscenaAcaros, lineaAcaros } from "./linea-acaros";
@@ -56,9 +55,6 @@ export const AcarosReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoD
       <Sequence name="03 Tranqui" from={e.tranqui.desde} durationInFrames={e.tranqui.duracion}>
         <Tranqui marcas={m.tranqui} duracion={e.tranqui.duracion} />
       </Sequence>
-      <Sequence name="Remate" from={e.remate.desde} durationInFrames={e.remate.duracion}>
-        <Remate duracion={e.remate.duracion} />
-      </Sequence>
       <Sequence name="CTA" from={e.cta.desde} durationInFrames={e.cta.duracion}>
         <CTA marcas={m.cta} duracion={e.cta.duracion} logoDisponible={logoDisponible} />
       </Sequence>
@@ -81,7 +77,7 @@ export const AcarosReel: React.FC<PropsReel> = ({ palabras, vozDisponible, logoD
         volumenMusica={VOLUMEN.musica}
         ducking={VOLUMEN.ducking}
       />
-      {(["quienes", "noche", "tranqui", "remate", "cta"] as const).map((id) => (
+      {(["quienes", "noche", "tranqui", "cta"] as const).map((id) => (
         <Sfx key={id} efecto="whoosh" desde={Math.max(0, e[id].desde - 8)} />
       ))}
     </AbsoluteFill>

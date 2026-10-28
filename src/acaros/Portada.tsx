@@ -13,7 +13,11 @@ export const PortadaAcaros: React.FC = () => (
       </div>
     }
     etiqueta={{ texto: PORTADA.etiqueta, color: COLOR.rojo }}
-    lineas={[{ texto: PORTADA.lineas[0] }, { texto: PORTADA.lineas[1] }, { texto: PORTADA.lineas[2], color: COLOR.rojo }]}
+    lineas={[
+      { texto: PORTADA.lineas[0] },
+      { texto: PORTADA.lineas[1] },
+      { texto: PORTADA.lineas[2], color: COLOR.rojo },
+    ]}
     subrayado={COLOR.rojo}
     logo={CUENTA.logo}
     usuario={CUENTA.usuario}

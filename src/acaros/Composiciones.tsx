@@ -5,7 +5,6 @@ import { CTA } from "./escenas/CTA";
 import { Hook } from "./escenas/Hook";
 import { Noche } from "./escenas/Noche";
 import { Quienes } from "./escenas/Quienes";
-import { Remate } from "./escenas/Remate";
 import { Tranqui } from "./escenas/Tranqui";
 import { calcularMetadataAcaros, AcarosReel, PROPS_ACAROS } from "./AcarosReel";
 import { lineaAcaros } from "./linea-acaros";
@@ -31,12 +30,51 @@ export const ComposicionesAcaros: React.FC = () => (
     />
     <Still id="Acaros-Portada" component={PortadaAcaros} width={ANCHO} height={ALTO} />
     <Folder name="Acaros-Escenas">
-      <Composition id="Acaros-Hook" component={Hook} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.hook.duracion} defaultProps={{ marcas: m.hook, duracion: e.hook.duracion }} />
-      <Composition id="Acaros-Quienes" component={Quienes} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.quienes.duracion} defaultProps={{ marcas: m.quienes, duracion: e.quienes.duracion }} />
-      <Composition id="Acaros-Noche" component={Noche} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.noche.duracion} defaultProps={{ marcas: m.noche, duracion: e.noche.duracion }} />
-      <Composition id="Acaros-Tranqui" component={Tranqui} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.tranqui.duracion} defaultProps={{ marcas: m.tranqui, duracion: e.tranqui.duracion }} />
-      <Composition id="Acaros-Remate" component={Remate} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.remate.duracion} defaultProps={{ duracion: e.remate.duracion }} />
-      <Composition id="Acaros-CTA" component={CTA} width={ANCHO} height={ALTO} fps={FPS} durationInFrames={e.cta.duracion} defaultProps={{ marcas: m.cta, duracion: e.cta.duracion, logoDisponible: false }} />
+      <Composition
+        id="Acaros-Hook"
+        component={Hook}
+        width={ANCHO}
+        height={ALTO}
+        fps={FPS}
+        durationInFrames={e.hook.duracion}
+        defaultProps={{ marcas: m.hook, duracion: e.hook.duracion }}
+      />
+      <Composition
+        id="Acaros-Quienes"
+        component={Quienes}
+        width={ANCHO}
+        height={ALTO}
+        fps={FPS}
+        durationInFrames={e.quienes.duracion}
+        defaultProps={{ marcas: m.quienes, duracion: e.quienes.duracion }}
+      />
+      <Composition
+        id="Acaros-Noche"
+        component={Noche}
+        width={ANCHO}
+        height={ALTO}
+        fps={FPS}
+        durationInFrames={e.noche.duracion}
+        defaultProps={{ marcas: m.noche, duracion: e.noche.duracion }}
+      />
+      <Composition
+        id="Acaros-Tranqui"
+        component={Tranqui}
+        width={ANCHO}
+        height={ALTO}
+        fps={FPS}
+        durationInFrames={e.tranqui.duracion}
+        defaultProps={{ marcas: m.tranqui, duracion: e.tranqui.duracion }}
+      />
+      <Composition
+        id="Acaros-CTA"
+        component={CTA}
+        width={ANCHO}
+        height={ALTO}
+        fps={FPS}
+        durationInFrames={e.cta.duracion}
+        defaultProps={{ marcas: m.cta, duracion: e.cta.duracion, logoDisponible: false }}
+      />
     </Folder>
   </Folder>
 );

@@ -6,16 +6,16 @@ import { Acaro, POROS, SuperficiePiel } from "./Piel";
 export const PORO_LUPA = POROS[5];
 
 /** Lupa circular (HTML) que muestra la piel aumentada con un ácaro asomando del poro. */
-export const Lupa: React.FC<{ x: number; y: number; r: number; zoom: number; asoma: number; frame: number; etiqueta: string; noche?: number }> = ({
-  x,
-  y,
-  r,
-  zoom,
-  asoma,
-  frame,
-  etiqueta,
-  noche = 0,
-}) => (
+export const Lupa: React.FC<{
+  x: number;
+  y: number;
+  r: number;
+  zoom: number;
+  asoma: number;
+  frame: number;
+  etiqueta: string;
+  noche?: number;
+}> = ({ x, y, r, zoom, asoma, frame, etiqueta, noche = 0 }) => (
   <div style={{ position: "absolute", left: x - r, top: y - r, width: 2 * r, height: 2 * r }}>
     <div
       style={{

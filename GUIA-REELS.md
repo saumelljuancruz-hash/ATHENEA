@@ -5,13 +5,22 @@ el guion tiene que pasar el **checklist** del final.
 
 ---
 
-## 1. Estilo de la cuenta (fijo)
+## 1. Estilo de la cuenta
 
 - **Formato:** 1080×1920, 60 fps, MP4 H.264 + AAC, Remotion. Salida en `out/<reel>.mp4`.
-- **Look:** fondo carbón (#16171a–#2a2c31), estilo maqueta 3D minimalista, movimiento constante.
-- **Colores:** turquesa #3ee0c0 (lo correcto / principal), rojo #ff5a4e (lo engañoso), azul #4aa3ff (datos),
-  naranja calor #ff7a3d, magenta #ff4f7a.
+- **Look (desde ácaros en adelante): ilustración cálida y humana, NO gris oscuro.**
+  - **Fondos con color:** gradientes suaves y vivos (cielo → lavanda, durazno → coral, menta → turquesa,
+    amarillo manteca). Para la noche, azul índigo con luces cálidas, nunca gris carbón ni negro.
+  - **Dibujos humanos:** ilustración plana con formas redondeadas, sombras suaves y algo de textura.
+    Personas con cara y expresión (ojos, cejas, boca), tonos de piel variados, manos y gestos.
+    Los objetos y bichos pueden tener carita/personalidad cuando suma.
+  - **Escenas cotidianas reconocibles** (la cocina, la cama, el colectivo, la mano con el celular)
+    antes que diagramas técnicos. Los diagramas, si hacen falta, también con color y calidez.
+  - Nada de siluetas grises ni maquetas frías: si algo se ve "de manual técnico", rehacerlo.
+- **Colores de acento:** turquesa #3ee0c0 (lo correcto / principal), rojo coral #ff5a4e (lo engañoso),
+  azul #4aa3ff (datos), amarillo #ffc94a, naranja #ff7a3d, rosa #ff4f7a.
 - **HUD:** etiquetas en JetBrains Mono 22–26 px con línea guía animada de 1 px; contador abajo a la izquierda.
+  Paneles con buen contraste sobre fondos de color (claros o translúcidos), no bloques negros pesados.
 - **Título de sección:** badge "01" con borde turquesa + Inter bold en mayúsculas.
 - **Subtítulos:** Inter Bold **50 px** blanco (más chicos para no tapar el video), 2–4 palabras,
   palabra clave en turquesa, tercio inferior.
@@ -22,13 +31,13 @@ el guion tiene que pasar el **checklist** del final.
 
 ## 2. Estructura del video
 
-Hook → 01 → 02 → 03 → **Remate** → **CTA** → loop.
+Hook → 01 → 02 → 03 → **CTA** → loop.
 
 - **Sin pausa para comentarios.** Nada de tarjeta "Contame en los comentarios" ni frase de la voz
   pidiendo comentarios: en los datos de la cuenta, ahí la retención cae casi un 30 %.
-- **Remate sin silencio:** las 3 líneas en mayúsculas con subrayado turquesa aparecen **mientras la voz
-  dice la última frase** (la escena arranca con esa frase, `inicio: { frase }`). No se inserta la pausa
-  de 2,5 s (no se usa `PAUSA_REMATE`) y el guion no lleva `[pausa]`.
+- **Sin triple texto (Remate):** no hay escena de 3 líneas en mayúsculas. La idea central la repite la voz
+  en la última frase, sobre una imagen de la sección 03.
+- **Sin silencios:** no se inserta pausa (no se usa `PAUSA_REMATE`) y el guion no lleva `[pausa]`.
 - **CTA:** "¿LO SABÍAS?", teléfono con el Reel, dedo que toca **MANDÁSELO ➤** → SEGUIME → ✓ Siguiendo.
 - **Loop:** los últimos **45 frames (≈ 0,75 s)** funden suave al primer cuadro del Hook (`CierreLoop`).
 
@@ -37,6 +46,9 @@ Hook → 01 → 02 → 03 → **Remate** → **CTA** → loop.
 - **Pedir comentarios en el medio del video hace caer la retención ~30 %** (dato de la cuenta).
   La interacción se pide en la descripción y en el comentario fijado, nunca frenando el video.
 - **Ningún silencio largo:** cualquier pausa sin voz (como la del remate) es un punto de salida.
+- **El triple texto del remate no suma:** se sacó de la estructura.
+- **Lo cotidiano engancha más:** temas que le pasan a cualquiera en el día (dormir, comer, el celular,
+  el cuerpo) y dibujos cálidos y humanos en los que la gente se reconoce.
 
 - **Primer segundo:** la pregunta o el dato tiene que estar **escrito en pantalla desde el cuadro 1**
   (como la portada), no solo en los subtítulos. Si la gente salta en los primeros 2–3 s, el Reel muere.
@@ -118,7 +130,8 @@ Que se sienta animado por una persona, no por una máquina:
 - [ ] Al menos 2 números concretos (12).
 - [ ] **No pide comentarios** en ningún momento del video (va en la descripción y el comentario fijado).
 - [ ] **No tiene `[pausa]`**: la voz va de corrido hasta el "Mandáselo".
-- [ ] El remate repite la idea central con otras palabras (28) y toca una emoción (29).
+- [ ] La última frase repite la idea central con otras palabras (28) y toca una emoción (29).
+- [ ] Es algo que le pasa a la gente en su día a día (o se conecta con eso en la primera frase).
 - [ ] El cierre es una micro-CTA para mandar o comentar, o un cliffhanger de parte 2 (24, 30).
 - [ ] La voz dura 20–35 s.
 
@@ -131,4 +144,5 @@ Que se sienta animado por una persona, no por una máquina:
 - [ ] Efectos de sonido solo en los momentos clave (21).
 - [ ] El último cuadro empalma con el primero: fundido de ≈ 0,75 s (loop visual, 23).
 - [ ] Movimiento humanizado: resortes, cámara en mano, movimiento secundario, ritmos irregulares.
-- [ ] Subtítulos a 50 px; el remate aparece con la última frase, sin silencio.
+- [ ] Subtítulos a 50 px. Sin escena de remate (triple texto) y sin silencios.
+- [ ] Look cálido y humano: fondos con color, personas con cara y expresión, nada gris oscuro.

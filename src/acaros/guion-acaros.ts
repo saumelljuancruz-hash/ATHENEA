@@ -3,8 +3,7 @@
  *
  * Escrito con GUIA-REELS.md: dato que choca en pantalla desde el cuadro 1, tono de charla,
  * autocorrección ("Bueno, salen… caminan un centímetro por hora"), números concretos y cierre
- * para mandarlo. Sin pausa para comentarios y sin silencio en el remate: las tres líneas
- * acompañan la última frase.
+ * para mandarlo. Sin pausa para comentarios, sin silencios y sin el triple texto del remate.
  *
  * Datos: miden ~0,3 mm, viven cabeza abajo en folículos y poros (pestañas incluidas) y comen sebo;
  * de noche salen a aparearse y, según el estudio de su genoma (2022), usan la melatonina de la
@@ -37,8 +36,6 @@ export const ANCLAS = {
   quienes: "Se llaman Demodex",
   noche: "De día no",
   tranqui: "Tranqui: casi",
-  /** El remate arranca con la última frase (sin silencio): las tres líneas la acompañan. */
-  remate: "Te los pasó",
   cta: "Mandáselo al que",
   adelanto: 0.12,
 };
@@ -66,6 +63,7 @@ export const MARCAS = {
     adultos: "los adultos",
     demasiados: "haya demasiados",
     inofensivos: "son inofensivos",
+    mama: "Te los pasó",
   },
   cta: {
     manda: "Mandáselo",
@@ -130,9 +128,9 @@ export const TEXTOS = {
     titulo: "TRANQUI",
     demasiados: "demasiados: irritan",
     inofensivos: "normal: inofensivos",
+    mama: "de mamá a bebé",
     contador: "ADULTOS QUE LOS TIENEN",
   },
-  remate: ["NO ESTÁS SUCIO", "ESTÁS HABITADO", "DESDE BEBÉ"],
   cta: {
     titulo: "¿LO SABÍAS?",
     comentar: "MANDÁSELO ➤",
