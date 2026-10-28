@@ -1,0 +1,65 @@
+{
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {"text": "Tu dedo está moviendo ELECTRICIDAD."},
+        {"text": "Ahora MISMO."}
+      ]
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {"text": "Un rayo también… con 300 MILLONES de voltios."},
+        {"text": "Al final vas a saber si viene HACIA VOS."}
+      ]
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {"text": "Una nube de tormenta mide 15 KILÓMETROS: casi dos EVEREST."},
+        {"text": "Adentro, vientos de 100 KM/H hacen chocar millones de piedritas de HIELO."},
+        {"text": "Cada choque arranca CARGA, como la ESTÁTICA que junta polvo en tu pantalla."},
+        {"text": "Arriba, POSITIVO. Abajo, NEGATIVO."},
+        {"text": "Una PILA gigante."}
+      ]
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {"text": "Pero el rayo te ENGAÑA."}
+      ]
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {"text": "No baja: SUBE."},
+        {"text": "Primero cae un camino INVISIBLE, a saltos."},
+        {"text": "Al tocar el suelo, el destello sube a 100.000 KILÓMETROS por segundo."}
+      ]
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {"text": "Y lo más LOCO está adentro."}
+      ]
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {"text": "Ese canal es del ancho de tu DEDO."},
+        {"text": "Pero llega a 30.000 GRADOS: cinco veces la superficie del SOL."},
+        {"text": "El aire EXPLOTA, y eso es el TRUENO."},
+        {"text": "Contá los segundos hasta escucharlo y dividí por TRES: esos son los KILÓMETROS."},
+        {"text": "Si el número BAJA, viene hacia VOS."}
+      ]
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {"text": "GUARDALO para la próxima tormenta."},
+        {"text": "Y SEGUÍ a @nadietelo.explico para más datos así."}
+      ]
+    }
+  ]
+}
