@@ -1,0 +1,63 @@
+{
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {"text": "Nadie te ve como te ves en el ESPEJO."}
+      ]
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {"text": "Por eso odiás tus SELFIES."},
+        {"text": "Al final, el TRUCO para arreglarlo."}
+      ]
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {"text": "El espejo te muestra al REVÉS."},
+        {"text": "Y ninguna cara es SIMÉTRICA: un ojo más alto, una sonrisa torcida, la raya del pelo."},
+        {"text": "Vos te viste al revés TODA LA VIDA."},
+        {"text": "La cámara te muestra al derecho, y tu cerebro dice: algo está MAL."}
+      ]
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {"text": "Pero tu cerebro hace TRAMPA."}
+      ]
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {"text": "En 1977 lo probaron: fotografiaron a un grupo de mujeres y les mostraron su foto normal y espejada."},
+        {"text": "Ellas eligieron la ESPEJADA."},
+        {"text": "Sus amigos, la NORMAL."},
+        {"text": "Te gusta la cara que más VISTE."}
+      ]
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {"text": "Y la cámara frontal te hace algo PEOR."}
+      ]
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {"text": "Es GRAN ANGULAR y la tenés a unos 30 centímetros."},
+        {"text": "A esa distancia, tu nariz se ve un 30% más ANCHA."},
+        {"text": "El espejo te muestra desde el DOBLE de lejos."},
+        {"text": "Truco: ALEJÁ el celular y hacé ZOOM."}
+      ]
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {"text": "GUARDALO para tu próxima selfie."},
+        {"text": "Y SEGUÍ a @nadietelo.explico para más datos así."}
+      ]
+    }
+  ]
+}

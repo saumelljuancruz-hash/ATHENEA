@@ -1,0 +1,1749 @@
+{
+  "fps": 30,
+  "durationInFrames": 1667,
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {
+          "text": "Nadie te ve como te ves en el ESPEJO.",
+          "start": 0,
+          "end": 63
+        }
+      ],
+      "from": 0,
+      "durationInFrames": 73
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {
+          "text": "Por eso odiás tus SELFIES.",
+          "start": 0,
+          "end": 39
+        },
+        {
+          "text": "Al final, el TRUCO para arreglarlo.",
+          "start": 56,
+          "end": 117
+        }
+      ],
+      "from": 73,
+      "durationInFrames": 130
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {
+          "text": "El espejo te muestra al REVÉS.",
+          "start": 0,
+          "end": 48
+        },
+        {
+          "text": "Y ninguna cara es SIMÉTRICA: un ojo más alto, una sonrisa torcida, la raya del pelo.",
+          "start": 60,
+          "end": 211
+        },
+        {
+          "text": "Vos te viste al revés TODA LA VIDA.",
+          "start": 222,
+          "end": 273
+        },
+        {
+          "text": "La cámara te muestra al derecho, y tu cerebro dice: algo está MAL.",
+          "start": 285,
+          "end": 402
+        }
+      ],
+      "from": 203,
+      "durationInFrames": 413
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {
+          "text": "Pero tu cerebro hace TRAMPA.",
+          "start": 0,
+          "end": 46
+        }
+      ],
+      "from": 616,
+      "durationInFrames": 60
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {
+          "text": "En 1977 lo probaron: fotografiaron a un grupo de mujeres y les mostraron su foto normal y espejada.",
+          "start": 0,
+          "end": 192
+        },
+        {
+          "text": "Ellas eligieron la ESPEJADA.",
+          "start": 192,
+          "end": 244
+        },
+        {
+          "text": "Sus amigos, la NORMAL.",
+          "start": 255,
+          "end": 289
+        },
+        {
+          "text": "Te gusta la cara que más VISTE.",
+          "start": 302,
+          "end": 354
+        }
+      ],
+      "from": 676,
+      "durationInFrames": 367
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {
+          "text": "Y la cámara frontal te hace algo PEOR.",
+          "start": 0,
+          "end": 68
+        }
+      ],
+      "from": 1043,
+      "durationInFrames": 77
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {
+          "text": "Es GRAN ANGULAR y la tenés a unos 30 centímetros.",
+          "start": 0,
+          "end": 82
+        },
+        {
+          "text": "A esa distancia, tu nariz se ve un 30% más ANCHA.",
+          "start": 93,
+          "end": 192
+        },
+        {
+          "text": "El espejo te muestra desde el DOBLE de lejos.",
+          "start": 201,
+          "end": 271
+        },
+        {
+          "text": "Truco: ALEJÁ el celular y hacé ZOOM.",
+          "start": 279,
+          "end": 352
+        }
+      ],
+      "from": 1120,
+      "durationInFrames": 360
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {
+          "text": "GUARDALO para tu próxima selfie.",
+          "start": 0,
+          "end": 45
+        },
+        {
+          "text": "Y SEGUÍ a @nadietelo.explico para más datos así.",
+          "start": 57,
+          "end": 134
+        }
+      ],
+      "from": 1480,
+      "durationInFrames": 187
+    }
+  ],
+  "captions": [
+    {
+      "text": "Nadie",
+      "startMs": 0,
+      "endMs": 420,
+      "timestampMs": 210,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 420,
+      "endMs": 620,
+      "timestampMs": 520,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ve",
+      "startMs": 620,
+      "endMs": 760,
+      "timestampMs": 690,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " como",
+      "startMs": 760,
+      "endMs": 940,
+      "timestampMs": 850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 940,
+      "endMs": 1180,
+      "timestampMs": 1060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ves",
+      "startMs": 1180,
+      "endMs": 1340,
+      "timestampMs": 1260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 1340,
+      "endMs": 1500,
+      "timestampMs": 1420,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 1500,
+      "endMs": 1620,
+      "timestampMs": 1560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ESPEJO.",
+      "startMs": 1620,
+      "endMs": 2100,
+      "timestampMs": 1860,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Por",
+      "startMs": 2420,
+      "endMs": 2640,
+      "timestampMs": 2530,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " eso",
+      "startMs": 2640,
+      "endMs": 2880,
+      "timestampMs": 2760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " odiás",
+      "startMs": 2880,
+      "endMs": 3180,
+      "timestampMs": 3030,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tus",
+      "startMs": 3180,
+      "endMs": 3380,
+      "timestampMs": 3280,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SELFIES.",
+      "startMs": 3380,
+      "endMs": 3740,
+      "timestampMs": 3560,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Al",
+      "startMs": 4300,
+      "endMs": 4440,
+      "timestampMs": 4370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " final,",
+      "startMs": 4440,
+      "endMs": 4680,
+      "timestampMs": 4560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 5040,
+      "endMs": 5180,
+      "timestampMs": 5110,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " TRUCO",
+      "startMs": 5180,
+      "endMs": 5500,
+      "timestampMs": 5340,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 5500,
+      "endMs": 5740,
+      "timestampMs": 5620,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " arreglarlo.",
+      "startMs": 5740,
+      "endMs": 6340,
+      "timestampMs": 6040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " El",
+      "startMs": 6760,
+      "endMs": 6880,
+      "timestampMs": 6820,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " espejo",
+      "startMs": 6880,
+      "endMs": 7300,
+      "timestampMs": 7090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 7300,
+      "endMs": 7460,
+      "timestampMs": 7380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " muestra",
+      "startMs": 7460,
+      "endMs": 7840,
+      "timestampMs": 7650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 7840,
+      "endMs": 8000,
+      "timestampMs": 7920,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " REVÉS.",
+      "startMs": 8000,
+      "endMs": 8380,
+      "timestampMs": 8190,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 8780,
+      "endMs": 8880,
+      "timestampMs": 8830,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ninguna",
+      "startMs": 8880,
+      "endMs": 9180,
+      "timestampMs": 9030,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cara",
+      "startMs": 9180,
+      "endMs": 9520,
+      "timestampMs": 9350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " es",
+      "startMs": 9520,
+      "endMs": 9700,
+      "timestampMs": 9610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SIMÉTRICA:",
+      "startMs": 9700,
+      "endMs": 10180,
+      "timestampMs": 9940,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " un",
+      "startMs": 10560,
+      "endMs": 10680,
+      "timestampMs": 10620,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ojo",
+      "startMs": 10680,
+      "endMs": 10840,
+      "timestampMs": 10760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 10840,
+      "endMs": 11060,
+      "timestampMs": 10950,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " alto,",
+      "startMs": 11060,
+      "endMs": 11380,
+      "timestampMs": 11220,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " una",
+      "startMs": 11640,
+      "endMs": 11780,
+      "timestampMs": 11710,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sonrisa",
+      "startMs": 11780,
+      "endMs": 12160,
+      "timestampMs": 11970,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " torcida,",
+      "startMs": 12160,
+      "endMs": 12660,
+      "timestampMs": 12410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " la",
+      "startMs": 13020,
+      "endMs": 13100,
+      "timestampMs": 13060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " raya",
+      "startMs": 13100,
+      "endMs": 13340,
+      "timestampMs": 13220,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " del",
+      "startMs": 13340,
+      "endMs": 13520,
+      "timestampMs": 13430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " pelo.",
+      "startMs": 13520,
+      "endMs": 13800,
+      "timestampMs": 13660,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Vos",
+      "startMs": 14180,
+      "endMs": 14300,
+      "timestampMs": 14240,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 14300,
+      "endMs": 14460,
+      "timestampMs": 14380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " viste",
+      "startMs": 14460,
+      "endMs": 14680,
+      "timestampMs": 14570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 14680,
+      "endMs": 14860,
+      "timestampMs": 14770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " revés",
+      "startMs": 14860,
+      "endMs": 15140,
+      "timestampMs": 15000,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " TODA",
+      "startMs": 15140,
+      "endMs": 15440,
+      "timestampMs": 15290,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " LA",
+      "startMs": 15440,
+      "endMs": 15640,
+      "timestampMs": 15540,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " VIDA.",
+      "startMs": 15640,
+      "endMs": 15880,
+      "timestampMs": 15760,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " La",
+      "startMs": 16260,
+      "endMs": 16400,
+      "timestampMs": 16330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cámara",
+      "startMs": 16400,
+      "endMs": 16720,
+      "timestampMs": 16560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 16720,
+      "endMs": 16960,
+      "timestampMs": 16840,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " muestra",
+      "startMs": 16960,
+      "endMs": 17320,
+      "timestampMs": 17140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 17320,
+      "endMs": 17500,
+      "timestampMs": 17410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " derecho,",
+      "startMs": 17500,
+      "endMs": 17760,
+      "timestampMs": 17630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " y",
+      "startMs": 18160,
+      "endMs": 18220,
+      "timestampMs": 18190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tu",
+      "startMs": 18220,
+      "endMs": 18340,
+      "timestampMs": 18280,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cerebro",
+      "startMs": 18340,
+      "endMs": 18640,
+      "timestampMs": 18490,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " dice:",
+      "startMs": 18640,
+      "endMs": 18940,
+      "timestampMs": 18790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " algo",
+      "startMs": 19380,
+      "endMs": 19580,
+      "timestampMs": 19480,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está",
+      "startMs": 19580,
+      "endMs": 19880,
+      "timestampMs": 19730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MAL.",
+      "startMs": 19880,
+      "endMs": 20180,
+      "timestampMs": 20030,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Pero",
+      "startMs": 20520,
+      "endMs": 20660,
+      "timestampMs": 20590,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tu",
+      "startMs": 20660,
+      "endMs": 20840,
+      "timestampMs": 20750,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cerebro",
+      "startMs": 20840,
+      "endMs": 21340,
+      "timestampMs": 21090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hace",
+      "startMs": 21340,
+      "endMs": 21600,
+      "timestampMs": 21470,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " TRAMPA.",
+      "startMs": 21600,
+      "endMs": 22080,
+      "timestampMs": 21840,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " En",
+      "startMs": 22540,
+      "endMs": 22720,
+      "timestampMs": 22630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 1977",
+      "startMs": 22720,
+      "endMs": 23500,
+      "timestampMs": 23110,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " lo",
+      "startMs": 23500,
+      "endMs": 24240,
+      "timestampMs": 23870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " probaron:",
+      "startMs": 24240,
+      "endMs": 24680,
+      "timestampMs": 24460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " fotografiaron",
+      "startMs": 25000,
+      "endMs": 25520,
+      "timestampMs": 25260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 25520,
+      "endMs": 25660,
+      "timestampMs": 25590,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 25660,
+      "endMs": 25740,
+      "timestampMs": 25700,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " grupo",
+      "startMs": 25740,
+      "endMs": 25900,
+      "timestampMs": 25820,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 25900,
+      "endMs": 26120,
+      "timestampMs": 26010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mujeres",
+      "startMs": 26120,
+      "endMs": 26500,
+      "timestampMs": 26310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 26500,
+      "endMs": 26740,
+      "timestampMs": 26620,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " les",
+      "startMs": 26740,
+      "endMs": 26880,
+      "timestampMs": 26810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mostraron",
+      "startMs": 26880,
+      "endMs": 27320,
+      "timestampMs": 27100,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " su",
+      "startMs": 27320,
+      "endMs": 27440,
+      "timestampMs": 27380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " foto",
+      "startMs": 27440,
+      "endMs": 27700,
+      "timestampMs": 27570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " normal",
+      "startMs": 27700,
+      "endMs": 28120,
+      "timestampMs": 27910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 28120,
+      "endMs": 28380,
+      "timestampMs": 28250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " espejada.",
+      "startMs": 28380,
+      "endMs": 28920,
+      "timestampMs": 28650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Ellas",
+      "startMs": 28920,
+      "endMs": 29600,
+      "timestampMs": 29260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " eligieron",
+      "startMs": 29600,
+      "endMs": 30020,
+      "timestampMs": 29810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 30020,
+      "endMs": 30160,
+      "timestampMs": 30090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ESPEJADA.",
+      "startMs": 30160,
+      "endMs": 30680,
+      "timestampMs": 30420,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Sus",
+      "startMs": 31020,
+      "endMs": 31100,
+      "timestampMs": 31060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " amigos,",
+      "startMs": 31100,
+      "endMs": 31460,
+      "timestampMs": 31280,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " la",
+      "startMs": 31780,
+      "endMs": 31880,
+      "timestampMs": 31830,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " NORMAL.",
+      "startMs": 31880,
+      "endMs": 32180,
+      "timestampMs": 32030,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Te",
+      "startMs": 32600,
+      "endMs": 32680,
+      "timestampMs": 32640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " gusta",
+      "startMs": 32680,
+      "endMs": 32920,
+      "timestampMs": 32800,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 32920,
+      "endMs": 33120,
+      "timestampMs": 33020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cara",
+      "startMs": 33120,
+      "endMs": 33340,
+      "timestampMs": 33230,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 33340,
+      "endMs": 33560,
+      "timestampMs": 33450,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 33560,
+      "endMs": 33900,
+      "timestampMs": 33730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " VISTE.",
+      "startMs": 33900,
+      "endMs": 34320,
+      "timestampMs": 34110,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 34760,
+      "endMs": 34860,
+      "timestampMs": 34810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 34860,
+      "endMs": 34980,
+      "timestampMs": 34920,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cámara",
+      "startMs": 34980,
+      "endMs": 35260,
+      "timestampMs": 35120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " frontal",
+      "startMs": 35260,
+      "endMs": 35720,
+      "timestampMs": 35490,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 35720,
+      "endMs": 36000,
+      "timestampMs": 35860,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hace",
+      "startMs": 36000,
+      "endMs": 36220,
+      "timestampMs": 36110,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " algo",
+      "startMs": 36220,
+      "endMs": 36500,
+      "timestampMs": 36360,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " PEOR.",
+      "startMs": 36500,
+      "endMs": 37040,
+      "timestampMs": 36770,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Es",
+      "startMs": 37320,
+      "endMs": 37540,
+      "timestampMs": 37430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " GRAN",
+      "startMs": 37540,
+      "endMs": 37780,
+      "timestampMs": 37660,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ANGULAR",
+      "startMs": 37780,
+      "endMs": 38140,
+      "timestampMs": 37960,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 38140,
+      "endMs": 38420,
+      "timestampMs": 38280,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 38420,
+      "endMs": 38520,
+      "timestampMs": 38470,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tenés",
+      "startMs": 38520,
+      "endMs": 38800,
+      "timestampMs": 38660,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 38800,
+      "endMs": 38900,
+      "timestampMs": 38850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " unos",
+      "startMs": 38900,
+      "endMs": 39040,
+      "timestampMs": 38970,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 30",
+      "startMs": 39040,
+      "endMs": 39440,
+      "timestampMs": 39240,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " centímetros.",
+      "startMs": 39440,
+      "endMs": 40080,
+      "timestampMs": 39760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " A",
+      "startMs": 40440,
+      "endMs": 40560,
+      "timestampMs": 40500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " esa",
+      "startMs": 40560,
+      "endMs": 40700,
+      "timestampMs": 40630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " distancia,",
+      "startMs": 40700,
+      "endMs": 41280,
+      "timestampMs": 40990,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " tu",
+      "startMs": 41280,
+      "endMs": 41480,
+      "timestampMs": 41380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " nariz",
+      "startMs": 41480,
+      "endMs": 41780,
+      "timestampMs": 41630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " se",
+      "startMs": 41780,
+      "endMs": 41880,
+      "timestampMs": 41830,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ve",
+      "startMs": 41880,
+      "endMs": 41980,
+      "timestampMs": 41930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 41980,
+      "endMs": 42100,
+      "timestampMs": 42040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 30%",
+      "startMs": 42100,
+      "endMs": 42440,
+      "timestampMs": 42270,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 42840,
+      "endMs": 43320,
+      "timestampMs": 43080,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ANCHA.",
+      "startMs": 43320,
+      "endMs": 43740,
+      "timestampMs": 43530,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " El",
+      "startMs": 44020,
+      "endMs": 44180,
+      "timestampMs": 44100,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " espejo",
+      "startMs": 44180,
+      "endMs": 44580,
+      "timestampMs": 44380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 44580,
+      "endMs": 44720,
+      "timestampMs": 44650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " muestra",
+      "startMs": 44720,
+      "endMs": 45100,
+      "timestampMs": 44910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " desde",
+      "startMs": 45100,
+      "endMs": 45340,
+      "timestampMs": 45220,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 45340,
+      "endMs": 45560,
+      "timestampMs": 45450,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " DOBLE",
+      "startMs": 45560,
+      "endMs": 45900,
+      "timestampMs": 45730,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 45900,
+      "endMs": 46020,
+      "timestampMs": 45960,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " lejos.",
+      "startMs": 46020,
+      "endMs": 46360,
+      "timestampMs": 46190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Truco:",
+      "startMs": 46620,
+      "endMs": 47080,
+      "timestampMs": 46850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " ALEJÁ",
+      "startMs": 47380,
+      "endMs": 47740,
+      "timestampMs": 47560,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 47740,
+      "endMs": 47820,
+      "timestampMs": 47780,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " celular",
+      "startMs": 47820,
+      "endMs": 48140,
+      "timestampMs": 47980,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 48140,
+      "endMs": 48440,
+      "timestampMs": 48290,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hacé",
+      "startMs": 48440,
+      "endMs": 48720,
+      "timestampMs": 48580,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ZOOM.",
+      "startMs": 48720,
+      "endMs": 49060,
+      "timestampMs": 48890,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " GUARDALO",
+      "startMs": 49340,
+      "endMs": 49740,
+      "timestampMs": 49540,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 49740,
+      "endMs": 49920,
+      "timestampMs": 49830,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tu",
+      "startMs": 49920,
+      "endMs": 50100,
+      "timestampMs": 50010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " próxima",
+      "startMs": 50100,
+      "endMs": 50380,
+      "timestampMs": 50240,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " selfie.",
+      "startMs": 50380,
+      "endMs": 50840,
+      "timestampMs": 50610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 51220,
+      "endMs": 51300,
+      "timestampMs": 51260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SEGUÍ",
+      "startMs": 51300,
+      "endMs": 51572,
+      "timestampMs": 51436,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 51572,
+      "endMs": 51708,
+      "timestampMs": 51640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " @nadietelo.explico",
+      "startMs": 51708,
+      "endMs": 52660,
+      "timestampMs": 52184,
+      "confidence": null,
+      "keyword": false,
+      "handle": true,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 52660,
+      "endMs": 52880,
+      "timestampMs": 52770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 52880,
+      "endMs": 53200,
+      "timestampMs": 53040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " datos",
+      "startMs": 53200,
+      "endMs": 53540,
+      "timestampMs": 53370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " así.",
+      "startMs": 53540,
+      "endMs": 53800,
+      "timestampMs": 53670,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    }
+  ]
+}
