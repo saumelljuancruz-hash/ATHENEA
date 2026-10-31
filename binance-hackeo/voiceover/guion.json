@@ -1,0 +1,62 @@
+{
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {"text": "6.300 MILLONES de dólares en 20 minutos: el mayor ROBO cripto de la historia."}
+      ]
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {"text": "Fue contra BINANCE."},
+        {"text": "Al final, qué pasa con TU PLATA."}
+      ]
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {"text": "Todo empezó con la LAPTOP de un ingeniero."},
+        {"text": "Desde ahí llegaron al sistema que FIRMA los retiros, como tu huella al pagar."},
+        {"text": "Prepararon 50 FIRMAS por adelantado."},
+        {"text": "Con que una sirviera, alcanzaba. Y SIRVIÓ."}
+      ]
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {"text": "Y ahí empezó la CARRERA."}
+      ]
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {"text": "En un solo movimiento se llevaron 2.500 MILLONES."},
+        {"text": "En 20 minutos vaciaron billeteras en 10 BLOCKCHAINS."},
+        {"text": "TRM Labs y Chainalysis apuntan a COREA DEL NORTE."}
+      ]
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {"text": "Pero no todo salió como QUERÍAN."}
+      ]
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {"text": "Más de la mitad eran DÓLARES DIGITALES."},
+        {"text": "Tether y Circle empezaron a CONGELARLOS en menos de una hora: casi 3.000 millones, trabados."},
+        {"text": "Bitcoin y ether no se congelan: 2.400 millones siguen con los HACKERS."},
+        {"text": "¿Y tu plata? Binance dice que ya repuso el 90% con fondos propios."}
+      ]
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {"text": "MANDÁSELO a alguien que tenga cripto."},
+        {"text": "Y SEGUÍ a @nadietelo.explico para más datos así."}
+      ]
+    }
+  ]
+}
