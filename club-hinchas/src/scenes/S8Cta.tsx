@@ -6,6 +6,7 @@ import { Finger } from "../components/Finger";
 import { SFX } from "../components/sfx";
 import { easeInOut, easeOut, mix, pop, ramp } from "../components/anim";
 import { Background, Flash, Label, shake } from "../components/Ui";
+import { SEGUIR } from "../serie";
 import { C, DISPLAY } from "../theme";
 import { beats, wordAt } from "../timeline";
 
@@ -111,13 +112,13 @@ export const S8Cta: React.FC = () => {
               width: 480,
               height: 110,
               borderRadius: 30,
-              background: followed ? "rgba(255,255,255,0.14)" : C.electricDeep,
+              background: followed ? "rgba(255,255,255,0.14)" : SEGUIR,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               gap: 16,
               scale: String(1 - (ramp(frame, tapFollow, tapFollow + 3) - ramp(frame, tapFollow + 3, tapFollow + 10)) * 0.08),
-              boxShadow: followed ? "none" : `0 0 40px ${C.electricDeep}aa`,
+              boxShadow: followed ? "none" : `0 0 40px ${SEGUIR}aa`,
             }}
           >
             {followed ? (

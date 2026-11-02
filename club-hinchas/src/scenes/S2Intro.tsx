@@ -6,7 +6,7 @@ import { TEAL } from "../components/Props";
 import { SFX } from "../components/sfx";
 import { mix, pop, ramp } from "../components/anim";
 import { Background, Label, Panel, shake } from "../components/Ui";
-import serie from "../serie.json";
+import { HINCHAS } from "../serie";
 import { C, MONO } from "../theme";
 import { beats, wordAt } from "../timeline";
 
@@ -33,7 +33,7 @@ export const S2Intro: React.FC = () => {
       <AbsoluteFill style={{ scale: String(interpolate(frame, [0, 144], [1, 1.06])), ...shake(frame, [cien], 10) }}>
         <Background tint="#0d2a1a" />
         <div style={{ position: "absolute", left: 0, top: 330 }}>
-          <Potrero hinchas={serie.hinchas} frame={frame} />
+          <Potrero hinchas={HINCHAS} frame={frame} />
         </div>
         {roll > 0 && roll < 1 ? (
           <div style={{ position: "absolute", left: mix(roll, -200, 1180), top: 1060 - Math.abs(Math.sin(roll * 14)) * 40 }}>
@@ -43,7 +43,7 @@ export const S2Intro: React.FC = () => {
         <div style={{ position: "absolute", left: 0, right: 0, top: 200, display: "flex", justifyContent: "center", opacity: counter, scale: String(mix(counter, 1.5, 1)) }}>
           <Panel glow={TEAL} style={{ padding: "14px 34px", display: "flex", alignItems: "baseline", gap: 18 }}>
             <Label size={84} mono color={TEAL}>
-              {serie.hinchas}
+              {HINCHAS}
             </Label>
             <Label size={52} mono color={C.dim}>
               / 100
@@ -62,7 +62,7 @@ export const S2Intro: React.FC = () => {
         </div>
         <div style={{ position: "absolute", left: 0, right: 0, top: 330 + 260, display: "flex", justifyContent: "center", opacity: ramp(frame, vacia - 2, vacia + 8) * (1 - ramp(frame, teaser - 6, teaser)) }}>
           <div style={{ fontFamily: MONO, fontWeight: 800, fontSize: 40, color: C.white, background: "rgba(0,0,0,0.55)", padding: "8px 20px", borderRadius: 14 }}>
-            {100 - serie.hinchas} LUGARES LIBRES
+            {100 - HINCHAS} LUGARES LIBRES
           </div>
         </div>
       </AbsoluteFill>

@@ -7,7 +7,7 @@ import { SFX } from "../components/sfx";
 import { easeInOut, mix, pop, ramp, window01 } from "../components/anim";
 import { Background, fmt, Label, Panel, shake } from "../components/Ui";
 import fixture from "../liga/fixture.json";
-import serie from "../serie.json";
+import { HINCHAS } from "../serie";
 import { C, DISPLAY, MONO } from "../theme";
 import { beats, wordAt } from "../timeline";
 
@@ -34,7 +34,7 @@ export const S7Final: React.FC = () => {
   const card = ramp(frame, resultados - 6, resultados + 8, pop);
 
   const filas = [
-    { hinchas: serie.hinchas, nivel: 0, at: gente, hoy: true },
+    { hinchas: HINCHAS, nivel: 0, at: gente, hoy: true },
     { hinchas: 1000, nivel: 1, at: cancha, hoy: false },
     { hinchas: 100000, nivel: 3, at: fuerte, hoy: false },
   ];

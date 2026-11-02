@@ -8,6 +8,7 @@ Serie de Instagram para **@nadietelo.explico**: un club de fútbol que llenan lo
 | --- | --- |
 | `episodio-01.mp4` | Reel del lanzamiento (47,8 s, 1080 × 1920, audio a −14 LUFS). |
 | `portada-episodio-01.jpg` | Portada sugerida del reel. |
+| `episodio-01-tiktok.mp4`, `portada-episodio-01-tiktok.jpg` | Versión para TikTok: 21 hinchas y el botón "Seguir" en rojo. |
 | `fecha-01/Fecha-1-Partido.png`, `Fecha-2-Resultados.png`, `Fecha-3-Tabla.png` | Carrusel de la fecha 1 (1080 × 1350). Es una vista previa jugada con 8 hinchas: se vuelve a jugar con los seguidores del día. |
 | `fecha-01/Cancha.png` | "La cancha hoy", para la historia. |
 
@@ -38,7 +39,11 @@ npm run dev                                          # Remotion Studio
 npx remotion render Episodio1 out/episodio-01.mp4
 ```
 
-El contador de hinchas del reel sale de `src/serie.json`. Si cambia el número antes de publicar, se edita ese archivo y se vuelve a renderizar: la voz no dice el número.
+El contador de hinchas del reel sale de `src/serie.json` (Instagram). Para otra cuenta, el número y la red se pasan al renderizar, sin tocar archivos; la voz no dice el número:
+
+```console
+npx remotion render Episodio1 out/episodio-01-tiktok.mp4 --props='{"hinchas":21,"plataforma":"tiktok"}'
+```
 
 La voz es **Fernando Martínez** de ElevenLabs (modelo `eleven_v4`), alineada con faster-whisper:
 

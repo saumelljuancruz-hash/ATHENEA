@@ -7,7 +7,7 @@ import { Phone, TEAL } from "../components/Props";
 import { SFX } from "../components/sfx";
 import { easeInOut, easeOut, mix, pop, ramp, window01 } from "../components/anim";
 import { Background, Flash, fmt, Label, Panel, shake } from "../components/Ui";
-import serie from "../serie.json";
+import { HINCHAS, SEGUIR } from "../serie";
 import { C, DISPLAY } from "../theme";
 import { beats, wordAt } from "../timeline";
 
@@ -50,12 +50,12 @@ export const S3Cuerpo1: React.FC = () => {
         {partA > 0 ? (
           <AbsoluteFill style={{ opacity: partA }}>
             <div style={{ position: "absolute", left: 81, top: 240 }}>
-              <Potrero hinchas={serie.hinchas} vos={sentado} frame={frame} width={918} />
+              <Potrero hinchas={HINCHAS} vos={sentado} frame={frame} width={918} />
             </div>
             <div style={{ position: "absolute", left: 60, top: 200 }}>
               <Panel glow={TEAL} style={{ padding: "8px 22px" }}>
                 <Label size={40} mono color={TEAL}>
-                  {sentado > 0.5 ? serie.hinchas + 1 : serie.hinchas} / 100
+                  {sentado > 0.5 ? HINCHAS + 1 : HINCHAS} / 100
                 </Label>
               </Panel>
             </div>
@@ -70,7 +70,7 @@ export const S3Cuerpo1: React.FC = () => {
                       width: 160,
                       height: 50,
                       borderRadius: 14,
-                      background: followed ? "rgba(255,255,255,0.16)" : C.electricDeep,
+                      background: followed ? "rgba(255,255,255,0.16)" : SEGUIR,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -127,11 +127,11 @@ export const S3Cuerpo1: React.FC = () => {
                     POTRERO
                   </Label>
                   <Label size={36} mono color={lleno > 0.98 ? C.yellow : TEAL}>
-                    {Math.round(mix(lleno, serie.hinchas, 100))} / 100 {lleno > 0.98 ? "· LLENO" : ""}
+                    {Math.round(mix(lleno, HINCHAS, 100))} / 100 {lleno > 0.98 ? "· LLENO" : ""}
                   </Label>
                 </div>
                 <div style={{ height: 30, borderRadius: 15, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>
-                  <div style={{ width: `${mix(lleno, serie.hinchas, 100)}%`, height: "100%", background: lleno > 0.98 ? C.yellow : TEAL }} />
+                  <div style={{ width: `${mix(lleno, HINCHAS, 100)}%`, height: "100%", background: lleno > 0.98 ? C.yellow : TEAL }} />
                 </div>
               </Panel>
             </div>
