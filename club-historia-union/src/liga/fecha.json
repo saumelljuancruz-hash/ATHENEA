@@ -1,0 +1,161 @@
+{
+  "temporada": 1,
+  "fecha": 1,
+  "totalFechas": 18,
+  "hinchas": 8,
+  "bonusHinchada": 3.8,
+  "partidos": [
+    {
+      "local": "NUE",
+      "visitante": "FMA",
+      "gl": 2,
+      "gv": 0,
+      "semilla": "t1-f1-NUE-FMA"
+    },
+    {
+      "local": "DBB",
+      "visitante": "SNE",
+      "gl": 2,
+      "gv": 2,
+      "semilla": "t1-f1-DBB-SNE"
+    },
+    {
+      "local": "ESN",
+      "visitante": "JTS",
+      "gl": 0,
+      "gv": 0,
+      "semilla": "t1-f1-ESN-JTS"
+    },
+    {
+      "local": "DPI",
+      "visitante": "GRA",
+      "gl": 3,
+      "gv": 1,
+      "semilla": "t1-f1-DPI-GRA"
+    },
+    {
+      "local": "UFO",
+      "visitante": "RAN",
+      "gl": 1,
+      "gv": 3,
+      "semilla": "t1-f1-UFO-RAN"
+    }
+  ],
+  "tabla": [
+    {
+      "id": "DPI",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "gf": 3,
+      "gc": 1,
+      "pts": 3,
+      "dg": 2
+    },
+    {
+      "id": "RAN",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "gf": 3,
+      "gc": 1,
+      "pts": 3,
+      "dg": 2
+    },
+    {
+      "id": "NUE",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "gf": 2,
+      "gc": 0,
+      "pts": 3,
+      "dg": 2
+    },
+    {
+      "id": "DBB",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "gf": 2,
+      "gc": 2,
+      "pts": 1,
+      "dg": 0
+    },
+    {
+      "id": "SNE",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "gf": 2,
+      "gc": 2,
+      "pts": 1,
+      "dg": 0
+    },
+    {
+      "id": "ESN",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "gf": 0,
+      "gc": 0,
+      "pts": 1,
+      "dg": 0
+    },
+    {
+      "id": "JTS",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "gf": 0,
+      "gc": 0,
+      "pts": 1,
+      "dg": 0
+    },
+    {
+      "id": "GRA",
+      "pj": 1,
+      "g": 0,
+      "e": 0,
+      "p": 1,
+      "gf": 1,
+      "gc": 3,
+      "pts": 0,
+      "dg": -2
+    },
+    {
+      "id": "UFO",
+      "pj": 1,
+      "g": 0,
+      "e": 0,
+      "p": 1,
+      "gf": 1,
+      "gc": 3,
+      "pts": 0,
+      "dg": -2
+    },
+    {
+      "id": "FMA",
+      "pj": 1,
+      "g": 0,
+      "e": 0,
+      "p": 1,
+      "gf": 0,
+      "gc": 2,
+      "pts": 0,
+      "dg": -2
+    }
+  ],
+  "proximo": {
+    "fecha": 2,
+    "local": "DBB",
+    "visitante": "NUE"
+  }
+}

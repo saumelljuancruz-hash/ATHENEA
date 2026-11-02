@@ -1,0 +1,9 @@
+{
+  "pieces": [
+    { "id": "atencion", "sentences": [{ "text": "¡Atención, HINCHADA! Juntamos los dos CLUBES." }] },
+    { "id": "union", "sentences": [{ "text": "El de INSTAGRAM y el de TIKTOK ahora son UNO SOLO." }] },
+    { "id": "sumas", "sentences": [{ "text": "Me sigas donde me sigas, sumás un HINCHA a la misma cancha." }] },
+    { "id": "doble", "sentences": [{ "text": "Y si me seguís en las DOS, valés DOBLE." }] },
+    { "id": "manana", "sentences": [{ "text": "Mañana juega la FECHA 1, con TODOS." }] }
+  ]
+}
