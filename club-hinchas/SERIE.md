@@ -1,6 +1,6 @@
 # El club de los seguidores — biblia de la serie
 
-**Cuenta:** @nadietelo.explico · **Arranque:** 8 seguidores · **Formato:** un reel por episodio, un carrusel de resultados por día y una historia diaria.
+**Cuenta:** @nadietelo.explico en Instagram y TikTok · **Arranque:** 8 + 21 = 29 hinchas · **Formato:** un reel por episodio, un carrusel de resultados por día y una historia diaria.
 
 ## La idea en una línea
 
@@ -18,7 +18,7 @@ La cuenta funda un club de fútbol sin nombre, sin escudo y sin colores. Cada se
 
 ### 1 · Un seguidor = un hincha
 
-La tribuna se llena con la cantidad de seguidores del día. Cuando se llena, el club se muda a una cancha más grande, y cada mudanza es un episodio especial.
+La tribuna se llena con la cantidad de seguidores del día, **sumando Instagram y TikTok**: es un solo club en las dos redes, con los mismos resultados y la misma tabla. El que sigue en las dos cuenta doble. Cuando se llena, el club se muda a una cancha más grande, y cada mudanza es un episodio especial.
 
 | Nivel | Cancha | Lugares |
 |---|---|---|
