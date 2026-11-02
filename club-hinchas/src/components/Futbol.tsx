@@ -203,14 +203,25 @@ export const Crest: React.FC<{ team: Equipo; size: number; blank?: boolean; glow
   );
 };
 
-/** Orden fijo en que se van ocupando los 100 lugares del potrero. */
-const ORDEN = new Array(100)
-  .fill(0)
-  .map((_, i) => i)
-  .sort((x, y) => random(`asiento${x}`) - random(`asiento${y}`));
+/** Orden fijo en que se van ocupando los lugares de cada cancha. */
+const orden = (n: number) =>
+  new Array(n)
+    .fill(0)
+    .map((_, i) => i)
+    .sort((x, y) => random(`asiento${n}-${x}`) - random(`asiento${n}-${y}`));
+const ORDEN: Record<number, number[]> = { 100: orden(100), 1000: orden(1000) };
 
-const FILAS = 4;
-const POR_FILA = 25;
+/**
+ * Cómo es cada tribuna: el potrero tiene 4 tablones de madera de 25 lugares;
+ * la cancha de barrio, 10 escalones de cemento de 100.
+ */
+const TRIBUNA = {
+  100: { filas: 4, porFila: 25, paso: 92, inset: 22, escalon: 22, contra: 70, hincha: 1.35, achica: 0.06, bob: 4, madera: true },
+  1000: { filas: 10, porFila: 100, paso: 40, inset: 9, escalon: 12, contra: 28, hincha: 0.42, achica: 0.02, bob: 2, madera: false },
+} as const;
+
+/** La cancha que le toca a una hinchada: el potrero hasta 99, después la de barrio. */
+export const capacidadPara = (hinchas: number) => (hinchas >= 100 ? 1000 : 100);
 
 /** Un hincha sentado. */
 const Hincha: React.FC<{ x: number; y: number; s: number; color: string; bob: number }> = ({ x, y, s, color, bob }) => (
@@ -221,12 +232,15 @@ const Hincha: React.FC<{ x: number; y: number; s: number; color: string; bob: nu
 );
 
 /**
- * El potrero: tablones de madera con 100 lugares, el alambrado y un pedazo
- * de cancha. `hinchas` lugares ocupados; `vos` ilumina el lugar siguiente.
+ * La cancha con su tribuna: el potrero (100 lugares, tablones de madera) o la
+ * cancha de barrio (1.000, escalones de cemento), con alambrado y un pedazo de
+ * cancha. `hinchas` lugares ocupados; `vos` ilumina el lugar siguiente.
  */
-export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL }) => {
-  const ocupados = new Set(ORDEN.slice(0, Math.max(0, Math.min(100, Math.floor(hinchas)))));
-  const tuyo = ORDEN[Math.min(99, Math.floor(hinchas))];
+export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string; capacidad?: 100 | 1000 }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL, capacidad = 100 }) => {
+  const t = TRIBUNA[capacidad];
+  const orden = ORDEN[capacidad];
+  const ocupados = new Set(orden.slice(0, Math.max(0, Math.min(capacidad, Math.floor(hinchas)))));
+  const tuyo = orden[Math.min(capacidad - 1, Math.floor(hinchas))];
   return (
     <svg width={width} height={(width / 1080) * 900} viewBox="0 0 1080 900" style={{ overflow: "visible" }}>
       <defs>
@@ -237,6 +251,10 @@ export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; w
         <linearGradient id="madera" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#9a6b3f" />
           <stop offset="1" stopColor="#5a3b20" />
+        </linearGradient>
+        <linearGradient id="cemento" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#8a93a4" />
+          <stop offset="1" stopColor="#5c6475" />
         </linearGradient>
         <radialGradient id="luz" cx="0.5" cy="0" r="1">
           <stop offset="0" stopColor="#fff6c8" stopOpacity={0.35} />
@@ -251,35 +269,36 @@ export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; w
       ))}
       <path d="M 75 40 L -100 900 L 700 900 Z" fill="url(#luz)" />
       {/* Tablones: la fila 0 es la de adelante */}
-      {new Array(FILAS).fill(0).map((_, k) => {
-        const r = FILAS - 1 - k;
-        const y = 520 - r * 92;
-        const inset = r * 22;
+      {new Array(t.filas).fill(0).map((_, k) => {
+        const r = t.filas - 1 - k;
+        const y = 520 - r * t.paso;
+        const inset = r * t.inset;
         const x0 = 70 + inset;
         const w = 940 - inset * 2;
+        const vacio = w / t.porFila;
         return (
           <g key={r}>
-            <rect x={x0 - 6} y={y} width={w + 12} height={22} rx={4} fill="url(#madera)" />
-            <rect x={x0 - 6} y={y + 22} width={w + 12} height={70} fill="#1a130c" opacity={0.85} />
-            {[0, 0.25, 0.5, 0.75, 1].map((f) => (
-              <rect key={f} x={x0 + f * w - 5} y={y + 22} width={10} height={70} fill="#3a2a18" />
-            ))}
-            {new Array(POR_FILA).fill(0).map((__, c) => {
-              const i = r * POR_FILA + c;
-              const x = x0 + (c + 0.5) * (w / POR_FILA);
-              const s = (1 - r * 0.06) * 1.35;
+            <rect x={x0 - 6} y={y} width={w + 12} height={t.escalon} rx={t.madera ? 4 : 2} fill={t.madera ? "url(#madera)" : "url(#cemento)"} />
+            <rect x={x0 - 6} y={y + t.escalon} width={w + 12} height={t.contra} fill={t.madera ? "#1a130c" : "#262b36"} opacity={0.85} />
+            {t.madera
+              ? [0, 0.25, 0.5, 0.75, 1].map((f) => <rect key={f} x={x0 + f * w - 5} y={y + 22} width={10} height={70} fill="#3a2a18" />)
+              : null}
+            {new Array(t.porFila).fill(0).map((__, c) => {
+              const i = r * t.porFila + c;
+              const x = x0 + (c + 0.5) * vacio;
+              const s = (1 - r * t.achica) * t.hincha;
               if (i === tuyo && vos > 0) {
                 return (
                   <g key={c} opacity={vos}>
-                    <circle cx={x} cy={y - 30} r={34 * vos} fill={C.yellow} opacity={0.25} />
-                    <Hincha x={x} y={y} s={s * (1 + (1 - vos) * 0.8)} color={C.yellow} bob={0} />
+                    <circle cx={x} cy={y - 30 * t.hincha} r={(t.madera ? 34 : 44) * vos} fill={C.yellow} opacity={t.madera ? 0.3 : 0.4} />
+                    <Hincha x={x} y={y} s={s * (t.madera ? 1 + (1 - vos) * 0.8 : 3.4)} color={C.yellow} bob={0} />
                   </g>
                 );
               }
               if (ocupados.has(i)) {
-                return <Hincha key={c} x={x} y={y} s={s} color={color} bob={Math.max(0, Math.sin(frame * 0.25 + i)) * 4} />;
+                return <Hincha key={c} x={x} y={y} s={s} color={color} bob={Math.max(0, Math.sin(frame * 0.25 + i)) * t.bob} />;
               }
-              return <rect key={c} x={x - 10} y={y - 4} width={20} height={4} rx={2} fill="#c9a06e" opacity={0.5} />;
+              return <rect key={c} x={x - vacio * 0.3} y={y - 3} width={vacio * 0.6} height={3} rx={1.5} fill={t.madera ? "#c9a06e" : "#b8c0cf"} opacity={0.5} />;
             })}
           </g>
         );

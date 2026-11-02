@@ -1,0 +1,127 @@
+{
+  "liga": "Liga Curiosa",
+  "temporada": 1,
+  "nuestro": "NUE",
+  "equipos": [
+    {
+      "id": "NUE",
+      "nombre": "Club Sin Nombre",
+      "corto": "SIN NOMBRE",
+      "sigla": "???",
+      "colores": [
+        "#3a4256",
+        "#e8ecf4"
+      ],
+      "icono": "pregunta",
+      "fuerza": 63
+    },
+    {
+      "id": "GRA",
+      "nombre": "Atlético Gravedad",
+      "corto": "GRAVEDAD",
+      "sigla": "GRA",
+      "colores": [
+        "#1f3b73",
+        "#f2c230"
+      ],
+      "icono": "manzana",
+      "fuerza": 76
+    },
+    {
+      "id": "DBB",
+      "nombre": "Deportivo Big Bang",
+      "corto": "BIG BANG",
+      "sigla": "DBB",
+      "colores": [
+        "#e63946",
+        "#1d1d1d"
+      ],
+      "icono": "explosion",
+      "fuerza": 80
+    },
+    {
+      "id": "RAN",
+      "nombre": "Racing Agujero Negro",
+      "corto": "AGUJERO NEGRO",
+      "sigla": "RAN",
+      "colores": [
+        "#151515",
+        "#9b5de5"
+      ],
+      "icono": "agujero",
+      "fuerza": 78
+    },
+    {
+      "id": "SNE",
+      "nombre": "Sportivo Neutrón",
+      "corto": "NEUTRÓN",
+      "sigla": "SNE",
+      "colores": [
+        "#00a6d6",
+        "#ffffff"
+      ],
+      "icono": "atomo",
+      "fuerza": 70
+    },
+    {
+      "id": "UFO",
+      "nombre": "Unión Fotosíntesis",
+      "corto": "FOTOSÍNTESIS",
+      "sigla": "UFO",
+      "colores": [
+        "#2a9d3f",
+        "#ffe14d"
+      ],
+      "icono": "hoja",
+      "fuerza": 66
+    },
+    {
+      "id": "DPI",
+      "nombre": "Defensores de Pi",
+      "corto": "PI",
+      "sigla": "DPI",
+      "colores": [
+        "#264653",
+        "#f4a261"
+      ],
+      "icono": "pi",
+      "fuerza": 72
+    },
+    {
+      "id": "JTS",
+      "nombre": "Juventud Tsunami",
+      "corto": "TSUNAMI",
+      "sigla": "JTS",
+      "colores": [
+        "#0077b6",
+        "#caf0f8"
+      ],
+      "icono": "ola",
+      "fuerza": 74
+    },
+    {
+      "id": "ESN",
+      "nombre": "Estrella Supernova",
+      "corto": "SUPERNOVA",
+      "sigla": "ESN",
+      "colores": [
+        "#ff006e",
+        "#ffbe0b"
+      ],
+      "icono": "estrella",
+      "fuerza": 68
+    },
+    {
+      "id": "FMA",
+      "nombre": "Ferro Magnético",
+      "corto": "MAGNÉTICO",
+      "sigla": "FMA",
+      "colores": [
+        "#5c636a",
+        "#d62828"
+      ],
+      "icono": "iman",
+      "fuerza": 64
+    }
+  ]
+}

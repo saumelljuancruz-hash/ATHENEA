@@ -1,12 +1,12 @@
 import React from "react";
 import { Audio } from "@remotion/media";
 import { AbsoluteFill, Img, staticFile, useCurrentFrame } from "remotion";
-import { Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
+import { capacidadPara, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
 import { Finger } from "../components/Finger";
 import { Phone, TEAL } from "../components/Props";
 import { SFX } from "../components/sfx";
 import { easeInOut, easeOut, mix, pop, ramp } from "../components/anim";
-import { Background, Flash, Label, Panel, shake } from "../components/Ui";
+import { Background, Flash, fmt, Label, Panel, shake } from "../components/Ui";
 import fixture from "../liga/fixture.json";
 import serie from "../serie.json";
 import { C, DISPLAY } from "../theme";
@@ -15,6 +15,7 @@ import { wordAt } from "../timeline";
 const IG = serie.instagram;
 const TT = serie.tiktok;
 const TOTAL = IG + TT;
+const CAP = capacidadPara(TOTAL);
 const AZUL = "#2f8cff";
 const ROJO = "#fe2c55";
 
@@ -46,13 +47,13 @@ const DosClubes: React.FC<{ frame: number; enter: number; glowIg: number; glowTt
           </Label>
         </Panel>
         <div style={{ borderRadius: 30, overflow: "hidden", border: `3px solid ${c.color}${c.glow > 0.5 ? "" : "66"}` }}>
-          <Potrero hinchas={c.n} frame={frame} width={500} />
+          <Potrero hinchas={c.n} frame={frame} width={500} capacidad={capacidadPara(c.n)} />
         </div>
         <Label size={60} mono color={C.white}>
-          {c.n}
+          {fmt(c.n)}
         </Label>
         <Label size={26} color={C.dim}>
-          HINCHAS
+          HINCHAS · {capacidadPara(c.n) === 1000 ? "CANCHA DE BARRIO" : "POTRERO"}
         </Label>
       </div>
     ))}
@@ -98,30 +99,39 @@ export const H2Union: React.FC = () => {
         {big > 0 ? (
           <>
             <div style={{ position: "absolute", left: 60, top: 440, opacity: Math.min(1, big), scale: String(mix(big, 0.6, 1)) }}>
-              <Potrero hinchas={TOTAL} frame={frame} width={960} />
+              <Potrero hinchas={TOTAL} frame={frame} width={960} capacidad={CAP} />
             </div>
             <div style={{ position: "absolute", left: 0, right: 0, top: 340, display: "flex", justifyContent: "center", opacity: Math.min(1, big) }}>
               <Panel glow={TEAL} style={{ padding: "12px 28px", display: "flex", alignItems: "baseline", gap: 14 }}>
                 <Label size={44} mono color="#7cb8ff">
-                  {IG}
+                  {fmt(IG)}
                 </Label>
                 <Label size={40} mono color={C.dim}>
                   +
                 </Label>
                 <Label size={44} mono color="#ff6f8a">
-                  {TT}
+                  {fmt(TT)}
                 </Label>
                 <Label size={40} mono color={C.dim}>
                   =
                 </Label>
                 <Label size={72} mono color={TEAL}>
-                  {TOTAL}
+                  {fmt(TOTAL)}
                 </Label>
                 <Label size={34} color={C.white}>
                   HINCHAS
                 </Label>
               </Panel>
             </div>
+            {CAP === 1000 ? (
+              <div style={{ position: "absolute", left: 0, right: 0, top: 1150, display: "flex", justifyContent: "center", opacity: ramp(frame, uno + 6, uno + 14), scale: String(mix(ramp(frame, uno + 6, uno + 18, pop), 0.5, 1)) }}>
+                <Panel glow={C.yellow} style={{ padding: "10px 24px" }}>
+                  <Label size={36} color={C.yellow}>
+                    ¡NOS MUDAMOS A LA CANCHA DE BARRIO!
+                  </Label>
+                </Panel>
+              </div>
+            ) : null}
           </>
         ) : null}
       </AbsoluteFill>
@@ -164,12 +174,12 @@ export const H3Sumas: React.FC = () => {
       <AbsoluteFill style={{ ...shake(frame, taps, 10) }}>
         <Background tint="#0d2a1a" />
         <div style={{ position: "absolute", left: 90, top: 300 }}>
-          <Potrero hinchas={TOTAL + sumados} frame={frame} width={900} />
+          <Potrero hinchas={TOTAL + sumados} frame={frame} width={900} capacidad={CAP} />
         </div>
         <div style={{ position: "absolute", left: 60, top: 250 }}>
           <Panel glow={TEAL} style={{ padding: "8px 22px" }}>
             <Label size={40} mono color={TEAL}>
-              {TOTAL + sumados} / 100
+              {fmt(TOTAL + sumados)} / {fmt(CAP)}
             </Label>
           </Panel>
         </div>
@@ -321,7 +331,7 @@ export const H5Manana: React.FC = () => {
         <div style={{ position: "absolute", left: 0, right: 0, top: 840, display: "flex", justifyContent: "center", opacity: crowd, scale: String(mix(crowd, 1.8, 1)) }}>
           <Panel glow={TEAL} style={{ padding: "14px 30px", display: "flex", alignItems: "baseline", gap: 16 }}>
             <Label size={84} mono color={TEAL}>
-              {TOTAL}
+              {fmt(TOTAL)}
             </Label>
             <Label size={38} color={C.white}>
               HINCHAS EMPUJANDO

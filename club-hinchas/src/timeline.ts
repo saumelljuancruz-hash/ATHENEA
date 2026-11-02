@@ -60,5 +60,14 @@ export const wordAt = (id: PieceId, word: string, occurrence = 0): number => {
   return Math.round((match.startMs / 1000) * FPS) - p.from;
 };
 
+/** Como wordAt, pero devuelve null si la palabra no está en esa pieza. */
+export const tryWordAt = (id: PieceId, word: string, occurrence = 0): number | null => {
+  try {
+    return wordAt(id, word, occurrence);
+  } catch {
+    return null;
+  }
+};
+
 /** Frames donde cambia de escena, para los flashes y whooshes. */
 export const CUTS = PIECES.slice(1).map((p) => p.from);

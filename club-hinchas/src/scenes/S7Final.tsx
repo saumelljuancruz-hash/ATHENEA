@@ -33,11 +33,18 @@ export const S7Final: React.FC = () => {
   const partC = ramp(frame, clave - 4, clave + 6);
   const card = ramp(frame, resultados - 6, resultados + 8, pop);
 
-  const filas = [
-    { hinchas: HINCHAS, nivel: 0, at: gente, hoy: true },
-    { hinchas: 1000, nivel: 1, at: cancha, hoy: false },
-    { hinchas: 100000, nivel: 3, at: fuerte, hoy: false },
-  ];
+  const filas =
+    HINCHAS >= 100
+      ? [
+          { hinchas: HINCHAS, nivel: 1, at: gente, hoy: true },
+          { hinchas: 10000, nivel: 2, at: cancha, hoy: false },
+          { hinchas: 100000, nivel: 3, at: fuerte, hoy: false },
+        ]
+      : [
+          { hinchas: HINCHAS, nivel: 0, at: gente, hoy: true },
+          { hinchas: 1000, nivel: 1, at: cancha, hoy: false },
+          { hinchas: 100000, nivel: 3, at: fuerte, hoy: false },
+        ];
 
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg }}>

@@ -1,8 +1,8 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
+import { capacidadPara, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
 import { TEAL } from "../components/Props";
-import { Background, Label, Panel, Watermark } from "../components/Ui";
+import { Background, fmt, Label, Panel, Watermark } from "../components/Ui";
 import liga from "../liga/equipos.json";
 import fecha from "../liga/fecha.json";
 import { C, DISPLAY, MONO } from "../theme";
@@ -190,15 +190,15 @@ export const SlideCancha: React.FC = () => (
     <Background tint="#0d2a1a" />
     <Header title="LA CANCHA HOY" />
     <div style={{ position: "absolute", left: 0, top: 330 }}>
-      <Potrero hinchas={fecha.hinchas} frame={0} />
+      <Potrero hinchas={fecha.hinchas} frame={0} capacidad={capacidadPara(fecha.hinchas)} />
     </div>
     <div style={{ position: "absolute", left: 0, right: 0, top: 1090, display: "flex", justifyContent: "center" }}>
       <Panel glow={TEAL} style={{ padding: "14px 34px", display: "flex", alignItems: "baseline", gap: 18 }}>
         <Label size={84} mono color={TEAL}>
-          {fecha.hinchas}
+          {fmt(fecha.hinchas)}
         </Label>
         <Label size={52} mono color={C.dim}>
-          / 100
+          / {fmt(capacidadPara(fecha.hinchas))}
         </Label>
         <Label size={38} color={C.white} style={{ marginLeft: 10 }}>
           HINCHAS

@@ -1,7 +1,7 @@
 import React from "react";
 import { Audio } from "@remotion/media";
 import { AbsoluteFill, staticFile, useCurrentFrame } from "remotion";
-import { Ball, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
+import { Ball, capacidadPara, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
 import { SFX } from "../components/sfx";
 import { easeOut, mix, pop, ramp } from "../components/anim";
 import { Background, Label, Panel, shake } from "../components/Ui";
@@ -25,7 +25,7 @@ export const S1Gancho: React.FC = () => {
       <AbsoluteFill style={{ scale: String(mix(reveal, 1.25, 1)), ...shake(frame, [1, vos], 18) }}>
         <Background tint="#0d2a1a" />
         <div style={{ position: "absolute", left: 0, top: 330, opacity: reveal }}>
-          <Potrero hinchas={HINCHAS} vos={seat} frame={frame} />
+          <Potrero hinchas={HINCHAS} vos={seat} frame={frame} capacidad={capacidadPara(HINCHAS)} />
         </div>
         <div style={{ position: "absolute", left: 60, top: 140, display: "flex", alignItems: "center", gap: 20, opacity: crest, scale: String(mix(crest, 0.4, 1)), transformOrigin: "0 50%" }}>
           <Crest team={equipo(NUESTRO)} size={120} blank />

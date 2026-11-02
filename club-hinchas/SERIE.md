@@ -1,6 +1,6 @@
 # El club de los seguidores — biblia de la serie
 
-**Cuenta:** @nadietelo.explico en Instagram y TikTok · **Arranque:** 8 + 21 = 29 hinchas · **Formato:** un reel por episodio, un carrusel de resultados por día y una historia diaria.
+**Cuenta:** @nadietelo.explico en Instagram y TikTok · **Arranque:** 18 (Instagram) + 894 (TikTok) = 912 hinchas · **Formato:** un reel por episodio, un carrusel de resultados por día y una historia diaria.
 
 ## La idea en una línea
 
@@ -12,7 +12,7 @@ La cuenta funda un club de fútbol sin nombre, sin escudo y sin colores. Cada se
 - **Te da un motivo para comentar:** el nombre, el escudo y los colores salen de los comentarios.
 - **Crea un hábito:** todos los días hay un resultado nuevo y una tabla que se mueve. Es la razón para volver mañana.
 - **El que llega tarde no se queda afuera:** cada carrusel se entiende solo (nuestro partido, todos los resultados y la tabla).
-- **Arrancar con 8 seguidores juega a favor:** el club más chico de la liga, en un potrero casi vacío, es una historia de "de abajo" que da ganas de bancar.
+- **Arranca con una meta cerca:** con 912 hinchas el club ya superó el potrero y está en la cancha de barrio al 91 %. Faltan 88 para la primera mudanza grande, a un estadio de 10.000.
 
 ## Las reglas (lo que se les cuenta a los seguidores)
 
@@ -44,8 +44,9 @@ Hasta que haya nombre, el club juega como **"Club Sin Nombre"**, con un escudo v
 
 | Hinchas | Chance de ganar de local |
 |---|---|
-| 8 (hoy) | 39 % |
+| 8 | 39 % |
 | 100 | 49 % |
+| 912 (hoy) | 58 % |
 | 1.000 | 58 % |
 | 10.000 | 67 % |
 | 100.000 | 76 % |
@@ -92,7 +93,7 @@ Hasta que haya nombre, el club juega como **"Club Sin Nombre"**, con un escudo v
 
 ## Cosas a cuidar
 
-- **Pocos comentarios al principio:** con 8 seguidores puede que lleguen pocas propuestas. Si pasa, sumá 3 propias en una historia con encuesta, y cada comentario que llegue se suma a la votación.
+- **Pocos comentarios al principio:** en Instagram (18 seguidores) puede que lleguen pocas propuestas; el grueso va a venir de TikTok. Si pasa, sumá 3 propias en una historia con encuesta, y cada comentario que llegue se suma a la votación.
 - **Moderación:** quedan afuera los nombres ofensivos, los de marcas y los de clubes reales.
 - **Premiar al que participa:** el que propone el nombre ganador puede ser el "socio fundador n.º 1", con su @ en la tribuna, siempre que dé permiso.
 - **Ser claros:** la liga es simulada. Conviene decirlo en la descripción ("resultados sorteados con semilla pública") para que nadie piense que son partidos reales.

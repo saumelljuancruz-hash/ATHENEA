@@ -6,9 +6,9 @@ Serie de Instagram para **@nadietelo.explico**: un club de fútbol que llenan lo
 
 | Archivo | Qué es |
 | --- | --- |
-| `episodio-01.mp4` | Reel del lanzamiento (47,8 s, 1080 × 1920, audio a −14 LUFS). |
+| `episodio-01.mp4` | Reel del lanzamiento para Instagram, con 18 hinchas (47,8 s, 1080 × 1920, audio a −14 LUFS). |
 | `portada-episodio-01.jpg` | Portada sugerida del reel. |
-| `episodio-01-tiktok.mp4`, `portada-episodio-01-tiktok.jpg` | Versión para TikTok: 21 hinchas y el botón "Seguir" en rojo. |
+| — | La versión de TikTok (894 seguidores, cancha de barrio) está en [club-hinchas-tiktok](../club-hinchas-tiktok). |
 | `fecha-01/Fecha-1-Partido.png`, `Fecha-2-Resultados.png`, `Fecha-3-Tabla.png` | Carrusel de la fecha 1 (1080 × 1350). Es una vista previa jugada con 8 hinchas: se vuelve a jugar con los seguidores del día. |
 | `fecha-01/Cancha.png` | "La cancha hoy", para la historia. |
 
