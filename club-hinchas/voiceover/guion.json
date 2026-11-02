@@ -1,0 +1,12 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "Fundé un club de FÚTBOL, y la hinchada sos VOS." }] },
+    { "id": "intro", "sentences": [{ "text": "La cancha tiene lugar para 100. Y está casi VACÍA." }, { "text": "Al final te digo cómo ENTRÁS." }] },
+    { "id": "cuerpo1", "sentences": [{ "text": "Cada persona que sigue la cuenta es un HINCHA más sentado en la tribuna." }, { "text": "Cuando se llena, nos MUDAMOS: 1.000 lugares, después 10.000, y así hasta un estadio de 100.000." }] },
+    { "id": "bucle1", "sentences": [{ "text": "Pero al club le falta lo más IMPORTANTE." }] },
+    { "id": "cuerpo2", "sentences": [{ "text": "No tiene NOMBRE. No tiene ESCUDO. Ni COLORES." }, { "text": "Lo deciden ustedes en los COMENTARIOS: gana el más votado." }] },
+    { "id": "bucle2", "sentences": [{ "text": "Y desde mañana, JUEGA." }] },
+    { "id": "final", "sentences": [{ "text": "Una liga de 10 equipos, una FECHA por día, contra rivales como Big Bang o Agujero Negro." }, { "text": "No vas a ver los partidos: solo los RESULTADOS." }, { "text": "Y acá está la clave: cuanta más gente en la cancha, más FUERTE juega de local." }] },
+    { "id": "cta", "sentences": [{ "text": "COMENTÁ cómo se tiene que llamar el club." }, { "text": "Y SEGUÍ a @nadietelo.explico para entrar a la cancha." }] }
+  ]
+}
