@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* Modo oscuro por clase (.dark en <html>), controlado por el botón de tema. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================
+   PALETA «BRASA»
+   Cambia los colores aquí y se actualizan en todo el sitio.
+   ============================================================ */
+:root {
+  --bg: #faf5ee;          /* crema */
+  --surface: #ffffff;
+  --surface-2: #f3ebe0;
+  --line: rgb(30 25 21 / 0.12);
+  --fg: #1e1915;          /* tinta */
+  --muted: #6b5e52;
+  --primary: #c2412a;     /* tomate */
+  --primary-hover: #a93621;
+  --primary-fg: #ffffff;
+  --accent: #b7791f;      /* azafrán */
+  --basil: #4f7a4a;       /* albahaca */
+  --danger: #b4321f;
+  --glow: rgb(194 65 42 / 0.18);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #14110f;          /* carbón */
+  --surface: #1e1915;
+  --surface-2: #2a231d;
+  --line: rgb(245 237 227 / 0.1);
+  --fg: #f5ede3;          /* crema */
+  --muted: #b8aa9a;
+  --primary: #e8553d;     /* tomate */
+  --primary-hover: #f06a50;
+  --primary-fg: #14110f;
+  --accent: #f2a541;      /* azafrán */
+  --basil: #7fa77a;       /* albahaca */
+  --danger: #ff7a66;
+  --glow: rgb(232 85 61 / 0.25);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-basil: var(--basil);
+  --color-danger: var(--danger);
+  --color-whatsapp: #25d366;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+html {
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Grano sutil para dar textura "papel" */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Sliders de la calculadora */
+input[type="range"].range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--primary) var(--fill, 50%), var(--surface-2) var(--fill, 50%));
+  cursor: pointer;
+}
+input[type="range"].range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--fg);
+  border: 4px solid var(--primary);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+}
+input[type="range"].range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--fg);
+  border: 4px solid var(--primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Entrada del hero (CSS puro, no espera a JavaScript) */
+@keyframes rise {
+  from {
+    opacity: var(--rise-from, 0);
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}
