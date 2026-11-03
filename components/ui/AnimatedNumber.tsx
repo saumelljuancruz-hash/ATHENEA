@@ -34,7 +34,6 @@ export function AnimatedNumber({
     const from = fromRef.current;
     if (reduce || from === value) {
       fromRef.current = value;
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- sin animación: valor final directo
       setDisplay(value);
       return;
     }
