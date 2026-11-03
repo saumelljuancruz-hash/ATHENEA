@@ -1,0 +1,21 @@
+{
+  "instagram": 18,
+  "tiktok": 995,
+  "mudanza": "¡NOS MUDAMOS!",
+  "eligieron": {
+    "nombre": {
+      "autor": "J.P",
+      "likes": 69,
+      "imagen": "club/comentario-nombre.jpg",
+      "ancho": 1170,
+      "alto": 225
+    },
+    "escudo": {
+      "autor": "Rami",
+      "likes": 28,
+      "imagen": "club/comentario-escudo.jpg",
+      "ancho": 1170,
+      "alto": 706
+    }
+  }
+}

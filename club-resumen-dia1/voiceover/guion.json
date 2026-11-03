@@ -1,0 +1,12 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "Día 1 del club: ya tiene NOMBRE, ESCUDO… y GANÓ." }] },
+    { "id": "nombre", "sentences": [{ "text": "Se llama FC NTLE: Nadie Te Lo Explicó." }, { "text": "Lo propuso J.P, con 69 me gusta." }] },
+    { "id": "escudo", "sentences": [{ "text": "Y el ESCUDO lo trajo Rami, con 28 me gusta." }] },
+    { "id": "hinchada", "sentences": [{ "text": "Y la HINCHADA no para: en un día sumamos más de 100, y ya somos más de MIL." }] },
+    { "id": "mudanza", "sentences": [{ "text": "La cancha de barrio se llenó, así que nos MUDAMOS a un estadio de 10.000." }] },
+    { "id": "partido", "sentences": [{ "text": "Y en el debut, de local, GANAMOS 2 a 0 contra Ferro Magnético." }] },
+    { "id": "manana", "sentences": [{ "text": "Mañana viene lo DIFÍCIL: de visitante contra Big Bang, el más fuerte de la liga." }] },
+    { "id": "cta", "sentences": [{ "text": "COMPARTILO con alguien que tenga que estar en la tribuna." }, { "text": "Cada uno que se suma nos hace más FUERTES de local." }, { "text": "Y SEGUÍ a @nadietelo.explico." }] }
+  ]
+}

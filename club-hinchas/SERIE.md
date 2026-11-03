@@ -114,3 +114,12 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
 - **Fichajes por hitos:** cada 100 seguidores nuevos, un "refuerzo" que suma fuerza también de visitante.
 - **El clásico:** elegir un rival como clásico y hacer un reel especial ese día.
 - **Fin de temporada:** campeón, descenso y una temporada 2 con la cancha nueva.
+
+## Bitácora
+
+- **Día 1 (3/11/2026):**
+  - El club se llama **Club FC NTLE** ("Nadie Te Lo Explicó"): lo propuso J.P, con 69 me gusta.
+  - El escudo es el de Rami (28 me gusta): azul y negro, con corona, pelota y estrella.
+  - La hinchada llegó a 1.013 (18 en Instagram y 995 en TikTok), así que se llenó la cancha de barrio y el club se mudó al estadio de 10.000.
+  - Fecha 1: FC NTLE 2-0 Ferro Magnético, de local. Quedó 3.º, con 3 puntos.
+  - Fecha 2: de visitante contra Deportivo Big Bang, el más fuerte de la liga.

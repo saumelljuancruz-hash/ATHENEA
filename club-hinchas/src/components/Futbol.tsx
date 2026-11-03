@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { random } from "remotion";
+import { Img, random, staticFile } from "remotion";
 import liga from "../liga/equipos.json";
 import { TEAL } from "./Props";
 import { C, DISPLAY, MONO } from "../theme";
@@ -173,6 +173,15 @@ const Icono: React.FC<{ tipo: string; color: string; fondo: string }> = ({ tipo,
 /** Escudo de un equipo: forma de escudo, banda con la sigla e ícono. */
 export const Crest: React.FC<{ team: Equipo; size: number; blank?: boolean; glow?: number }> = ({ team, size, blank = false, glow = 0 }) => {
   const id = useId();
+  const escudo = (team as { escudo?: string }).escudo;
+  if (escudo && !blank) {
+    // El escudo que eligieron los seguidores, recortado sobre transparente.
+    return (
+      <div style={{ width: size, height: size * 1.2, display: "flex", alignItems: "center", justifyContent: "center", filter: glow > 0 ? `drop-shadow(0 0 ${24 * glow}px ${team.colores[0]})` : undefined }}>
+        <Img src={staticFile(escudo)} style={{ height: size * 1.18, width: "auto" }} />
+      </div>
+    );
+  }
   const [a, b] = team.colores;
   const shield = "M 100 6 L 190 30 V 110 C 190 170 150 210 100 234 C 50 210 10 170 10 110 V 30 Z";
   return (
@@ -209,7 +218,7 @@ const orden = (n: number) =>
     .fill(0)
     .map((_, i) => i)
     .sort((x, y) => random(`asiento${n}-${x}`) - random(`asiento${n}-${y}`));
-const ORDEN: Record<number, number[]> = { 100: orden(100), 1000: orden(1000) };
+const ORDEN: Record<number, number[]> = { 100: orden(100), 1000: orden(1000), 10000: orden(10000) };
 
 /**
  * Cómo es cada tribuna: el potrero tiene 4 tablones de madera de 25 lugares;
@@ -220,8 +229,70 @@ const TRIBUNA = {
   1000: { filas: 10, porFila: 100, paso: 40, inset: 9, escalon: 12, contra: 28, hincha: 0.42, achica: 0.02, bob: 2, madera: false },
 } as const;
 
-/** La cancha que le toca a una hinchada: el potrero hasta 99, después la de barrio. */
-export const capacidadPara = (hinchas: number) => (hinchas >= 100 ? 1000 : 100);
+/** 10.000 butacas en 30 anillos elípticos alrededor de la cancha (vista desde arriba). */
+const BUTACAS_ESTADIO: [number, number][] = (() => {
+  const anillos = 30;
+  const per = (a: number, b: number) => Math.PI * (3 * (a + b) - Math.sqrt((3 * a + b) * (a + 3 * b)));
+  const radios = new Array(anillos).fill(0).map((_, k) => [262 + k * 8.6, 178 + k * 8.4] as const);
+  const total = radios.reduce((acc, [a, b]) => acc + per(a, b), 0);
+  const cuantos = radios.map(([a, b]) => Math.round((per(a, b) / total) * 10000));
+  cuantos[anillos - 1] += 10000 - cuantos.reduce((x, y) => x + y, 0);
+  const out: [number, number][] = [];
+  radios.forEach(([a, b], k) => {
+    for (let j = 0; j < cuantos[k]; j++) {
+      const t = (j / cuantos[k]) * Math.PI * 2 + k * 0.37;
+      out.push([540 + Math.cos(t) * a, 450 + Math.sin(t) * b]);
+    }
+  });
+  return out;
+})();
+
+const EstadioArriba: React.FC<{ hinchas: number; vos: number; width: number; color: string }> = ({ hinchas, vos, width, color }) => {
+  const orden = ORDEN[10000];
+  const ocupados = new Set(orden.slice(0, Math.max(0, Math.min(10000, Math.floor(hinchas)))));
+  const tuyo = orden[Math.min(9999, Math.floor(hinchas))];
+  return (
+    <svg width={width} height={(width / 1080) * 900} viewBox="0 0 1080 900" style={{ overflow: "visible" }}>
+      <defs>
+        <radialGradient id="luzEstadio" cx="0.5" cy="0.5" r="0.6">
+          <stop offset="0" stopColor="#fff6c8" stopOpacity={0.18} />
+          <stop offset="1" stopColor="#fff6c8" stopOpacity={0} />
+        </radialGradient>
+      </defs>
+      <ellipse cx={540} cy={450} rx={530} ry={440} fill="#151a24" stroke="#3a4256" strokeWidth={6} />
+      <ellipse cx={540} cy={450} rx={258} ry={174} fill="#1a6a32" />
+      <rect x={360} y={335} width={360} height={230} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
+      <line x1={540} y1={335} x2={540} y2={565} stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
+      <circle cx={540} cy={450} r={34} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
+      <rect x={360} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
+      <rect x={680} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
+      {BUTACAS_ESTADIO.map(([x, y], i) => (ocupados.has(i) ? <circle key={i} cx={x} cy={y} r={2.8} fill={color} /> : <circle key={i} cx={x} cy={y} r={2.2} fill="#2e3646" />))}
+      {vos > 0 ? (
+        <g opacity={vos}>
+          <circle cx={BUTACAS_ESTADIO[tuyo][0]} cy={BUTACAS_ESTADIO[tuyo][1]} r={26 * vos} fill={C.yellow} opacity={0.4} />
+          <circle cx={BUTACAS_ESTADIO[tuyo][0]} cy={BUTACAS_ESTADIO[tuyo][1]} r={7} fill={C.yellow} />
+        </g>
+      ) : null}
+      {[
+        [60, 70],
+        [1020, 70],
+        [60, 830],
+        [1020, 830],
+      ].map(([x, y]) => (
+        <g key={`${x}${y}`}>
+          <rect x={x - 26} y={y - 12} width={52} height={24} rx={5} fill="#3a4256" />
+          {[0, 1, 2].map((k) => (
+            <circle key={k} cx={x - 14 + k * 14} cy={y} r={5} fill="#fff6c8" />
+          ))}
+        </g>
+      ))}
+      <ellipse cx={540} cy={450} rx={540} ry={450} fill="url(#luzEstadio)" />
+    </svg>
+  );
+};
+
+/** La cancha que le toca a una hinchada: potrero (100), barrio (1.000) o estadio (10.000). */
+export const capacidadPara = (hinchas: number): 100 | 1000 | 10000 => (hinchas >= 1000 ? 10000 : hinchas >= 100 ? 1000 : 100);
 
 /** Un hincha sentado. */
 const Hincha: React.FC<{ x: number; y: number; s: number; color: string; bob: number }> = ({ x, y, s, color, bob }) => (
@@ -236,7 +307,10 @@ const Hincha: React.FC<{ x: number; y: number; s: number; color: string; bob: nu
  * cancha de barrio (1.000, escalones de cemento), con alambrado y un pedazo de
  * cancha. `hinchas` lugares ocupados; `vos` ilumina el lugar siguiente.
  */
-export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string; capacidad?: 100 | 1000 }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL, capacidad = 100 }) => {
+export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string; capacidad?: 100 | 1000 | 10000 }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL, capacidad = 100 }) => {
+  if (capacidad === 10000) {
+    return <EstadioArriba hinchas={hinchas} vos={vos} width={width} color={color} />;
+  }
   const t = TRIBUNA[capacidad];
   const orden = ORDEN[capacidad];
   const ocupados = new Set(orden.slice(0, Math.max(0, Math.min(capacidad, Math.floor(hinchas)))));

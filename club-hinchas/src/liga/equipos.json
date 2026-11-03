@@ -5,15 +5,16 @@
   "equipos": [
     {
       "id": "NUE",
-      "nombre": "Club Sin Nombre",
-      "corto": "SIN NOMBRE",
-      "sigla": "???",
+      "nombre": "Club FC NTLE",
+      "corto": "FC NTLE",
+      "sigla": "NTLE",
       "colores": [
-        "#3a4256",
-        "#e8ecf4"
+        "#2050f3",
+        "#0b0d12"
       ],
-      "icono": "pregunta",
-      "fuerza": 63
+      "icono": "escudo",
+      "fuerza": 63,
+      "escudo": "club/escudo-ntle.png"
     },
     {
       "id": "GRA",

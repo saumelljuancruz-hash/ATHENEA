@@ -1,10 +1,11 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img, staticFile } from "remotion";
 import { capacidadPara, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
 import { TEAL } from "../components/Props";
 import { Background, fmt, Label, Panel, Watermark } from "../components/Ui";
 import liga from "../liga/equipos.json";
 import fecha from "../liga/fecha.json";
+import redes from "../liga/redes.json";
 import { C, DISPLAY, MONO } from "../theme";
 
 // Slides de 1080 × 1350 para el carrusel diario de resultados.
@@ -12,7 +13,7 @@ import { C, DISPLAY, MONO } from "../theme";
 
 export const W = 1080;
 export const H = 1350;
-const TOTAL = 3;
+const TOTAL = 5;
 
 type Partido = (typeof fecha.partidos)[number];
 const NUESTRO_PARTIDO = fecha.partidos.find((p) => p.local === NUESTRO || p.visitante === NUESTRO) as Partido;
@@ -22,6 +23,10 @@ const ELLOS = DE_LOCAL ? NUESTRO_PARTIDO.gv : NUESTRO_PARTIDO.gl;
 const VEREDICTO = NUESTROS > ELLOS ? "¡GANAMOS!" : NUESTROS === ELLOS ? "EMPATAMOS" : "PERDIMOS";
 const VEREDICTO_COLOR = NUESTROS > ELLOS ? TEAL : NUESTROS === ELLOS ? C.yellow : C.positive;
 const nombre = (id: string) => equipo(id).corto;
+/** El club de la serie sin escudo todavía se dibuja con el "?". */
+const sinEscudo = (id: string) => id === NUESTRO && !(equipo(id) as { escudo?: string }).escudo;
+const PROXIMO = fecha.proximo;
+const RIVAL_PROXIMO = PROXIMO ? (PROXIMO.local === NUESTRO ? PROXIMO.visitante : PROXIMO.local) : null;
 
 const Header: React.FC<{ title: string }> = ({ title }) => (
   <>
@@ -55,8 +60,8 @@ const Footer: React.FC<{ text: string }> = ({ text }) => (
 export const SlidePartido: React.FC = () => {
   const local = NUESTRO_PARTIDO.local;
   const visitante = NUESTRO_PARTIDO.visitante;
-  const proximo = fecha.proximo;
-  const rivalProximo = proximo ? (proximo.local === NUESTRO ? proximo.visitante : proximo.local) : null;
+  const proximo = PROXIMO;
+  const rivalProximo = RIVAL_PROXIMO;
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
       <Background tint="#0d2a1a" />
@@ -72,7 +77,7 @@ export const SlidePartido: React.FC = () => {
                   </div>
                 ) : null}
                 <div style={{ width: 280, display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }}>
-                  <Crest team={equipo(id)} size={190} blank={id === NUESTRO} />
+                  <Crest team={equipo(id)} size={190} blank={sinEscudo(id)} />
                   <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 32, color: id === NUESTRO ? C.yellow : C.white, textAlign: "center", lineHeight: 1.05 }}>{nombre(id)}</div>
                   <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 22, color: C.dim }}>{k === 0 ? "LOCAL" : "VISITANTE"}</div>
                 </div>
@@ -90,7 +95,7 @@ export const SlidePartido: React.FC = () => {
             HINCHAS EN LA CANCHA
           </Label>
           <Label size={54} mono color={TEAL}>
-            {fecha.hinchas}
+            {fmt(fecha.hinchas)}
           </Label>
           <Label size={24} color={DE_LOCAL ? C.yellow : C.dim}>
             {DE_LOCAL ? `LOCALÍA +${String(fecha.bonusHinchada).replace(".", ",")}` : "DE VISITANTE: SIN EXTRA"}
@@ -116,12 +121,54 @@ export const SlidePartido: React.FC = () => {
         </Panel>
       </div>
       <Dots index={0} />
-      <Footer text="RESULTADOS Y TABLA →" />
+      <Footer text="DESLIZÁ →" />
     </AbsoluteFill>
   );
 };
 
-/** Slide 2: todos los resultados de la fecha. */
+/** Slide 2: el nombre y el escudo, con los comentarios que ganaron. */
+export const SlideEligieron: React.FC = () => {
+  const { nombre: n, escudo: e } = redes.eligieron;
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
+      <Background tint="#0c1a3a" />
+      <Header title="LO ELIGIERON USTEDES" />
+      <div style={{ position: "absolute", left: 70, right: 70, top: 300, display: "flex", alignItems: "center", gap: 28 }}>
+        <Label size={34} color={C.yellow}>
+          EL NOMBRE
+        </Label>
+        <Label size={26} color={C.dim}>
+          comentario de {n.autor} · {n.likes} me gusta
+        </Label>
+      </div>
+      <div style={{ position: "absolute", left: 70, top: 352, width: 940, borderRadius: 24, overflow: "hidden", border: `3px solid ${C.yellow}88`, boxShadow: `0 0 40px ${C.yellow}33` }}>
+        <Img src={staticFile(n.imagen)} style={{ width: 940, height: (940 * n.alto) / n.ancho, display: "block" }} />
+      </div>
+      <div style={{ position: "absolute", left: 70, right: 70, top: 590, display: "flex", alignItems: "center", gap: 28 }}>
+        <Label size={34} color={C.yellow}>
+          EL ESCUDO
+        </Label>
+        <Label size={26} color={C.dim}>
+          comentario de {e.autor} · {e.likes} me gusta
+        </Label>
+      </div>
+      <div style={{ position: "absolute", left: 70, top: 642, width: 640, borderRadius: 24, overflow: "hidden", border: `3px solid ${C.yellow}88`, boxShadow: `0 0 40px ${C.yellow}33` }}>
+        <Img src={staticFile(e.imagen)} style={{ width: 640, height: (640 * e.alto) / e.ancho, display: "block" }} />
+      </div>
+      <div style={{ position: "absolute", left: 730, top: 660, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+        <Crest team={equipo(NUESTRO)} size={260} />
+        <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 34, color: C.white, textAlign: "center", lineHeight: 1.1 }}>{equipo(NUESTRO).nombre.toUpperCase()}</div>
+      </div>
+      <div style={{ position: "absolute", left: 70, right: 70, top: 1120, fontFamily: DISPLAY, fontWeight: 800, fontSize: 32, color: TEAL, lineHeight: 1.3 }}>
+        ¡Gracias {n.autor} y {e.autor}! Lo que sigue también se vota en los comentarios.
+      </div>
+      <Dots index={1} />
+      <Footer text="RESULTADOS →" />
+    </AbsoluteFill>
+  );
+};
+
+/** Slide 3: todos los resultados de la fecha. */
 export const SlideResultados: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
     <Background tint="#101a30" />
@@ -131,24 +178,24 @@ export const SlideResultados: React.FC = () => (
         const ours = p.local === NUESTRO || p.visitante === NUESTRO;
         return (
           <div key={p.semilla} style={{ display: "flex", alignItems: "center", gap: 16, padding: "18px 24px", borderRadius: 26, background: ours ? "rgba(255,225,77,0.1)" : "rgba(255,255,255,0.05)", border: `2px solid ${ours ? C.yellow : "rgba(255,255,255,0.12)"}` }}>
-            <Crest team={equipo(p.local)} size={74} blank={p.local === NUESTRO} />
+            <Crest team={equipo(p.local)} size={74} blank={sinEscudo(p.local)} />
             <div style={{ flex: 1, fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: p.local === NUESTRO ? C.yellow : C.white, lineHeight: 1.05 }}>{nombre(p.local)}</div>
             <div style={{ fontFamily: MONO, fontWeight: 800, fontSize: 64, color: C.white, minWidth: 150, textAlign: "center" }}>
               {p.gl}-{p.gv}
             </div>
             <div style={{ flex: 1, fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: p.visitante === NUESTRO ? C.yellow : C.white, textAlign: "right", lineHeight: 1.05 }}>{nombre(p.visitante)}</div>
-            <Crest team={equipo(p.visitante)} size={74} blank={p.visitante === NUESTRO} />
+            <Crest team={equipo(p.visitante)} size={74} blank={sinEscudo(p.visitante)} />
           </div>
         );
       })}
     </div>
     <div style={{ position: "absolute", left: 70, right: 70, top: 1170, fontFamily: DISPLAY, fontWeight: 600, fontSize: 26, color: C.dim }}>Los partidos no se ven: cada resultado sale de un sorteo con semilla pública. La hinchada del club suma de local.</div>
-    <Dots index={1} />
+    <Dots index={2} />
     <Footer text="TABLA →" />
   </AbsoluteFill>
 );
 
-/** Slide 3: tabla de posiciones. */
+/** Slide 4: tabla de posiciones. */
 export const SlideTabla: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
     <Background tint="#1a1430" />
@@ -168,7 +215,7 @@ export const SlideTabla: React.FC = () => (
             <div key={f.id} style={{ display: "flex", alignItems: "center", padding: "6px 22px", borderRadius: 18, background: ours ? "rgba(255,225,77,0.12)" : i % 2 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.06)", border: `2px solid ${ours ? C.yellow : "transparent"}` }}>
               <div style={{ width: 60, fontFamily: MONO, fontWeight: 800, fontSize: 32, color: ours ? C.yellow : C.white }}>{i + 1}</div>
               <div style={{ flex: 1, display: "flex", alignItems: "center", gap: 16 }}>
-                <Crest team={equipo(f.id)} size={44} blank={ours} />
+                <Crest team={equipo(f.id)} size={44} blank={sinEscudo(f.id)} />
                 <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: ours ? C.yellow : C.white }}>{equipo(f.id).nombre}</div>
               </div>
               <div style={{ width: 80, textAlign: "center", fontFamily: MONO, fontWeight: 800, fontSize: 30, color: C.dim }}>{f.pj}</div>
@@ -179,31 +226,59 @@ export const SlideTabla: React.FC = () => (
         })}
       </div>
     </div>
-    <div style={{ position: "absolute", left: 70, right: 70, top: 1196, fontFamily: DISPLAY, fontWeight: 800, fontSize: 28, color: TEAL }}>¿Todavía sin nombre? Comentá cómo se tiene que llamar el club.</div>
-    <Dots index={2} />
+    <div style={{ position: "absolute", left: 70, right: 70, top: 1196, fontFamily: DISPLAY, fontWeight: 800, fontSize: 28, color: TEAL }}>
+      {PROXIMO && RIVAL_PROXIMO ? `Fecha ${PROXIMO.fecha}: ${PROXIMO.local === NUESTRO ? "de local" : "de visitante"} contra ${equipo(RIVAL_PROXIMO).nombre}.` : "Fin de la temporada."}
+    </div>
+    <Dots index={3} />
+    <Footer text="LA CANCHA →" />
   </AbsoluteFill>
 );
 
-/** Estado de la cancha, para historias: cuántos hinchas hay hoy. */
-export const SlideCancha: React.FC = () => (
-  <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
-    <Background tint="#0d2a1a" />
-    <Header title="LA CANCHA HOY" />
-    <div style={{ position: "absolute", left: 0, top: 330 }}>
-      <Potrero hinchas={fecha.hinchas} frame={0} capacidad={capacidadPara(fecha.hinchas)} />
-    </div>
-    <div style={{ position: "absolute", left: 0, right: 0, top: 1090, display: "flex", justifyContent: "center" }}>
-      <Panel glow={TEAL} style={{ padding: "14px 34px", display: "flex", alignItems: "baseline", gap: 18 }}>
-        <Label size={84} mono color={TEAL}>
-          {fmt(fecha.hinchas)}
-        </Label>
-        <Label size={52} mono color={C.dim}>
-          / {fmt(capacidadPara(fecha.hinchas))}
-        </Label>
-        <Label size={38} color={C.white} style={{ marginLeft: 10 }}>
-          HINCHAS
-        </Label>
-      </Panel>
-    </div>
-  </AbsoluteFill>
-);
+/** Cuántos hinchas hay y en qué cancha: slide 5 del carrusel (y sirve para la historia). */
+const CanchaHoy: React.FC<{ index?: number }> = ({ index }) => {
+  const cap = capacidadPara(fecha.hinchas);
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
+      <Background tint="#0d2a1a" />
+      <Header title={redes.mudanza || "LA CANCHA HOY"} />
+      <div style={{ position: "absolute", left: 90, top: 330 }}>
+        <Potrero hinchas={fecha.hinchas} frame={0} capacidad={cap} width={900} />
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 285, display: "flex", justifyContent: "center", gap: 16 }}>
+        <Panel glow="#2f8cff" style={{ padding: "8px 20px" }}>
+          <Label size={30} color="#7cb8ff">
+            INSTAGRAM {fmt(redes.instagram)}
+          </Label>
+        </Panel>
+        <Panel glow="#fe2c55" style={{ padding: "8px 20px" }}>
+          <Label size={30} color="#ff6f8a">
+            TIKTOK {fmt(redes.tiktok)}
+          </Label>
+        </Panel>
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1010, display: "flex", justifyContent: "center" }}>
+        <Panel glow={TEAL} style={{ padding: "10px 30px", display: "flex", alignItems: "baseline", gap: 18 }}>
+          <Label size={84} mono color={TEAL}>
+            {fmt(fecha.hinchas)}
+          </Label>
+          <Label size={52} mono color={C.dim}>
+            / {fmt(cap)}
+          </Label>
+          <Label size={38} color={C.white} style={{ marginLeft: 10 }}>
+            HINCHAS
+          </Label>
+        </Panel>
+      </div>
+      <div style={{ position: "absolute", left: 70, right: 70, top: 1130, display: "flex", justifyContent: "center" }}>
+        <Panel glow={C.yellow} style={{ padding: "12px 24px" }}>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: C.yellow, lineHeight: 1.3, textAlign: "center" }}>Compartilo: cada seguidor nuevo es un hincha más en la tribuna.</div>
+        </Panel>
+      </div>
+      {index !== undefined ? <Dots index={index} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+export const SlideCancha: React.FC = () => <CanchaHoy index={4} />;
+/** La misma imagen sin los puntitos del carrusel, para la historia. */
+export const HistoriaCancha: React.FC = () => <CanchaHoy />;
