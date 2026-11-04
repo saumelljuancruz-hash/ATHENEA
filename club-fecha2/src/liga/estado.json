@@ -1,0 +1,86 @@
+{
+  "fechas": [
+    {
+      "fecha": 1,
+      "hinchas": 1013,
+      "partidos": [
+        {
+          "local": "NUE",
+          "visitante": "FMA",
+          "gl": 2,
+          "gv": 0,
+          "semilla": "t1-f1-NUE-FMA"
+        },
+        {
+          "local": "DBB",
+          "visitante": "SNE",
+          "gl": 2,
+          "gv": 2,
+          "semilla": "t1-f1-DBB-SNE"
+        },
+        {
+          "local": "ESN",
+          "visitante": "JTS",
+          "gl": 0,
+          "gv": 0,
+          "semilla": "t1-f1-ESN-JTS"
+        },
+        {
+          "local": "DPI",
+          "visitante": "GRA",
+          "gl": 3,
+          "gv": 1,
+          "semilla": "t1-f1-DPI-GRA"
+        },
+        {
+          "local": "UFO",
+          "visitante": "RAN",
+          "gl": 1,
+          "gv": 3,
+          "semilla": "t1-f1-UFO-RAN"
+        }
+      ]
+    },
+    {
+      "fecha": 2,
+      "hinchas": 1131,
+      "partidos": [
+        {
+          "local": "DBB",
+          "visitante": "NUE",
+          "gl": 6,
+          "gv": 3,
+          "semilla": "t1-f2-DBB-NUE"
+        },
+        {
+          "local": "JTS",
+          "visitante": "FMA",
+          "gl": 2,
+          "gv": 0,
+          "semilla": "t1-f2-JTS-FMA"
+        },
+        {
+          "local": "SNE",
+          "visitante": "GRA",
+          "gl": 1,
+          "gv": 0,
+          "semilla": "t1-f2-SNE-GRA"
+        },
+        {
+          "local": "RAN",
+          "visitante": "ESN",
+          "gl": 2,
+          "gv": 2,
+          "semilla": "t1-f2-RAN-ESN"
+        },
+        {
+          "local": "DPI",
+          "visitante": "UFO",
+          "gl": 3,
+          "gv": 0,
+          "semilla": "t1-f2-DPI-UFO"
+        }
+      ]
+    }
+  ]
+}

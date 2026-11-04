@@ -1,161 +1,161 @@
 {
   "temporada": 1,
-  "fecha": 1,
+  "fecha": 2,
   "totalFechas": 18,
-  "hinchas": 1013,
-  "bonusHinchada": 12,
+  "hinchas": 1131,
+  "bonusHinchada": 12.2,
   "partidos": [
     {
-      "local": "NUE",
+      "local": "DBB",
+      "visitante": "NUE",
+      "gl": 6,
+      "gv": 3,
+      "semilla": "t1-f2-DBB-NUE"
+    },
+    {
+      "local": "JTS",
       "visitante": "FMA",
       "gl": 2,
       "gv": 0,
-      "semilla": "t1-f1-NUE-FMA"
+      "semilla": "t1-f2-JTS-FMA"
     },
     {
-      "local": "DBB",
-      "visitante": "SNE",
+      "local": "SNE",
+      "visitante": "GRA",
+      "gl": 1,
+      "gv": 0,
+      "semilla": "t1-f2-SNE-GRA"
+    },
+    {
+      "local": "RAN",
+      "visitante": "ESN",
       "gl": 2,
       "gv": 2,
-      "semilla": "t1-f1-DBB-SNE"
-    },
-    {
-      "local": "ESN",
-      "visitante": "JTS",
-      "gl": 0,
-      "gv": 0,
-      "semilla": "t1-f1-ESN-JTS"
+      "semilla": "t1-f2-RAN-ESN"
     },
     {
       "local": "DPI",
-      "visitante": "GRA",
+      "visitante": "UFO",
       "gl": 3,
-      "gv": 1,
-      "semilla": "t1-f1-DPI-GRA"
-    },
-    {
-      "local": "UFO",
-      "visitante": "RAN",
-      "gl": 1,
-      "gv": 3,
-      "semilla": "t1-f1-UFO-RAN"
+      "gv": 0,
+      "semilla": "t1-f2-DPI-UFO"
     }
   ],
   "tabla": [
     {
       "id": "DPI",
-      "pj": 1,
-      "g": 1,
+      "pj": 2,
+      "g": 2,
       "e": 0,
       "p": 0,
-      "gf": 3,
+      "gf": 6,
       "gc": 1,
-      "pts": 3,
-      "dg": 2
-    },
-    {
-      "id": "RAN",
-      "pj": 1,
-      "g": 1,
-      "e": 0,
-      "p": 0,
-      "gf": 3,
-      "gc": 1,
-      "pts": 3,
-      "dg": 2
-    },
-    {
-      "id": "NUE",
-      "pj": 1,
-      "g": 1,
-      "e": 0,
-      "p": 0,
-      "gf": 2,
-      "gc": 0,
-      "pts": 3,
-      "dg": 2
+      "pts": 6,
+      "dg": 5
     },
     {
       "id": "DBB",
-      "pj": 1,
-      "g": 0,
+      "pj": 2,
+      "g": 1,
       "e": 1,
       "p": 0,
-      "gf": 2,
-      "gc": 2,
-      "pts": 1,
-      "dg": 0
+      "gf": 8,
+      "gc": 5,
+      "pts": 4,
+      "dg": 3
     },
     {
-      "id": "SNE",
-      "pj": 1,
-      "g": 0,
+      "id": "RAN",
+      "pj": 2,
+      "g": 1,
       "e": 1,
       "p": 0,
-      "gf": 2,
-      "gc": 2,
-      "pts": 1,
-      "dg": 0
-    },
-    {
-      "id": "ESN",
-      "pj": 1,
-      "g": 0,
-      "e": 1,
-      "p": 0,
-      "gf": 0,
-      "gc": 0,
-      "pts": 1,
-      "dg": 0
+      "gf": 5,
+      "gc": 3,
+      "pts": 4,
+      "dg": 2
     },
     {
       "id": "JTS",
-      "pj": 1,
-      "g": 0,
+      "pj": 2,
+      "g": 1,
       "e": 1,
       "p": 0,
-      "gf": 0,
+      "gf": 2,
       "gc": 0,
-      "pts": 1,
+      "pts": 4,
+      "dg": 2
+    },
+    {
+      "id": "SNE",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "gf": 3,
+      "gc": 2,
+      "pts": 4,
+      "dg": 1
+    },
+    {
+      "id": "NUE",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "gf": 5,
+      "gc": 6,
+      "pts": 3,
+      "dg": -1
+    },
+    {
+      "id": "ESN",
+      "pj": 2,
+      "g": 0,
+      "e": 2,
+      "p": 0,
+      "gf": 2,
+      "gc": 2,
+      "pts": 2,
       "dg": 0
     },
     {
       "id": "GRA",
-      "pj": 1,
+      "pj": 2,
       "g": 0,
       "e": 0,
-      "p": 1,
+      "p": 2,
       "gf": 1,
-      "gc": 3,
+      "gc": 4,
       "pts": 0,
-      "dg": -2
-    },
-    {
-      "id": "UFO",
-      "pj": 1,
-      "g": 0,
-      "e": 0,
-      "p": 1,
-      "gf": 1,
-      "gc": 3,
-      "pts": 0,
-      "dg": -2
+      "dg": -3
     },
     {
       "id": "FMA",
-      "pj": 1,
+      "pj": 2,
       "g": 0,
       "e": 0,
-      "p": 1,
+      "p": 2,
       "gf": 0,
-      "gc": 2,
+      "gc": 4,
       "pts": 0,
-      "dg": -2
+      "dg": -4
+    },
+    {
+      "id": "UFO",
+      "pj": 2,
+      "g": 0,
+      "e": 0,
+      "p": 2,
+      "gf": 1,
+      "gc": 6,
+      "pts": 0,
+      "dg": -5
     }
   ],
   "proximo": {
-    "fecha": 2,
-    "local": "DBB",
-    "visitante": "NUE"
+    "fecha": 3,
+    "local": "NUE",
+    "visitante": "JTS"
   }
 }

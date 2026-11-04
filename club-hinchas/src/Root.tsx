@@ -1,6 +1,6 @@
 import { Composition, Folder, Still } from "remotion";
 import { Reel } from "./Reel";
-import { H, HistoriaCancha, SlideCancha, SlideEligieron, SlidePartido, SlideResultados, SlideTabla, W } from "./resultados/Resultados";
+import { H, HistoriaCancha, SlideCancha, SlideEligieron, SlidePartido, SlideResultados, SlideTabla, Vertical, W } from "./resultados/Resultados";
 import { S1Gancho } from "./scenes/S1Gancho";
 import { S2Intro } from "./scenes/S2Intro";
 import { S3Cuerpo1 } from "./scenes/S3Cuerpo1";
@@ -32,6 +32,12 @@ export const RemotionRoot: React.FC = () => {
         <Still id="Fecha-4-Tabla" component={SlideTabla} width={W} height={H} />
         <Still id="Fecha-5-Cancha" component={SlideCancha} width={W} height={H} />
         <Still id="Cancha" component={HistoriaCancha} width={W} height={H} />
+      </Folder>
+      <Folder name="TikTok">
+        <Still id="TikTok-1-Partido" component={() => <Vertical><SlidePartido /></Vertical>} width={1080} height={1920} />
+        <Still id="TikTok-2-Resultados" component={() => <Vertical tint="#101a30"><SlideResultados /></Vertical>} width={1080} height={1920} />
+        <Still id="TikTok-3-Tabla" component={() => <Vertical tint="#1a1430"><SlideTabla /></Vertical>} width={1080} height={1920} />
+        <Still id="TikTok-4-Cancha" component={() => <Vertical><SlideCancha /></Vertical>} width={1080} height={1920} />
       </Folder>
     </>
   );

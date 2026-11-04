@@ -123,3 +123,8 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
   - La hinchada llegó a 1.013 (18 en Instagram y 995 en TikTok), así que se llenó la cancha de barrio y el club se mudó al estadio de 10.000.
   - Fecha 1: FC NTLE 2-0 Ferro Magnético, de local. Quedó 3.º, con 3 puntos.
   - Fecha 2: de visitante contra Deportivo Big Bang, el más fuerte de la liga.
+- **Día 2 (4/11/2026), solo TikTok:**
+  - Hinchas: 1.131 (+118).
+  - Fecha 2: Deportivo Big Bang 6-3 FC NTLE, de visitante. Fueron 9 goles, el partido con más goles de la fecha. El club bajó al 6.º puesto, con 3 puntos.
+  - Fecha 3: de local contra Juventud Tsunami. Con 1.131 hinchas, la chance de ganar es 54 %.
+  - El carrusel se hizo en 9:16 para el modo foto de TikTok (`TikTok-1-Partido` … `TikTok-4-Cancha`).

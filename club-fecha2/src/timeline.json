@@ -1,0 +1,962 @@
+{
+  "fps": 30,
+  "durationInFrames": 976,
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {
+          "text": "Perdimos 6 a 3… pero le metimos 3 goles al más FUERTE de la liga.",
+          "start": 0,
+          "end": 134
+        }
+      ],
+      "from": 0,
+      "durationInFrames": 145
+    },
+    {
+      "id": "partido",
+      "sentences": [
+        {
+          "text": "De visitante y sin hinchada, contra Big Bang: NUEVE goles, el partido más loco de la fecha.",
+          "start": 0,
+          "end": 168
+        }
+      ],
+      "from": 145,
+      "durationInFrames": 180
+    },
+    {
+      "id": "tabla",
+      "sentences": [
+        {
+          "text": "Bajamos al SEXTO puesto, con 3 puntos.",
+          "start": 0,
+          "end": 67
+        }
+      ],
+      "from": 325,
+      "durationInFrames": 79
+    },
+    {
+      "id": "hinchada",
+      "sentences": [
+        {
+          "text": "Pero la tribuna no para de crecer: ya somos 1.131 hinchas.",
+          "start": 0,
+          "end": 131
+        }
+      ],
+      "from": 404,
+      "durationInFrames": 132
+    },
+    {
+      "id": "manana",
+      "sentences": [
+        {
+          "text": "Y mañana volvemos a jugar de LOCAL, contra Juventud Tsunami.",
+          "start": 0,
+          "end": 99
+        }
+      ],
+      "from": 536,
+      "durationInFrames": 109
+    },
+    {
+      "id": "chance",
+      "sentences": [
+        {
+          "text": "Con la gente de hoy, tenemos un 54% de chances de ganar.",
+          "start": 0,
+          "end": 111
+        },
+        {
+          "text": "Cada hincha nuevo la SUBE.",
+          "start": 119,
+          "end": 164
+        }
+      ],
+      "from": 645,
+      "durationInFrames": 164
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {
+          "text": "COMPARTILO para llenar la tribuna.",
+          "start": 0,
+          "end": 58
+        },
+        {
+          "text": "Y SEGUÍ a @nadietelo.explico.",
+          "start": 70,
+          "end": 115
+        }
+      ],
+      "from": 809,
+      "durationInFrames": 167
+    }
+  ],
+  "captions": [
+    {
+      "text": "Perdimos",
+      "startMs": 0,
+      "endMs": 460,
+      "timestampMs": 230,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 6",
+      "startMs": 460,
+      "endMs": 860,
+      "timestampMs": 660,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 860,
+      "endMs": 1040,
+      "timestampMs": 950,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 3…",
+      "startMs": 1040,
+      "endMs": 1320,
+      "timestampMs": 1180,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " pero",
+      "startMs": 1780,
+      "endMs": 1940,
+      "timestampMs": 1860,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " le",
+      "startMs": 1940,
+      "endMs": 2060,
+      "timestampMs": 2000,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " metimos",
+      "startMs": 2060,
+      "endMs": 2420,
+      "timestampMs": 2240,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 3",
+      "startMs": 2420,
+      "endMs": 2740,
+      "timestampMs": 2580,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " goles",
+      "startMs": 2740,
+      "endMs": 3080,
+      "timestampMs": 2910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 3080,
+      "endMs": 3280,
+      "timestampMs": 3180,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 3280,
+      "endMs": 3520,
+      "timestampMs": 3400,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FUERTE",
+      "startMs": 3520,
+      "endMs": 3920,
+      "timestampMs": 3720,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 3920,
+      "endMs": 4100,
+      "timestampMs": 4010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 4100,
+      "endMs": 4200,
+      "timestampMs": 4150,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " liga.",
+      "startMs": 4200,
+      "endMs": 4480,
+      "timestampMs": 4340,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " De",
+      "startMs": 4840,
+      "endMs": 5060,
+      "timestampMs": 4950,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " visitante",
+      "startMs": 5060,
+      "endMs": 5540,
+      "timestampMs": 5300,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 5540,
+      "endMs": 5740,
+      "timestampMs": 5640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sin",
+      "startMs": 5740,
+      "endMs": 5840,
+      "timestampMs": 5790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hinchada,",
+      "startMs": 5840,
+      "endMs": 6240,
+      "timestampMs": 6040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " contra",
+      "startMs": 6460,
+      "endMs": 6660,
+      "timestampMs": 6560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Big",
+      "startMs": 6660,
+      "endMs": 6940,
+      "timestampMs": 6800,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Bang:",
+      "startMs": 6940,
+      "endMs": 7220,
+      "timestampMs": 7080,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " NUEVE",
+      "startMs": 7540,
+      "endMs": 7840,
+      "timestampMs": 7690,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " goles,",
+      "startMs": 7840,
+      "endMs": 8300,
+      "timestampMs": 8070,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 8560,
+      "endMs": 8640,
+      "timestampMs": 8600,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " partido",
+      "startMs": 8640,
+      "endMs": 8940,
+      "timestampMs": 8790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 8940,
+      "endMs": 9380,
+      "timestampMs": 9160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " loco",
+      "startMs": 9380,
+      "endMs": 9800,
+      "timestampMs": 9590,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 9800,
+      "endMs": 9940,
+      "timestampMs": 9870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 9940,
+      "endMs": 10020,
+      "timestampMs": 9980,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " fecha.",
+      "startMs": 10020,
+      "endMs": 10440,
+      "timestampMs": 10230,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Bajamos",
+      "startMs": 10820,
+      "endMs": 11200,
+      "timestampMs": 11010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 11200,
+      "endMs": 11400,
+      "timestampMs": 11300,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SEXTO",
+      "startMs": 11400,
+      "endMs": 11780,
+      "timestampMs": 11590,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " puesto,",
+      "startMs": 11780,
+      "endMs": 12080,
+      "timestampMs": 11930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " con",
+      "startMs": 12380,
+      "endMs": 12540,
+      "timestampMs": 12460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 3",
+      "startMs": 12540,
+      "endMs": 12720,
+      "timestampMs": 12630,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " puntos.",
+      "startMs": 12720,
+      "endMs": 13080,
+      "timestampMs": 12900,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Pero",
+      "startMs": 13480,
+      "endMs": 13660,
+      "timestampMs": 13570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 13660,
+      "endMs": 13800,
+      "timestampMs": 13730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tribuna",
+      "startMs": 13800,
+      "endMs": 14160,
+      "timestampMs": 13980,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 14160,
+      "endMs": 14420,
+      "timestampMs": 14290,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 14420,
+      "endMs": 14700,
+      "timestampMs": 14560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 14700,
+      "endMs": 14880,
+      "timestampMs": 14790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " crecer:",
+      "startMs": 14880,
+      "endMs": 15280,
+      "timestampMs": 15080,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " ya",
+      "startMs": 15540,
+      "endMs": 15680,
+      "timestampMs": 15610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " somos",
+      "startMs": 15680,
+      "endMs": 15920,
+      "timestampMs": 15800,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 1.131",
+      "startMs": 15920,
+      "endMs": 17000,
+      "timestampMs": 16460,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hinchas.",
+      "startMs": 17000,
+      "endMs": 17820,
+      "timestampMs": 17410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 17860,
+      "endMs": 18000,
+      "timestampMs": 17930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mañana",
+      "startMs": 18000,
+      "endMs": 18260,
+      "timestampMs": 18130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " volvemos",
+      "startMs": 18260,
+      "endMs": 18960,
+      "timestampMs": 18610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 18960,
+      "endMs": 19060,
+      "timestampMs": 19010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " jugar",
+      "startMs": 19060,
+      "endMs": 19220,
+      "timestampMs": 19140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 19220,
+      "endMs": 19440,
+      "timestampMs": 19330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " LOCAL,",
+      "startMs": 19440,
+      "endMs": 19680,
+      "timestampMs": 19560,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " contra",
+      "startMs": 19680,
+      "endMs": 20160,
+      "timestampMs": 19920,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Juventud",
+      "startMs": 20160,
+      "endMs": 20700,
+      "timestampMs": 20430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Tsunami.",
+      "startMs": 20700,
+      "endMs": 21160,
+      "timestampMs": 20930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Con",
+      "startMs": 21500,
+      "endMs": 21600,
+      "timestampMs": 21550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 21600,
+      "endMs": 21720,
+      "timestampMs": 21660,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " gente",
+      "startMs": 21720,
+      "endMs": 21920,
+      "timestampMs": 21820,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 21920,
+      "endMs": 22100,
+      "timestampMs": 22010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hoy,",
+      "startMs": 22100,
+      "endMs": 22300,
+      "timestampMs": 22200,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " tenemos",
+      "startMs": 22420,
+      "endMs": 22660,
+      "timestampMs": 22540,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 22660,
+      "endMs": 22900,
+      "timestampMs": 22780,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 54%",
+      "startMs": 22900,
+      "endMs": 23360,
+      "timestampMs": 23130,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 24060,
+      "endMs": 24360,
+      "timestampMs": 24210,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " chances",
+      "startMs": 24360,
+      "endMs": 24640,
+      "timestampMs": 24500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 24640,
+      "endMs": 24880,
+      "timestampMs": 24760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ganar.",
+      "startMs": 24880,
+      "endMs": 25200,
+      "timestampMs": 25040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Cada",
+      "startMs": 25480,
+      "endMs": 25700,
+      "timestampMs": 25590,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " hincha",
+      "startMs": 25700,
+      "endMs": 26080,
+      "timestampMs": 25890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " nuevo",
+      "startMs": 26080,
+      "endMs": 26340,
+      "timestampMs": 26210,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 26340,
+      "endMs": 26600,
+      "timestampMs": 26470,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SUBE.",
+      "startMs": 26600,
+      "endMs": 26960,
+      "timestampMs": 26780,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " COMPARTILO",
+      "startMs": 27220,
+      "endMs": 27780,
+      "timestampMs": 27370,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 27780,
+      "endMs": 28000,
+      "timestampMs": 27890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " llenar",
+      "startMs": 28000,
+      "endMs": 28400,
+      "timestampMs": 28200,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 28400,
+      "endMs": 28480,
+      "timestampMs": 28440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tribuna.",
+      "startMs": 28480,
+      "endMs": 28900,
+      "timestampMs": 28690,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 29300,
+      "endMs": 29360,
+      "timestampMs": 29330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SEGUÍ",
+      "startMs": 29360,
+      "endMs": 29648,
+      "timestampMs": 29504,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 29648,
+      "endMs": 29792,
+      "timestampMs": 29720,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " @nadietelo.explico.",
+      "startMs": 29792,
+      "endMs": 30800,
+      "timestampMs": 30296,
+      "confidence": null,
+      "keyword": false,
+      "handle": true,
+      "pageBreakAfter": true
+    }
+  ]
+}

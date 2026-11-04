@@ -13,7 +13,13 @@ import { C, DISPLAY, MONO } from "../theme";
 
 export const W = 1080;
 export const H = 1350;
-const TOTAL = 5;
+// Qué slides lleva el carrusel de hoy, en orden (los puntitos de avance salen de acá).
+const DIAPOSITIVAS: string[] = redes.diapositivas ?? ["partido", "eligieron", "resultados", "tabla", "cancha"];
+const TOTAL = DIAPOSITIVAS.length;
+const indice = (id: string) => Math.max(0, DIAPOSITIVAS.indexOf(id));
+const siguiente = (id: string) => DIAPOSITIVAS[DIAPOSITIVAS.indexOf(id) + 1];
+const NOMBRE_SLIDE: Record<string, string> = { partido: "PARTIDO", eligieron: "LO ELIGIERON", resultados: "RESULTADOS", tabla: "TABLA", cancha: "LA CANCHA" };
+const flecha = (id: string) => (siguiente(id) ? `${NOMBRE_SLIDE[siguiente(id)]} →` : "");
 
 type Partido = (typeof fecha.partidos)[number];
 const NUESTRO_PARTIDO = fecha.partidos.find((p) => p.local === NUESTRO || p.visitante === NUESTRO) as Partido;
@@ -120,8 +126,8 @@ export const SlidePartido: React.FC = () => {
           ) : null}
         </Panel>
       </div>
-      <Dots index={0} />
-      <Footer text="DESLIZÁ →" />
+      <Dots index={indice("partido")} />
+      <Footer text={flecha("partido")} />
     </AbsoluteFill>
   );
 };
@@ -162,8 +168,8 @@ export const SlideEligieron: React.FC = () => {
       <div style={{ position: "absolute", left: 70, right: 70, top: 1120, fontFamily: DISPLAY, fontWeight: 800, fontSize: 32, color: TEAL, lineHeight: 1.3 }}>
         ¡Gracias {n.autor} y {e.autor}! Lo que sigue también se vota en los comentarios.
       </div>
-      <Dots index={1} />
-      <Footer text="RESULTADOS →" />
+      <Dots index={indice("eligieron")} />
+      <Footer text={flecha("eligieron")} />
     </AbsoluteFill>
   );
 };
@@ -190,8 +196,8 @@ export const SlideResultados: React.FC = () => (
       })}
     </div>
     <div style={{ position: "absolute", left: 70, right: 70, top: 1170, fontFamily: DISPLAY, fontWeight: 600, fontSize: 26, color: C.dim }}>Los partidos no se ven: cada resultado sale de un sorteo con semilla pública. La hinchada del club suma de local.</div>
-    <Dots index={2} />
-    <Footer text="TABLA →" />
+    <Dots index={indice("resultados")} />
+    <Footer text={flecha("resultados")} />
   </AbsoluteFill>
 );
 
@@ -229,8 +235,8 @@ export const SlideTabla: React.FC = () => (
     <div style={{ position: "absolute", left: 70, right: 70, top: 1196, fontFamily: DISPLAY, fontWeight: 800, fontSize: 28, color: TEAL }}>
       {PROXIMO && RIVAL_PROXIMO ? `Fecha ${PROXIMO.fecha}: ${PROXIMO.local === NUESTRO ? "de local" : "de visitante"} contra ${equipo(RIVAL_PROXIMO).nombre}.` : "Fin de la temporada."}
     </div>
-    <Dots index={3} />
-    <Footer text="LA CANCHA →" />
+    <Dots index={indice("tabla")} />
+    <Footer text={flecha("tabla")} />
   </AbsoluteFill>
 );
 
@@ -244,7 +250,7 @@ const CanchaHoy: React.FC<{ index?: number }> = ({ index }) => {
       <div style={{ position: "absolute", left: 90, top: 330 }}>
         <Potrero hinchas={fecha.hinchas} frame={0} capacidad={cap} width={900} />
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 285, display: "flex", justifyContent: "center", gap: 16 }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 285, display: redes.mostrarRedes === false ? "none" : "flex", justifyContent: "center", gap: 16 }}>
         <Panel glow="#2f8cff" style={{ padding: "8px 20px" }}>
           <Label size={30} color="#7cb8ff">
             INSTAGRAM {fmt(redes.instagram)}
@@ -279,6 +285,17 @@ const CanchaHoy: React.FC<{ index?: number }> = ({ index }) => {
   );
 };
 
-export const SlideCancha: React.FC = () => <CanchaHoy index={4} />;
+export const SlideCancha: React.FC = () => <CanchaHoy index={indice("cancha")} />;
+
+/**
+ * El mismo slide en 9:16 para TikTok: el contenido de 1080 × 1350 va centrado
+ * (lejos de los botones de arriba y del texto de abajo) y el fondo se extiende.
+ */
+export const Vertical: React.FC<{ children: React.ReactNode; tint?: string }> = ({ children, tint = "#0d2a1a" }) => (
+  <AbsoluteFill style={{ backgroundColor: C.bg }}>
+    <Background tint={tint} />
+    <div style={{ position: "absolute", left: 0, top: 190, width: W, height: H, maskImage: "linear-gradient(transparent, black 5%, black 95%, transparent)" }}>{children}</div>
+  </AbsoluteFill>
+);
 /** La misma imagen sin los puntitos del carrusel, para la historia. */
 export const HistoriaCancha: React.FC = () => <CanchaHoy />;

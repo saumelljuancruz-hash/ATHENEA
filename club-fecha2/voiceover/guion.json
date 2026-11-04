@@ -1,0 +1,11 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "Perdimos 6 a 3… pero le metimos 3 goles al más FUERTE de la liga." }] },
+    { "id": "partido", "sentences": [{ "text": "De visitante y sin hinchada, contra Big Bang: NUEVE goles, el partido más loco de la fecha." }] },
+    { "id": "tabla", "sentences": [{ "text": "Bajamos al SEXTO puesto, con 3 puntos." }] },
+    { "id": "hinchada", "sentences": [{ "text": "Pero la tribuna no para de crecer: ya somos 1.131 hinchas." }] },
+    { "id": "manana", "sentences": [{ "text": "Y mañana volvemos a jugar de LOCAL, contra Juventud Tsunami." }] },
+    { "id": "chance", "sentences": [{ "text": "Con la gente de hoy, tenemos un 54% de chances de ganar." }, { "text": "Cada hincha nuevo la SUBE." }] },
+    { "id": "cta", "sentences": [{ "text": "COMPARTILO para llenar la tribuna." }, { "text": "Y SEGUÍ a @nadietelo.explico." }] }
+  ]
+}

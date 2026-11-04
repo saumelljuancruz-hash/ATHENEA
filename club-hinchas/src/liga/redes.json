@@ -1,7 +1,7 @@
 {
-  "instagram": 18,
-  "tiktok": 995,
-  "mudanza": "¡NOS MUDAMOS!",
+  "instagram": 0,
+  "tiktok": 1131,
+  "mudanza": "",
   "eligieron": {
     "nombre": {
       "autor": "J.P",
@@ -17,5 +17,12 @@
       "ancho": 1170,
       "alto": 706
     }
-  }
+  },
+  "mostrarRedes": false,
+  "diapositivas": [
+    "partido",
+    "resultados",
+    "tabla",
+    "cancha"
+  ]
 }
