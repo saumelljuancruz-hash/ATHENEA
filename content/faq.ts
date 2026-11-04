@@ -14,6 +14,13 @@ export const faq: { q: L10n; a: L10n }[] = [
     },
   },
   {
+    q: { es: "¿Usas inteligencia artificial para hacer las páginas?", en: "Do you use artificial intelligence to build the websites?" },
+    a: {
+      es: "Sí. Trabajo con herramientas de inteligencia artificial de última generación, y eso es lo que me permite entregarte una web profesional en días y no en meses, a un precio mucho más accesible que el de una agencia tradicional. La IA es mi herramienta, pero el trabajo es mío: yo diseño tu web según tu restaurante y tu menú, decido qué funciona mejor para recibir pedidos, la configuro con tu dominio, la pruebo en celular y te acompaño cuando necesitas cambios. Tú recibes una web personalizada y funcionando, sin tener que tocar nada técnico.",
+      en: "Yes. I work with cutting-edge AI tools, which is what allows me to deliver a professional website in days instead of months, at a much more affordable price than a traditional agency. AI is my tool, but the work is mine: I design your site around your restaurant and your menu, decide what works best to bring in orders, set it up with your own domain, test it on mobile and support you whenever you need changes. You get a custom, fully working website without having to deal with anything technical.",
+    },
+  },
+  {
     q: { es: "¿Cómo puedo pagar?", en: "How can I pay?" },
     a: {
       es: "Acepto PayPal, Payoneer y USDT. Pagas el 50% para empezar y el 50% restante cuando la web está terminada y aprobada por ti, antes de publicarla con tu dominio.",
