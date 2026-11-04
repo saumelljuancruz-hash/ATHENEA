@@ -63,9 +63,14 @@ export function Contact() {
               {t.contact.title}
             </h2>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">{t.contact.subtitle}</p>
-            <p className="mt-8 text-sm text-muted">{t.contact.orEmail}</p>
-            <a href={`mailto:${site.email}`} className="mt-1 inline-flex items-center gap-2 font-semibold hover:text-primary">
-              <IconMail width={18} height={18} />
+            <p className="mt-8 text-sm text-muted">{t.contact.orWhatsapp}</p>
+            <a href={whatsappLink(t.contact.fabMessage)} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center gap-2 font-semibold hover:text-primary">
+              <IconWhatsApp width={18} height={18} />
+              {site.whatsappDisplay}
+            </a>
+            <p className="mt-5 text-sm text-muted">{t.contact.orEmail}</p>
+            <a href={`mailto:${site.email}`} className="mt-1 inline-flex items-center gap-2 break-all font-semibold hover:text-primary">
+              <IconMail width={18} height={18} className="shrink-0" />
               {site.email}
             </a>
           </Reveal>

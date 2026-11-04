@@ -2,11 +2,12 @@
 
 import { m } from "framer-motion";
 import { useLang } from "@/lib/i18n";
-import { site } from "@/content/site";
+import { site, whatsappLink } from "@/content/site";
 import { buttonClass } from "@/components/ui/Button";
-import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
-import { IconArrowRight } from "@/components/ui/Icons";
+import { IconClock, IconGlobe, IconPercent, IconWhatsApp } from "@/components/ui/Icons";
 import { HeroPhone } from "./HeroPhone";
+
+const benefitIcons = { clock: IconClock, percent: IconPercent, globe: IconGlobe };
 
 export function Hero() {
   const { t, l } = useLang();
@@ -63,9 +64,9 @@ export function Hero() {
           </p>
 
           <div style={rise(0.24)} className="rise mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <a href="#contacto" className={buttonClass("primary", "group text-base")}>
+            <a href={whatsappLink(t.hero.ctaMessage)} target="_blank" rel="noopener noreferrer" className={buttonClass("primary", "group text-base")}>
+              <IconWhatsApp className="transition-transform group-hover:scale-110" />
               {t.hero.cta}
-              <IconArrowRight className="transition-transform group-hover:translate-x-1" />
             </a>
             <a href="#demo" className={buttonClass("outline", "text-base")}>
               {t.hero.secondary}
@@ -82,22 +83,27 @@ export function Hero() {
         </div>
       </div>
 
-      {/* contadores */}
-      <dl
+      {/* beneficios */}
+      <ul
         style={rise(0.4)}
-        aria-label={t.stats.label}
-        className="rise mx-auto mt-20 grid max-w-6xl grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-4"
+        aria-label={t.benefits.label}
+        className="rise mx-auto mt-20 grid max-w-6xl gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-3"
       >
-        {site.stats.map((s) => (
-          <div key={s.label.es} className="flex flex-col-reverse gap-1 bg-bg/90 px-5 py-6 text-center backdrop-blur sm:py-8">
-            <dt className="text-xs text-muted sm:text-sm">{l(s.label)}</dt>
-            <dd className="font-display text-4xl font-semibold text-fg sm:text-5xl">
-              <AnimatedNumber value={s.value} startOnView duration={1.6} />
-              <span className="text-primary">{s.suffix}</span>
-            </dd>
-          </div>
-        ))}
-      </dl>
+        {site.benefits.map((b) => {
+          const Icon = benefitIcons[b.icon];
+          return (
+            <li key={b.title.es} className="flex items-center gap-4 bg-bg/90 px-5 py-5 backdrop-blur sm:flex-col sm:gap-3 sm:px-6 sm:py-8 sm:text-center">
+              <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary/12 text-primary sm:size-14">
+                <Icon width={24} height={24} />
+              </span>
+              <span>
+                <span className="block font-display text-lg font-semibold leading-tight sm:text-xl">{l(b.title)}</span>
+                <span className="mt-1 block text-sm text-muted">{l(b.text)}</span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }

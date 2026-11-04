@@ -20,52 +20,39 @@ Todo el contenido está en la carpeta **`content/`**. Los textos que aparecen en
 | Quiero cambiar… | Archivo |
 |---|---|
 | Nombre de la marca, **WhatsApp**, email, Instagram, URL del sitio | `content/site.ts` |
-| **Contadores** (webs entregadas, países, días…) | `content/site.ts` → `stats` |
+| **Beneficios** debajo del hero (entrega en días, 0% comisiones…) | `content/site.ts` → `benefits` |
 | **Precios**, planes, qué incluye cada uno, plan destacado | `content/pricing.ts` → `plans` |
 | Tabla comparativa | `content/pricing.ts` → `comparison` |
 | Extras y mantenimiento | `content/pricing.ts` → `extras`, `maintenance` |
-| **Proyectos del portafolio** | `content/projects.ts` |
-| Menús de la demo interactiva (pizzería, hamburguesería, café) | `content/demo-menus.ts` |
+| **Diseños conceptuales** y menús de la demo interactiva (pizzería, hamburguesería, café) | `content/demo-menus.ts` |
 | Preguntas frecuentes | `content/faq.ts` |
 | Textos de la interfaz (títulos, botones, mensajes) | `content/i18n/es.ts` y `content/i18n/en.ts` |
 | Colores de la paleta | `app/globals.css` (bloques `:root` = claro y `.dark` = oscuro) |
 
 ### Cambiar un precio
-En `content/pricing.ts`, cambia `price: 380` por el valor nuevo. Se actualiza en las tarjetas, la tabla, el configurador, el formulario de contacto y los mensajes de WhatsApp.
+En `content/pricing.ts`, cambia `price: 250` por el valor nuevo. Se actualiza en las tarjetas, la tabla, el configurador, el formulario de contacto y los mensajes de WhatsApp.
 
-### Agregar un proyecto al portafolio
-1. Guarda las imágenes en `public/images/projects/` (ideal: 1200×900 px, JPG o WebP).
-2. En `content/projects.ts`, copia un bloque `{ id: "...", ... }` completo, pégalo al final de la lista y cambia los datos.
-3. En `url` pon el link del proyecto. Si lo dejas vacío (`""`), el botón muestra «Link disponible pronto».
+### Diseños conceptuales (ex portafolio)
+La sección muestra los 3 restaurantes ficticios de `content/demo-menus.ts` (Forno Rosso, Smash Club y Café Alba), con una etiqueta visible de «Diseño de ejemplo». El botón «Ver demo» abre la demo interactiva con ese estilo ya elegido. Para cambiar el texto de una tarjeta, edita el campo `concept` de cada restaurante.
+
+Cuando tengas clientes reales, puedes volver a sumar una sección de proyectos.
 
 ### Cambiar un texto
 Busca el texto en `content/i18n/es.ts`, cámbialo y haz lo mismo en `content/i18n/en.ts`. Si te olvidas de algún texto en inglés, TypeScript te avisa al compilar.
 
 ---
 
-## ⚠️ Datos que debes reemplazar antes de publicar
+## Datos de contacto
 
 En `content/site.ts`:
-- `whatsapp`: tu número con código de país, **solo dígitos** (ej. `5491112345678`). Ahora tiene un número de prueba.
-- `email`: tu email real.
+- `whatsapp`: `5492291525151` (formato de wa.me, solo dígitos). Lo usan todos los botones y mensajes de WhatsApp.
+- `whatsappDisplay`: `+54 9 2291 525151` (cómo se muestra escrito en contacto y footer).
+- `email`: `juancruzwebstudio@gmail.com`.
 - `instagram`: tu perfil (o `""` para ocultarlo).
 - `url`: el dominio final (o configúralo en Vercel con la variable `NEXT_PUBLIC_SITE_URL`).
 
-En `content/projects.ts`:
-- `url` de **Mima Pizzería**, **ATHENEA Relojería** y **BALU Salón de Eventos**.
-
-### Imágenes de reemplazo (fotos libres de Unsplash)
-
-| Imagen | Qué poner |
-|---|---|
-| `public/images/projects/mima.jpg`, `mima-2.jpg` | Capturas reales de la web de Mima Pizzería |
-| `public/images/projects/athenea.jpg`, `athenea-2.jpg` | Capturas reales de ATHENEA Relojería |
-| `public/images/projects/balu.jpg`, `balu-2.jpg` | Capturas reales de BALU Salón de Eventos |
-| `public/images/hero-restaurante.jpg` | Portada del celular del hero (puede quedar así) |
-| `public/images/demo/*.jpg` | Platos de la demo (pueden quedar así: son de uso libre) |
-
-Si cambias una imagen, mantén el **mismo nombre de archivo** o actualiza la ruta en el archivo de datos correspondiente.
-Para las capturas, lo ideal es tomarlas desde el celular (o desde el modo celular del navegador) y recortarlas en formato 4:3.
+### Imágenes
+Las fotos de platos (`public/images/demo/`) y la portada del hero (`public/images/hero-restaurante.jpg`) son de Unsplash, de uso libre. Si cambias una, mantén el mismo nombre de archivo o actualiza la ruta en `content/demo-menus.ts`.
 
 El logo es un monograma generado con la inicial de la marca (`components/layout/Logo.tsx`). El ícono de la pestaña está en `app/icon.svg`.
 

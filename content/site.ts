@@ -1,7 +1,7 @@
 /**
  * DATOS GENERALES DEL SITIO
  * --------------------------------------------------------------
- * Edita aquí tu marca, tus datos de contacto y los contadores.
+ * Edita aquí tu marca, tus datos de contacto y los beneficios del hero.
  * Todo lo que cambies se refleja automáticamente en la web.
  */
 import type { L10n } from "./types";
@@ -19,27 +19,40 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://juancruzwebstudio.com",
 
   /**
-   * ⚠️ REEMPLAZAR: tu número de WhatsApp con código de país, solo dígitos.
-   * Ejemplo Argentina: 5491112345678 · México: 5215512345678 · España: 34612345678
+   * Número de WhatsApp con código de país, solo dígitos (formato de wa.me).
+   * Lo usan TODOS los botones y mensajes de WhatsApp del sitio.
    */
-  whatsapp: "5490000000000",
+  whatsapp: "5492291525151",
+  /** El mismo número, como se muestra escrito en la web. */
+  whatsappDisplay: "+54 9 2291 525151",
 
-  /** ⚠️ REEMPLAZAR: tu email de contacto. */
-  email: "hola@juancruzwebstudio.com",
+  /** Email de contacto (sección de contacto y footer). */
+  email: "juancruzwebstudio@gmail.com",
 
   /** Redes (deja "" para ocultar). */
   instagram: "https://instagram.com/",
 
   /**
-   * Contadores animados que aparecen debajo del hero.
-   * ⚠️ Actualízalos con tus números reales.
+   * Beneficios que aparecen debajo del hero, con su ícono.
+   * Íconos disponibles: "clock" (reloj), "percent" (0%), "globe" (mundo).
    */
-  stats: [
-    { value: 12, suffix: "+", label: { es: "Webs entregadas", en: "Websites delivered" } },
-    { value: 4, suffix: "", label: { es: "Países", en: "Countries" } },
-    { value: 7, suffix: "", label: { es: "Días promedio de entrega", en: "Average days to deliver" } },
-    { value: 0, suffix: "%", label: { es: "Comisión por pedido", en: "Commission per order" } },
-  ] satisfies { value: number; suffix: string; label: L10n }[],
+  benefits: [
+    {
+      icon: "clock",
+      title: { es: "Entrega en días", en: "Delivered in days" },
+      text: { es: "Tu web lista en 5 a 14 días, según el plan.", en: "Your site ready in 5 to 14 days, depending on the plan." },
+    },
+    {
+      icon: "percent",
+      title: { es: "0% comisiones", en: "0% commissions" },
+      text: { es: "Los pedidos llegan directo a tu WhatsApp.", en: "Orders go straight to your WhatsApp." },
+    },
+    {
+      icon: "globe",
+      title: { es: "100% online, desde cualquier país", en: "100% online, from any country" },
+      text: { es: "Todo por WhatsApp o videollamada.", en: "Everything over WhatsApp or video call." },
+    },
+  ] satisfies { icon: "clock" | "percent" | "globe"; title: L10n; text: L10n }[],
 };
 
 /** Arma un link de WhatsApp con el mensaje ya escrito. */

@@ -1,9 +1,9 @@
 "use client";
 
 import { m } from "framer-motion";
-import { useState } from "react";
 import { demoRestaurants } from "@/content/demo-menus";
 import { useLang } from "@/lib/i18n";
+import { useDemoStyle } from "@/lib/demo-style";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { PhoneFrame } from "@/components/ui/PhoneFrame";
@@ -12,7 +12,7 @@ import { DemoApp } from "@/components/demo/DemoApp";
 
 export function Demo() {
   const { t, l } = useLang();
-  const [activeId, setActiveId] = useState(demoRestaurants[0].id);
+  const { demoId: activeId, setDemoId: setActiveId } = useDemoStyle();
   const restaurant = demoRestaurants.find((r) => r.id === activeId)!;
 
   const onKeyDown = (e: React.KeyboardEvent, index: number) => {

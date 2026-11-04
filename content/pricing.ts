@@ -25,7 +25,7 @@ export const plans: Plan[] = [
   {
     id: "basico",
     name: { es: "Básico", en: "Basic" },
-    price: 180,
+    price: 120,
     tagline: {
       es: "Tu local presente en internet, listo para recibir mensajes.",
       en: "Your place online, ready to get messages.",
@@ -42,7 +42,7 @@ export const plans: Plan[] = [
   {
     id: "pro",
     name: { es: "Pro", en: "Pro" },
-    price: 380,
+    price: 250,
     highlighted: true,
     tagline: {
       es: "Recibe pedidos armados por WhatsApp, sin comisiones.",
@@ -61,7 +61,7 @@ export const plans: Plan[] = [
   {
     id: "premium",
     name: { es: "Premium", en: "Premium" },
-    price: 750,
+    price: 490,
     tagline: {
       es: "La web completa de tu marca, que tú mismo actualizas.",
       en: "Your brand's complete website, updated by you.",
@@ -127,19 +127,19 @@ export const extras: Extra[] = [
     id: "fotos-ia",
     name: { es: "Fotos de platos con IA", en: "AI dish photos" },
     description: { es: "Imágenes profesionales de tus platos, sin sesión de fotos.", en: "Pro-looking dish images, no photo shoot needed." },
-    price: 60,
+    price: 40,
   },
   {
     id: "logo",
     name: { es: "Logo simple", en: "Simple logo" },
     description: { es: "Un logo limpio para tu web, redes y menú QR.", en: "A clean logo for your site, socials and QR menu." },
-    price: 80,
+    price: 50,
   },
   {
     id: "promo",
     name: { es: "Página para evento o promo", en: "Event or promo page" },
     description: { es: "Una página especial para una fecha, evento o promoción.", en: "A dedicated page for a date, event or promotion." },
-    price: 70,
+    price: 50,
   },
 ];
 
@@ -156,13 +156,13 @@ export const maintenance: { id: MaintenanceId; name: L10n; description: L10n; mo
     id: "esencial",
     name: { es: "Esencial", en: "Essential" },
     description: { es: "Hosting, web siempre online y pequeños arreglos.", en: "Hosting, site always online and small fixes." },
-    monthly: 25,
+    monthly: 15,
   },
   {
     id: "activo",
     name: { es: "Activo", en: "Active" },
     description: { es: "Todo lo anterior más hasta 4 cambios por mes.", en: "All of the above plus up to 4 changes a month." },
-    monthly: 50,
+    monthly: 30,
   },
 ];
 

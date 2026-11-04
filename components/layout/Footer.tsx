@@ -42,7 +42,7 @@ export function Footer() {
         <ul className="space-y-1.5 text-sm">
           <li>
             <a href={whatsappLink(t.contact.fabMessage)} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-fg">
-              WhatsApp
+              WhatsApp: {site.whatsappDisplay}
             </a>
           </li>
           <li>

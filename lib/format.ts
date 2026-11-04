@@ -1,4 +1,4 @@
-/** "USD 380" / "USD 1,250" */
+/** "USD 250" / "USD 1,250" */
 export function usd(value: number) {
   return `USD ${Math.round(value).toLocaleString("en-US")}`;
 }

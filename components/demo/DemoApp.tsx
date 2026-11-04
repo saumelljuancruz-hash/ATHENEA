@@ -19,7 +19,8 @@ const fontFor = (f: DemoRestaurant["theme"]["font"]) =>
       : "var(--font-inter), system-ui, sans-serif";
 
 /** Mini web de restaurante funcionando dentro del celular. */
-export function DemoApp({ restaurant }: { restaurant: DemoRestaurant }) {
+/** preview: versión estática para las tarjetas de "Diseños conceptuales" (sin la pista inicial). */
+export function DemoApp({ restaurant, preview = false }: { restaurant: DemoRestaurant; preview?: boolean }) {
   const { t, l } = useLang();
   const th = restaurant.theme;
   const [cart, setCart] = useState<Record<string, number>>({});
@@ -150,7 +151,7 @@ export function DemoApp({ restaurant }: { restaurant: DemoRestaurant }) {
 
       {/* pista inicial */}
       <AnimatePresence>
-        {count === 0 && view === "menu" && (
+        {!preview && count === 0 && view === "menu" && (
           <m.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

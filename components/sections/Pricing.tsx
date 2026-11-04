@@ -9,7 +9,7 @@ import { usd, scrollToId } from "@/lib/format";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { IconCheck, IconChevronDown, IconMinus } from "@/components/ui/Icons";
+import { IconCheck, IconChevronDown, IconMinus, IconSparkle } from "@/components/ui/Icons";
 
 export function Pricing() {
   const { t, l } = useLang();
@@ -24,6 +24,13 @@ export function Pricing() {
   return (
     <Section id="planes" labelledBy="pricing-title" className="bg-surface/40">
       <SectionHeading id="pricing-title" eyebrow={t.pricing.eyebrow} title={t.pricing.title} subtitle={t.pricing.subtitle} />
+
+      <Reveal className="-mt-6 mb-10 flex justify-center sm:-mt-10 sm:mb-12">
+        <p className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-fg">
+          <IconSparkle width={15} height={15} className="text-accent" />
+          {t.pricing.launch}
+        </p>
+      </Reveal>
 
       <div className="grid items-stretch gap-5 lg:grid-cols-3 lg:gap-6">
         {plans.map((plan, i) => {

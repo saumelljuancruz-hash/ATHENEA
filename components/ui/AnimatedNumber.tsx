@@ -7,7 +7,7 @@ const easeOut = (t: number) => 1 - Math.pow(1 - t, 4);
 
 /**
  * Número que se anima hasta `value`.
- * - startOnView: arranca cuando entra en pantalla (contadores).
+ * - startOnView: arranca cuando entra en pantalla.
  * - Si no, se anima cada vez que cambia el valor (calculadora, configurador).
  */
 export function AnimatedNumber({

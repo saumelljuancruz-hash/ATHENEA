@@ -1,8 +1,9 @@
 /**
- * RESTAURANTES DE LA DEMO INTERACTIVA
+ * RESTAURANTES FICTICIOS: DEMO INTERACTIVA Y DISEÑOS CONCEPTUALES
  * --------------------------------------------------------------
- * Cada estilo tiene su nombre, colores y menú. Puedes cambiar
- * platos, precios o fotos (en /public/images/demo/).
+ * Cada estilo tiene su nombre, colores y menú. Se usan en la demo
+ * interactiva y en las tarjetas de "Diseños conceptuales".
+ * Puedes cambiar platos, precios o fotos (en /public/images/demo/).
  */
 import type { L10n } from "./types";
 
@@ -25,6 +26,8 @@ export type DemoRestaurant = {
   emoji: string;
   name: string;
   tagline: L10n;
+  /** Descripción de la tarjeta en "Diseños conceptuales". */
+  concept: L10n;
   /** Colores de la mini web. */
   theme: {
     bg: string;
@@ -50,6 +53,10 @@ export const demoRestaurants: DemoRestaurant[] = [
     emoji: "🍕",
     name: "Forno Rosso",
     tagline: { es: "Pizza a la piedra · Desde 1998", en: "Stone-baked pizza · Since 1998" },
+    concept: {
+      es: "Pizzería clásica con estética italiana: tipografía con serifa, rojo tomate y fotos grandes que abren el apetito.",
+      en: "A classic pizzeria with Italian flair: serif type, tomato red and big, mouth-watering photos.",
+    },
     theme: {
       bg: "#FFF8F0",
       surface: "#FFFFFF",
@@ -96,6 +103,10 @@ export const demoRestaurants: DemoRestaurant[] = [
     emoji: "🍔",
     name: "Smash Club",
     tagline: { es: "Smash burgers · Abierto hasta tarde", en: "Smash burgers · Open late" },
+    concept: {
+      es: "Hamburguesería urbana en modo oscuro, con amarillo intenso y un menú pensado para pedir rápido de noche.",
+      en: "An urban burger joint in dark mode, with bold yellow and a menu built for fast late-night orders.",
+    },
     theme: {
       bg: "#111111",
       surface: "#1E1E1E",
@@ -141,6 +152,10 @@ export const demoRestaurants: DemoRestaurant[] = [
     emoji: "☕",
     name: "Café Alba",
     tagline: { es: "Especialidad y brunch · Todos los días", en: "Specialty coffee & brunch · Every day" },
+    concept: {
+      es: "Cafetería de especialidad en tonos suaves y verde salvia, ideal para brunch, pastelería y pedidos para llevar.",
+      en: "A specialty café in soft tones and sage green, perfect for brunch, pastries and takeaway orders.",
+    },
     theme: {
       bg: "#F1EBE3",
       surface: "#FBF8F4",

@@ -10,7 +10,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { IconCheck, IconX } from "@/components/ui/Icons";
 
-const proPrice = plans.find((p) => p.id === "pro")?.price ?? 380;
+const proPrice = plans.find((p) => p.id === "pro")!.price;
 
 export function Compare() {
   const { t } = useLang();
