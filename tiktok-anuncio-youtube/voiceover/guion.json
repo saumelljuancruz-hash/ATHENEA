@@ -1,0 +1,10 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "Esto no te lo conté en ningún VIDEO." }] },
+    { "id": "intro", "sentences": [{ "text": "Nadie Te Lo Explicó ahora también está en YOUTUBE." }] },
+    { "id": "cuerpo", "sentences": [{ "text": "Vas a encontrar los videos de siempre… y algo que acá no entra: videos LARGOS, con la historia completa." }] },
+    { "id": "bucle", "sentences": [{ "text": "Y el primero ya está: por qué tu celular te MIENTE cada vez que sacás una foto." }] },
+    { "id": "final", "sentences": [{ "text": "¿Dónde está? El link está en mi PERFIL." }, { "text": "Tocá mi foto, entrá al link y SUSCRIBITE." }] },
+    { "id": "cta", "sentences": [{ "text": "Y SEGUIME acá: mañana juega el FC NTLE." }] }
+  ]
+}

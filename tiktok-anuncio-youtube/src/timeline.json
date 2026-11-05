@@ -1,0 +1,855 @@
+{
+  "fps": 30,
+  "durationInFrames": 812,
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {
+          "text": "Esto no te lo conté en ningún VIDEO.",
+          "start": 0,
+          "end": 56
+        }
+      ],
+      "from": 0,
+      "durationInFrames": 67
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {
+          "text": "Nadie Te Lo Explicó ahora también está en YOUTUBE.",
+          "start": 0,
+          "end": 77
+        }
+      ],
+      "from": 67,
+      "durationInFrames": 89
+    },
+    {
+      "id": "cuerpo",
+      "sentences": [
+        {
+          "text": "Vas a encontrar los videos de siempre… y algo que acá no entra: videos LARGOS, con la historia completa.",
+          "start": 0,
+          "end": 175
+        }
+      ],
+      "from": 156,
+      "durationInFrames": 189
+    },
+    {
+      "id": "bucle",
+      "sentences": [
+        {
+          "text": "Y el primero ya está: por qué tu celular te MIENTE cada vez que sacás una foto.",
+          "start": 0,
+          "end": 128
+        }
+      ],
+      "from": 345,
+      "durationInFrames": 142
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {
+          "text": "¿Dónde está? El link está en mi PERFIL.",
+          "start": 0,
+          "end": 64
+        },
+        {
+          "text": "Tocá mi foto, entrá al link y SUSCRIBITE.",
+          "start": 72,
+          "end": 144
+        }
+      ],
+      "from": 487,
+      "durationInFrames": 155
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {
+          "text": "Y SEGUIME acá: mañana juega el FC NTLE.",
+          "start": 0,
+          "end": 112
+        }
+      ],
+      "from": 642,
+      "durationInFrames": 170
+    }
+  ],
+  "captions": [
+    {
+      "text": "Esto",
+      "startMs": 0,
+      "endMs": 300,
+      "timestampMs": 150,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 300,
+      "endMs": 500,
+      "timestampMs": 400,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 500,
+      "endMs": 600,
+      "timestampMs": 550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " lo",
+      "startMs": 600,
+      "endMs": 720,
+      "timestampMs": 660,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " conté",
+      "startMs": 720,
+      "endMs": 1100,
+      "timestampMs": 910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 1100,
+      "endMs": 1180,
+      "timestampMs": 1140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ningún",
+      "startMs": 1180,
+      "endMs": 1500,
+      "timestampMs": 1340,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " VIDEO.",
+      "startMs": 1500,
+      "endMs": 1880,
+      "timestampMs": 1690,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Nadie",
+      "startMs": 2240,
+      "endMs": 2680,
+      "timestampMs": 2460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Te",
+      "startMs": 2680,
+      "endMs": 2800,
+      "timestampMs": 2740,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Lo",
+      "startMs": 2800,
+      "endMs": 2880,
+      "timestampMs": 2840,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Explicó",
+      "startMs": 2880,
+      "endMs": 3360,
+      "timestampMs": 3120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ahora",
+      "startMs": 3440,
+      "endMs": 3640,
+      "timestampMs": 3540,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " también",
+      "startMs": 3640,
+      "endMs": 4140,
+      "timestampMs": 3890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está",
+      "startMs": 4140,
+      "endMs": 4400,
+      "timestampMs": 4270,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 4400,
+      "endMs": 4540,
+      "timestampMs": 4470,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " YOUTUBE.",
+      "startMs": 4540,
+      "endMs": 4800,
+      "timestampMs": 4670,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Vas",
+      "startMs": 5200,
+      "endMs": 5380,
+      "timestampMs": 5290,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 5380,
+      "endMs": 5500,
+      "timestampMs": 5440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " encontrar",
+      "startMs": 5500,
+      "endMs": 5760,
+      "timestampMs": 5630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " los",
+      "startMs": 5760,
+      "endMs": 6000,
+      "timestampMs": 5880,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " videos",
+      "startMs": 6000,
+      "endMs": 6280,
+      "timestampMs": 6140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 6280,
+      "endMs": 6460,
+      "timestampMs": 6370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " siempre…",
+      "startMs": 6460,
+      "endMs": 6780,
+      "timestampMs": 6620,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " y",
+      "startMs": 6780,
+      "endMs": 7300,
+      "timestampMs": 7040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " algo",
+      "startMs": 7300,
+      "endMs": 7520,
+      "timestampMs": 7410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 7520,
+      "endMs": 7760,
+      "timestampMs": 7640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " acá",
+      "startMs": 7760,
+      "endMs": 7940,
+      "timestampMs": 7850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 7940,
+      "endMs": 8140,
+      "timestampMs": 8040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " entra:",
+      "startMs": 8140,
+      "endMs": 8460,
+      "timestampMs": 8300,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " videos",
+      "startMs": 8860,
+      "endMs": 9140,
+      "timestampMs": 9000,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " LARGOS,",
+      "startMs": 9140,
+      "endMs": 9860,
+      "timestampMs": 9500,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " con",
+      "startMs": 9940,
+      "endMs": 10080,
+      "timestampMs": 10010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 10080,
+      "endMs": 10200,
+      "timestampMs": 10140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " historia",
+      "startMs": 10200,
+      "endMs": 10500,
+      "timestampMs": 10350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " completa.",
+      "startMs": 10500,
+      "endMs": 11040,
+      "timestampMs": 10770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 11500,
+      "endMs": 11580,
+      "timestampMs": 11540,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 11580,
+      "endMs": 11680,
+      "timestampMs": 11630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " primero",
+      "startMs": 11680,
+      "endMs": 12020,
+      "timestampMs": 11850,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ya",
+      "startMs": 12020,
+      "endMs": 12300,
+      "timestampMs": 12160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está:",
+      "startMs": 12300,
+      "endMs": 12560,
+      "timestampMs": 12430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " por",
+      "startMs": 12980,
+      "endMs": 13060,
+      "timestampMs": 13020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " qué",
+      "startMs": 13060,
+      "endMs": 13240,
+      "timestampMs": 13150,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tu",
+      "startMs": 13240,
+      "endMs": 13380,
+      "timestampMs": 13310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " celular",
+      "startMs": 13380,
+      "endMs": 13740,
+      "timestampMs": 13560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 13740,
+      "endMs": 13907,
+      "timestampMs": 13823,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MIENTE",
+      "startMs": 13907,
+      "endMs": 14240,
+      "timestampMs": 14073,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cada",
+      "startMs": 14240,
+      "endMs": 14580,
+      "timestampMs": 14410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " vez",
+      "startMs": 14580,
+      "endMs": 14860,
+      "timestampMs": 14720,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 14860,
+      "endMs": 15000,
+      "timestampMs": 14930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sacás",
+      "startMs": 15000,
+      "endMs": 15360,
+      "timestampMs": 15180,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " una",
+      "startMs": 15360,
+      "endMs": 15500,
+      "timestampMs": 15430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " foto.",
+      "startMs": 15500,
+      "endMs": 15780,
+      "timestampMs": 15640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " ¿Dónde",
+      "startMs": 16220,
+      "endMs": 16420,
+      "timestampMs": 16320,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está?",
+      "startMs": 16420,
+      "endMs": 16640,
+      "timestampMs": 16530,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " El",
+      "startMs": 17020,
+      "endMs": 17260,
+      "timestampMs": 17140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " link",
+      "startMs": 17260,
+      "endMs": 17480,
+      "timestampMs": 17370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " está",
+      "startMs": 17480,
+      "endMs": 17780,
+      "timestampMs": 17630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 17780,
+      "endMs": 17900,
+      "timestampMs": 17840,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mi",
+      "startMs": 17900,
+      "endMs": 17980,
+      "timestampMs": 17940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " PERFIL.",
+      "startMs": 17980,
+      "endMs": 18380,
+      "timestampMs": 18180,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Tocá",
+      "startMs": 18620,
+      "endMs": 18900,
+      "timestampMs": 18760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " mi",
+      "startMs": 18900,
+      "endMs": 18980,
+      "timestampMs": 18940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " foto,",
+      "startMs": 18980,
+      "endMs": 19280,
+      "timestampMs": 19130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " entrá",
+      "startMs": 19560,
+      "endMs": 19800,
+      "timestampMs": 19680,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 19800,
+      "endMs": 19960,
+      "timestampMs": 19880,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " link",
+      "startMs": 19960,
+      "endMs": 20180,
+      "timestampMs": 20070,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 20180,
+      "endMs": 20420,
+      "timestampMs": 20300,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SUSCRIBITE.",
+      "startMs": 20420,
+      "endMs": 21020,
+      "timestampMs": 20720,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 21400,
+      "endMs": 21580,
+      "timestampMs": 21490,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " SEGUIME",
+      "startMs": 21580,
+      "endMs": 21960,
+      "timestampMs": 21770,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " acá:",
+      "startMs": 21960,
+      "endMs": 22180,
+      "timestampMs": 22070,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " mañana",
+      "startMs": 22480,
+      "endMs": 22860,
+      "timestampMs": 22670,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " juega",
+      "startMs": 22860,
+      "endMs": 23380,
+      "timestampMs": 23120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 23380,
+      "endMs": 23540,
+      "timestampMs": 23460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FC",
+      "startMs": 23540,
+      "endMs": 24067,
+      "timestampMs": 23803,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " NTLE.",
+      "startMs": 24067,
+      "endMs": 25120,
+      "timestampMs": 24593,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    }
+  ]
+}
