@@ -1,0 +1,163 @@
+{
+  "temporada": 1,
+  "fecha": 3,
+  "totalFechas": 18,
+  "hinchas": 1175,
+  "bonusHinchada": 12.3,
+  "bengalas": 0,
+  "bonusBengalas": 0,
+  "partidos": [
+    {
+      "local": "NUE",
+      "visitante": "JTS",
+      "gl": 6,
+      "gv": 2,
+      "semilla": "t1-f3-NUE-JTS"
+    },
+    {
+      "local": "GRA",
+      "visitante": "DBB",
+      "gl": 2,
+      "gv": 4,
+      "semilla": "t1-f3-GRA-DBB"
+    },
+    {
+      "local": "FMA",
+      "visitante": "RAN",
+      "gl": 2,
+      "gv": 3,
+      "semilla": "t1-f3-FMA-RAN"
+    },
+    {
+      "local": "UFO",
+      "visitante": "SNE",
+      "gl": 0,
+      "gv": 1,
+      "semilla": "t1-f3-UFO-SNE"
+    },
+    {
+      "local": "ESN",
+      "visitante": "DPI",
+      "gl": 3,
+      "gv": 1,
+      "semilla": "t1-f3-ESN-DPI"
+    }
+  ],
+  "tabla": [
+    {
+      "id": "DBB",
+      "pj": 3,
+      "g": 2,
+      "e": 1,
+      "p": 0,
+      "gf": 12,
+      "gc": 7,
+      "pts": 7,
+      "dg": 5
+    },
+    {
+      "id": "RAN",
+      "pj": 3,
+      "g": 2,
+      "e": 1,
+      "p": 0,
+      "gf": 8,
+      "gc": 5,
+      "pts": 7,
+      "dg": 3
+    },
+    {
+      "id": "SNE",
+      "pj": 3,
+      "g": 2,
+      "e": 1,
+      "p": 0,
+      "gf": 4,
+      "gc": 2,
+      "pts": 7,
+      "dg": 2
+    },
+    {
+      "id": "NUE",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "gf": 11,
+      "gc": 8,
+      "pts": 6,
+      "dg": 3
+    },
+    {
+      "id": "DPI",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "gf": 7,
+      "gc": 4,
+      "pts": 6,
+      "dg": 3
+    },
+    {
+      "id": "ESN",
+      "pj": 3,
+      "g": 1,
+      "e": 2,
+      "p": 0,
+      "gf": 5,
+      "gc": 3,
+      "pts": 5,
+      "dg": 2
+    },
+    {
+      "id": "JTS",
+      "pj": 3,
+      "g": 1,
+      "e": 1,
+      "p": 1,
+      "gf": 4,
+      "gc": 6,
+      "pts": 4,
+      "dg": -2
+    },
+    {
+      "id": "GRA",
+      "pj": 3,
+      "g": 0,
+      "e": 0,
+      "p": 3,
+      "gf": 3,
+      "gc": 8,
+      "pts": 0,
+      "dg": -5
+    },
+    {
+      "id": "FMA",
+      "pj": 3,
+      "g": 0,
+      "e": 0,
+      "p": 3,
+      "gf": 2,
+      "gc": 7,
+      "pts": 0,
+      "dg": -5
+    },
+    {
+      "id": "UFO",
+      "pj": 3,
+      "g": 0,
+      "e": 0,
+      "p": 3,
+      "gf": 1,
+      "gc": 7,
+      "pts": 0,
+      "dg": -6
+    }
+  ],
+  "proximo": {
+    "fecha": 4,
+    "local": "GRA",
+    "visitante": "NUE"
+  }
+}

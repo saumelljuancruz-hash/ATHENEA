@@ -11,6 +11,53 @@ export const equipo = (id: string) => EQUIPOS.find((e) => e.id === id) as Equipo
 
 /** Misma cuenta que scripts/liga.mjs: localía extra por la hinchada. */
 export const bonusHinchada = (hinchas: number) => 4 * Math.log10(hinchas + 1);
+/** Bengalas = compartidos de los videos; suman solo de local, como la hinchada. */
+export const bonusBengalas = (bengalas: number) => 3 * Math.log10(bengalas + 1);
+
+/** Chance de ganarle de local a un rival puntual, con hinchas y bengalas. */
+export const chanceLocalVs = (rival: string, hinchas: number, bengalas = 0) => {
+  const d = (equipo(NUESTRO).fuerza + 3 + bonusHinchada(hinchas) + bonusBengalas(bengalas) - equipo(rival).fuerza) / 25;
+  const lh = 1.35 * Math.exp(d);
+  const la = 1.05 * Math.exp(-d);
+  let gana = 0;
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < i; j++) {
+      gana += poisson(lh, i) * poisson(la, j);
+    }
+  }
+  return gana;
+};
+
+/** Una bengala encendida: palo, llama roja que titila, chispas y humo. */
+export const Bengala: React.FC<{ size: number; frame: number; seed?: number }> = ({ size, frame, seed = 0 }) => {
+  const f = frame + seed * 7;
+  const flick = 0.85 + 0.15 * Math.sin(f * 1.7) * Math.sin(f * 0.9 + 1);
+  return (
+    <svg width={size} height={size * 1.6} viewBox="-50 -110 100 160" style={{ overflow: "visible" }}>
+      <defs>
+        <radialGradient id={`bengala${seed}`} cx="0.5" cy="0.6" r="0.6">
+          <stop offset="0" stopColor="#fff3c4" />
+          <stop offset="0.35" stopColor="#ff8a3d" />
+          <stop offset="1" stopColor="#ff2d2d" stopOpacity={0} />
+        </radialGradient>
+      </defs>
+      {/* Humo */}
+      {[0, 1, 2].map((k) => {
+        const t = ((f * 0.02 + k / 3) % 1 + 1) % 1;
+        return <circle key={k} cx={Math.sin(t * 6 + k) * 14} cy={-40 - t * 70} r={12 + t * 22} fill="#c9a6a6" opacity={(1 - t) * 0.25} />;
+      })}
+      <circle cx={0} cy={-18} r={46 * flick} fill={`url(#bengala${seed})`} opacity={0.9} />
+      <path d={`M -9 -6 C -14 -26 -4 -38 0 ${-52 * flick} C 4 -38 14 -26 9 -6 Z`} fill="#ffe0a3" />
+      {new Array(6).fill(0).map((_, k) => {
+        const a = k * 1.05 + f * 0.31;
+        const r = 18 + ((f * 3 + k * 11) % 26);
+        return <circle key={k} cx={Math.cos(a) * r} cy={-16 + Math.sin(a) * r * 0.7} r={2.4} fill="#fff1b8" />;
+      })}
+      <rect x={-5} y={-8} width={10} height={58} rx={4} fill="#7a1f1f" />
+      <rect x={-5} y={-8} width={10} height={10} rx={3} fill="#ff4d3d" />
+    </svg>
+  );
+};
 
 const poisson = (l: number, k: number) => {
   let p = Math.exp(-l);
@@ -247,7 +294,7 @@ const BUTACAS_ESTADIO: [number, number][] = (() => {
   return out;
 })();
 
-const EstadioArriba: React.FC<{ hinchas: number; vos: number; width: number; color: string }> = ({ hinchas, vos, width, color }) => {
+const EstadioArriba: React.FC<{ hinchas: number; vos: number; width: number; color: string; bengalas?: number; frame?: number }> = ({ hinchas, vos, width, color, bengalas = 0, frame = 0 }) => {
   const orden = ORDEN[10000];
   const ocupados = new Set(orden.slice(0, Math.max(0, Math.min(10000, Math.floor(hinchas)))));
   const tuyo = orden[Math.min(9999, Math.floor(hinchas))];
@@ -267,6 +314,17 @@ const EstadioArriba: React.FC<{ hinchas: number; vos: number; width: number; col
       <rect x={360} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
       <rect x={680} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
       {BUTACAS_ESTADIO.map(([x, y], i) => (ocupados.has(i) ? <circle key={i} cx={x} cy={y} r={2.8} fill={color} /> : <circle key={i} cx={x} cy={y} r={2.2} fill="#2e3646" />))}
+      {new Array(Math.min(300, Math.floor(bengalas))).fill(0).map((_, k) => {
+        // Cada bengala se prende sobre un hincha ocupado, y titila.
+        const [x, y] = BUTACAS_ESTADIO[orden[(k * 37) % Math.max(1, Math.min(10000, Math.floor(hinchas)))]];
+        const fl = 0.75 + 0.25 * Math.sin(frame * 0.9 + k * 1.3);
+        return (
+          <g key={`b${k}`}>
+            <circle cx={x} cy={y} r={16 * fl} fill="#ff4d2d" opacity={0.35} />
+            <circle cx={x} cy={y} r={5} fill="#ffe0a3" />
+          </g>
+        );
+      })}
       {vos > 0 ? (
         <g opacity={vos}>
           <circle cx={BUTACAS_ESTADIO[tuyo][0]} cy={BUTACAS_ESTADIO[tuyo][1]} r={26 * vos} fill={C.yellow} opacity={0.4} />
@@ -307,9 +365,9 @@ const Hincha: React.FC<{ x: number; y: number; s: number; color: string; bob: nu
  * cancha de barrio (1.000, escalones de cemento), con alambrado y un pedazo de
  * cancha. `hinchas` lugares ocupados; `vos` ilumina el lugar siguiente.
  */
-export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string; capacidad?: 100 | 1000 | 10000 }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL, capacidad = 100 }) => {
+export const Potrero: React.FC<{ hinchas: number; vos?: number; frame: number; width?: number; color?: string; capacidad?: 100 | 1000 | 10000; bengalas?: number }> = ({ hinchas, vos = 0, frame, width = 1080, color = TEAL, capacidad = 100, bengalas = 0 }) => {
   if (capacidad === 10000) {
-    return <EstadioArriba hinchas={hinchas} vos={vos} width={width} color={color} />;
+    return <EstadioArriba hinchas={hinchas} vos={vos} width={width} color={color} bengalas={bengalas} frame={frame} />;
   }
   const t = TRIBUNA[capacidad];
   const orden = ORDEN[capacidad];

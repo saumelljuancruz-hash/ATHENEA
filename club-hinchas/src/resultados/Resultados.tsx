@@ -1,10 +1,11 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
-import { capacidadPara, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
+import { Bengala, capacidadPara, chanceLocalVs, Crest, equipo, NUESTRO, Potrero } from "../components/Futbol";
 import { TEAL } from "../components/Props";
 import { Background, fmt, Label, Panel, Watermark } from "../components/Ui";
 import liga from "../liga/equipos.json";
 import fecha from "../liga/fecha.json";
+import fixture from "../liga/fixture.json";
 import redes from "../liga/redes.json";
 import { C, DISPLAY, MONO } from "../theme";
 
@@ -18,7 +19,10 @@ const DIAPOSITIVAS: string[] = redes.diapositivas ?? ["partido", "eligieron", "r
 const TOTAL = DIAPOSITIVAS.length;
 const indice = (id: string) => Math.max(0, DIAPOSITIVAS.indexOf(id));
 const siguiente = (id: string) => DIAPOSITIVAS[DIAPOSITIVAS.indexOf(id) + 1];
-const NOMBRE_SLIDE: Record<string, string> = { partido: "PARTIDO", eligieron: "LO ELIGIERON", resultados: "RESULTADOS", tabla: "TABLA", cancha: "LA CANCHA" };
+const NOMBRE_SLIDE: Record<string, string> = { partido: "PARTIDO", eligieron: "LO ELIGIERON", resultados: "RESULTADOS", tabla: "TABLA", bengalas: "BENGALAS", cancha: "LA CANCHA" };
+/** El próximo partido de local del club: ahí cuentan las bengalas. */
+const PROXIMO_LOCAL = fixture.find((f) => f.fecha > fecha.fecha && f.partidos.some((p) => p.local === NUESTRO));
+const RIVAL_LOCAL = PROXIMO_LOCAL?.partidos.find((p) => p.local === NUESTRO)?.visitante;
 const flecha = (id: string) => (siguiente(id) ? `${NOMBRE_SLIDE[siguiente(id)]} →` : "");
 
 type Partido = (typeof fecha.partidos)[number];
@@ -106,6 +110,11 @@ export const SlidePartido: React.FC = () => {
           <Label size={24} color={DE_LOCAL ? C.yellow : C.dim}>
             {DE_LOCAL ? `LOCALÍA +${String(fecha.bonusHinchada).replace(".", ",")}` : "DE VISITANTE: SIN EXTRA"}
           </Label>
+          {DE_LOCAL && (fecha.bengalas ?? 0) > 0 ? (
+            <Label size={24} color="#ff8a3d">
+              + {fmt(fecha.bengalas)} BENGALAS (+{String(fecha.bonusBengalas).replace(".", ",")})
+            </Label>
+          ) : null}
         </Panel>
         <Panel glow={C.yellow} style={{ flex: 1.3, padding: "18px 22px", display: "flex", flexDirection: "column", gap: 10 }}>
           <Label size={26} color={C.dim}>
@@ -201,6 +210,57 @@ export const SlideResultados: React.FC = () => (
   </AbsoluteFill>
 );
 
+/** Las bengalas: cada compartido prende una en la tribuna para el próximo partido de local. */
+export const SlideBengalas: React.FC = () => {
+  const filas = [0, 10, 50, 100];
+  return (
+    <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
+      <Background tint="#3a120a" />
+      <Header title="NUEVO: BENGALAS" />
+      <div style={{ position: "absolute", left: 50, top: 290, display: "flex", gap: 0 }}>
+        {[0, 1, 2].map((k) => (
+          <div key={k} style={{ rotate: `${(k - 1) * 14}deg`, marginTop: k === 1 ? -24 : 0 }}>
+            <Bengala size={104} frame={k * 9} seed={k} />
+          </div>
+        ))}
+      </div>
+      <div style={{ position: "absolute", left: 380, right: 70, top: 320, fontFamily: DISPLAY, fontWeight: 800, fontSize: 38, color: C.white, lineHeight: 1.3 }}>
+        Cada vez que <span style={{ color: "#ff8a3d" }}>compartís un video</span>, se prende una bengala en la tribuna.
+      </div>
+      <div style={{ position: "absolute", left: 380, right: 70, top: 500, fontFamily: DISPLAY, fontWeight: 600, fontSize: 28, color: C.dim, lineHeight: 1.35 }}>
+        Suman fuerza solo de local y el rival entra con miedo. Cuentan los compartidos hasta el próximo partido en casa.
+      </div>
+      {RIVAL_LOCAL && PROXIMO_LOCAL ? (
+        <>
+          <div style={{ position: "absolute", left: 70, right: 70, top: 640, display: "flex", alignItems: "center", gap: 18 }}>
+            <Crest team={equipo(RIVAL_LOCAL)} size={64} />
+            <Label size={34} color={C.yellow}>
+              FECHA {PROXIMO_LOCAL.fecha} · DE LOCAL vs {equipo(RIVAL_LOCAL).corto}
+            </Label>
+          </div>
+          <div style={{ position: "absolute", left: 70, right: 70, top: 740, display: "flex", flexDirection: "column", gap: 16 }}>
+            {filas.map((b) => {
+              const v = chanceLocalVs(RIVAL_LOCAL, fecha.hinchas, b);
+              return (
+                <div key={b} style={{ display: "flex", alignItems: "center", gap: 20, padding: "14px 24px", borderRadius: 22, background: b === 0 ? "rgba(255,255,255,0.05)" : "rgba(255,138,61,0.1)", border: `2px solid ${b === 0 ? "rgba(255,255,255,0.14)" : "#ff8a3d66"}` }}>
+                  <div style={{ width: 260, fontFamily: DISPLAY, fontWeight: 800, fontSize: 32, color: b === 0 ? C.dim : "#ffb27a" }}>{b === 0 ? "SIN BENGALAS" : `${fmt(b)} BENGALAS`}</div>
+                  <div style={{ flex: 1, height: 22, borderRadius: 11, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>
+                    <div style={{ width: `${v * 100}%`, height: "100%", background: b === 0 ? "#8a93a4" : "linear-gradient(90deg, #ff4d2d, #ffb27a)" }} />
+                  </div>
+                  <div style={{ width: 120, textAlign: "right", fontFamily: MONO, fontWeight: 800, fontSize: 44, color: b === 0 ? C.white : "#ffb27a" }}>{Math.round(v * 100)}%</div>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ position: "absolute", left: 70, right: 70, top: 1150, fontFamily: DISPLAY, fontWeight: 600, fontSize: 26, color: C.dim }}>Chance de ganar con la hinchada de hoy ({fmt(fecha.hinchas)}). Cada bengala suma 3 × log10(bengalas + 1) de fuerza.</div>
+        </>
+      ) : null}
+      <Dots index={indice("bengalas")} />
+      <Footer text={flecha("bengalas")} />
+    </AbsoluteFill>
+  );
+};
+
 /** Slide 4: tabla de posiciones. */
 export const SlideTabla: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
@@ -242,13 +302,14 @@ export const SlideTabla: React.FC = () => (
 
 /** Cuántos hinchas hay y en qué cancha: slide 5 del carrusel (y sirve para la historia). */
 const CanchaHoy: React.FC<{ index?: number }> = ({ index }) => {
+  const bengalas = DE_LOCAL ? (fecha.bengalas ?? 0) : 0;
   const cap = capacidadPara(fecha.hinchas);
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
       <Background tint="#0d2a1a" />
       <Header title={redes.mudanza || "LA CANCHA HOY"} />
       <div style={{ position: "absolute", left: 90, top: 330 }}>
-        <Potrero hinchas={fecha.hinchas} frame={0} capacidad={cap} width={900} />
+        <Potrero hinchas={fecha.hinchas} frame={0} capacidad={cap} width={900} bengalas={bengalas} />
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 285, display: redes.mostrarRedes === false ? "none" : "flex", justifyContent: "center", gap: 16 }}>
         <Panel glow="#2f8cff" style={{ padding: "8px 20px" }}>
@@ -277,7 +338,9 @@ const CanchaHoy: React.FC<{ index?: number }> = ({ index }) => {
       </div>
       <div style={{ position: "absolute", left: 70, right: 70, top: 1130, display: "flex", justifyContent: "center" }}>
         <Panel glow={C.yellow} style={{ padding: "12px 24px" }}>
-          <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: C.yellow, lineHeight: 1.3, textAlign: "center" }}>Compartilo: cada seguidor nuevo es un hincha más en la tribuna.</div>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: C.yellow, lineHeight: 1.3, textAlign: "center" }}>
+            {DIAPOSITIVAS.includes("bengalas") && PROXIMO_LOCAL ? `Seguí para sumar hinchas y compartí para prender bengalas: cuentan en la fecha ${PROXIMO_LOCAL.fecha}.` : "Compartilo: cada seguidor nuevo es un hincha más en la tribuna."}
+          </div>
         </Panel>
       </div>
       {index !== undefined ? <Dots index={index} /> : null}

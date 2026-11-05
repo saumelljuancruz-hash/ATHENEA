@@ -3,12 +3,15 @@
 //   node scripts/liga.mjs fixture                 muestra las 18 fechas
 //   node scripts/liga.mjs jugar --hinchas 8       juega la próxima fecha
 //   node scripts/liga.mjs jugar --hinchas 8 --fecha 3 --forzar
+//   node scripts/liga.mjs jugar --hinchas 1175 --bengalas 40   (compartidos de los videos)
 //   node scripts/liga.mjs club --nombre "Club X" --corto "X" --sigla CLX --colores "#123456,#ffffff"
 //
 // Los resultados salen de un sorteo con semilla pública ("t1-f3-NUE-GRA"):
 // cualquiera puede repetir la cuenta y obtener lo mismo. Nadie los elige a mano.
-// La única ventaja del club de la serie es su hinchada: de local suma
-// 4 × log10(hinchas + 1) puntos de fuerza (8 hinchas ≈ +3,8; 1.000 ≈ +12).
+// La única ventaja del club de la serie es su gente, y solo de local:
+//   hinchada (seguidores): 4 × log10(hinchas + 1) puntos de fuerza (1.000 ≈ +12)
+//   bengalas (compartidos de los videos desde el último partido de local):
+//   3 × log10(bengalas + 1) puntos (10 ≈ +3,1; 100 ≈ +6; 1.000 ≈ +9).
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -100,11 +103,12 @@ const fixture = () => {
 
 const equipo = (id) => liga.equipos.find((e) => e.id === id);
 const bonusHinchada = (hinchas) => 4 * Math.log10(hinchas + 1);
+const bonusBengalas = (bengalas) => 3 * Math.log10(bengalas + 1);
 
-const jugarPartido = (fecha, local, visitante, hinchas) => {
+const jugarPartido = (fecha, local, visitante, hinchas, bengalas) => {
   const semilla = `t${liga.temporada}-f${fecha}-${local}-${visitante}`;
   const rand = rng(semilla);
-  const localia = 3 + (local === liga.nuestro ? bonusHinchada(hinchas) : 0);
+  const localia = 3 + (local === liga.nuestro ? bonusHinchada(hinchas) + bonusBengalas(bengalas) : 0);
   const d = (equipo(local).fuerza + localia - equipo(visitante).fuerza) / 25;
   return { local, visitante, gl: poisson(1.35 * Math.exp(d), rand), gv: poisson(1.05 * Math.exp(-d), rand), semilla };
 };
@@ -158,6 +162,10 @@ if (comando === "fixture") {
   if (!Number.isFinite(hinchas) || hinchas < 0) {
     throw new Error("Falta --hinchas <seguidores de hoy>");
   }
+  const bengalas = Number(opt("bengalas") ?? 0);
+  if (!Number.isFinite(bengalas) || bengalas < 0) {
+    throw new Error("--bengalas tiene que ser un número (compartidos)");
+  }
   const estado = leerEstado();
   const numero = Number(opt("fecha") ?? estado.fechas.length + 1);
   if (numero < 1 || numero > FIX.length) {
@@ -167,8 +175,8 @@ if (comando === "fixture") {
   if (ya && !args.includes("--forzar")) {
     throw new Error(`La fecha ${numero} ya se jugó (con ${ya.hinchas} hinchas). Usá --forzar para repetirla.`);
   }
-  const partidos = FIX[numero - 1].map(([l, v]) => jugarPartido(numero, l, v, hinchas));
-  estado.fechas = [...estado.fechas.filter((f) => f.fecha !== numero), { fecha: numero, hinchas, partidos }].sort((a, b) => a.fecha - b.fecha);
+  const partidos = FIX[numero - 1].map(([l, v]) => jugarPartido(numero, l, v, hinchas, bengalas));
+  estado.fechas = [...estado.fechas.filter((f) => f.fecha !== numero), { fecha: numero, hinchas, bengalas, partidos }].sort((a, b) => a.fecha - b.fecha);
   guardar(ESTADO, estado);
   const jugadas = estado.fechas.filter((f) => f.fecha <= numero);
   const proxima = FIX[numero]?.find((p) => p.includes(liga.nuestro));
@@ -178,11 +186,13 @@ if (comando === "fixture") {
     totalFechas: FIX.length,
     hinchas,
     bonusHinchada: Math.round(bonusHinchada(hinchas) * 10) / 10,
+    bengalas,
+    bonusBengalas: Math.round(bonusBengalas(bengalas) * 10) / 10,
     partidos,
     tabla: tabla(jugadas),
     proximo: proxima ? { fecha: numero + 1, local: proxima[0], visitante: proxima[1] } : null,
   });
-  console.log(`Fecha ${numero} · hinchas ${hinchas} (localía +${bonusHinchada(hinchas).toFixed(1)})`);
+  console.log(`Fecha ${numero} · hinchas ${hinchas} (+${bonusHinchada(hinchas).toFixed(1)}) · bengalas ${bengalas} (+${bonusBengalas(bengalas).toFixed(1)}) — solo cuentan de local`);
   for (const m of partidos) {
     console.log(`  ${equipo(m.local).nombre.padEnd(22)} ${m.gl} - ${m.gv}  ${equipo(m.visitante).nombre}`);
   }

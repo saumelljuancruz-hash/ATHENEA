@@ -128,3 +128,13 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
   - Fecha 2: Deportivo Big Bang 6-3 FC NTLE, de visitante. Fueron 9 goles, el partido con más goles de la fecha. El club bajó al 6.º puesto, con 3 puntos.
   - Fecha 3: de local contra Juventud Tsunami. Con 1.131 hinchas, la chance de ganar es 54 %.
   - El carrusel se hizo en 9:16 para el modo foto de TikTok (`TikTok-1-Partido` … `TikTok-4-Cancha`).
+- **Día 3 (5/11/2026), solo TikTok:**
+  - Hinchas: 1.175.
+  - Fecha 3: FC NTLE 6-2 Juventud Tsunami, de local. El club subió al 4.º puesto, con 6 puntos, a uno de los punteros.
+  - **Regla nueva, las bengalas:** cada compartido de los videos es una bengala.
+    - Suman fuerza solo de local: `3 × log10(bengalas + 1)`.
+    - Cuentan los compartidos de los videos publicados desde el último partido de local hasta el próximo.
+    - Las primeras van para la **fecha 5, de local contra Racing Agujero Negro**: los compartidos de los videos de las fechas 3 y 4.
+    - Antes de jugarla, el usuario pasa cuántos compartidos suman esos videos, y se juega con `node scripts/liga.mjs jugar --hinchas N --bengalas B`.
+  - Chance contra Agujero Negro con 1.175 hinchas: 44 % sin bengalas, 52 % con 10, 57 % con 50, 59 % con 100 y 67 % con 1.000.
+  - Fecha 4: de visitante contra Atlético Gravedad (ahí no suman ni la hinchada ni las bengalas).

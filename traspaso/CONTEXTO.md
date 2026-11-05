@@ -1,6 +1,6 @@
 # Contexto para seguir en un chat nuevo · @nadietelo.explico
 
-Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nuevo de Claude siga igual que el anterior. La conversación completa está en [chat-completo.md](chat-completo.md). Estado al **5/11/2026**.
+Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nuevo de Claude siga igual que el anterior. La conversación completa está en [chat-completo.md](chat-completo.md). Estado al **5/11/2026**, después de la fecha 3.
 
 ## 1 · La cuenta
 
@@ -11,7 +11,7 @@ Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nue
 - **Seguidores registrados:**
   - Instagram: 8 → 18.
   - TikTok: 894 → 995.
-  - Hinchas del club (suma o TikTok solo): 912 el 2/11, 1.013 el 3/11 y 1.131 el 4/11. El 1.131 lo pasó el usuario cuando ya publicaba solo en TikTok.
+  - Hinchas del club (suma o TikTok solo): 912 el 2/11, 1.013 el 3/11, 1.131 el 4/11 y 1.175 el 5/11. Desde el 4/11 el usuario pasa el número cuando ya publica solo en TikTok.
 
 ## 2 · Reglas de los reels de datos (pedido original del usuario)
 
@@ -88,7 +88,14 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
 - **Fechas jugadas:**
   - **Fecha 1** (1.013 hinchas): FC NTLE 2-0 Ferro Magnético, de local. El club quedó 3.º.
   - **Fecha 2** (1.131 hinchas): Big Bang 6-3 FC NTLE, de visitante. Bajó al 6.º puesto, con 3 puntos.
-- **Próxima, fecha 3:** de local contra Juventud Tsunami. Con 1.131 hinchas, la chance de ganar es 54 %.
+  - **Fecha 3** (1.175 hinchas): FC NTLE 6-2 Juventud Tsunami, de local. Subió al 4.º puesto, con 6 puntos.
+- **Bengalas** (regla nueva desde la fecha 3):
+  - Cada compartido de los videos es una bengala, y suma `3 × log10(bengalas + 1)` de fuerza **solo de local**.
+  - Cuentan los compartidos de los videos publicados desde el último partido de local hasta el próximo.
+  - Las primeras van para la **fecha 5, de local contra Agujero Negro**: los compartidos de los videos de las fechas 3 y 4. El usuario pasa ese número antes de jugarla.
+  - Se juega con `jugar --hinchas N --bengalas B`.
+  - En el estadio se ven como puntos rojos que titilan (componente `Bengala` y la prop `bengalas` de `Potrero`). El carrusel suma el slide `bengalas`.
+- **Próxima, fecha 4:** de visitante contra Atlético Gravedad (5,9 % de chance). Después, la fecha 5 de local contra Agujero Negro: 44 % sin bengalas y 57 % con 50, con 1.175 hinchas.
 - **Resto del fixture del club:**
   - F4: Gravedad (V)
   - F5: Agujero Negro (L)

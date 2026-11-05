@@ -1,0 +1,12 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "¡6 a 2! La REVANCHA llegó de local." }] },
+    { "id": "partido", "sentences": [{ "text": "Con 1.175 hinchas empujando, le metimos 6 goles a Juventud Tsunami." }] },
+    { "id": "tabla", "sentences": [{ "text": "Subimos al CUARTO puesto, a un punto de los de arriba." }] },
+    { "id": "bengalas", "sentences": [{ "text": "Y desde hoy hay algo nuevo: las BENGALAS." }, { "text": "Cada vez que compartís un video, se prende una bengala en la tribuna." }] },
+    { "id": "regla", "sentences": [{ "text": "Las bengalas suman fuerza en el próximo partido de LOCAL, y el rival entra con MIEDO." }] },
+    { "id": "numeros", "sentences": [{ "text": "Contra Agujero Negro, en la fecha 5, sin bengalas tenemos un 44% de ganar." }, { "text": "Con 50, un 57%." }] },
+    { "id": "manana", "sentences": [{ "text": "Pero antes, mañana, visitamos a Gravedad." }] },
+    { "id": "cta", "sentences": [{ "text": "COMPARTILO para prender la primera BENGALA." }, { "text": "Y SEGUÍ a @nadietelo.explico." }] }
+  ]
+}
