@@ -129,8 +129,8 @@ export const Banner: React.FC<{ zonas?: boolean }> = ({ zonas = false }) => (
       <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 132, lineHeight: 0.98, letterSpacing: -3, color: C.yellow, textShadow: `0 0 50px ${C.yellow}66, 0 8px 30px rgba(0,0,0,0.8)` }}>EXPLICÓ</div>
       <div style={{ fontFamily: DISPLAY, fontWeight: 600, fontSize: 40, color: "rgba(255,255,255,0.85)", marginTop: 16 }}>Cómo funcionan las cosas que usás todos los días</div>
       <div style={{ display: "flex", gap: 16, marginTop: 16 }}>
-        {["SHORTS", "VIDEOS LARGOS", "FC NTLE"].map((t, i) => (
-          <div key={t} style={{ fontFamily: MONO, fontWeight: 800, fontSize: 28, color: i === 2 ? C.yellow : TEAL, padding: "8px 18px", borderRadius: 30, border: `2px solid ${i === 2 ? C.yellow : TEAL}88`, background: "rgba(0,0,0,0.35)" }}>{t}</div>
+        {["SHORTS", "VIDEOS LARGOS"].map((t) => (
+          <div key={t} style={{ fontFamily: MONO, fontWeight: 800, fontSize: 28, color: TEAL, padding: "8px 18px", borderRadius: 30, border: `2px solid ${TEAL}88`, background: "rgba(0,0,0,0.35)" }}>{t}</div>
         ))}
       </div>
     </div>
