@@ -1,0 +1,12 @@
+{
+  "pieces": [
+    { "id": "gancho", "sentences": [{ "text": "Tu celular te MIENTE cada vez que sacás una foto." }] },
+    { "id": "intro", "sentences": [{ "text": "Te muestro cómo al FINAL." }, { "text": "Pero antes: bienvenido al canal de YOUTUBE de Nadie Te Lo Explicó." }] },
+    { "id": "cuerpo1", "sentences": [{ "text": "Acá vas a ver cómo funcionan las cosas que usás TODOS LOS DÍAS." }, { "text": "Por qué un RAYO tiene 300 millones de voltios." }, { "text": "Por qué en el ESPEJO ves una cara que nadie más ve." }, { "text": "Y cómo le robaron 6.300 millones a BINANCE en 20 minutos." }] },
+    { "id": "bucle1", "sentences": [{ "text": "Y no solo en un MINUTO." }] },
+    { "id": "cuerpo2", "sentences": [{ "text": "También van a venir videos LARGOS, con la historia completa." }] },
+    { "id": "bucle2", "sentences": [{ "text": "Ahora sí: la MENTIRA de tu cámara." }] },
+    { "id": "final", "sentences": [{ "text": "Ese CLIC es falso." }, { "text": "Tu celular no tiene una persiana que se cierre: el sonido es una GRABACIÓN." }, { "text": "Y en Japón, los celulares que se venden no te dejan APAGARLO." }] },
+    { "id": "cta", "sentences": [{ "text": "SUSCRIBITE a Nadie Te Lo Explicó y activá la CAMPANITA para no perderte ninguno." }] }
+  ]
+}

@@ -28,6 +28,11 @@ Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nue
 - **Formato de la respuesta, por pieza:** pieza y tiempo; voz en off; texto en pantalla, palabra por palabra y con la palabra clave en MAYÚSCULAS; visual descripto para IA (3D oscuro y limpio, luz cinematográfica, objetos en primer plano); y movimiento.
 - **Al final:** 3 ganchos alternativos, una descripción de 2 líneas como máximo con 5 hashtags y un chequeo de las 3 reglas.
 - **Datos verdaderos:** se investigan y se citan las fuentes en `GUION.md`.
+- **Suspenso, siempre** (pedido del usuario el 5/11, para que la gente se quede hasta el final):
+  - Abrir con una pregunta o promesa en el primer segundo y resolverla recién al final ("te muestro cómo al final").
+  - Mostrar una barra o contador de "la respuesta" que avanza durante el video.
+  - Adelantar sin resolver en el momento, y no revelar el dato principal hasta la última parte.
+  - Cambiar algo en pantalla cada 2 o 3 segundos.
 
 ## 3 · Estilo visual y de audio
 

@@ -7,4 +7,5 @@ Repositorio de reels, carruseles y la serie del club FC NTLE para Instagram, Tik
 - Contestá siempre en español rioplatense (voseo).
 - Los resultados de la liga salen solo de `club-hinchas/scripts/liga.mjs`: nunca se inventan ni se tocan a mano.
 - Los datos de los reels tienen que ser verdaderos y llevar las fuentes en el `GUION.md` de cada proyecto.
+- Todos los videos llevan suspenso: una pregunta en el primer segundo que se responde al final, una barra de "la respuesta" que avanza y adelantos sin resolver (ver CONTEXTO.md).
 - Pendiente principal: subir y programar los 4 Shorts de `youtube-canal/SUBIDAS.md` en YouTube Studio desde el Chrome del usuario. El usuario inicia sesión él mismo.

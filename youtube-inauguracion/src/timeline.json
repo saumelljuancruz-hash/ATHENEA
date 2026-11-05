@@ -1,0 +1,1524 @@
+{
+  "fps": 30,
+  "durationInFrames": 1361,
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        {
+          "text": "Tu celular te MIENTE cada vez que sacás una foto.",
+          "start": 0,
+          "end": 78
+        }
+      ],
+      "from": 0,
+      "durationInFrames": 91
+    },
+    {
+      "id": "intro",
+      "sentences": [
+        {
+          "text": "Te muestro cómo al FINAL.",
+          "start": 0,
+          "end": 37
+        },
+        {
+          "text": "Pero antes: bienvenido al canal de YOUTUBE de Nadie Te Lo Explicó.",
+          "start": 52,
+          "end": 154
+        }
+      ],
+      "from": 91,
+      "durationInFrames": 163
+    },
+    {
+      "id": "cuerpo1",
+      "sentences": [
+        {
+          "text": "Acá vas a ver cómo funcionan las cosas que usás TODOS LOS DÍAS.",
+          "start": 0,
+          "end": 93
+        },
+        {
+          "text": "Por qué un RAYO tiene 300 millones de voltios.",
+          "start": 106,
+          "end": 185
+        },
+        {
+          "text": "Por qué en el ESPEJO ves una cara que nadie más ve.",
+          "start": 195,
+          "end": 276
+        },
+        {
+          "text": "Y cómo le robaron 6.300 millones a BINANCE en 20 minutos.",
+          "start": 285,
+          "end": 405
+        }
+      ],
+      "from": 254,
+      "durationInFrames": 417
+    },
+    {
+      "id": "bucle1",
+      "sentences": [
+        {
+          "text": "Y no solo en un MINUTO.",
+          "start": 0,
+          "end": 38
+        }
+      ],
+      "from": 671,
+      "durationInFrames": 46
+    },
+    {
+      "id": "cuerpo2",
+      "sentences": [
+        {
+          "text": "También van a venir videos LARGOS, con la historia completa.",
+          "start": 0,
+          "end": 85
+        }
+      ],
+      "from": 717,
+      "durationInFrames": 98
+    },
+    {
+      "id": "bucle2",
+      "sentences": [
+        {
+          "text": "Ahora sí: la MENTIRA de tu cámara.",
+          "start": 0,
+          "end": 63
+        }
+      ],
+      "from": 815,
+      "durationInFrames": 63
+    },
+    {
+      "id": "final",
+      "sentences": [
+        {
+          "text": "Ese CLIC es falso.",
+          "start": 0,
+          "end": 54
+        },
+        {
+          "text": "Tu celular no tiene una persiana que se cierre: el sonido es una GRABACIÓN.",
+          "start": 64,
+          "end": 183
+        },
+        {
+          "text": "Y en Japón, los celulares que se venden no te dejan APAGARLO.",
+          "start": 194,
+          "end": 293
+        }
+      ],
+      "from": 878,
+      "durationInFrames": 304
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        {
+          "text": "SUSCRIBITE a Nadie Te Lo Explicó y activá la CAMPANITA para no perderte ninguno.",
+          "start": 0,
+          "end": 127
+        }
+      ],
+      "from": 1182,
+      "durationInFrames": 179
+    }
+  ],
+  "captions": [
+    {
+      "text": "Tu",
+      "startMs": 0,
+      "endMs": 140,
+      "timestampMs": 70,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " celular",
+      "startMs": 140,
+      "endMs": 500,
+      "timestampMs": 320,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 500,
+      "endMs": 700,
+      "timestampMs": 600,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MIENTE",
+      "startMs": 700,
+      "endMs": 980,
+      "timestampMs": 840,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cada",
+      "startMs": 980,
+      "endMs": 1380,
+      "timestampMs": 1180,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " vez",
+      "startMs": 1380,
+      "endMs": 1660,
+      "timestampMs": 1520,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 1660,
+      "endMs": 1800,
+      "timestampMs": 1730,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sacás",
+      "startMs": 1800,
+      "endMs": 2120,
+      "timestampMs": 1960,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " una",
+      "startMs": 2120,
+      "endMs": 2300,
+      "timestampMs": 2210,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " foto.",
+      "startMs": 2300,
+      "endMs": 2600,
+      "timestampMs": 2450,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Te",
+      "startMs": 3020,
+      "endMs": 3160,
+      "timestampMs": 3090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " muestro",
+      "startMs": 3160,
+      "endMs": 3500,
+      "timestampMs": 3330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cómo",
+      "startMs": 3500,
+      "endMs": 3880,
+      "timestampMs": 3690,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 3880,
+      "endMs": 4060,
+      "timestampMs": 3970,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " FINAL.",
+      "startMs": 4060,
+      "endMs": 4260,
+      "timestampMs": 4160,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Pero",
+      "startMs": 4760,
+      "endMs": 4860,
+      "timestampMs": 4810,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " antes:",
+      "startMs": 4860,
+      "endMs": 5180,
+      "timestampMs": 5020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " bienvenido",
+      "startMs": 5540,
+      "endMs": 6000,
+      "timestampMs": 5770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " al",
+      "startMs": 6000,
+      "endMs": 6140,
+      "timestampMs": 6070,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " canal",
+      "startMs": 6140,
+      "endMs": 6360,
+      "timestampMs": 6250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 6360,
+      "endMs": 6520,
+      "timestampMs": 6440,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " YOUTUBE",
+      "startMs": 6520,
+      "endMs": 6820,
+      "timestampMs": 6670,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 6820,
+      "endMs": 7120,
+      "timestampMs": 6970,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Nadie",
+      "startMs": 7120,
+      "endMs": 7400,
+      "timestampMs": 7260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Te",
+      "startMs": 7400,
+      "endMs": 7600,
+      "timestampMs": 7500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Lo",
+      "startMs": 7600,
+      "endMs": 7700,
+      "timestampMs": 7650,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Explicó.",
+      "startMs": 7700,
+      "endMs": 8180,
+      "timestampMs": 7940,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Acá",
+      "startMs": 8480,
+      "endMs": 8667,
+      "timestampMs": 8573,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " vas",
+      "startMs": 8667,
+      "endMs": 8760,
+      "timestampMs": 8713,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 8760,
+      "endMs": 8960,
+      "timestampMs": 8860,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ver",
+      "startMs": 8960,
+      "endMs": 9120,
+      "timestampMs": 9040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cómo",
+      "startMs": 9120,
+      "endMs": 9360,
+      "timestampMs": 9240,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " funcionan",
+      "startMs": 9360,
+      "endMs": 9840,
+      "timestampMs": 9600,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " las",
+      "startMs": 9840,
+      "endMs": 9980,
+      "timestampMs": 9910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cosas",
+      "startMs": 9980,
+      "endMs": 10220,
+      "timestampMs": 10100,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 10220,
+      "endMs": 10440,
+      "timestampMs": 10330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " usás",
+      "startMs": 10440,
+      "endMs": 10720,
+      "timestampMs": 10580,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " TODOS",
+      "startMs": 10720,
+      "endMs": 11020,
+      "timestampMs": 10870,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " LOS",
+      "startMs": 11020,
+      "endMs": 11340,
+      "timestampMs": 11180,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " DÍAS.",
+      "startMs": 11340,
+      "endMs": 11560,
+      "timestampMs": 11450,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Por",
+      "startMs": 12000,
+      "endMs": 12080,
+      "timestampMs": 12040,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " qué",
+      "startMs": 12080,
+      "endMs": 12240,
+      "timestampMs": 12160,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 12240,
+      "endMs": 12380,
+      "timestampMs": 12310,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " RAYO",
+      "startMs": 12380,
+      "endMs": 12680,
+      "timestampMs": 12530,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tiene",
+      "startMs": 12680,
+      "endMs": 12920,
+      "timestampMs": 12800,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 300",
+      "startMs": 12920,
+      "endMs": 13300,
+      "timestampMs": 13110,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " millones",
+      "startMs": 13300,
+      "endMs": 13960,
+      "timestampMs": 13630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 13960,
+      "endMs": 14280,
+      "timestampMs": 14120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " voltios.",
+      "startMs": 14280,
+      "endMs": 14640,
+      "timestampMs": 14460,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Por",
+      "startMs": 14980,
+      "endMs": 15140,
+      "timestampMs": 15060,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " qué",
+      "startMs": 15140,
+      "endMs": 15300,
+      "timestampMs": 15220,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 15300,
+      "endMs": 15400,
+      "timestampMs": 15350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " el",
+      "startMs": 15400,
+      "endMs": 15500,
+      "timestampMs": 15450,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ESPEJO",
+      "startMs": 15500,
+      "endMs": 15920,
+      "timestampMs": 15710,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ves",
+      "startMs": 15920,
+      "endMs": 16100,
+      "timestampMs": 16010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " una",
+      "startMs": 16100,
+      "endMs": 16300,
+      "timestampMs": 16200,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cara",
+      "startMs": 16300,
+      "endMs": 16540,
+      "timestampMs": 16420,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 16540,
+      "endMs": 16740,
+      "timestampMs": 16640,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " nadie",
+      "startMs": 16740,
+      "endMs": 17080,
+      "timestampMs": 16910,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " más",
+      "startMs": 17080,
+      "endMs": 17440,
+      "timestampMs": 17260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ve.",
+      "startMs": 17440,
+      "endMs": 17660,
+      "timestampMs": 17550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 17960,
+      "endMs": 18100,
+      "timestampMs": 18030,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cómo",
+      "startMs": 18100,
+      "endMs": 18300,
+      "timestampMs": 18200,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " le",
+      "startMs": 18300,
+      "endMs": 18440,
+      "timestampMs": 18370,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " robaron",
+      "startMs": 18440,
+      "endMs": 18800,
+      "timestampMs": 18620,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 6.300",
+      "startMs": 18800,
+      "endMs": 19580,
+      "timestampMs": 19190,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " millones",
+      "startMs": 19580,
+      "endMs": 20180,
+      "timestampMs": 19880,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 20180,
+      "endMs": 20520,
+      "timestampMs": 20350,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " BINANCE",
+      "startMs": 20520,
+      "endMs": 20880,
+      "timestampMs": 20700,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 20880,
+      "endMs": 21160,
+      "timestampMs": 21020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " 20",
+      "startMs": 21160,
+      "endMs": 21440,
+      "timestampMs": 21300,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " minutos.",
+      "startMs": 21440,
+      "endMs": 21960,
+      "timestampMs": 21700,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 22360,
+      "endMs": 22480,
+      "timestampMs": 22420,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 22480,
+      "endMs": 22660,
+      "timestampMs": 22570,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " solo",
+      "startMs": 22660,
+      "endMs": 22920,
+      "timestampMs": 22790,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 22920,
+      "endMs": 23120,
+      "timestampMs": 23020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " un",
+      "startMs": 23120,
+      "endMs": 23220,
+      "timestampMs": 23170,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MINUTO.",
+      "startMs": 23220,
+      "endMs": 23640,
+      "timestampMs": 23430,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " También",
+      "startMs": 23900,
+      "endMs": 24140,
+      "timestampMs": 24020,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " van",
+      "startMs": 24140,
+      "endMs": 24360,
+      "timestampMs": 24250,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 24360,
+      "endMs": 24460,
+      "timestampMs": 24410,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " venir",
+      "startMs": 24460,
+      "endMs": 24640,
+      "timestampMs": 24550,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " videos",
+      "startMs": 24640,
+      "endMs": 25020,
+      "timestampMs": 24830,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " LARGOS,",
+      "startMs": 25020,
+      "endMs": 25560,
+      "timestampMs": 25290,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " con",
+      "startMs": 25660,
+      "endMs": 25840,
+      "timestampMs": 25750,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 25840,
+      "endMs": 25940,
+      "timestampMs": 25890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " historia",
+      "startMs": 25940,
+      "endMs": 26240,
+      "timestampMs": 26090,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " completa.",
+      "startMs": 26240,
+      "endMs": 26720,
+      "timestampMs": 26480,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Ahora",
+      "startMs": 27180,
+      "endMs": 27460,
+      "timestampMs": 27320,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sí:",
+      "startMs": 27460,
+      "endMs": 27700,
+      "timestampMs": 27580,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " la",
+      "startMs": 28060,
+      "endMs": 28160,
+      "timestampMs": 28110,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " MENTIRA",
+      "startMs": 28160,
+      "endMs": 28620,
+      "timestampMs": 28390,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " de",
+      "startMs": 28620,
+      "endMs": 28800,
+      "timestampMs": 28710,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tu",
+      "startMs": 28800,
+      "endMs": 28940,
+      "timestampMs": 28870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cámara.",
+      "startMs": 28940,
+      "endMs": 29260,
+      "timestampMs": 29100,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Ese",
+      "startMs": 29260,
+      "endMs": 29900,
+      "timestampMs": 29580,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " CLIC",
+      "startMs": 29900,
+      "endMs": 30160,
+      "timestampMs": 30030,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " es",
+      "startMs": 30160,
+      "endMs": 30600,
+      "timestampMs": 30380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " falso.",
+      "startMs": 30600,
+      "endMs": 31080,
+      "timestampMs": 30840,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Tu",
+      "startMs": 31400,
+      "endMs": 31460,
+      "timestampMs": 31430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " celular",
+      "startMs": 31460,
+      "endMs": 31760,
+      "timestampMs": 31610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 31760,
+      "endMs": 32020,
+      "timestampMs": 31890,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " tiene",
+      "startMs": 32020,
+      "endMs": 32260,
+      "timestampMs": 32140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " una",
+      "startMs": 32260,
+      "endMs": 32420,
+      "timestampMs": 32340,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " persiana",
+      "startMs": 32420,
+      "endMs": 32840,
+      "timestampMs": 32630,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 32840,
+      "endMs": 33020,
+      "timestampMs": 32930,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " se",
+      "startMs": 33020,
+      "endMs": 33140,
+      "timestampMs": 33080,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " cierre:",
+      "startMs": 33140,
+      "endMs": 33580,
+      "timestampMs": 33360,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " el",
+      "startMs": 33800,
+      "endMs": 33920,
+      "timestampMs": 33860,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " sonido",
+      "startMs": 33920,
+      "endMs": 34360,
+      "timestampMs": 34140,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " es",
+      "startMs": 34360,
+      "endMs": 34640,
+      "timestampMs": 34500,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " una",
+      "startMs": 34640,
+      "endMs": 34800,
+      "timestampMs": 34720,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " GRABACIÓN.",
+      "startMs": 34800,
+      "endMs": 35360,
+      "timestampMs": 35080,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " Y",
+      "startMs": 35720,
+      "endMs": 35820,
+      "timestampMs": 35770,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " en",
+      "startMs": 35820,
+      "endMs": 35920,
+      "timestampMs": 35870,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Japón,",
+      "startMs": 35920,
+      "endMs": 36320,
+      "timestampMs": 36120,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " los",
+      "startMs": 36520,
+      "endMs": 36600,
+      "timestampMs": 36560,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " celulares",
+      "startMs": 36600,
+      "endMs": 36900,
+      "timestampMs": 36750,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " que",
+      "startMs": 36900,
+      "endMs": 37120,
+      "timestampMs": 37010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " se",
+      "startMs": 37120,
+      "endMs": 37260,
+      "timestampMs": 37190,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " venden",
+      "startMs": 37260,
+      "endMs": 37600,
+      "timestampMs": 37430,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 37600,
+      "endMs": 37920,
+      "timestampMs": 37760,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " te",
+      "startMs": 37920,
+      "endMs": 38100,
+      "timestampMs": 38010,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " dejan",
+      "startMs": 38100,
+      "endMs": 38420,
+      "timestampMs": 38260,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " APAGARLO.",
+      "startMs": 38420,
+      "endMs": 39020,
+      "timestampMs": 38720,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": true
+    },
+    {
+      "text": " SUSCRIBITE",
+      "startMs": 39400,
+      "endMs": 39920,
+      "timestampMs": 39660,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " a",
+      "startMs": 39920,
+      "endMs": 40020,
+      "timestampMs": 39970,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Nadie",
+      "startMs": 40020,
+      "endMs": 40240,
+      "timestampMs": 40130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Te",
+      "startMs": 40240,
+      "endMs": 40420,
+      "timestampMs": 40330,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Lo",
+      "startMs": 40420,
+      "endMs": 40520,
+      "timestampMs": 40470,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " Explicó",
+      "startMs": 40520,
+      "endMs": 41040,
+      "timestampMs": 40780,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " y",
+      "startMs": 41040,
+      "endMs": 41220,
+      "timestampMs": 41130,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " activá",
+      "startMs": 41220,
+      "endMs": 41580,
+      "timestampMs": 41400,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " la",
+      "startMs": 41580,
+      "endMs": 41640,
+      "timestampMs": 41610,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " CAMPANITA",
+      "startMs": 41640,
+      "endMs": 42180,
+      "timestampMs": 41910,
+      "confidence": null,
+      "keyword": true,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " para",
+      "startMs": 42180,
+      "endMs": 42400,
+      "timestampMs": 42290,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " no",
+      "startMs": 42400,
+      "endMs": 42620,
+      "timestampMs": 42510,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " perderte",
+      "startMs": 42620,
+      "endMs": 43140,
+      "timestampMs": 42880,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": false
+    },
+    {
+      "text": " ninguno.",
+      "startMs": 43140,
+      "endMs": 43620,
+      "timestampMs": 43380,
+      "confidence": null,
+      "keyword": false,
+      "handle": false,
+      "pageBreakAfter": true
+    }
+  ]
+}
