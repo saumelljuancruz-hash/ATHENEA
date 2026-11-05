@@ -47,9 +47,12 @@ SPOKEN = {
     "2": "dos",
     "1.175": "mil ciento setenta y cinco",
     "5": "cinco",
+    "0,05%": "cero coma cero cinco por ciento",
     "44%": "cuarenta y cuatro por ciento",
-    "50": "cincuenta",
-    "57%": "cincuenta y siete por ciento",
+    "500": "quinientas",
+    "69%": "sesenta y nueve por ciento",
+    "1.000": "mil",
+    "90%": "noventa por ciento",
     "@nadietelo.explico": "Nadie Te Lo Explico",
 }
 

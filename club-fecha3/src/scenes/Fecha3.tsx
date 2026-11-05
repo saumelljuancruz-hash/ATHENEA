@@ -286,6 +286,7 @@ export const G4Bengalas: React.FC = () => {
 
 export const G5Regla: React.FC = () => {
   const frame = useCurrentFrame();
+  const suma = wordAt("regla", "suma");
   const local = wordAt("regla", "local");
   const miedo = wordAt("regla", "miedo");
   const temblor = ramp(frame, miedo - 4, miedo + 4);
@@ -297,12 +298,21 @@ export const G5Regla: React.FC = () => {
         <div style={{ position: "absolute", left: 60, top: 300 }}>
           <Potrero hinchas={HOY} frame={frame} capacidad={10000} width={960} bengalas={Math.floor(ramp(frame, 0, local) * 120)} />
         </div>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 250, display: "flex", justifyContent: "center", opacity: ramp(frame, local - 4, local + 6), scale: String(mix(ramp(frame, local - 4, local + 10, pop), 1.6, 1)) }}>
-          <Panel glow={C.yellow} style={{ padding: "10px 26px" }}>
-            <Label size={44} color={C.yellow}>
-              SOLO CUENTAN DE LOCAL
-            </Label>
-          </Panel>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 250, display: "flex", justifyContent: "center", gap: 16 }}>
+          <div style={{ opacity: ramp(frame, suma - 4, suma + 6), scale: String(mix(ramp(frame, suma - 4, suma + 10, pop), 1.6, 1)) }}>
+            <Panel glow={NARANJA} style={{ padding: "10px 22px" }}>
+              <Label size={42} color="#ffb27a">
+                1 BENGALA = +0,05%
+              </Label>
+            </Panel>
+          </div>
+          <div style={{ opacity: ramp(frame, local - 4, local + 6), scale: String(mix(ramp(frame, local - 4, local + 10, pop), 1.6, 1)) }}>
+            <Panel glow={C.yellow} style={{ padding: "10px 22px" }}>
+              <Label size={42} color={C.yellow}>
+                SOLO DE LOCAL
+              </Label>
+            </Panel>
+          </div>
         </div>
         <div style={{ position: "absolute", left: 540 - 140, top: 560, opacity: ramp(frame, miedo - 10, miedo - 2), scale: String(mix(ramp(frame, miedo - 10, miedo + 2, pop), 0.4, 1) * (1 - temblor * 0.1)), translate: `${susto}px 0px` }}>
           <Crest team={equipo(RIVAL_LOCAL)} size={280} />
@@ -313,6 +323,7 @@ export const G5Regla: React.FC = () => {
           </Label>
         </div>
       </AbsoluteFill>
+      <Audio from={suma} src={staticFile("sfx/toque.wav")} volume={SFX.toque} />
       <Audio from={local} src={staticFile("sfx/toque.wav")} volume={SFX.toque} />
       <Audio from={miedo} src={staticFile("sfx/chispa.wav")} volume={SFX.chispa} />
     </AbsoluteFill>
@@ -324,14 +335,16 @@ export const G6Numeros: React.FC = () => {
   const [, con] = beats("numeros");
   const f5 = wordAt("numeros", "fecha");
   const sin = wordAt("numeros", "44%");
-  const cincuenta = wordAt("numeros", "57%");
+  const quinientas = wordAt("numeros", "69%");
+  const mil = wordAt("numeros", "90%");
   const filas = [
     { b: 0, at: sin, label: "SIN BENGALAS" },
-    { b: 50, at: cincuenta, label: "CON 50 BENGALAS" },
+    { b: 500, at: quinientas, label: "CON 500 BENGALAS" },
+    { b: 1000, at: mil, label: "CON 1.000 (TOPE)" },
   ];
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg }}>
-      <AbsoluteFill style={{ ...shake(frame, [cincuenta], 14) }}>
+      <AbsoluteFill style={{ ...shake(frame, [quinientas, mil], 14) }}>
         <Background tint="#2a0e08" />
         <div style={{ position: "absolute", left: 0, right: 0, top: 260, display: "flex", justifyContent: "center", alignItems: "center", gap: 20, opacity: ramp(frame, 0, 10) }}>
           <Crest team={equipo(RIVAL_LOCAL)} size={110} />
@@ -349,7 +362,7 @@ export const G6Numeros: React.FC = () => {
           const v = chanceLocalVs(RIVAL_LOCAL, HOY, r.b);
           const fill = ramp(frame, r.at - 4, r.at + 14, easeInOut);
           return (
-            <div key={r.b} style={{ position: "absolute", left: 80, right: 80, top: 470 + i * 300, opacity: show, translate: `${mix(show, -120, 0)}px 0px` }}>
+            <div key={r.b} style={{ position: "absolute", left: 80, right: 80, top: 430 + i * 230, opacity: show, translate: `${mix(show, -120, 0)}px 0px` }}>
               <Panel glow={r.b ? NARANJA : "#8a93a4"} style={{ padding: "22px 28px", display: "flex", alignItems: "center", gap: 24 }}>
                 <div style={{ width: 120, display: "flex", justifyContent: "center" }}>
                   {r.b ? <Bengala size={84} frame={frame} seed={i} /> : <Label size={60} color={C.dim}>–</Label>}
@@ -371,15 +384,16 @@ export const G6Numeros: React.FC = () => {
             </div>
           );
         })}
-        <div style={{ position: "absolute", left: 0, right: 0, top: 1110, display: "flex", justifyContent: "center", opacity: ramp(frame, con, con + 10) }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1150, display: "flex", justifyContent: "center", opacity: ramp(frame, con, con + 10) }}>
           <Label size={30} color={C.dim}>
             CHANCE DE GANAR · CON {fmt(HOY)} HINCHAS
           </Label>
         </div>
       </AbsoluteFill>
       <Audio from={sin} src={staticFile("sfx/toque.wav")} volume={SFX.toque} />
-      <Audio from={cincuenta} src={staticFile("sfx/chispa.wav")} volume={SFX.chispa} />
-      <Audio from={cincuenta + 10} src={staticFile("sfx/ding.wav")} volume={SFX.ding} />
+      <Audio from={quinientas} src={staticFile("sfx/chispa.wav")} volume={SFX.chispa} />
+      <Audio from={mil} src={staticFile("sfx/chispa.wav")} volume={SFX.chispa} />
+      <Audio from={mil + 10} src={staticFile("sfx/ding.wav")} volume={SFX.ding} />
     </AbsoluteFill>
   );
 };
@@ -425,6 +439,7 @@ export const G8Cta: React.FC = () => {
   const [, sigue] = beats("cta");
   const tap = wordAt("cta", "compartilo") + 6;
   const tapFollow = wordAt("cta", "seguí") + 6;
+  const hincha = wordAt("cta", "hincha");
   const card = ramp(frame, sigue - 6, sigue + 10, pop);
   const followed = frame >= tapFollow + 2;
   const vuelo = ramp(frame, tap + 6, tap + 30, easeInOut);
@@ -448,7 +463,7 @@ export const G8Cta: React.FC = () => {
           <div style={{ position: "absolute", left: 0, right: 0, top: 1180, display: "flex", justifyContent: "center", opacity: ramp(frame, tap + 24, tap + 34) }}>
             <Panel glow={NARANJA} style={{ padding: "8px 22px" }}>
               <Label size={38} color={NARANJA}>
-                PRENDÉ LA PRIMERA BENGALA
+                PRENDÉ BENGALAS
               </Label>
             </Panel>
           </div>
@@ -484,6 +499,13 @@ export const G8Cta: React.FC = () => {
             <Label size={50}>{followed ? "Siguiendo" : "Seguir"}</Label>
           </div>
         </div>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1150, display: "flex", justifyContent: "center", opacity: ramp(frame, hincha - 4, hincha + 6), scale: String(mix(ramp(frame, hincha - 4, hincha + 10, pop), 0.5, 1)) }}>
+          <Panel glow={TEAL} style={{ padding: "10px 26px" }}>
+            <Label size={44} color={TEAL}>
+              +1 HINCHA EN LA TRIBUNA
+            </Label>
+          </Panel>
+        </div>
         {frame >= sigue ? <Dedo frame={frame} at={tapFollow} x={600} y={990} leave={tapFollow + 30} /> : null}
       </AbsoluteFill>
       <Flash at={tap + 30} color={NARANJA} length={8} peak={0.3} />
@@ -493,6 +515,7 @@ export const G8Cta: React.FC = () => {
       <Audio from={sigue - 6} src={staticFile("sfx/whoosh.wav")} volume={SFX.whoosh} />
       <Audio from={tapFollow - 1} src={staticFile("sfx/toque.wav")} volume={SFX.toque} />
       <Audio from={tapFollow + 1} src={staticFile("sfx/ding.wav")} volume={SFX.ding} />
+      <Audio from={hincha} src={staticFile("sfx/ding.wav")} volume={SFX.ding} />
     </AbsoluteFill>
   );
 };

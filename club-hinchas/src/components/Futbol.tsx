@@ -11,21 +11,22 @@ export const equipo = (id: string) => EQUIPOS.find((e) => e.id === id) as Equipo
 
 /** Misma cuenta que scripts/liga.mjs: localía extra por la hinchada. */
 export const bonusHinchada = (hinchas: number) => 4 * Math.log10(hinchas + 1);
-/** Bengalas = compartidos de los videos; suman solo de local, como la hinchada. */
-export const bonusBengalas = (bengalas: number) => 3 * Math.log10(bengalas + 1);
+/** Bengalas = compartidos de los videos. Solo de local: +0,05 % de chance de ganar cada una, tope 90 %. */
+export const POR_BENGALA = 0.0005;
+export const TOPE_BENGALAS = 0.9;
 
-/** Chance de ganarle de local a un rival puntual, con hinchas y bengalas. */
+/** Chance de ganarle de local a un rival puntual, con hinchas y bengalas (misma cuenta que scripts/liga.mjs). */
 export const chanceLocalVs = (rival: string, hinchas: number, bengalas = 0) => {
-  const d = (equipo(NUESTRO).fuerza + 3 + bonusHinchada(hinchas) + bonusBengalas(bengalas) - equipo(rival).fuerza) / 25;
+  const d = (equipo(NUESTRO).fuerza + 3 + bonusHinchada(hinchas) - equipo(rival).fuerza) / 25;
   const lh = 1.35 * Math.exp(d);
   const la = 1.05 * Math.exp(-d);
-  let gana = 0;
-  for (let i = 0; i < 15; i++) {
+  let base = 0;
+  for (let i = 0; i < 20; i++) {
     for (let j = 0; j < i; j++) {
-      gana += poisson(lh, i) * poisson(la, j);
+      base += poisson(lh, i) * poisson(la, j);
     }
   }
-  return gana;
+  return bengalas > 0 ? Math.max(base, Math.min(TOPE_BENGALAS, base + POR_BENGALA * bengalas)) : base;
 };
 
 /** Una bengala encendida: palo, llama roja que titila, chispas y humo. */

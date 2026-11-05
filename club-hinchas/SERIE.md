@@ -132,9 +132,10 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
   - Hinchas: 1.175.
   - Fecha 3: FC NTLE 6-2 Juventud Tsunami, de local. El club subió al 4.º puesto, con 6 puntos, a uno de los punteros.
   - **Regla nueva, las bengalas:** cada compartido de los videos es una bengala.
-    - Suman fuerza solo de local: `3 × log10(bengalas + 1)`.
+    - Cada bengala suma **0,05 % de chance de ganar**, solo de local, con un **tope de 90 %**. El simulador ajusta la fuerza del partido para que la chance real sea exactamente esa.
     - Cuentan los compartidos de los videos publicados desde el último partido de local hasta el próximo.
     - Las primeras van para la **fecha 5, de local contra Racing Agujero Negro**: los compartidos de los videos de las fechas 3 y 4.
-    - Antes de jugarla, el usuario pasa cuántos compartidos suman esos videos, y se juega con `node scripts/liga.mjs jugar --hinchas N --bengalas B`.
-  - Chance contra Agujero Negro con 1.175 hinchas: 44 % sin bengalas, 52 % con 10, 57 % con 50, 59 % con 100 y 67 % con 1.000.
+    - Antes de jugarla, el usuario pasa el total, y se juega con `node scripts/liga.mjs jugar --hinchas N --bengalas B`.
+  - Chance contra Agujero Negro con 1.175 hinchas: 44 % sin bengalas, 49 % con 100, 69 % con 500 y 90 % (el tope) con 1.000.
+  - Los videos cierran pidiendo que sigan la cuenta: cada seguidor nuevo es un hincha más en la tribuna.
   - Fecha 4: de visitante contra Atlético Gravedad (ahí no suman ni la hinchada ni las bengalas).

@@ -11,7 +11,8 @@
 // La única ventaja del club de la serie es su gente, y solo de local:
 //   hinchada (seguidores): 4 × log10(hinchas + 1) puntos de fuerza (1.000 ≈ +12)
 //   bengalas (compartidos de los videos desde el último partido de local):
-//   3 × log10(bengalas + 1) puntos (10 ≈ +3,1; 100 ≈ +6; 1.000 ≈ +9).
+//   cada una suma 0,05 % de chance de ganar, con un tope de 90 %. El partido
+//   se juega con la fuerza que da exactamente esa chance.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -103,13 +104,53 @@ const fixture = () => {
 
 const equipo = (id) => liga.equipos.find((e) => e.id === id);
 const bonusHinchada = (hinchas) => 4 * Math.log10(hinchas + 1);
-const bonusBengalas = (bengalas) => 3 * Math.log10(bengalas + 1);
+const POR_BENGALA = 0.0005; // 0,05 % de chance de ganar por bengala
+const TOPE = 0.9; // con bengalas, la chance de ganar no pasa del 90 %
+
+const poissonP = (l, k) => {
+  let p = Math.exp(-l);
+  for (let i = 1; i <= k; i++) {
+    p *= l / i;
+  }
+  return p;
+};
+/** Probabilidad de que gane el local, según la diferencia de fuerza (en la escala d). */
+const pGanaLocal = (d) => {
+  const lh = 1.35 * Math.exp(d);
+  const la = 1.05 * Math.exp(-d);
+  let w = 0;
+  for (let i = 0; i < 45; i++) {
+    for (let j = 0; j < i; j++) {
+      w += poissonP(lh, i) * poissonP(la, j);
+    }
+  }
+  return w;
+};
+/** Cuánto hay que subir d para que la chance de ganar quede en `objetivo` (búsqueda binaria). */
+const subirHasta = (d0, objetivo) => {
+  // Hasta d + 2,5 alcanza para cualquier chance del tope (90 %) y los goles esperados siguen siendo razonables.
+  let lo = 0;
+  let hi = 2.5;
+  for (let k = 0; k < 60; k++) {
+    const mid = (lo + hi) / 2;
+    if (pGanaLocal(d0 + mid) < objetivo) {
+      lo = mid;
+    } else {
+      hi = mid;
+    }
+  }
+  return (lo + hi) / 2;
+};
+const chanceConBengalas = (base, bengalas) => (bengalas > 0 ? Math.max(base, Math.min(TOPE, base + POR_BENGALA * bengalas)) : base);
 
 const jugarPartido = (fecha, local, visitante, hinchas, bengalas) => {
   const semilla = `t${liga.temporada}-f${fecha}-${local}-${visitante}`;
   const rand = rng(semilla);
-  const localia = 3 + (local === liga.nuestro ? bonusHinchada(hinchas) + bonusBengalas(bengalas) : 0);
-  const d = (equipo(local).fuerza + localia - equipo(visitante).fuerza) / 25;
+  const localia = 3 + (local === liga.nuestro ? bonusHinchada(hinchas) : 0);
+  let d = (equipo(local).fuerza + localia - equipo(visitante).fuerza) / 25;
+  if (local === liga.nuestro && bengalas > 0) {
+    d += subirHasta(d, chanceConBengalas(pGanaLocal(d), bengalas));
+  }
   return { local, visitante, gl: poisson(1.35 * Math.exp(d), rand), gv: poisson(1.05 * Math.exp(-d), rand), semilla };
 };
 
@@ -187,12 +228,12 @@ if (comando === "fixture") {
     hinchas,
     bonusHinchada: Math.round(bonusHinchada(hinchas) * 10) / 10,
     bengalas,
-    bonusBengalas: Math.round(bonusBengalas(bengalas) * 10) / 10,
+    extraBengalas: Math.round(Math.min(POR_BENGALA * bengalas, TOPE) * 1000) / 10,
     partidos,
     tabla: tabla(jugadas),
     proximo: proxima ? { fecha: numero + 1, local: proxima[0], visitante: proxima[1] } : null,
   });
-  console.log(`Fecha ${numero} · hinchas ${hinchas} (+${bonusHinchada(hinchas).toFixed(1)}) · bengalas ${bengalas} (+${bonusBengalas(bengalas).toFixed(1)}) — solo cuentan de local`);
+  console.log(`Fecha ${numero} · hinchas ${hinchas} (+${bonusHinchada(hinchas).toFixed(1)} de fuerza) · bengalas ${bengalas} (+${(POR_BENGALA * bengalas * 100).toFixed(2)} % de chance, tope ${TOPE * 100} %) — solo cuentan de local`);
   for (const m of partidos) {
     console.log(`  ${equipo(m.local).nombre.padEnd(22)} ${m.gl} - ${m.gv}  ${equipo(m.visitante).nombre}`);
   }

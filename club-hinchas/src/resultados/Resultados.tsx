@@ -112,7 +112,7 @@ export const SlidePartido: React.FC = () => {
           </Label>
           {DE_LOCAL && (fecha.bengalas ?? 0) > 0 ? (
             <Label size={24} color="#ff8a3d">
-              + {fmt(fecha.bengalas)} BENGALAS (+{String(fecha.bonusBengalas).replace(".", ",")})
+              + {fmt(fecha.bengalas)} BENGALAS (+{String(fecha.extraBengalas).replace(".", ",")} % DE CHANCE)
             </Label>
           ) : null}
         </Panel>
@@ -212,7 +212,7 @@ export const SlideResultados: React.FC = () => (
 
 /** Las bengalas: cada compartido prende una en la tribuna para el próximo partido de local. */
 export const SlideBengalas: React.FC = () => {
-  const filas = [0, 10, 50, 100];
+  const filas = [0, 100, 500, 1000];
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg, width: W, height: H }}>
       <Background tint="#3a120a" />
@@ -228,7 +228,7 @@ export const SlideBengalas: React.FC = () => {
         Cada vez que <span style={{ color: "#ff8a3d" }}>compartís un video</span>, se prende una bengala en la tribuna.
       </div>
       <div style={{ position: "absolute", left: 380, right: 70, top: 500, fontFamily: DISPLAY, fontWeight: 600, fontSize: 28, color: C.dim, lineHeight: 1.35 }}>
-        Suman fuerza solo de local y el rival entra con miedo. Cuentan los compartidos hasta el próximo partido en casa.
+        Cada una suma <span style={{ color: "#ffb27a" }}>0,05 % de chance de ganar</span>, solo de local. Cuentan los compartidos hasta el próximo partido en casa.
       </div>
       {RIVAL_LOCAL && PROXIMO_LOCAL ? (
         <>
@@ -243,7 +243,7 @@ export const SlideBengalas: React.FC = () => {
               const v = chanceLocalVs(RIVAL_LOCAL, fecha.hinchas, b);
               return (
                 <div key={b} style={{ display: "flex", alignItems: "center", gap: 20, padding: "14px 24px", borderRadius: 22, background: b === 0 ? "rgba(255,255,255,0.05)" : "rgba(255,138,61,0.1)", border: `2px solid ${b === 0 ? "rgba(255,255,255,0.14)" : "#ff8a3d66"}` }}>
-                  <div style={{ width: 260, fontFamily: DISPLAY, fontWeight: 800, fontSize: 32, color: b === 0 ? C.dim : "#ffb27a" }}>{b === 0 ? "SIN BENGALAS" : `${fmt(b)} BENGALAS`}</div>
+                  <div style={{ width: 300, fontFamily: DISPLAY, fontWeight: 800, fontSize: 30, color: b === 0 ? C.dim : "#ffb27a", whiteSpace: "nowrap" }}>{b === 0 ? "SIN BENGALAS" : `${fmt(b)} BENGALAS`}</div>
                   <div style={{ flex: 1, height: 22, borderRadius: 11, background: "rgba(255,255,255,0.1)", overflow: "hidden" }}>
                     <div style={{ width: `${v * 100}%`, height: "100%", background: b === 0 ? "#8a93a4" : "linear-gradient(90deg, #ff4d2d, #ffb27a)" }} />
                   </div>
@@ -252,7 +252,7 @@ export const SlideBengalas: React.FC = () => {
               );
             })}
           </div>
-          <div style={{ position: "absolute", left: 70, right: 70, top: 1150, fontFamily: DISPLAY, fontWeight: 600, fontSize: 26, color: C.dim }}>Chance de ganar con la hinchada de hoy ({fmt(fecha.hinchas)}). Cada bengala suma 3 × log10(bengalas + 1) de fuerza.</div>
+          <div style={{ position: "absolute", left: 70, right: 70, top: 1170, fontFamily: DISPLAY, fontWeight: 600, fontSize: 26, color: C.dim }}>Chance de ganar con la hinchada de hoy ({fmt(fecha.hinchas)}). Cada bengala suma 0,05 %; con bengalas, el tope es 90 %.</div>
         </>
       ) : null}
       <Dots index={indice("bengalas")} />

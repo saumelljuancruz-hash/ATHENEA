@@ -90,12 +90,13 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - **Fecha 2** (1.131 hinchas): Big Bang 6-3 FC NTLE, de visitante. Bajó al 6.º puesto, con 3 puntos.
   - **Fecha 3** (1.175 hinchas): FC NTLE 6-2 Juventud Tsunami, de local. Subió al 4.º puesto, con 6 puntos.
 - **Bengalas** (regla nueva desde la fecha 3):
-  - Cada compartido de los videos es una bengala, y suma `3 × log10(bengalas + 1)` de fuerza **solo de local**.
+  - Cada compartido de los videos es una bengala, y suma **0,05 % de chance de ganar, solo de local, con un tope de 90 %**. El simulador ajusta la fuerza para que la chance real dé exactamente eso.
   - Cuentan los compartidos de los videos publicados desde el último partido de local hasta el próximo.
   - Las primeras van para la **fecha 5, de local contra Agujero Negro**: los compartidos de los videos de las fechas 3 y 4. El usuario pasa ese número antes de jugarla.
-  - Se juega con `jugar --hinchas N --bengalas B`.
+  - Se juega con `jugar --hinchas N --bengalas B`. En el código: `POR_BENGALA` y `TOPE` en `scripts/liga.mjs`, y `chanceLocalVs()` en `Futbol.tsx`.
   - En el estadio se ven como puntos rojos que titilan (componente `Bengala` y la prop `bengalas` de `Potrero`). El carrusel suma el slide `bengalas`.
-- **Próxima, fecha 4:** de visitante contra Atlético Gravedad (5,9 % de chance). Después, la fecha 5 de local contra Agujero Negro: 44 % sin bengalas y 57 % con 50, con 1.175 hinchas.
+- **Cierre de los videos:** compartí para prender bengalas, y seguí la cuenta porque cada seguidor nuevo es un hincha más en la tribuna.
+- **Próxima, fecha 4:** de visitante contra Atlético Gravedad (5,9 % de chance). Después, la fecha 5 de local contra Agujero Negro: con 1.175 hinchas, 44 % sin bengalas, 49 % con 100, 69 % con 500 y 90 % con 1.000.
 - **Resto del fixture del club:**
   - F4: Gravedad (V)
   - F5: Agujero Negro (L)
