@@ -1,0 +1,34 @@
+{
+  "zonaHoraria": "America/Argentina/Buenos_Aires",
+  "nota": "Cada video se sube como Short (vertical, menos de 60 s) y se programa en YouTube Studio: Visibilidad → Programar.",
+  "videos": [
+    {
+      "archivo": "binance-hackeo/entrega/binance-hackeo.mp4",
+      "publicar": "2026-11-05T12:30:00-03:00",
+      "titulo": "Le robaron 6.300 millones de dólares a Binance en 20 minutos",
+      "descripcion": "El mayor robo cripto de la historia: cómo entraron, por qué apuntan a Corea del Norte y qué pasa con la plata de los usuarios. Datos al 31/10/2026 (TRM Labs, Chainalysis, CNBC).\nSuscribite a Nadie Te Lo Explicó para más datos así.",
+      "hashtags": ["#binance", "#cripto", "#bitcoin", "#hackeo", "#datoscuriosos"]
+    },
+    {
+      "archivo": "espejo-vs-camara/entrega/espejo-vs-camara.mp4",
+      "publicar": "2026-11-05T19:30:00-03:00",
+      "titulo": "Por qué te ves distinto en el espejo que en las selfies",
+      "descripcion": "No es tu cara: es tu cerebro y el gran angular de la cámara frontal. A 30 cm, la nariz se ve hasta un 30 % más ancha. El truco para tu próxima selfie está al final.\nSuscribite a Nadie Te Lo Explicó para más datos así.",
+      "hashtags": ["#selfie", "#espejo", "#ciencia", "#datoscuriosos", "#sabiasque"]
+    },
+    {
+      "archivo": "tormentas-electricas/entrega/tormentas-electricas.mp4",
+      "publicar": "2026-11-06T12:30:00-03:00",
+      "titulo": "Un rayo tiene 300 millones de voltios: así se forma",
+      "descripcion": "Tu dedo y un rayo hacen lo mismo: mover electricidad. La diferencia es que uno tiene 5 voltios y el otro, 300 millones. Al final, la regla del ÷3 para saber a cuántos kilómetros cayó.\nSuscribite a Nadie Te Lo Explicó para más datos así.",
+      "hashtags": ["#tormentas", "#rayos", "#ciencia", "#datoscuriosos", "#sabiasque"]
+    },
+    {
+      "archivo": "el-nino-argentina/entrega/el-nino-argentina.mp4",
+      "publicar": "2026-11-06T19:30:00-03:00",
+      "titulo": "El Niño ya está acá: qué le hace al clima de Argentina",
+      "descripcion": "El Pacífico está 2,1 °C más caliente de lo normal (NOAA, octubre de 2026). Cuando los vientos se frenan, el agua caliente vuelve hacia Sudamérica y en el Litoral y la Pampa llueve más.\nSuscribite a Nadie Te Lo Explicó para más datos así.",
+      "hashtags": ["#elniño", "#clima", "#argentina", "#lluvias", "#ciencia"]
+    }
+  ]
+}
