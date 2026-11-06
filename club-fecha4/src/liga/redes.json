@@ -1,0 +1,34 @@
+{
+  "instagram": 0,
+  "tiktok": 1307,
+  "mudanza": "",
+  "eligieron": {
+    "nombre": {
+      "autor": "J.P",
+      "likes": 69,
+      "imagen": "club/comentario-nombre.jpg",
+      "ancho": 1170,
+      "alto": 225
+    },
+    "escudo": {
+      "autor": "Rami",
+      "likes": 28,
+      "imagen": "club/comentario-escudo.jpg",
+      "ancho": 1170,
+      "alto": 706
+    }
+  },
+  "mostrarRedes": false,
+  "diapositivas": [
+    "partido",
+    "resultados",
+    "tabla",
+    "bengalas",
+    "cancha"
+  ],
+  "bengalas": {
+    "fecha": 5,
+    "acumuladas": 421,
+    "detalle": "421 compartidos del video de la fecha 3"
+  }
+}

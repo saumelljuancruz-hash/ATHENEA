@@ -139,3 +139,8 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
   - Chance contra Agujero Negro con 1.175 hinchas: 44 % sin bengalas, 49 % con 100, 69 % con 500 y 90 % (el tope) con 1.000.
   - Los videos cierran pidiendo que sigan la cuenta: cada seguidor nuevo es un hincha más en la tribuna.
   - Fecha 4: de visitante contra Atlético Gravedad (ahí no suman ni la hinchada ni las bengalas).
+- **Día 4 (6/11/2026), solo TikTok:**
+  - Hinchas: 1.307 (+132). El video de la fecha 3 tuvo **421 compartidos: 421 bengalas** para la fecha 5.
+  - Fecha 4: Atlético Gravedad 3-0 FC NTLE, de visitante. Antes del partido la chance de ganar era 6 % (13 % de empate, 81 % de perder). El club bajó al 7.º puesto, con 6 puntos, a 4 del puntero.
+  - Fecha 5: de local contra Racing Agujero Negro (3.º). Con 1.307 hinchas: 45 % sin bengalas y **66 % con las 421**. El tope de 90 % llega con 905 bengalas: faltan 484, que pueden salir de los compartidos del video de la fecha 4.
+  - El video suma la barra de suspenso "LA RESPUESTA" (pregunta: "¿le podemos ganar al tercero?").

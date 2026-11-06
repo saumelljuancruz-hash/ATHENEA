@@ -1,6 +1,6 @@
 # Contexto para seguir en un chat nuevo · @nadietelo.explico
 
-Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nuevo de Claude siga igual que el anterior. La conversación completa está en [chat-completo.md](chat-completo.md). Estado al **5/11/2026**, después de la fecha 3.
+Este archivo resume todo lo que se hizo y cómo se trabaja, para que un chat nuevo de Claude siga igual que el anterior. La conversación completa está en [chat-completo.md](chat-completo.md). Estado al **6/11/2026**, después de la fecha 4.
 
 ## 1 · La cuenta
 
@@ -94,6 +94,7 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - **Fecha 1** (1.013 hinchas): FC NTLE 2-0 Ferro Magnético, de local. El club quedó 3.º.
   - **Fecha 2** (1.131 hinchas): Big Bang 6-3 FC NTLE, de visitante. Bajó al 6.º puesto, con 3 puntos.
   - **Fecha 3** (1.175 hinchas): FC NTLE 6-2 Juventud Tsunami, de local. Subió al 4.º puesto, con 6 puntos.
+  - **Fecha 4** (1.307 hinchas): Gravedad 3-0 FC NTLE, de visitante (tenía 6 % de chance). Bajó al 7.º puesto, con 6 puntos, a 4 del puntero (Big Bang, 10).
 - **Bengalas** (regla nueva desde la fecha 3):
   - Cada compartido de los videos es una bengala, y suma **0,05 % de chance de ganar, solo de local, con un tope de 90 %**. El simulador ajusta la fuerza para que la chance real dé exactamente eso.
   - Cuentan los compartidos de los videos publicados desde el último partido de local hasta el próximo.
@@ -101,7 +102,11 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - Se juega con `jugar --hinchas N --bengalas B`. En el código: `POR_BENGALA` y `TOPE` en `scripts/liga.mjs`, y `chanceLocalVs()` en `Futbol.tsx`.
   - En el estadio se ven como puntos rojos que titilan (componente `Bengala` y la prop `bengalas` de `Potrero`). El carrusel suma el slide `bengalas`.
 - **Cierre de los videos:** compartí para prender bengalas, y seguí la cuenta porque cada seguidor nuevo es un hincha más en la tribuna.
-- **Próxima, fecha 4:** de visitante contra Atlético Gravedad (5,9 % de chance). Después, la fecha 5 de local contra Agujero Negro: con 1.175 hinchas, 44 % sin bengalas, 49 % con 100, 69 % con 500 y 90 % con 1.000.
+- **Próxima, fecha 5:** de local contra Agujero Negro (3.º). El video de la fecha 3 tuvo **421 compartidos = 421 bengalas** (guardadas en `redes.json` → `bengalas.acumuladas`). Con 1.307 hinchas: 45 % sin bengalas, **66 % con las 421**, y el tope de 90 % llega con 905 (faltan 484).
+  - Antes de jugarla, el usuario pasa los seguidores y los compartidos del video de la fecha 4. Se juega con `jugar --hinchas N --bengalas (421 + compartidos nuevos)`.
+  - Las funciones `chanceVisitanteVs()` y `bengalasParaTope()` de `Futbol.tsx` dan la chance de visitante y cuántas bengalas faltan para el tope.
+- **Suspenso en los videos del club** (desde la fecha 4): pregunta en el primer segundo ("¿le podemos ganar al tercero?"), barra de "LA RESPUESTA" arriba que se llena hasta el número final y un adelanto sin resolver ("¿llegamos antes del partido?").
+- **ElevenLabs:** el 6/11 quedaron ~337 créditos; una toma de 55 s cuesta 920. Hay que recargar antes del próximo video con voz.
 - **Resto del fixture del club:**
   - F4: Gravedad (V)
   - F5: Agujero Negro (L)

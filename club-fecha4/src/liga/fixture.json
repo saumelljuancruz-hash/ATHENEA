@@ -1,0 +1,452 @@
+[
+  {
+    "fecha": 1,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "FMA"
+      },
+      {
+        "local": "DBB",
+        "visitante": "SNE"
+      },
+      {
+        "local": "ESN",
+        "visitante": "JTS"
+      },
+      {
+        "local": "DPI",
+        "visitante": "GRA"
+      },
+      {
+        "local": "UFO",
+        "visitante": "RAN"
+      }
+    ]
+  },
+  {
+    "fecha": 2,
+    "partidos": [
+      {
+        "local": "DBB",
+        "visitante": "NUE"
+      },
+      {
+        "local": "JTS",
+        "visitante": "FMA"
+      },
+      {
+        "local": "SNE",
+        "visitante": "GRA"
+      },
+      {
+        "local": "RAN",
+        "visitante": "ESN"
+      },
+      {
+        "local": "DPI",
+        "visitante": "UFO"
+      }
+    ]
+  },
+  {
+    "fecha": 3,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "JTS"
+      },
+      {
+        "local": "GRA",
+        "visitante": "DBB"
+      },
+      {
+        "local": "FMA",
+        "visitante": "RAN"
+      },
+      {
+        "local": "UFO",
+        "visitante": "SNE"
+      },
+      {
+        "local": "ESN",
+        "visitante": "DPI"
+      }
+    ]
+  },
+  {
+    "fecha": 4,
+    "partidos": [
+      {
+        "local": "GRA",
+        "visitante": "NUE"
+      },
+      {
+        "local": "JTS",
+        "visitante": "RAN"
+      },
+      {
+        "local": "DBB",
+        "visitante": "UFO"
+      },
+      {
+        "local": "FMA",
+        "visitante": "DPI"
+      },
+      {
+        "local": "SNE",
+        "visitante": "ESN"
+      }
+    ]
+  },
+  {
+    "fecha": 5,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "RAN"
+      },
+      {
+        "local": "UFO",
+        "visitante": "GRA"
+      },
+      {
+        "local": "DPI",
+        "visitante": "JTS"
+      },
+      {
+        "local": "ESN",
+        "visitante": "DBB"
+      },
+      {
+        "local": "SNE",
+        "visitante": "FMA"
+      }
+    ]
+  },
+  {
+    "fecha": 6,
+    "partidos": [
+      {
+        "local": "UFO",
+        "visitante": "NUE"
+      },
+      {
+        "local": "RAN",
+        "visitante": "DPI"
+      },
+      {
+        "local": "GRA",
+        "visitante": "ESN"
+      },
+      {
+        "local": "JTS",
+        "visitante": "SNE"
+      },
+      {
+        "local": "FMA",
+        "visitante": "DBB"
+      }
+    ]
+  },
+  {
+    "fecha": 7,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "DPI"
+      },
+      {
+        "local": "ESN",
+        "visitante": "UFO"
+      },
+      {
+        "local": "RAN",
+        "visitante": "SNE"
+      },
+      {
+        "local": "FMA",
+        "visitante": "GRA"
+      },
+      {
+        "local": "DBB",
+        "visitante": "JTS"
+      }
+    ]
+  },
+  {
+    "fecha": 8,
+    "partidos": [
+      {
+        "local": "ESN",
+        "visitante": "NUE"
+      },
+      {
+        "local": "SNE",
+        "visitante": "DPI"
+      },
+      {
+        "local": "UFO",
+        "visitante": "FMA"
+      },
+      {
+        "local": "RAN",
+        "visitante": "DBB"
+      },
+      {
+        "local": "GRA",
+        "visitante": "JTS"
+      }
+    ]
+  },
+  {
+    "fecha": 9,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "SNE"
+      },
+      {
+        "local": "FMA",
+        "visitante": "ESN"
+      },
+      {
+        "local": "DPI",
+        "visitante": "DBB"
+      },
+      {
+        "local": "JTS",
+        "visitante": "UFO"
+      },
+      {
+        "local": "RAN",
+        "visitante": "GRA"
+      }
+    ]
+  },
+  {
+    "fecha": 10,
+    "partidos": [
+      {
+        "local": "FMA",
+        "visitante": "NUE"
+      },
+      {
+        "local": "SNE",
+        "visitante": "DBB"
+      },
+      {
+        "local": "JTS",
+        "visitante": "ESN"
+      },
+      {
+        "local": "GRA",
+        "visitante": "DPI"
+      },
+      {
+        "local": "RAN",
+        "visitante": "UFO"
+      }
+    ]
+  },
+  {
+    "fecha": 11,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "DBB"
+      },
+      {
+        "local": "FMA",
+        "visitante": "JTS"
+      },
+      {
+        "local": "GRA",
+        "visitante": "SNE"
+      },
+      {
+        "local": "ESN",
+        "visitante": "RAN"
+      },
+      {
+        "local": "UFO",
+        "visitante": "DPI"
+      }
+    ]
+  },
+  {
+    "fecha": 12,
+    "partidos": [
+      {
+        "local": "JTS",
+        "visitante": "NUE"
+      },
+      {
+        "local": "DBB",
+        "visitante": "GRA"
+      },
+      {
+        "local": "RAN",
+        "visitante": "FMA"
+      },
+      {
+        "local": "SNE",
+        "visitante": "UFO"
+      },
+      {
+        "local": "DPI",
+        "visitante": "ESN"
+      }
+    ]
+  },
+  {
+    "fecha": 13,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "GRA"
+      },
+      {
+        "local": "RAN",
+        "visitante": "JTS"
+      },
+      {
+        "local": "UFO",
+        "visitante": "DBB"
+      },
+      {
+        "local": "DPI",
+        "visitante": "FMA"
+      },
+      {
+        "local": "ESN",
+        "visitante": "SNE"
+      }
+    ]
+  },
+  {
+    "fecha": 14,
+    "partidos": [
+      {
+        "local": "RAN",
+        "visitante": "NUE"
+      },
+      {
+        "local": "GRA",
+        "visitante": "UFO"
+      },
+      {
+        "local": "JTS",
+        "visitante": "DPI"
+      },
+      {
+        "local": "DBB",
+        "visitante": "ESN"
+      },
+      {
+        "local": "FMA",
+        "visitante": "SNE"
+      }
+    ]
+  },
+  {
+    "fecha": 15,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "UFO"
+      },
+      {
+        "local": "DPI",
+        "visitante": "RAN"
+      },
+      {
+        "local": "ESN",
+        "visitante": "GRA"
+      },
+      {
+        "local": "SNE",
+        "visitante": "JTS"
+      },
+      {
+        "local": "DBB",
+        "visitante": "FMA"
+      }
+    ]
+  },
+  {
+    "fecha": 16,
+    "partidos": [
+      {
+        "local": "DPI",
+        "visitante": "NUE"
+      },
+      {
+        "local": "UFO",
+        "visitante": "ESN"
+      },
+      {
+        "local": "SNE",
+        "visitante": "RAN"
+      },
+      {
+        "local": "GRA",
+        "visitante": "FMA"
+      },
+      {
+        "local": "JTS",
+        "visitante": "DBB"
+      }
+    ]
+  },
+  {
+    "fecha": 17,
+    "partidos": [
+      {
+        "local": "NUE",
+        "visitante": "ESN"
+      },
+      {
+        "local": "DPI",
+        "visitante": "SNE"
+      },
+      {
+        "local": "FMA",
+        "visitante": "UFO"
+      },
+      {
+        "local": "DBB",
+        "visitante": "RAN"
+      },
+      {
+        "local": "JTS",
+        "visitante": "GRA"
+      }
+    ]
+  },
+  {
+    "fecha": 18,
+    "partidos": [
+      {
+        "local": "SNE",
+        "visitante": "NUE"
+      },
+      {
+        "local": "ESN",
+        "visitante": "FMA"
+      },
+      {
+        "local": "DBB",
+        "visitante": "DPI"
+      },
+      {
+        "local": "UFO",
+        "visitante": "JTS"
+      },
+      {
+        "local": "GRA",
+        "visitante": "RAN"
+      }
+    ]
+  }
+]

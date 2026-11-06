@@ -123,6 +123,48 @@
           "semilla": "t1-f3-ESN-DPI"
         }
       ]
+    },
+    {
+      "fecha": 4,
+      "hinchas": 1307,
+      "bengalas": 0,
+      "partidos": [
+        {
+          "local": "GRA",
+          "visitante": "NUE",
+          "gl": 3,
+          "gv": 0,
+          "semilla": "t1-f4-GRA-NUE"
+        },
+        {
+          "local": "JTS",
+          "visitante": "RAN",
+          "gl": 2,
+          "gv": 1,
+          "semilla": "t1-f4-JTS-RAN"
+        },
+        {
+          "local": "DBB",
+          "visitante": "UFO",
+          "gl": 1,
+          "gv": 0,
+          "semilla": "t1-f4-DBB-UFO"
+        },
+        {
+          "local": "FMA",
+          "visitante": "DPI",
+          "gl": 3,
+          "gv": 1,
+          "semilla": "t1-f4-FMA-DPI"
+        },
+        {
+          "local": "SNE",
+          "visitante": "ESN",
+          "gl": 0,
+          "gv": 0,
+          "semilla": "t1-f4-SNE-ESN"
+        }
+      ]
     }
   ]
 }

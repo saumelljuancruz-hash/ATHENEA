@@ -1,0 +1,58 @@
+{
+  "pieces": [
+    {
+      "id": "gancho",
+      "sentences": [
+        { "text": "¡3 a 0 en contra! ¿Y aun así le podemos ganar al TERCERO?" },
+        { "text": "La respuesta la prendieron ustedes." }
+      ]
+    },
+    {
+      "id": "partido",
+      "sentences": [
+        { "text": "De visitante no suma la hinchada: contra Gravedad teníamos un 6% de chance." }
+      ]
+    },
+    {
+      "id": "tabla",
+      "sentences": [
+        { "text": "Bajamos del cuarto al SÉPTIMO puesto, a cuatro puntos del puntero." }
+      ]
+    },
+    {
+      "id": "hinchas",
+      "sentences": [
+        { "text": "Pero la tribuna no para: ya somos 1.307 hinchas, 132 más que ayer." }
+      ]
+    },
+    {
+      "id": "bengalas",
+      "sentences": [
+        { "text": "Y el video de ayer tuvo 421 compartidos." },
+        { "text": "O sea: 421 BENGALAS prendidas para mañana." }
+      ]
+    },
+    {
+      "id": "numeros",
+      "sentences": [
+        { "text": "Mañana jugamos de local contra Agujero Negro." },
+        { "text": "Sin bengalas, la chance era 45%." },
+        { "text": "Con estas 421… ¡66%!" }
+      ]
+    },
+    {
+      "id": "faltan",
+      "sentences": [
+        { "text": "Y con 905 bengalas tocamos el tope: 90%." },
+        { "text": "Faltan solo 484." }
+      ]
+    },
+    {
+      "id": "cta",
+      "sentences": [
+        { "text": "COMPARTILO: cada compartido es una BENGALA más para mañana." },
+        { "text": "Y SEGUÍ a @nadietelo.explico: cada seguidor nuevo es un HINCHA más en la tribuna." }
+      ]
+    }
+  ]
+}

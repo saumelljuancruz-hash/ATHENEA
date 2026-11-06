@@ -1,6 +1,6 @@
 {
   "instagram": 0,
-  "tiktok": 1175,
+  "tiktok": 1307,
   "mudanza": "",
   "eligieron": {
     "nombre": {
@@ -25,5 +25,10 @@
     "tabla",
     "bengalas",
     "cancha"
-  ]
+  ],
+  "bengalas": {
+    "fecha": 5,
+    "acumuladas": 421,
+    "detalle": "421 compartidos del video de la fecha 3"
+  }
 }

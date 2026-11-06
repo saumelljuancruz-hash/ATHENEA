@@ -29,6 +29,29 @@ export const chanceLocalVs = (rival: string, hinchas: number, bengalas = 0) => {
   return bengalas > 0 ? Math.max(base, Math.min(TOPE_BENGALAS, base + POR_BENGALA * bengalas)) : base;
 };
 
+/** Ganar, empatar o perder de visitante contra un rival puntual (ahí no suman hinchada ni bengalas). */
+export const chanceVisitanteVs = (rival: string) => {
+  const d = (equipo(rival).fuerza + 3 - equipo(NUESTRO).fuerza) / 25;
+  const lh = 1.35 * Math.exp(d);
+  const la = 1.05 * Math.exp(-d);
+  let gana = 0;
+  let empata = 0;
+  for (let i = 0; i < 20; i++) {
+    for (let j = 0; j < 20; j++) {
+      const p = poisson(lh, i) * poisson(la, j);
+      if (j > i) {
+        gana += p;
+      } else if (i === j) {
+        empata += p;
+      }
+    }
+  }
+  return { gana, empata, pierde: 1 - gana - empata };
+};
+
+/** Cuántas bengalas hacen falta para llegar al tope de chance de local. */
+export const bengalasParaTope = (rival: string, hinchas: number) => Math.ceil((TOPE_BENGALAS - chanceLocalVs(rival, hinchas)) / POR_BENGALA);
+
 /** Una bengala encendida: palo, llama roja que titila, chispas y humo. */
 export const Bengala: React.FC<{ size: number; frame: number; seed?: number }> = ({ size, frame, seed = 0 }) => {
   const f = frame + seed * 7;
@@ -315,7 +338,7 @@ const EstadioArriba: React.FC<{ hinchas: number; vos: number; width: number; col
       <rect x={360} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
       <rect x={680} y={405} width={40} height={90} fill="none" stroke="#fff" strokeOpacity={0.6} strokeWidth={3} />
       {BUTACAS_ESTADIO.map(([x, y], i) => (ocupados.has(i) ? <circle key={i} cx={x} cy={y} r={2.8} fill={color} /> : <circle key={i} cx={x} cy={y} r={2.2} fill="#2e3646" />))}
-      {new Array(Math.min(300, Math.floor(bengalas))).fill(0).map((_, k) => {
+      {new Array(Math.min(1000, Math.floor(bengalas))).fill(0).map((_, k) => {
         // Cada bengala se prende sobre un hincha ocupado, y titila.
         const [x, y] = BUTACAS_ESTADIO[orden[(k * 37) % Math.max(1, Math.min(10000, Math.floor(hinchas)))]];
         const fl = 0.75 + 0.25 * Math.sin(frame * 0.9 + k * 1.3);
