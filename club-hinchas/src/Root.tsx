@@ -1,4 +1,5 @@
 import { Composition, Folder, Still } from "remotion";
+import { AvisoSinVoz } from "./avisos/SinVoz";
 import { Reel } from "./Reel";
 import { H, HistoriaCancha, SlideCancha, SlideEligieron, SlidePartido, SlideResultados, SlideBengalas, SlideTabla, Vertical, W } from "./resultados/Resultados";
 import { S1Gancho } from "./scenes/S1Gancho";
@@ -39,6 +40,9 @@ export const RemotionRoot: React.FC = () => {
         <Still id="TikTok-3-Tabla" component={() => <Vertical tint="#1a1430"><SlideTabla /></Vertical>} width={1080} height={1920} />
         <Still id="TikTok-4-Bengalas" component={() => <Vertical tint="#3a120a"><SlideBengalas /></Vertical>} width={1080} height={1920} />
         <Still id="TikTok-5-Cancha" component={() => <Vertical><SlideCancha /></Vertical>} width={1080} height={1920} />
+      </Folder>
+      <Folder name="Avisos">
+        <Still id="Aviso-SinVoz" component={AvisoSinVoz} width={1080} height={1920} />
       </Folder>
     </>
   );
