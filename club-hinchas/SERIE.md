@@ -144,3 +144,4 @@ Cuando el club tenga nombre, lo cargo con `node scripts/liga.mjs club --nombre "
   - Fecha 4: Atlético Gravedad 3-0 FC NTLE, de visitante. Antes del partido la chance de ganar era 6 % (13 % de empate, 81 % de perder). El club bajó al 7.º puesto, con 6 puntos, a 4 del puntero.
   - Fecha 5: de local contra Racing Agujero Negro (3.º). Con 1.307 hinchas: 45 % sin bengalas y **66 % con las 421**. El tope de 90 % llega con 905 bengalas: faltan 484, que pueden salir de los compartidos del video de la fecha 4.
   - El video suma la barra de suspenso "LA RESPUESTA" (pregunta: "¿le podemos ganar al tercero?").
+- **7/11/2026, pausa:** sin créditos de ElevenLabs para la voz, el usuario avisó en TikTok que hasta nuevo aviso no hay videos de fútbol (`entrega/avisos/disculpas-sin-voz.png`). La fecha 5 queda pendiente, con las 421 bengalas guardadas.

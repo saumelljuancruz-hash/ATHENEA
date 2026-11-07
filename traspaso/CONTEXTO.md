@@ -107,6 +107,7 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - Las funciones `chanceVisitanteVs()` y `bengalasParaTope()` de `Futbol.tsx` dan la chance de visitante y cuántas bengalas faltan para el tope.
 - **Suspenso en los videos del club** (desde la fecha 4): pregunta en el primer segundo ("¿le podemos ganar al tercero?"), barra de "LA RESPUESTA" arriba que se llena hasta el número final y un adelanto sin resolver ("¿llegamos antes del partido?").
 - **ElevenLabs:** el 6/11 quedaron ~337 créditos; una toma de 55 s cuesta 920. Hay que recargar antes del próximo video con voz.
+- **Pausa (7/11/2026):** por falta de créditos, el usuario avisó que **hasta nuevo aviso no hay videos de fútbol**. Se publicó la imagen `club-hinchas/entrega/avisos/disculpas-sin-voz.png` (composición `Aviso-SinVoz`). La fecha 5 queda sin jugar hasta que el usuario la retome; las 421 bengalas siguen guardadas en `redes.json`.
 - **Resto del fixture del club:**
   - F4: Gravedad (V)
   - F5: Agujero Negro (L)
