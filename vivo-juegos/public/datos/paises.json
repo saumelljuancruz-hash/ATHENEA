@@ -1,0 +1,1604 @@
+[
+ {
+  "codigo": "dz",
+  "nombre": "Argelia",
+  "acepta": [
+   "argelia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ao",
+  "nombre": "Angola",
+  "acepta": [
+   "angola"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bj",
+  "nombre": "Benín",
+  "acepta": [
+   "benin"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bw",
+  "nombre": "Botsuana",
+  "acepta": [
+   "botsuana",
+   "botswana"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bf",
+  "nombre": "Burkina Faso",
+  "acepta": [
+   "burkina faso"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bi",
+  "nombre": "Burundi",
+  "acepta": [
+   "burundi"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "cv",
+  "nombre": "Cabo Verde",
+  "acepta": [
+   "cabo verde"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "cm",
+  "nombre": "Camerún",
+  "acepta": [
+   "camerun"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "cf",
+  "nombre": "República Centroafricana",
+  "acepta": [
+   "republica centroafricana",
+   "centroafrica"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "td",
+  "nombre": "Chad",
+  "acepta": [
+   "chad"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "km",
+  "nombre": "Comoras",
+  "acepta": [
+   "comoras"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "cg",
+  "nombre": "Congo",
+  "acepta": [
+   "congo",
+   "republica del congo",
+   "congo brazzaville"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "cd",
+  "nombre": "República Democrática del Congo",
+  "acepta": [
+   "republica democratica del congo",
+   "rd congo",
+   "rdc",
+   "congo kinshasa",
+   "congo"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ci",
+  "nombre": "Costa de Marfil",
+  "acepta": [
+   "costa de marfil",
+   "cote d ivoire",
+   "cote divoire"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "dj",
+  "nombre": "Yibuti",
+  "acepta": [
+   "yibuti",
+   "djibouti"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "eg",
+  "nombre": "Egipto",
+  "acepta": [
+   "egipto"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "gq",
+  "nombre": "Guinea Ecuatorial",
+  "acepta": [
+   "guinea ecuatorial"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "er",
+  "nombre": "Eritrea",
+  "acepta": [
+   "eritrea"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sz",
+  "nombre": "Esuatini",
+  "acepta": [
+   "esuatini",
+   "suazilandia",
+   "eswatini"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "et",
+  "nombre": "Etiopía",
+  "acepta": [
+   "etiopia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ga",
+  "nombre": "Gabón",
+  "acepta": [
+   "gabon"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "gm",
+  "nombre": "Gambia",
+  "acepta": [
+   "gambia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "gh",
+  "nombre": "Ghana",
+  "acepta": [
+   "ghana"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "gn",
+  "nombre": "Guinea",
+  "acepta": [
+   "guinea"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "gw",
+  "nombre": "Guinea-Bisáu",
+  "acepta": [
+   "guinea bisau"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ke",
+  "nombre": "Kenia",
+  "acepta": [
+   "kenia",
+   "kenya"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ls",
+  "nombre": "Lesoto",
+  "acepta": [
+   "lesoto",
+   "lesotho"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "lr",
+  "nombre": "Liberia",
+  "acepta": [
+   "liberia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ly",
+  "nombre": "Libia",
+  "acepta": [
+   "libia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mg",
+  "nombre": "Madagascar",
+  "acepta": [
+   "madagascar"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mw",
+  "nombre": "Malaui",
+  "acepta": [
+   "malaui",
+   "malawi"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ml",
+  "nombre": "Mali",
+  "acepta": [
+   "mali"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mr",
+  "nombre": "Mauritania",
+  "acepta": [
+   "mauritania"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mu",
+  "nombre": "Mauricio",
+  "acepta": [
+   "mauricio"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ma",
+  "nombre": "Marruecos",
+  "acepta": [
+   "marruecos"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "mz",
+  "nombre": "Mozambique",
+  "acepta": [
+   "mozambique"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "na",
+  "nombre": "Namibia",
+  "acepta": [
+   "namibia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ne",
+  "nombre": "Níger",
+  "acepta": [
+   "niger"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ng",
+  "nombre": "Nigeria",
+  "acepta": [
+   "nigeria"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "rw",
+  "nombre": "Ruanda",
+  "acepta": [
+   "ruanda"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "st",
+  "nombre": "Santo Tomé y Príncipe",
+  "acepta": [
+   "santo tome y principe"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sn",
+  "nombre": "Senegal",
+  "acepta": [
+   "senegal"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "sc",
+  "nombre": "Seychelles",
+  "acepta": [
+   "seychelles"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sl",
+  "nombre": "Sierra Leona",
+  "acepta": [
+   "sierra leona"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "so",
+  "nombre": "Somalia",
+  "acepta": [
+   "somalia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "za",
+  "nombre": "Sudáfrica",
+  "acepta": [
+   "sudafrica"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ss",
+  "nombre": "Sudán del Sur",
+  "acepta": [
+   "sudan del sur"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sd",
+  "nombre": "Sudán",
+  "acepta": [
+   "sudan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tz",
+  "nombre": "Tanzania",
+  "acepta": [
+   "tanzania"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tg",
+  "nombre": "Togo",
+  "acepta": [
+   "togo"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tn",
+  "nombre": "Túnez",
+  "acepta": [
+   "tunez"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ug",
+  "nombre": "Uganda",
+  "acepta": [
+   "uganda"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "zm",
+  "nombre": "Zambia",
+  "acepta": [
+   "zambia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "zw",
+  "nombre": "Zimbabue",
+  "acepta": [
+   "zimbabue",
+   "zimbabwe"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ag",
+  "nombre": "Antigua y Barbuda",
+  "acepta": [
+   "antigua y barbuda"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ar",
+  "nombre": "Argentina",
+  "acepta": [
+   "argentina"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "bs",
+  "nombre": "Bahamas",
+  "acepta": [
+   "bahamas",
+   "las bahamas"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bb",
+  "nombre": "Barbados",
+  "acepta": [
+   "barbados"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bz",
+  "nombre": "Belice",
+  "acepta": [
+   "belice"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bo",
+  "nombre": "Bolivia",
+  "acepta": [
+   "bolivia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "br",
+  "nombre": "Brasil",
+  "acepta": [
+   "brasil"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ca",
+  "nombre": "Canadá",
+  "acepta": [
+   "canada"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "cl",
+  "nombre": "Chile",
+  "acepta": [
+   "chile"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "co",
+  "nombre": "Colombia",
+  "acepta": [
+   "colombia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "cr",
+  "nombre": "Costa Rica",
+  "acepta": [
+   "costa rica"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "cu",
+  "nombre": "Cuba",
+  "acepta": [
+   "cuba"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "dm",
+  "nombre": "Dominica",
+  "acepta": [
+   "dominica"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "do",
+  "nombre": "República Dominicana",
+  "acepta": [
+   "republica dominicana",
+   "dominicana",
+   "rep dominicana"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ec",
+  "nombre": "Ecuador",
+  "acepta": [
+   "ecuador"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "sv",
+  "nombre": "El Salvador",
+  "acepta": [
+   "el salvador"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "gd",
+  "nombre": "Granada",
+  "acepta": [
+   "granada"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "gt",
+  "nombre": "Guatemala",
+  "acepta": [
+   "guatemala"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "gy",
+  "nombre": "Guyana",
+  "acepta": [
+   "guyana"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ht",
+  "nombre": "Haití",
+  "acepta": [
+   "haiti"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "hn",
+  "nombre": "Honduras",
+  "acepta": [
+   "honduras"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "jm",
+  "nombre": "Jamaica",
+  "acepta": [
+   "jamaica"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "mx",
+  "nombre": "México",
+  "acepta": [
+   "mexico"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ni",
+  "nombre": "Nicaragua",
+  "acepta": [
+   "nicaragua"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "pa",
+  "nombre": "Panamá",
+  "acepta": [
+   "panama"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "py",
+  "nombre": "Paraguay",
+  "acepta": [
+   "paraguay"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "pe",
+  "nombre": "Perú",
+  "acepta": [
+   "peru"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "kn",
+  "nombre": "San Cristóbal y Nieves",
+  "acepta": [
+   "san cristobal y nieves"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "lc",
+  "nombre": "Santa Lucía",
+  "acepta": [
+   "santa lucia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "vc",
+  "nombre": "San Vicente y las Granadinas",
+  "acepta": [
+   "san vicente y las granadinas"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sr",
+  "nombre": "Surinam",
+  "acepta": [
+   "surinam",
+   "suriname"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tt",
+  "nombre": "Trinidad y Tobago",
+  "acepta": [
+   "trinidad y tobago",
+   "trinidad"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "us",
+  "nombre": "Estados Unidos",
+  "acepta": [
+   "estados unidos",
+   "eeuu",
+   "ee uu",
+   "usa",
+   "eua",
+   "estados unidos de america",
+   "united states"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "uy",
+  "nombre": "Uruguay",
+  "acepta": [
+   "uruguay"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ve",
+  "nombre": "Venezuela",
+  "acepta": [
+   "venezuela"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "af",
+  "nombre": "Afganistán",
+  "acepta": [
+   "afganistan"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "am",
+  "nombre": "Armenia",
+  "acepta": [
+   "armenia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "az",
+  "nombre": "Azerbaiyán",
+  "acepta": [
+   "azerbaiyan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bh",
+  "nombre": "Baréin",
+  "acepta": [
+   "barein",
+   "bahrein"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bd",
+  "nombre": "Bangladesh",
+  "acepta": [
+   "bangladesh",
+   "banglades"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bt",
+  "nombre": "Bután",
+  "acepta": [
+   "butan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bn",
+  "nombre": "Brunéi",
+  "acepta": [
+   "brunei"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "kh",
+  "nombre": "Camboya",
+  "acepta": [
+   "camboya"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "cn",
+  "nombre": "China",
+  "acepta": [
+   "china"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "cy",
+  "nombre": "Chipre",
+  "acepta": [
+   "chipre"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ge",
+  "nombre": "Georgia",
+  "acepta": [
+   "georgia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "in",
+  "nombre": "India",
+  "acepta": [
+   "india"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "id",
+  "nombre": "Indonesia",
+  "acepta": [
+   "indonesia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ir",
+  "nombre": "Irán",
+  "acepta": [
+   "iran",
+   "persia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "iq",
+  "nombre": "Irak",
+  "acepta": [
+   "irak"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "il",
+  "nombre": "Israel",
+  "acepta": [
+   "israel"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "jp",
+  "nombre": "Japón",
+  "acepta": [
+   "japon"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "jo",
+  "nombre": "Jordania",
+  "acepta": [
+   "jordania"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "kz",
+  "nombre": "Kazajistán",
+  "acepta": [
+   "kazajistan",
+   "kazajstan"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "kw",
+  "nombre": "Kuwait",
+  "acepta": [
+   "kuwait"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "kg",
+  "nombre": "Kirguistán",
+  "acepta": [
+   "kirguistan",
+   "kirguizistan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "la",
+  "nombre": "Laos",
+  "acepta": [
+   "laos"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "lb",
+  "nombre": "Líbano",
+  "acepta": [
+   "libano"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "my",
+  "nombre": "Malasia",
+  "acepta": [
+   "malasia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "mv",
+  "nombre": "Maldivas",
+  "acepta": [
+   "maldivas"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mn",
+  "nombre": "Mongolia",
+  "acepta": [
+   "mongolia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "mm",
+  "nombre": "Myanmar",
+  "acepta": [
+   "myanmar",
+   "myanmar birmania",
+   "birmania"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "np",
+  "nombre": "Nepal",
+  "acepta": [
+   "nepal"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "kp",
+  "nombre": "Corea del Norte",
+  "acepta": [
+   "corea del norte"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "om",
+  "nombre": "Omán",
+  "acepta": [
+   "oman"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "pk",
+  "nombre": "Pakistán",
+  "acepta": [
+   "pakistan"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ph",
+  "nombre": "Filipinas",
+  "acepta": [
+   "filipinas"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "qa",
+  "nombre": "Qatar",
+  "acepta": [
+   "qatar",
+   "catar"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "sa",
+  "nombre": "Arabia Saudita",
+  "acepta": [
+   "arabia saudita",
+   "arabia saudi",
+   "arabia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "sg",
+  "nombre": "Singapur",
+  "acepta": [
+   "singapur"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "kr",
+  "nombre": "Corea del Sur",
+  "acepta": [
+   "corea del sur",
+   "corea"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "lk",
+  "nombre": "Sri Lanka",
+  "acepta": [
+   "sri lanka"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "sy",
+  "nombre": "Siria",
+  "acepta": [
+   "siria"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "tj",
+  "nombre": "Tayikistán",
+  "acepta": [
+   "tayikistan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "th",
+  "nombre": "Tailandia",
+  "acepta": [
+   "tailandia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "tl",
+  "nombre": "Timor Oriental",
+  "acepta": [
+   "timor oriental",
+   "timor leste",
+   "timor"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tr",
+  "nombre": "Turquía",
+  "acepta": [
+   "turquia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "tm",
+  "nombre": "Turkmenistán",
+  "acepta": [
+   "turkmenistan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ae",
+  "nombre": "Emiratos Árabes Unidos",
+  "acepta": [
+   "emiratos arabes unidos",
+   "emiratos",
+   "emiratos arabes"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "uz",
+  "nombre": "Uzbekistán",
+  "acepta": [
+   "uzbekistan"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "vn",
+  "nombre": "Vietnam",
+  "acepta": [
+   "vietnam",
+   "viet nam"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ye",
+  "nombre": "Yemen",
+  "acepta": [
+   "yemen"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "al",
+  "nombre": "Albania",
+  "acepta": [
+   "albania"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ad",
+  "nombre": "Andorra",
+  "acepta": [
+   "andorra"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "at",
+  "nombre": "Austria",
+  "acepta": [
+   "austria"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "by",
+  "nombre": "Bielorrusia",
+  "acepta": [
+   "bielorrusia",
+   "belarus"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "be",
+  "nombre": "Bélgica",
+  "acepta": [
+   "belgica"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ba",
+  "nombre": "Bosnia y Herzegovina",
+  "acepta": [
+   "bosnia y herzegovina",
+   "bosnia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "bg",
+  "nombre": "Bulgaria",
+  "acepta": [
+   "bulgaria"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "hr",
+  "nombre": "Croacia",
+  "acepta": [
+   "croacia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "cz",
+  "nombre": "República Checa",
+  "acepta": [
+   "republica checa",
+   "chequia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "dk",
+  "nombre": "Dinamarca",
+  "acepta": [
+   "dinamarca"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ee",
+  "nombre": "Estonia",
+  "acepta": [
+   "estonia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "fi",
+  "nombre": "Finlandia",
+  "acepta": [
+   "finlandia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "fr",
+  "nombre": "Francia",
+  "acepta": [
+   "francia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "de",
+  "nombre": "Alemania",
+  "acepta": [
+   "alemania"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "gr",
+  "nombre": "Grecia",
+  "acepta": [
+   "grecia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "hu",
+  "nombre": "Hungría",
+  "acepta": [
+   "hungria"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "is",
+  "nombre": "Islandia",
+  "acepta": [
+   "islandia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ie",
+  "nombre": "Irlanda",
+  "acepta": [
+   "irlanda"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "it",
+  "nombre": "Italia",
+  "acepta": [
+   "italia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "lv",
+  "nombre": "Letonia",
+  "acepta": [
+   "letonia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "li",
+  "nombre": "Liechtenstein",
+  "acepta": [
+   "liechtenstein"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "lt",
+  "nombre": "Lituania",
+  "acepta": [
+   "lituania"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "lu",
+  "nombre": "Luxemburgo",
+  "acepta": [
+   "luxemburgo"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mt",
+  "nombre": "Malta",
+  "acepta": [
+   "malta"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "md",
+  "nombre": "Moldavia",
+  "acepta": [
+   "moldavia",
+   "moldova"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mc",
+  "nombre": "Mónaco",
+  "acepta": [
+   "monaco"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "me",
+  "nombre": "Montenegro",
+  "acepta": [
+   "montenegro"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "nl",
+  "nombre": "Países Bajos",
+  "acepta": [
+   "paises bajos",
+   "holanda"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "mk",
+  "nombre": "Macedonia del Norte",
+  "acepta": [
+   "macedonia del norte",
+   "macedonia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "no",
+  "nombre": "Noruega",
+  "acepta": [
+   "noruega"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "pl",
+  "nombre": "Polonia",
+  "acepta": [
+   "polonia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "pt",
+  "nombre": "Portugal",
+  "acepta": [
+   "portugal"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ro",
+  "nombre": "Rumania",
+  "acepta": [
+   "rumania",
+   "romania"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "ru",
+  "nombre": "Rusia",
+  "acepta": [
+   "rusia",
+   "federacion rusa"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "sm",
+  "nombre": "San Marino",
+  "acepta": [
+   "san marino"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "rs",
+  "nombre": "Serbia",
+  "acepta": [
+   "serbia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "sk",
+  "nombre": "Eslovaquia",
+  "acepta": [
+   "eslovaquia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "si",
+  "nombre": "Eslovenia",
+  "acepta": [
+   "eslovenia"
+  ],
+  "nivel": 2
+ },
+ {
+  "codigo": "es",
+  "nombre": "España",
+  "acepta": [
+   "espana"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "se",
+  "nombre": "Suecia",
+  "acepta": [
+   "suecia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ch",
+  "nombre": "Suiza",
+  "acepta": [
+   "suiza"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "ua",
+  "nombre": "Ucrania",
+  "acepta": [
+   "ucrania"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "gb",
+  "nombre": "Reino Unido",
+  "acepta": [
+   "reino unido",
+   "uk",
+   "gran bretana",
+   "reino unido de gran bretana"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "au",
+  "nombre": "Australia",
+  "acepta": [
+   "australia"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "fj",
+  "nombre": "Fiyi",
+  "acepta": [
+   "fiyi",
+   "fiji"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ki",
+  "nombre": "Kiribati",
+  "acepta": [
+   "kiribati"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "mh",
+  "nombre": "Islas Marshall",
+  "acepta": [
+   "islas marshall"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "fm",
+  "nombre": "Micronesia",
+  "acepta": [
+   "micronesia"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "nr",
+  "nombre": "Nauru",
+  "acepta": [
+   "nauru"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "nz",
+  "nombre": "Nueva Zelanda",
+  "acepta": [
+   "nueva zelanda"
+  ],
+  "nivel": 1
+ },
+ {
+  "codigo": "pw",
+  "nombre": "Palaos",
+  "acepta": [
+   "palaos",
+   "palau"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "pg",
+  "nombre": "Papúa Nueva Guinea",
+  "acepta": [
+   "papua nueva guinea",
+   "papua"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "ws",
+  "nombre": "Samoa",
+  "acepta": [
+   "samoa"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "sb",
+  "nombre": "Islas Salomón",
+  "acepta": [
+   "islas salomon"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "to",
+  "nombre": "Tonga",
+  "acepta": [
+   "tonga"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "tv",
+  "nombre": "Tuvalu",
+  "acepta": [
+   "tuvalu"
+  ],
+  "nivel": 3
+ },
+ {
+  "codigo": "vu",
+  "nombre": "Vanuatu",
+  "acepta": [
+   "vanuatu"
+  ],
+  "nivel": 3
+ }
+]

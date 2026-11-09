@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juegos en vivo · @nadietelo.explico</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div id="escenario">
+      <div class="fondo"></div>
+
+      <!-- Estado de la conexión con el vivo -->
+      <div id="conexion" class="conexion"><span class="punto"></span><span id="conexion-texto">Conectando…</span></div>
+
+      <!-- Avisos de seguidores nuevos y compartidos -->
+      <div id="avisos" class="avisos"></div>
+
+      <!-- MENÚ -->
+      <section id="menu" class="pantalla">
+        <div class="marca"><img src="img/logo.png" alt="" /><span>@nadietelo.explico</span></div>
+        <h1 class="menu-titulo">JUEGOS<br /><span>EN VIVO</span></h1>
+        <p class="menu-sub">Comentá en el chat y sumá puntos</p>
+        <div class="opciones">
+          <div class="opcion" data-juego="banderas"><b>1</b><div><strong>ADIVINÁ EL PAÍS</strong><small>por su bandera</small></div></div>
+          <div class="opcion" data-juego="vf"><b>2</b><div><strong>¿VERDADERO O FALSO?</strong><small>datos que nadie te explicó</small></div></div>
+          <div class="opcion" data-juego="mixto"><b>3</b><div><strong>MIXTO</strong><small>banderas y verdadero o falso, alternados</small></div></div>
+        </div>
+        <div class="teclas">
+          <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> elegir juego</span>
+          <span><kbd>Espacio</kbd> pausa</span>
+          <span><kbd>→</kbd> saltar</span>
+          <span><kbd>R</kbd> otra partida</span>
+          <span><kbd>M</kbd> menú</span>
+          <span><kbd>B</kbd> jugadores de prueba</span>
+          <span><kbd>C</kbd> comentar a mano</span>
+          <span><kbd>S</kbd> sonido</span>
+          <span><kbd>F</kbd> pantalla completa</span>
+        </div>
+      </section>
+
+      <!-- JUEGO -->
+      <section id="juego" class="pantalla oculta">
+        <header class="cabecera">
+          <div>
+            <div class="marca chica"><img src="img/logo.png" alt="" /><span>@nadietelo.explico</span></div>
+            <h1 id="titulo" class="titulo">ADIVINÁ EL PAÍS</h1>
+            <p id="subtitulo" class="subtitulo">POR SU BANDERA</p>
+          </div>
+          <div class="reloj">
+            <svg viewBox="0 0 120 120"><circle class="pista" cx="60" cy="60" r="52" /><circle id="reloj-arco" class="arco" cx="60" cy="60" r="52" /></svg>
+            <div id="reloj-numero" class="reloj-numero">15</div>
+          </div>
+        </header>
+
+        <div class="fila-info">
+          <div class="pastilla">PREGUNTA <span id="numero" class="mono">1 / 30</span></div>
+          <div class="pastilla verde mono" id="puntos-pregunta">+100 PTS</div>
+        </div>
+
+        <div class="tarjeta">
+          <div id="bandera" class="bandera"><img id="bandera-img" alt="" /></div>
+          <div id="dato" class="dato oculta">
+            <p id="dato-texto"></p>
+            <p id="dato-explicacion" class="explicacion"></p>
+            <p id="dato-fuente" class="fuente"></p>
+          </div>
+        </div>
+
+        <div id="respuesta" class="respuesta"><span id="respuesta-texto">COMENTÁ EL PAÍS EN EL CHAT</span></div>
+        <div id="vf" class="vf oculta">
+          <div class="voto" id="voto-V"><b>V</b><span>VERDADERO</span><em id="voto-V-pct">0%</em><i><u id="voto-V-barra"></u></i></div>
+          <div class="voto" id="voto-F"><b>F</b><span>FALSO</span><em id="voto-F-pct">0%</em><i><u id="voto-F-barra"></u></i></div>
+        </div>
+
+        <div class="contadores">
+          <div class="contador"><span class="icono ok">✓</span><div><strong id="aciertos" class="mono">0</strong><small id="aciertos-label">aciertos</small></div></div>
+          <div class="contador"><span class="icono gente"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><circle cx="15" cy="13" r="6" /><path d="M4 33c1-7 6-10 11-10s10 3 11 10" /><circle cx="28" cy="15" r="4.5" /><path d="M26 23.5c5 0 9 3 10 9" /></svg></span><div><strong id="participando" class="mono">0</strong><small>participando</small></div></div>
+        </div>
+
+        <div id="primeros" class="primeros"></div>
+
+        <div class="top">
+          <div class="top-titulo"><span>🏆 TOP 5</span><small>ESTA PARTIDA</small></div>
+          <ol id="top"></ol>
+        </div>
+
+        <div id="cuenta" class="cuenta oculta"><small>LA PARTIDA EMPIEZA EN</small><b id="cuenta-numero">3</b></div>
+        <div id="pausa" class="pausa oculta">PAUSA</div>
+      </section>
+
+      <!-- FINAL -->
+      <section id="final" class="pantalla oculta">
+        <div class="marca"><img src="img/logo.png" alt="" /><span>@nadietelo.explico</span></div>
+        <h1 class="final-titulo">¡TERMINÓ<br /><span>LA PARTIDA!</span></h1>
+        <div id="podio" class="podio"></div>
+        <ol id="resto" class="resto"></ol>
+        <div class="final-cta">Seguime para jugar la próxima partida</div>
+      </section>
+
+      <!-- Comentario a mano, para probar -->
+      <form id="manual" class="manual oculta">
+        <input id="manual-usuario" value="prueba" aria-label="Usuario" />
+        <input id="manual-texto" placeholder="Escribí un comentario y Enter" aria-label="Comentario" />
+      </form>
+    </div>
+    <script type="module" src="juego.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "vivo-juegos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Juegos para los vivos de TikTok de @nadietelo.explico: la gente comenta y suma puntos.",
+  "type": "module",
+  "scripts": {
+    "start": "node servidor.mjs",
+    "prueba": "node servidor.mjs --prueba",
+    "test": "node pruebas/respuestas.test.mjs"
+  },
+  "dependencies": {
+    "flag-icons": "^7.6.0",
+    "tiktok-live-connector": "^2.5.0"
+  }
+}

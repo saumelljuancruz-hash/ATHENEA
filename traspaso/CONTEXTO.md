@@ -123,6 +123,20 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - Los datos tienen que ser reales: por ejemplo, no decir "más de mil en un día" si no fue así.
   - Para la fecha del día, el usuario pasa los seguidores antes de publicar.
 
+## 6 bis · Juegos para los vivos de TikTok (`vivo-juegos/`)
+
+- El usuario quiere hacer vivos con minijuegos donde la gente comenta y suma puntos (idea sacada de un vivo de "Adiviná el país").
+- Hechos (9/11/2026):
+  - **Adiviná el país por su bandera:** 193 países de la ONU, de fácil a difícil.
+  - **¿Verdadero o falso?:** 63 datos con fuente.
+  - **Mixto:** alterna los dos.
+- Cómo funciona:
+  - `servidor.mjs` lee el chat del vivo con `tiktok-live-connector` (no oficial, gratis) y se lo pasa por SSE a la página `http://localhost:3000`.
+  - La página se captura en TikTok LIVE Studio u OBS. Corre en la PC Windows del usuario con `iniciar.bat`; `probar.bat` abre el modo prueba, con jugadores de mentira.
+  - Puntos: 100 por acierto y 50 extra al primero. En verdadero o falso los puntos se reparten al revelar, para no adelantar la respuesta.
+- El corrector está en `public/respuestas.js`, con 68 pruebas (`npm test`).
+- **Pendiente:** el usuario tiene que dar el OK para un tercer juego. Propuesto: "¿Cuánto?", el que más se acerca gana.
+
 ## 7 · YouTube (pendiente)
 
 - **Canal:** "Nadie Te Lo Explicó", @nadietelo.explico. La descripción sugerida está en el chat.
