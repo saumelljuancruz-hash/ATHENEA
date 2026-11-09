@@ -24,10 +24,12 @@
         <div class="opciones">
           <div class="opcion" data-juego="banderas"><b>1</b><div><strong>ADIVINÁ EL PAÍS</strong><small>por su bandera</small></div></div>
           <div class="opcion" data-juego="vf"><b>2</b><div><strong>¿VERDADERO O FALSO?</strong><small>datos que nadie te explicó</small></div></div>
-          <div class="opcion" data-juego="mixto"><b>3</b><div><strong>MIXTO</strong><small>banderas y verdadero o falso, alternados</small></div></div>
+          <div class="opcion" data-juego="cuanto"><b>3</b><div><strong>¿CUÁNTO?</strong><small>el que más se acerca gana</small></div></div>
+          <div class="opcion" data-juego="logos"><b>4</b><div><strong>ADIVINÁ EL LOGO</strong><small>se va desdifuminando: el que acierta antes, suma más</small></div></div>
+          <div class="opcion" data-juego="mixto"><b>5</b><div><strong>MIXTO</strong><small>los cuatro juegos, alternados</small></div></div>
         </div>
         <div class="teclas">
-          <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> elegir juego</span>
+          <span><kbd>1</kbd>…<kbd>5</kbd> elegir juego</span>
           <span><kbd>Espacio</kbd> pausa</span>
           <span><kbd>→</kbd> saltar</span>
           <span><kbd>R</kbd> otra partida</span>
@@ -60,8 +62,13 @@
 
         <div class="tarjeta">
           <div id="bandera" class="bandera"><img id="bandera-img" alt="" /></div>
+          <div id="logo" class="logo oculta">
+            <span id="logo-pista" class="pista">APP</span>
+            <svg id="logo-svg" viewBox="0 0 24 24"><path id="logo-path" /></svg>
+          </div>
           <div id="dato" class="dato oculta">
             <p id="dato-texto"></p>
+            <div id="regla" class="regla oculta"><div id="regla-linea" class="regla-linea"></div><span id="regla-min" class="regla-min"></span><span id="regla-max" class="regla-max"></span></div>
             <p id="dato-explicacion" class="explicacion"></p>
             <p id="dato-fuente" class="fuente"></p>
           </div>

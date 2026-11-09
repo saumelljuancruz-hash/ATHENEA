@@ -30,23 +30,29 @@ export const distancia = (a, b) => {
 /** Cuántos errores de tipeo se perdonan según el largo del nombre. */
 const tolerancia = (frase) => (frase.length >= 9 ? 2 : frase.length >= 5 ? 1 : 0);
 
+const compacto = (texto) => texto.replace(/ /g, "");
+const claveDe = (item) => item.codigo ?? item.id;
+
 /**
- * ¿El comentario nombra al país correcto?
- * - Vale si el nombre (o una forma aceptada) aparece entero en el comentario: "es peru!!" acierta Perú.
- * - No vale nombrar otro país además ("colombia o ecuador"), salvo que sea parte del nombre correcto:
+ * ¿El comentario nombra a la respuesta correcta (un país o una marca)?
+ * Cada opción trae `acepta`: las formas normalizadas en que vale escribirla.
+ * - Vale si una forma aceptada aparece entera en el comentario: "es peru!!" acierta Perú.
+ * - No vale nombrar otra opción además ("colombia o ecuador"), salvo que sea parte del nombre correcto:
  *   "guinea ecuatorial" acierta Guinea Ecuatorial aunque adentro diga "guinea", pero no acierta Guinea.
- * - Si no aparece ningún país, se perdonan errores de tipeo chicos, siempre que el más parecido sea el correcto.
+ * - Vale escrito todo junto o separado: "mc donalds", "cocacola", "play station".
+ * - Si no, se perdonan errores de tipeo chicos, siempre que la opción más parecida sea la correcta.
  */
-export const aciertaPais = (comentario, pais, todos) => {
+export const acierta = (comentario, item, todos) => {
   const texto = normalizar(comentario);
   if (!texto) {
     return false;
   }
-  const propias = new Set(pais.acepta);
+  const clave = claveDe(item);
+  const propias = new Set(item.acepta);
   const dichas = [...propias].filter((frase) => contiene(texto, frase));
   const ajenas = [];
   for (const otro of todos) {
-    if (otro.codigo === pais.codigo) {
+    if (claveDe(otro) === clave) {
       continue;
     }
     for (const frase of otro.acepta) {
@@ -61,26 +67,68 @@ export const aciertaPais = (comentario, pais, todos) => {
   if (ajenas.length > 0 || texto.length > 40) {
     return false;
   }
+  const junto = compacto(texto);
   let mejor = Infinity;
   let ganadores = new Set();
-  for (const p of todos) {
-    for (const frase of p.acepta) {
-      if (Math.abs(frase.length - texto.length) > 2) {
+  for (const opcion of todos) {
+    for (const frase of opcion.acepta) {
+      const f = compacto(frase);
+      if (Math.abs(f.length - junto.length) > 2) {
         continue;
       }
-      const d = distancia(texto, frase);
-      if (d > tolerancia(frase)) {
+      const d = distancia(junto, f);
+      if (d > tolerancia(f)) {
         continue;
       }
       if (d < mejor) {
         mejor = d;
-        ganadores = new Set([p.codigo]);
+        ganadores = new Set([claveDe(opcion)]);
       } else if (d === mejor) {
-        ganadores.add(p.codigo);
+        ganadores.add(claveDe(opcion));
       }
     }
   }
-  return ganadores.size === 1 && ganadores.has(pais.codigo);
+  return ganadores.size === 1 && ganadores.has(clave);
+};
+
+/** Igual que `acierta`, para las banderas. */
+export const aciertaPais = acierta;
+
+/**
+ * El primer número de un comentario, como lo escribimos en Argentina:
+ * "206", "67,5", "384.400", "1.300.000", "384 mil", "1,3 millones", "2k", "1 palo".
+ * Si no hay número, null.
+ */
+export const leerNumero = (comentario) => {
+  const texto = String(comentario ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  const m = texto.match(/(\d[\d.,]*)(?![\d.,])\s*(?:(k|mil|millones|millon|palos|palo)\b)?/);
+  if (!m) {
+    // "un millón", "un palo", "mil"
+    if (/\bun (millon|palo)\b/.test(texto)) {
+      return 1e6;
+    }
+    return /\bmil\b/.test(texto) ? 1e3 : null;
+  }
+  let cifra = m[1].replace(/[.,]+$/, "");
+  const puntos = (cifra.match(/\./g) ?? []).length;
+  const comas = (cifra.match(/,/g) ?? []).length;
+  if (puntos && comas) {
+    // El último separador es el decimal.
+    cifra = cifra.lastIndexOf(",") > cifra.lastIndexOf(".") ? cifra.replace(/\./g, "").replace(",", ".") : cifra.replace(/,/g, "");
+  } else if (comas) {
+    cifra = comas === 1 ? cifra.replace(",", ".") : cifra.replace(/,/g, "");
+  } else if (puntos && /^\d{1,3}(\.\d{3})+$/.test(cifra)) {
+    cifra = cifra.replace(/\./g, "");
+  }
+  const valor = Number(cifra);
+  if (!Number.isFinite(valor)) {
+    return null;
+  }
+  const por = { k: 1e3, mil: 1e3, millon: 1e6, millones: 1e6, palo: 1e6, palos: 1e6 }[m[2]] ?? 1;
+  return valor * por;
 };
 
 const VERDADERO = new Set(["v", "vv", "vvv", "verdadero", "verdadera", "verdad", "cierto", "true"]);

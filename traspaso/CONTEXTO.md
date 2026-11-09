@@ -135,7 +135,10 @@ Los proyectos `club-*` nuevos y `youtube-canal` usan las dependencias de `club-h
   - La página se captura en TikTok LIVE Studio u OBS. Corre en la PC Windows del usuario con `iniciar.bat`; `probar.bat` abre el modo prueba, con jugadores de mentira.
   - Puntos: 100 por acierto y 50 extra al primero. En verdadero o falso los puntos se reparten al revelar, para no adelantar la respuesta.
 - El corrector está en `public/respuestas.js`, con 68 pruebas (`npm test`).
-- **Pendiente:** el usuario tiene que dar el OK para un tercer juego. Propuesto: "¿Cuánto?", el que más se acerca gana.
+- Sumados con el OK del usuario:
+  - **¿Cuánto?:** 44 preguntas de números; ganan los tres que más se acercan.
+  - **Adiviná el logo:** 136 marcas de Simple Icons, que empiezan difuminadas y se aclaran; cuanto antes se acierta, más puntos.
+- El menú quedó con 5 opciones (1 a 5); la quinta es el mixto de los cuatro juegos. El corrector tiene 103 pruebas.
 
 ## 7 · YouTube (pendiente)
 

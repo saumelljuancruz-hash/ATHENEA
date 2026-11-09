@@ -1,4 +1,4 @@
-import { aciertaPais, respuestaVF } from "./respuestas.js";
+import { acierta, leerNumero, respuestaVF } from "./respuestas.js";
 
 // ── Configuración (se puede cambiar en la dirección: ?preguntas=50&segundos=20) ──
 const params = new URLSearchParams(location.search);
@@ -8,32 +8,38 @@ const numero = (clave, defecto) => {
 };
 const CONFIG = {
   preguntas: numero("preguntas", 30),
-  segundosBandera: numero("segundos", 15),
-  segundosVF: numero("segundosvf", 18),
   segundosRevelar: numero("revelar", 6),
   puntos: 100,
   bonusPrimero: 50,
+  blurInicial: 80,
 };
 
-const $ = (id) => document.getElementById(id);
-const TITULOS = {
-  bandera: ["ADIVINÁ EL PAÍS", "POR SU BANDERA", "COMENTÁ EL PAÍS EN EL CHAT"],
-  vf: ["¿VERDADERO O FALSO?", "DATOS QUE NADIE TE EXPLICÓ", "COMENTÁ V O F EN EL CHAT"],
+// Cada tipo de pregunta: títulos, cuánto dura y qué dice el contador.
+const TIPOS = {
+  bandera: { titulo: "ADIVINÁ EL PAÍS", subtitulo: "POR SU BANDERA", pista: "COMENTÁ EL PAÍS EN EL CHAT", segundos: numero("segundos", 15), contador: "aciertos" },
+  vf: { titulo: "¿VERDADERO O FALSO?", subtitulo: "DATOS QUE NADIE TE EXPLICÓ", pista: "COMENTÁ V O F EN EL CHAT", segundos: numero("segundosvf", 18), contador: "votaron" },
+  cuanto: { titulo: "¿CUÁNTO?", subtitulo: "EL QUE MÁS SE ACERCA GANA", pista: "COMENTÁ UN NÚMERO EN EL CHAT", segundos: numero("segundoscuanto", 20), contador: "respondieron" },
+  logo: { titulo: "ADIVINÁ EL LOGO", subtitulo: "CUANTO ANTES, MÁS PUNTOS", pista: "COMENTÁ LA MARCA EN EL CHAT", segundos: numero("segundoslogo", 20), contador: "aciertos" },
 };
+const JUEGOS = { 1: "banderas", 2: "vf", 3: "cuanto", 4: "logos", 5: "mixto" };
+
+const $ = (id) => document.getElementById(id);
 
 let PAISES = [];
 let DATOS = [];
+let CUANTO = [];
+let LOGOS = [];
 
 const estado = {
   pantalla: "menu",
-  juego: null, // "banderas" | "vf" | "mixto"
+  juego: null, // "banderas" | "vf" | "cuanto" | "logos" | "mixto"
   preguntas: [],
   i: 0,
   fase: null, // "cuenta" | "pregunta" | "revelar"
   terminaEn: 0,
   pausa: false,
   restantePausa: 0,
-  jugadores: new Map(), // usuario → { nombre, foto, puntos, aciertos, desde }
+  jugadores: new Map(), // usuario → { nombre, foto, puntos, aciertos }
   participantes: new Set(),
   actual: null, // datos de la pregunta en juego
   sonido: true,
@@ -70,8 +76,11 @@ const mezclar = (lista) => {
   return a;
 };
 const fmt = (n) => Math.round(n).toLocaleString("es-AR");
+/** 384400 → "384.400", 67.5 → "67,5", y los años sin punto: 1969. */
+const fmtNumero = (n, anio = false) => (anio ? String(Math.round(n)) : n.toLocaleString("es-AR", { maximumFractionDigits: 2 }));
 const COLORES = ["#3ee0c0", "#ffe14d", "#ff8a3d", "#7fdcff", "#ff6f8a", "#b48cff", "#8ee06a"];
 const colorDe = (texto) => COLORES[[...texto].reduce((a, c) => a + c.charCodeAt(0), 0) % COLORES.length];
+const duracion = (pregunta) => TIPOS[pregunta.tipo].segundos * 1000;
 
 /** Avatar con la foto de TikTok, o la inicial si no hay foto. Todo con textContent: nada del chat se interpreta como HTML. */
 const avatar = (jugador) => {
@@ -117,11 +126,12 @@ const guardarUsadas = () => {
     // Sin almacenamiento: puede repetir, no pasa nada.
   }
 };
+const claveDe = (p) => ({ bandera: `b-${p.pais?.codigo}`, vf: `vf-${p.dato?.texto}`, cuanto: `c-${p.dato?.pregunta}`, logo: `l-${p.logo?.id}` })[p.tipo];
 const elegir = (lista, cantidad, clave) => {
   const nuevas = mezclar(lista.filter((x) => !usadas.has(clave(x))));
   const viejas = mezclar(lista.filter((x) => usadas.has(clave(x))));
   if (nuevas.length < cantidad) {
-    // Ya salieron casi todas: se vuelve a empezar con las que no salieron recién.
+    // Ya salieron casi todas: se vuelve a empezar.
     for (const x of lista) {
       usadas.delete(clave(x));
     }
@@ -130,27 +140,29 @@ const elegir = (lista, cantidad, clave) => {
 };
 
 // ── Armado de la partida ─────────────────────────────────────────────────────
-const armarBanderas = (cantidad) => {
+/** De menor a mayor dificultad (40 % fáciles, 35 % medias, 25 % difíciles), mezcladas dentro de cada nivel. */
+const porNiveles = (lista, cantidad, clave) => {
   const n1 = Math.round(cantidad * 0.4);
   const n2 = Math.round(cantidad * 0.35);
-  const n3 = cantidad - n1 - n2;
-  const clave = (p) => `b-${p.codigo}`;
-  // De menor a mayor dificultad, mezcladas dentro de cada nivel.
-  return [1, 2, 3].flatMap((nivel, k) => elegir(PAISES.filter((p) => p.nivel === nivel), [n1, n2, n3][k], clave)).map((pais) => ({ tipo: "bandera", pais }));
+  const cuantos = [n1, n2, cantidad - n1 - n2];
+  return [1, 2, 3].flatMap((nivel, k) => elegir(lista.filter((x) => x.nivel === nivel), cuantos[k], clave));
 };
-const armarVF = (cantidad) => elegir(DATOS, cantidad, (d) => `vf-${d.texto}`).map((dato) => ({ tipo: "vf", dato }));
-
+const ARMAR = {
+  bandera: (n) => porNiveles(PAISES, n, (p) => `b-${p.codigo}`).map((pais) => ({ tipo: "bandera", pais })),
+  vf: (n) => elegir(DATOS, Math.min(n, DATOS.length), (d) => `vf-${d.texto}`).map((dato) => ({ tipo: "vf", dato })),
+  cuanto: (n) => elegir(CUANTO, Math.min(n, CUANTO.length), (d) => `c-${d.pregunta}`).map((dato) => ({ tipo: "cuanto", dato })),
+  logo: (n) => porNiveles(LOGOS, n, (l) => `l-${l.id}`).map((logo) => ({ tipo: "logo", logo })),
+};
 const armarPartida = (juego) => {
   const n = CONFIG.preguntas;
-  if (juego === "banderas") {
-    return armarBanderas(n);
+  const solo = { banderas: "bandera", vf: "vf", cuanto: "cuanto", logos: "logo" }[juego];
+  if (solo) {
+    return ARMAR[solo](n);
   }
-  if (juego === "vf") {
-    return armarVF(Math.min(n, DATOS.length));
-  }
-  const banderas = armarBanderas(Math.ceil(n / 2));
-  const vf = armarVF(Math.floor(n / 2));
-  return Array.from({ length: n }, (_, i) => (i % 2 === 0 ? banderas[i / 2] : vf[(i - 1) / 2])).filter(Boolean);
+  // Mixto: bandera, verdadero o falso, logo, ¿cuánto?, y otra vez.
+  const orden = ["bandera", "vf", "logo", "cuanto"];
+  const tandas = Object.fromEntries(orden.map((t) => [t, ARMAR[t](Math.ceil(n / orden.length))]));
+  return Array.from({ length: n }, (_, i) => tandas[orden[i % orden.length]][Math.floor(i / orden.length)]).filter(Boolean);
 };
 
 // ── Pantallas ────────────────────────────────────────────────────────────────
@@ -189,96 +201,186 @@ const empezar = (juego) => {
   sonar("whoosh", 0.4);
 };
 
+const reanimar = (el) => {
+  el.style.animation = "none";
+  void el.offsetWidth;
+  el.style.animation = "";
+};
+
 /** Pone en pantalla la pregunta (sin arrancar el reloj si `jugar` es false). */
 const ponerPregunta = (pregunta, jugar = true) => {
   const tipo = pregunta.tipo;
-  const [titulo, subtitulo, pista] = TITULOS[tipo];
-  $("titulo").textContent = titulo;
+  const t = TIPOS[tipo];
+  $("titulo").textContent = t.titulo;
   $("titulo").classList.toggle("largo", tipo === "vf");
-  $("subtitulo").textContent = subtitulo;
-  $("subtitulo").classList.toggle("largo", tipo === "vf");
+  $("subtitulo").textContent = t.subtitulo;
+  $("subtitulo").classList.toggle("largo", tipo !== "bandera");
   $("numero").textContent = `${estado.i + 1} / ${estado.preguntas.length}`;
-  $("puntos-pregunta").textContent = `+${CONFIG.puntos} PTS`;
+  $("puntos-pregunta").textContent = tipo === "cuanto" ? "+150 PTS AL 1.º" : `+${CONFIG.puntos + (tipo === "logo" ? 50 : 0)} PTS`;
 
-  $("bandera").classList.toggle("oculta", tipo !== "bandera");
-  $("dato").classList.toggle("oculta", tipo !== "vf");
-  $("respuesta").classList.toggle("oculta", tipo !== "bandera");
-  $("vf").classList.toggle("oculta", tipo !== "vf");
+  const ver = { bandera: tipo === "bandera", logo: tipo === "logo", dato: tipo === "vf" || tipo === "cuanto", respuesta: tipo !== "vf", vf: tipo === "vf" };
+  for (const [id, visible] of Object.entries(ver)) {
+    $(id).classList.toggle("oculta", !visible);
+  }
   $("respuesta").classList.remove("revelada");
   $("respuesta-texto").className = "";
-  $("respuesta-texto").textContent = pista;
-  $("aciertos-label").textContent = tipo === "vf" ? "votaron" : "aciertos";
+  $("respuesta-texto").textContent = t.pista;
+  $("aciertos-label").textContent = t.contador;
   $("aciertos").textContent = "0";
   $("primeros").replaceChildren();
+  $("dato").classList.remove("revelado");
+  $("regla").classList.add("oculta");
 
   if (tipo === "bandera") {
-    const img = $("bandera-img");
-    img.src = `banderas/${pregunta.pais.codigo}.svg`;
-    // Reinicia la animación de entrada.
-    $("bandera").style.animation = "none";
-    void $("bandera").offsetWidth;
-    $("bandera").style.animation = "";
+    $("bandera-img").src = `banderas/${pregunta.pais.codigo}.svg`;
+    reanimar($("bandera"));
+  } else if (tipo === "logo") {
+    const { logo } = pregunta;
+    $("logo-path").setAttribute("d", logo.path);
+    $("logo-path").setAttribute("fill", logo.color);
+    // Los logos muy claros (amarillos, blancos) van sobre fondo oscuro.
+    const [r, g, b] = [1, 3, 5].map((k) => parseInt(logo.color.slice(k, k + 2), 16) / 255);
+    $("logo").classList.toggle("oscuro", 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.6);
+    $("logo-pista").textContent = logo.categoria;
+    $("logo-svg").style.filter = `blur(${CONFIG.blurInicial}px)`;
+    reanimar($("logo"));
   } else {
-    $("dato-texto").textContent = pregunta.dato.texto;
-    $("dato-texto").classList.toggle("largo", pregunta.dato.texto.length > 70);
+    const texto = tipo === "vf" ? pregunta.dato.texto : pregunta.dato.pregunta;
+    $("dato-texto").textContent = texto;
+    $("dato-texto").classList.toggle("largo", texto.length > 70);
     $("dato-explicacion").textContent = "";
     $("dato-fuente").textContent = "";
-    for (const l of ["V", "F"]) {
-      $(`voto-${l}`).classList.remove("bien", "mal");
-      $(`voto-${l}-pct`).textContent = "0%";
-      $(`voto-${l}-barra`).style.width = "0%";
+    if (tipo === "vf") {
+      for (const l of ["V", "F"]) {
+        $(`voto-${l}`).classList.remove("bien", "mal");
+        $(`voto-${l}-pct`).textContent = "0%";
+        $(`voto-${l}-barra`).style.width = "0%";
+      }
     }
-    $("dato").style.animation = "none";
-    void $("dato").offsetWidth;
-    $("dato").style.animation = "";
+    reanimar($("dato"));
   }
 
-  estado.actual = { pregunta, acertaron: [], votos: new Map(), cuentaVotos: { V: 0, F: 0 } };
+  estado.actual = { pregunta, acertaron: [], votos: new Map(), cuentaVotos: { V: 0, F: 0 }, numeros: new Map(), empezo: performance.now() };
   if (!jugar) {
     // Durante la cuenta regresiva no se ve la primera pregunta.
-    $("bandera").classList.add("oculta");
-    $("dato").classList.add("oculta");
+    for (const id of ["bandera", "logo", "dato"]) {
+      $(id).classList.add("oculta");
+    }
+    return;
   }
-  if (jugar) {
-    estado.fase = "pregunta";
-    estado.terminaEn = performance.now() + (tipo === "vf" ? CONFIG.segundosVF : CONFIG.segundosBandera) * 1000;
-    sonar("whoosh", 0.35);
-    lanzarBots(pregunta);
-  }
+  estado.fase = "pregunta";
+  estado.terminaEn = performance.now() + duracion(pregunta);
+  sonar("whoosh", 0.35);
+  lanzarBots(pregunta);
+};
+
+/** Puntos del logo: 150 apenas aparece, y bajan hasta 50 cuando ya se ve entero. */
+const puntosLogo = () => {
+  const resta = Math.max(0, estado.terminaEn - performance.now());
+  return 50 + Math.round((CONFIG.puntos * resta) / duracion(estado.actual.pregunta));
 };
 
 const revelar = () => {
-  const { pregunta, acertaron, votos } = estado.actual;
+  const { pregunta, acertaron } = estado.actual;
   estado.fase = "revelar";
   estado.terminaEn = performance.now() + CONFIG.segundosRevelar * 1000;
   pararBots();
-  if (pregunta.tipo === "bandera") {
-    const nombre = pregunta.pais.nombre.toUpperCase();
+  if (pregunta.tipo === "bandera" || pregunta.tipo === "logo") {
+    const nombre = (pregunta.tipo === "bandera" ? pregunta.pais.nombre : pregunta.logo.nombre).toUpperCase();
     $("respuesta-texto").textContent = nombre;
     $("respuesta-texto").className = nombre.length > 24 ? "muy-largo" : nombre.length > 15 ? "largo" : "";
     $("respuesta").classList.add("revelada");
-  } else {
-    const bien = pregunta.dato.respuesta;
-    $(`voto-${bien}`).classList.add("bien");
-    $(`voto-${bien === "V" ? "F" : "V"}`).classList.add("mal");
-    $("dato-explicacion").textContent = `${bien === "V" ? "VERDADERO" : "FALSO"}: ${pregunta.dato.explicacion}`;
-    $("dato-fuente").textContent = `Fuente: ${pregunta.dato.fuente}`;
-    // En verdadero o falso los puntos se reparten recién ahora, para no adelantar la respuesta.
-    let primero = true;
-    for (const [usuario, voto] of votos) {
-      if (voto.respuesta === bien) {
-        const pts = CONFIG.puntos + (primero ? CONFIG.bonusPrimero : 0);
-        sumar(voto.jugador, pts);
-        acertaron.push({ ...voto.jugador, usuario, pts });
-        primero = false;
-      }
+    if (pregunta.tipo === "logo") {
+      $("logo-svg").style.filter = "none";
+      $("puntos-pregunta").textContent = "+50 PTS";
     }
-    $("aciertos-label").textContent = "aciertos";
-    $("aciertos").textContent = fmt(acertaron.length);
-    renderPrimeros();
-    renderTop();
+  } else if (pregunta.tipo === "vf") {
+    revelarVF();
+  } else {
+    revelarCuanto();
   }
+  $("aciertos").textContent = fmt(pregunta.tipo === "cuanto" ? estado.actual.numeros.size : acertaron.length);
+  renderPrimeros();
+  renderTop();
   sonar("ding", 0.5);
+};
+
+const revelarVF = () => {
+  const { pregunta, acertaron, votos } = estado.actual;
+  const bien = pregunta.dato.respuesta;
+  $(`voto-${bien}`).classList.add("bien");
+  $(`voto-${bien === "V" ? "F" : "V"}`).classList.add("mal");
+  $("dato-explicacion").textContent = `${bien === "V" ? "VERDADERO" : "FALSO"}: ${pregunta.dato.explicacion}`;
+  $("dato-fuente").textContent = `Fuente: ${pregunta.dato.fuente}`;
+  // En verdadero o falso los puntos se reparten recién ahora, para no adelantar la respuesta.
+  let primero = true;
+  for (const voto of votos.values()) {
+    if (voto.respuesta === bien) {
+      const pts = CONFIG.puntos + (primero ? CONFIG.bonusPrimero : 0);
+      sumar(voto.jugador, pts);
+      acertaron.push({ ...voto.jugador, pts });
+      primero = false;
+    }
+  }
+  $("aciertos-label").textContent = "aciertos";
+};
+
+const revelarCuanto = () => {
+  const { pregunta, acertaron, numeros } = estado.actual;
+  const { respuesta, unidad, anio } = pregunta.dato;
+  const ordenadas = [...numeros.values()].sort((a, b) => Math.abs(a.valor - respuesta) - Math.abs(b.valor - respuesta) || a.t - b.t);
+  // 150, 100 y 50 a los tres más cerca; los que la clavaron justo, 150 todos.
+  ordenadas.forEach((r, k) => {
+    const exacto = Math.abs(r.valor - respuesta) < 1e-9;
+    const pts = exacto ? 150 : [150, 100, 50][k] ?? 0;
+    if (pts > 0) {
+      sumar(r.jugador, pts);
+      acertaron.push({ ...r.jugador, pts, valor: r.valor, exacto });
+    }
+  });
+  const texto = `${fmtNumero(respuesta, anio)}${unidad ? ` ${unidad}` : ""}`.toUpperCase();
+  $("respuesta-texto").textContent = texto;
+  $("respuesta-texto").className = texto.length > 24 ? "muy-largo" : texto.length > 15 ? "largo" : "";
+  $("respuesta").classList.add("revelada");
+  $("dato").classList.add("revelado");
+  $("dato-explicacion").textContent = pregunta.dato.explicacion;
+  $("dato-fuente").textContent = `Fuente: ${pregunta.dato.fuente}`;
+  renderRegla(ordenadas, respuesta, anio, acertaron);
+};
+
+/** La regla: dónde cayó cada número que comentaron, y la respuesta. */
+const renderRegla = (respuestas, respuesta, anio, ganadores) => {
+  const linea = $("regla-linea");
+  linea.replaceChildren();
+  $("regla").classList.remove("oculta");
+  const valores = respuestas.map((r) => r.valor).sort((a, b) => a - b);
+  const q = (p) => valores[Math.min(valores.length - 1, Math.floor(p * valores.length))];
+  let min = Math.min(respuesta, valores.length ? q(0.1) : respuesta);
+  let max = Math.max(respuesta, valores.length ? q(0.9) : respuesta);
+  if (max - min < 1e-9) {
+    min = respuesta * 0.8 - 1;
+    max = respuesta * 1.2 + 1;
+  }
+  const margen = (max - min) * 0.06;
+  min -= margen;
+  max += margen;
+  const x = (v) => `${Math.min(100, Math.max(0, ((v - min) / (max - min)) * 100))}%`;
+  const destacados = new Set(ganadores.map((g) => g.usuario));
+  for (const r of respuestas.slice(0, 200)) {
+    const punto = document.createElement("i");
+    punto.className = destacados.has(r.jugador.usuario) ? "punto top" : "punto";
+    punto.style.left = x(r.valor);
+    linea.append(punto);
+  }
+  const marca = document.createElement("b");
+  marca.className = "marca";
+  marca.style.left = x(respuesta);
+  marca.append(span("", fmtNumero(respuesta, anio)));
+  linea.append(marca);
+  // Los extremos, redondeados para que se lean fácil.
+  const redondo = (v) => (max - min > 20 ? Math.round(v) : Math.round(v * 10) / 10);
+  $("regla-min").textContent = fmtNumero(redondo(Math.max(0, min)), anio);
+  $("regla-max").textContent = fmtNumero(redondo(max), anio);
 };
 
 const siguiente = () => {
@@ -294,7 +396,7 @@ const terminar = () => {
   pararBots();
   estado.fase = null;
   for (const p of estado.preguntas) {
-    usadas.add(p.tipo === "bandera" ? `b-${p.pais.codigo}` : `vf-${p.dato.texto}`);
+    usadas.add(claveDe(p));
   }
   guardarUsadas();
   const ranking = ordenados();
@@ -314,8 +416,7 @@ const terminar = () => {
     escalon.append(base);
     podio.append(escalon);
   }
-  const resto = $("resto");
-  resto.replaceChildren(...ranking.slice(3, 8).map((j, k) => filaRanking(j, k + 4)));
+  $("resto").replaceChildren(...ranking.slice(3, 8).map((j, k) => filaRanking(j, k + 4)));
   mostrar("final");
   sonar("chispa", 0.5);
 };
@@ -324,7 +425,7 @@ const terminar = () => {
 const jugadorDe = (c) => {
   let j = estado.jugadores.get(c.usuario);
   if (!j) {
-    j = { usuario: c.usuario, nombre: c.nombre || c.usuario, foto: c.foto || "", puntos: 0, aciertos: 0, desde: performance.now() };
+    j = { usuario: c.usuario, nombre: c.nombre || c.usuario, foto: c.foto || "", puntos: 0, aciertos: 0, ultimo: 0 };
     estado.jugadores.set(c.usuario, j);
   } else if (c.foto && !j.foto) {
     j.foto = c.foto;
@@ -357,10 +458,13 @@ const renderTop = () => {
   lista.replaceChildren(...top.map((j, k) => filaRanking(j, k + 1)));
 };
 const renderPrimeros = () => {
-  const chips = estado.actual.acertaron.slice(0, 2).map((j) => {
+  const { pregunta, acertaron } = estado.actual;
+  const cuantos = pregunta.tipo === "cuanto" ? 3 : 2;
+  const chips = acertaron.slice(0, cuantos).map((j) => {
     const chip = document.createElement("div");
     chip.className = "chip";
-    chip.append(avatar(j), span("nombre", j.nombre), span("pts", `+${j.pts}`));
+    const nombre = pregunta.tipo === "cuanto" ? `${j.nombre}: ${fmtNumero(j.valor, pregunta.dato.anio)}` : j.nombre;
+    chip.append(avatar(j), span("nombre", nombre), span("pts", `+${j.pts}`));
     return chip;
   });
   $("primeros").replaceChildren(...chips);
@@ -371,46 +475,65 @@ const recibir = (c) => {
   if (estado.pantalla !== "juego" || estado.fase !== "pregunta" || estado.pausa || !estado.actual) {
     return;
   }
-  const { pregunta, acertaron, votos, cuentaVotos } = estado.actual;
+  const { pregunta, acertaron, votos, cuentaVotos, numeros } = estado.actual;
   if (!estado.participantes.has(c.usuario)) {
     estado.participantes.add(c.usuario);
     $("participando").textContent = fmt(estado.participantes.size);
   }
   const jugador = jugadorDe(c);
-  if (pregunta.tipo === "bandera") {
+
+  if (pregunta.tipo === "bandera" || pregunta.tipo === "logo") {
     if (acertaron.some((a) => a.usuario === c.usuario)) {
       return;
     }
-    if (aciertaPais(c.texto, pregunta.pais, PAISES)) {
-      const pts = CONFIG.puntos + (acertaron.length === 0 ? CONFIG.bonusPrimero : 0);
-      sumar(jugador, pts);
-      acertaron.push({ ...jugador, pts });
-      $("aciertos").textContent = fmt(acertaron.length);
-      if (acertaron.length <= 2) {
-        renderPrimeros();
-        sonar(acertaron.length === 1 ? "chispa" : "toque", 0.35);
-      }
-      renderTop();
+    const [item, lista] = pregunta.tipo === "bandera" ? [pregunta.pais, PAISES] : [pregunta.logo, LOGOS];
+    if (!acierta(c.texto, item, lista)) {
+      return;
     }
+    const base = pregunta.tipo === "logo" ? puntosLogo() : CONFIG.puntos;
+    const pts = base + (acertaron.length === 0 ? CONFIG.bonusPrimero : 0);
+    sumar(jugador, pts);
+    acertaron.push({ ...jugador, pts });
+    $("aciertos").textContent = fmt(acertaron.length);
+    if (acertaron.length <= 2) {
+      renderPrimeros();
+      sonar(acertaron.length === 1 ? "chispa" : "toque", 0.35);
+    }
+    renderTop();
     return;
   }
-  // Verdadero o falso: vale el primer voto de cada uno.
-  if (votos.has(c.usuario)) {
+
+  if (pregunta.tipo === "vf") {
+    // Vale el primer voto de cada uno.
+    if (votos.has(c.usuario)) {
+      return;
+    }
+    const r = respuestaVF(c.texto);
+    if (!r) {
+      return;
+    }
+    votos.set(c.usuario, { respuesta: r, jugador });
+    cuentaVotos[r] += 1;
+    const total = cuentaVotos.V + cuentaVotos.F;
+    for (const l of ["V", "F"]) {
+      const pct = Math.round((cuentaVotos[l] / total) * 100);
+      $(`voto-${l}-pct`).textContent = `${pct}%`;
+      $(`voto-${l}-barra`).style.width = `${pct}%`;
+    }
+    $("aciertos").textContent = fmt(total);
     return;
   }
-  const r = respuestaVF(c.texto);
-  if (!r) {
+
+  // ¿Cuánto?: vale el primer número de cada uno.
+  if (numeros.has(c.usuario)) {
     return;
   }
-  votos.set(c.usuario, { respuesta: r, jugador });
-  cuentaVotos[r] += 1;
-  const total = cuentaVotos.V + cuentaVotos.F;
-  for (const l of ["V", "F"]) {
-    const pct = Math.round((cuentaVotos[l] / total) * 100);
-    $(`voto-${l}-pct`).textContent = `${pct}%`;
-    $(`voto-${l}-barra`).style.width = `${pct}%`;
+  const valor = leerNumero(c.texto);
+  if (valor === null) {
+    return;
   }
-  $("aciertos").textContent = fmt(total);
+  numeros.set(c.usuario, { valor, jugador, t: performance.now() });
+  $("aciertos").textContent = fmt(numeros.size);
 };
 
 // ── Reloj (un solo bucle para todo) ─────────────────────────────────────────
@@ -437,10 +560,17 @@ const bucle = () => {
     return;
   }
   if (estado.fase === "pregunta") {
-    const total = (estado.actual.pregunta.tipo === "vf" ? CONFIG.segundosVF : CONFIG.segundosBandera) * 1000;
+    const { pregunta } = estado.actual;
+    const total = duracion(pregunta);
     $("reloj-numero").textContent = String(segundos);
     $("reloj-arco").style.strokeDashoffset = String(ARCO * (1 - resta / total));
     document.querySelector(".reloj").classList.toggle("apurado", segundos <= 5);
+    if (pregunta.tipo === "logo") {
+      // El logo se va desdifuminando a medida que pasa el tiempo.
+      const avance = 1 - resta / total;
+      $("logo-svg").style.filter = `blur(${(CONFIG.blurInicial * (1 - avance) ** 1.5).toFixed(1)}px)`;
+      $("puntos-pregunta").textContent = `+${puntosLogo() + (estado.actual.acertaron.length === 0 ? CONFIG.bonusPrimero : 0)} PTS`;
+    }
     if (segundos !== ultimoSegundo && segundos <= 3 && segundos > 0) {
       sonar("toque", 0.45);
     }
@@ -490,29 +620,43 @@ const pararBots = () => {
   }
   estado.timeoutsBots = [];
 };
+const azarNormal = () => Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random());
+const textoBot = (pregunta, avance) => {
+  if (pregunta.tipo === "vf") {
+    const r = Math.random() < 0.65 ? pregunta.dato.respuesta : pregunta.dato.respuesta === "V" ? "F" : "V";
+    return Math.random() < 0.5 ? r : r === "V" ? "verdadero" : "falso";
+  }
+  if (pregunta.tipo === "cuanto") {
+    const { respuesta, anio } = pregunta.dato;
+    if (Math.random() < 0.1) {
+      return String(respuesta).replace(".", ",");
+    }
+    const valor = anio ? Math.round(respuesta + azarNormal() * 12) : respuesta * Math.exp(azarNormal() * 0.45);
+    return valor >= 1000 && !anio ? fmt(valor) : String(Math.round(valor * 10) / 10).replace(".", ",");
+  }
+  if (pregunta.tipo === "logo") {
+    // Con el logo más nítido, es más fácil acertar.
+    const prob = [0, 0.9, 0.65, 0.4][pregunta.logo.nivel] * (0.3 + 0.7 * avance);
+    return Math.random() < prob ? pregunta.logo.nombre.toLowerCase() : LOGOS[Math.floor(Math.random() * LOGOS.length)].nombre;
+  }
+  const prob = [0, 0.85, 0.55, 0.3][pregunta.pais.nivel];
+  if (Math.random() < prob) {
+    return Math.random() < 0.3 ? `es ${pregunta.pais.nombre}!!` : pregunta.pais.nombre.toLowerCase();
+  }
+  return PAISES[Math.floor(Math.random() * PAISES.length)].nombre;
+};
 const lanzarBots = (pregunta) => {
   pararBots();
   if (!estado.bots) {
     return;
   }
-  const duracion = (pregunta.tipo === "vf" ? CONFIG.segundosVF : CONFIG.segundosBandera) * 1000;
-  const acierto = pregunta.tipo === "vf" ? 0.65 : [0, 0.85, 0.55, 0.3][pregunta.pais.nivel];
+  const total = duracion(pregunta);
   for (const nombre of NOMBRES_BOT) {
     if (Math.random() > 0.8) {
       continue;
     }
-    const cuando = 1500 + Math.random() * (duracion - 2500);
-    let texto;
-    if (pregunta.tipo === "vf") {
-      const bien = Math.random() < acierto;
-      const r = bien ? pregunta.dato.respuesta : pregunta.dato.respuesta === "V" ? "F" : "V";
-      texto = Math.random() < 0.5 ? r : r === "V" ? "verdadero" : "falso";
-    } else if (Math.random() < acierto) {
-      texto = Math.random() < 0.3 ? `es ${pregunta.pais.nombre}!!` : pregunta.pais.nombre.toLowerCase();
-    } else {
-      texto = PAISES[Math.floor(Math.random() * PAISES.length)].nombre;
-    }
-    estado.timeoutsBots.push(setTimeout(() => recibir({ usuario: nombre, nombre, foto: "", texto }), cuando));
+    const avance = pregunta.tipo === "logo" ? 0.15 + Math.random() * 0.8 : 0.1 + Math.random() * 0.8;
+    estado.timeoutsBots.push(setTimeout(() => recibir({ usuario: nombre, nombre, foto: "", texto: textoBot(pregunta, avance) }), avance * total));
   }
 };
 
@@ -565,8 +709,8 @@ addEventListener("keydown", (e) => {
     return;
   }
   const tecla = e.key.toLowerCase();
-  if (estado.pantalla === "menu" && ["1", "2", "3"].includes(tecla)) {
-    empezar({ 1: "banderas", 2: "vf", 3: "mixto" }[tecla]);
+  if (estado.pantalla === "menu" && JUEGOS[tecla]) {
+    empezar(JUEGOS[tecla]);
   } else if (tecla === " ") {
     e.preventDefault();
     pausar();
@@ -613,11 +757,12 @@ $("manual").addEventListener("submit", (e) => {
 
 // ── Arranque ─────────────────────────────────────────────────────────────────
 const cargar = async () => {
-  [PAISES, DATOS] = await Promise.all([fetch("datos/paises.json").then((r) => r.json()), fetch("datos/verdadero-falso.json").then((r) => r.json())]);
+  const leer = (archivo) => fetch(`datos/${archivo}`).then((r) => r.json());
+  [PAISES, DATOS, CUANTO, LOGOS] = await Promise.all([leer("paises.json"), leer("verdadero-falso.json"), leer("cuanto.json"), leer("logos.json")]);
   conectar();
   requestAnimationFrame(bucle);
   const juego = params.get("juego");
-  if (["banderas", "vf", "mixto"].includes(juego)) {
+  if (Object.values(JUEGOS).includes(juego)) {
     empezar(juego);
   }
 };

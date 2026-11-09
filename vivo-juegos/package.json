@@ -12,5 +12,8 @@
   "dependencies": {
     "flag-icons": "^7.6.0",
     "tiktok-live-connector": "^2.5.0"
+  },
+  "devDependencies": {
+    "simple-icons": "^16.37.0"
   }
 }
