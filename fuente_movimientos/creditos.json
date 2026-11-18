@@ -13,6 +13,13 @@
   "page": "https://commons.wikimedia.org/wiki/File:Madre_de_la_Plaza_de_Mayo_-_2008.jpg",
   "ok": true
  },
+ "mst": {
+  "title": "MST in Brasilia May05.jpeg",
+  "author": "Valter Campanato/ABr",
+  "license": "CC BY 3.0 br",
+  "page": "https://commons.wikimedia.org/wiki/File:MST_in_Brasilia_May05.jpeg",
+  "ok": true
+ },
  "niunamenos": {
   "title": "Marcha Ni una menos 3.JPG",
   "author": "Jaluj",
@@ -26,12 +33,5 @@
   "license": "CC BY 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Fridays_for_Future_Heidelberg_05.jpg",
   "ok": true
- },
- "panuelos": {
-  "title": "Plaza de Mayo, tiles by Plaza de mayo Mothers.jpg",
-  "author": "Vicpics",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Plaza_de_Mayo,_tiles_by_Plaza_de_mayo_Mothers.jpg",
-  "ok": false
  }
 }
