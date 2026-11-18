@@ -1,0 +1,37 @@
+{
+ "obrero": {
+  "title": "Quarto Stato (crop).jpg",
+  "author": "Giuseppe Pellizza da Volpedo",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Quarto_Stato_(crop).jpg",
+  "ok": true
+ },
+ "madres": {
+  "title": "Madre de la Plaza de Mayo - 2008.jpg",
+  "author": "Javier Paredes",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Madre_de_la_Plaza_de_Mayo_-_2008.jpg",
+  "ok": true
+ },
+ "niunamenos": {
+  "title": "Marcha Ni una menos 3.JPG",
+  "author": "Jaluj",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Marcha_Ni_una_menos_3.JPG",
+  "ok": true
+ },
+ "ecologistas": {
+  "title": "Fridays for Future Heidelberg 05.jpg",
+  "author": "Stephan Sprinz",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fridays_for_Future_Heidelberg_05.jpg",
+  "ok": true
+ },
+ "panuelos": {
+  "title": "Plaza de Mayo, tiles by Plaza de mayo Mothers.jpg",
+  "author": "Vicpics",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Plaza_de_Mayo,_tiles_by_Plaza_de_mayo_Mothers.jpg",
+  "ok": false
+ }
+}

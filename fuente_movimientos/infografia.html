@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Los movimientos sociales · Infografía</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  @page { size: A3; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { width: 297mm; height: 420mm; overflow: hidden; background: #f6f1e6; color: #1f2430;
+    font-family: "Lora", Georgia, serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { position: relative; height: 420mm; padding: 11mm 13mm 9mm; display: flex; flex-direction: column; gap: 4.5mm; }
+
+  /* Encabezado */
+  header { display: grid; grid-template-columns: 1fr 78mm; gap: 8mm; align-items: end;
+    padding-bottom: 4mm; border-bottom: 1.4mm solid #1f2430; }
+  .tp { font: 700 10pt "Montserrat", sans-serif; letter-spacing: 3pt; text-transform: uppercase; color: #b8322a; margin: 0 0 2mm; }
+  h1 { margin: 0; font: 800 44pt/1 "Playfair Display", serif; letter-spacing: -0.5pt; }
+  h1 span { color: #b8322a; }
+  .lead { margin: 2mm 0 0; font: italic 500 13pt/1.35 "Lora", serif; color: #444; }
+  .def { background: #1f2430; color: #f6f1e6; border-radius: 3mm; padding: 4mm 5mm; font-size: 11pt; line-height: 1.35; }
+  .def b { display: block; font: 700 9pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase; color: #f2c14e; margin-bottom: 1.5mm; }
+
+  /* Tarjetas */
+  .cards { display: flex; flex-direction: column; gap: 4mm; flex: 1 1 0; min-height: 0; }
+  .card { --c: #b8322a; position: relative; flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: 78mm 1fr; gap: 6mm;
+    background: #fff; border-radius: 3mm; padding: 4mm; box-shadow: 0 0 0 0.5pt rgba(0,0,0,0.12); border-left: 3mm solid var(--c); }
+  .card:nth-child(even) { grid-template-columns: 1fr 78mm; }
+  .card:nth-child(even) figure { order: 2; }
+  figure { margin: 0; display: flex; flex-direction: column; min-height: 0; }
+  .ph { position: relative; flex: 1 1 0; border-radius: 2mm; overflow: hidden; background: #ddd; min-height: 0; }
+  .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  figcaption { margin-top: 1.6mm; font: italic 8.5pt/1.3 "Lora", serif; color: #555; padding-left: 2.2mm; border-left: 0.9mm solid var(--c); }
+  .num { position: absolute; top: -3mm; width: 11mm; height: 11mm; border-radius: 50%; background: var(--c); color: #fff;
+    font: 800 16pt/11mm "Playfair Display", serif; text-align: center; box-shadow: 0 0 0 1.2mm #f6f1e6; }
+  .card:nth-child(odd) .num { left: -6mm; }
+  .card:nth-child(even) .num { right: -4mm; }
+  .txt { display: flex; flex-direction: column; min-width: 0; }
+  .kind { font: 700 8pt "Montserrat", sans-serif; letter-spacing: 1.8pt; text-transform: uppercase; color: var(--c); margin: 0; }
+  h2 { margin: 0.6mm 0 2mm; font: 700 19pt/1.05 "Playfair Display", serif; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+  .facts div b { display: block; font: 700 8pt "Montserrat", sans-serif; letter-spacing: 1.4pt; text-transform: uppercase; color: var(--c); margin-bottom: 0.4mm; }
+  .facts p { margin: 0; }
+  .hito { margin-top: auto; display: flex; gap: 3mm; align-items: center; background: color-mix(in srgb, var(--c) 10%, #fff);
+    border-radius: 2mm; padding: 2mm 3mm; font-size: 10.5pt; line-height: 1.3; }
+  .hito .yr { font: 800 17pt/1 "Playfair Display", serif; color: var(--c); flex: none; }
+
+  /* Línea de tiempo */
+  .timeline { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); padding: 5mm 0 0; }
+  .timeline::before { content: ""; position: absolute; left: 4mm; right: 4mm; top: 8.2mm; height: 1mm; background: #1f2430; border-radius: 1mm; }
+  .tl { position: relative; text-align: center; padding-top: 6.5mm; font-size: 9.5pt; line-height: 1.25; }
+  .tl::before { content: ""; position: absolute; top: 0.8mm; left: 50%; width: 5mm; height: 5mm; margin-left: -2.5mm; border-radius: 50%;
+    background: var(--c); box-shadow: 0 0 0 1mm #f6f1e6; }
+  .tl b { display: block; font: 800 14pt "Playfair Display", serif; color: var(--c); }
+  .tl-title { position: absolute; left: 0; top: -1.5mm; font: 700 8pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase; }
+
+  /* Pie */
+  footer { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; padding-top: 3.5mm; border-top: 0.6mm solid #1f2430; font-size: 8pt; line-height: 1.35; color: #333; }
+  footer h3 { margin: 0 0 1.2mm; font: 700 8pt "Montserrat", sans-serif; letter-spacing: 2pt; text-transform: uppercase; color: #1f2430; }
+  footer ul { margin: 0; padding-left: 3.5mm; }
+  footer li { margin-bottom: 0.5mm; }
+  .url { font-family: "Montserrat", sans-serif; font-size: 7.5pt; color: #2f5f8f; }
+</style></head><body><div class="page">
+
+<header>
+  <div>
+    <p class="tp">Trabajo práctico · Sociología · 5.º B</p>
+    <h1>Los movimientos <span>sociales</span></h1>
+    <p class="lead">Cinco movimientos que se organizaron para reclamar derechos y cambiar la sociedad.</p>
+  </div>
+  <div class="def"><b>¿Qué es un movimiento social?</b>Un grupo de personas que actúa en forma colectiva y organizada para defender una causa común y transformar algún aspecto de la sociedad.</div>
+</header>
+
+<div class="cards">
+
+  <section class="card" style="--c:#b8322a">
+    <span class="num">1</span>
+    <figure><div class="ph"><img src="img/obrero.jpg" alt=""></div>
+      <figcaption>«El cuarto estado» (1901), de Giuseppe Pellizza da Volpedo: trabajadores que avanzan juntos.</figcaption></figure>
+    <div class="txt">
+      <p class="kind">Movimiento moderno</p>
+      <h2>Movimiento obrero</h2>
+      <div class="facts">
+        <div><b>¿Cuándo y dónde?</b><p>Siglo XIX, en Europa, con la Revolución Industrial.</p></div>
+        <div><b>¿Quiénes?</b><p>Trabajadores de fábricas, organizados en sindicatos.</p></div>
+        <div><b>¿Qué reclama?</b><p>Jornada de 8 horas, salarios justos y condiciones de trabajo dignas.</p></div>
+        <div><b>¿Cómo actúa?</b><p>Huelgas, sindicatos y movilizaciones.</p></div>
+      </div>
+      <div class="hito"><span class="yr">1886</span><span>Huelga en Chicago por las 8 horas: por eso el 1.º de mayo es el Día del Trabajador.</span></div>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#2f5f8f">
+    <span class="num">2</span>
+    <figure><div class="ph"><img src="img/madres.jpg" alt=""></div>
+      <figcaption>Una Madre de Plaza de Mayo con el pañuelo blanco, el símbolo del movimiento (2008).</figcaption></figure>
+    <div class="txt">
+      <p class="kind">Derechos humanos · Argentina</p>
+      <h2>Madres de Plaza de Mayo</h2>
+      <div class="facts">
+        <div><b>¿Cuándo y dónde?</b><p>1977, en Buenos Aires, durante la última dictadura militar (1976-1983).</p></div>
+        <div><b>¿Quiénes?</b><p>Madres que buscaban a sus hijos detenidos-desaparecidos.</p></div>
+        <div><b>¿Qué reclama?</b><p>Memoria, verdad y justicia.</p></div>
+        <div><b>¿Cómo actúa?</b><p>Rondas de los jueves alrededor de la Pirámide de Mayo.</p></div>
+      </div>
+      <div class="hito"><span class="yr">30/4/1977</span><span>Primera ronda en Plaza de Mayo. Su símbolo: el pañuelo blanco.</span></div>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#b06d12">
+    <span class="num">3</span>
+    <figure><div class="ph"><img src="img/mst.svg" alt=""></div>
+      <figcaption>Ilustración: la tierra trabajada por los campesinos, el centro del reclamo del MST.</figcaption></figure>
+    <div class="txt">
+      <p class="kind">Movimiento campesino · Brasil</p>
+      <h2>Movimiento de los Sin Tierra (MST)</h2>
+      <div class="facts">
+        <div><b>¿Cuándo y dónde?</b><p>Fundado en 1984, en Cascavel, Paraná (Brasil).</p></div>
+        <div><b>¿Quiénes?</b><p>Campesinos y trabajadores rurales sin tierra propia.</p></div>
+        <div><b>¿Qué reclama?</b><p>La reforma agraria: repartir la tierra para quien la trabaja.</p></div>
+        <div><b>¿Cómo actúa?</b><p>Ocupa tierras improductivas y forma asentamientos y cooperativas.</p></div>
+      </div>
+      <div class="hito"><span class="yr">Lema</span><span>«Ocupar, resistir, producir».</span></div>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#7a3e9d">
+    <span class="num">4</span>
+    <figure><div class="ph"><img src="img/niunamenos.jpg" alt=""></div>
+      <figcaption>Marcha Ni Una Menos en Buenos Aires contra la violencia de género.</figcaption></figure>
+    <div class="txt">
+      <p class="kind">Movimiento de mujeres</p>
+      <h2>Ni Una Menos</h2>
+      <div class="facts">
+        <div><b>¿Cuándo y dónde?</b><p>2015, en Argentina; luego se extendió a otros países de América Latina.</p></div>
+        <div><b>¿Quiénes?</b><p>Mujeres, colectivos feministas y toda la sociedad.</p></div>
+        <div><b>¿Qué reclama?</b><p>El fin de los femicidios y de la violencia de género, e igualdad de derechos.</p></div>
+        <div><b>¿Cómo actúa?</b><p>Marchas masivas, campañas y redes sociales.</p></div>
+      </div>
+      <div class="hito"><span class="yr">3/6/2015</span><span>Primera marcha, frente al Congreso. Antecedente: la lucha por el voto femenino (1947).</span></div>
+    </div>
+  </section>
+
+  <section class="card" style="--c:#2e8b57">
+    <span class="num">5</span>
+    <figure><div class="ph"><img src="img/ecologistas.jpg" alt=""></div>
+      <figcaption>Jóvenes en una marcha de Fridays for Future por el clima, en Heidelberg (Alemania).</figcaption></figure>
+    <div class="txt">
+      <p class="kind">Nuevo movimiento social</p>
+      <h2>Movimientos ecologistas o verdes</h2>
+      <div class="facts">
+        <div><b>¿Cuándo y dónde?</b><p>Desde las décadas de 1960 y 1970, en todo el mundo.</p></div>
+        <div><b>¿Quiénes?</b><p>Ciudadanos, organizaciones ambientales y jóvenes.</p></div>
+        <div><b>¿Qué reclama?</b><p>Cuidar el ambiente y frenar la contaminación y el cambio climático.</p></div>
+        <div><b>¿Cómo actúa?</b><p>Campañas, asambleas y huelgas por el clima.</p></div>
+      </div>
+      <div class="hito"><span class="yr">2018</span><span>Greta Thunberg inicia las huelgas escolares por el clima (Fridays for Future).</span></div>
+    </div>
+  </section>
+</div>
+
+<div class="timeline">
+  <span class="tl-title">Línea de tiempo</span>
+  <div class="tl" style="--c:#b8322a"><b>1886</b>Huelga de Chicago por las 8 horas</div>
+  <div class="tl" style="--c:#2f5f8f"><b>1977</b>Primera ronda de las Madres</div>
+  <div class="tl" style="--c:#b06d12"><b>1984</b>Nace el MST en Brasil</div>
+  <div class="tl" style="--c:#7a3e9d"><b>2015</b>Primera marcha Ni Una Menos</div>
+  <div class="tl" style="--c:#2e8b57"><b>2018</b>Huelgas escolares por el clima</div>
+</div>
+
+<footer>
+  <div>
+    <h3>Fuentes de información</h3>
+    <ul>
+      <li>Módulo de la materia: «Los movimientos sociales – Participación y movimientos sociales». Sociología, 5.º B, INSL.</li>
+      <li>Encyclopaedia Britannica. <i>Haymarket Affair</i>. <span class="url">https://www.britannica.com/event/Haymarket-Affair</span></li>
+      <li>Asociación Madres de Plaza de Mayo. <span class="url">https://madres.org</span></li>
+      <li>Movimento dos Trabalhadores Rurais Sem Terra. <span class="url">https://mst.org.br</span></li>
+      <li>Ni Una Menos. <span class="url">https://niunamenos.org.ar</span></li>
+      <li>Fridays for Future. <span class="url">https://fridaysforfuture.org</span></li>
+    </ul>
+  </div>
+  <div>
+    <h3>Imágenes (Wikimedia Commons)</h3>
+    <ul id="creditos">@@CREDITOS@@</ul>
+  </div>
+</footer>
+</div></body></html>

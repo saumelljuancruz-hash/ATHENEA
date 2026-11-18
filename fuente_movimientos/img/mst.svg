@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c766"/><stop offset="1" stop-color="#f3e3b5"/></linearGradient>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a5a22"/><stop offset="1" stop-color="#6b3a14"/></linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#sky)"/>
+  <circle cx="300" cy="118" r="46" fill="#f19a2e"/>
+  <path d="M0 150 Q120 128 230 144 T400 138 V260 H0Z" fill="#5f8f3a"/>
+  <path d="M0 172 Q160 150 400 168 V260 H0Z" fill="url(#soil)"/>
+  <g stroke="#4e2a0e" stroke-width="3" fill="none" opacity="0.55">
+    <path d="M-20 260 L150 172"/><path d="M60 260 L175 171"/><path d="M140 260 L200 170"/><path d="M220 260 L226 170"/>
+    <path d="M300 260 L252 171"/><path d="M380 260 L278 172"/><path d="M450 260 L305 173"/>
+  </g>
+  <g fill="#3f7a2a">
+    <path d="M40 200 q8 -30 4 -46 q-10 16 -4 46z"/><path d="M48 200 q14 -22 22 -32 q-20 6 -22 32z"/>
+    <path d="M330 214 q8 -30 4 -46 q-10 16 -4 46z"/><path d="M338 214 q14 -22 22 -32 q-20 6 -22 32z"/>
+  </g>
+  <line x1="122" y1="238" x2="122" y2="60" stroke="#3b2a1a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M124 62 C160 52 190 76 226 66 L226 132 C190 142 160 118 124 128Z" fill="#c0281f"/>
+</svg>
